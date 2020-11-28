@@ -30,7 +30,7 @@ class MotorControl:
         yYtemp=y
 
 
-    def incrementer(self):
+    def incrementer(self,controlQueue):
         while True:
             t1=time.time()
             self.xVelocity+=self.xAcceleration
@@ -40,7 +40,7 @@ class MotorControl:
             time.sleep(self.timeUnit-t)
             #print('a')
 
-    def updater(self):#fix this
+    def updater(self,controlQueue):#fix this
         print('c')
         while True:
             
@@ -52,30 +52,35 @@ class MotorControl:
                 time.sleep(self.timeUnit)
             #else:
                 #print('empty')
-
+            if not controlQueue.empty():
+                break
                 
 
-    def xMotor(self):
+    def xMotor(self,controlQueue):
         while True:
             #print(self.xVelocity)
             if self.xVelocity !=0:
                 self.M1.runVelocityT(self.xVelocity,self.timeUnit)
+            if not controlQueue.empty():
+                break
 
-    def yMotor(self):
+    def yMotor(self,controlQueue):
         print('e')
         while True:
             
             if self.yVelocity !=0:
                 self.M2.runVelocityT(self.yVelocity,self.timeUnit)
+            if not controlQueue.empty():
+                break
 
-    def main(self,q):
+    def main(self,q,controlQueue):
         print('y')
         self.q=q
         #_thread.start_new_thread(self.incrementer,())
         print('d')
-        t1=threading.Thread(target=self.updater,args=())
-        t2=threading.Thread(target=self.xMotor,args=())
-        t3=threading.Thread(target=self.yMotor,args=())
+        t1=threading.Thread(target=self.updater,args=(controlQueue,))
+        t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+        t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
         t1.start()
         t2.start()
         t3.start()
