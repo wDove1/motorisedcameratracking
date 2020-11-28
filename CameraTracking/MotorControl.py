@@ -2,12 +2,12 @@
 import _thread
 import threading
 import time
-from Motor1 import *
+from MotorControl import Motor
 #from DataStore import *
 from Config import *
 class MotorControl:
-    M1=Motor1([17,22,23,24])
-    M2=Motor1([13,6,5,12])
+    M1=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[17,22,23,24]})
+    M2=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[13,6,5,12]})
     #DataStore=DataStore()
     #Config=Config()
     timeUnit=0.25
