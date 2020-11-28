@@ -25,7 +25,7 @@ class Imaging:
         
         self.target=target
 
-    def main(self,q):
+    def main(self,q,controlQueue):
         self.q=q
         #yV=0
         print('x')
@@ -39,6 +39,8 @@ class Imaging:
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
             self.calculateVelocity()#calculates velocity
+            if not controlQueue.empty():
+                break
 
     def getCurrentPosition(self):#calculates current position of motors
         print(self.currentVelocity[0])
