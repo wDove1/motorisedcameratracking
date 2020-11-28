@@ -8,6 +8,6 @@ THis can be installed through pip.
 ## Release Notes
 
 ## Plans
-#add support for more cameras.
+add support for more cameras. base the motor control off of the seperate library.
 ## License
 this is available under an apache v2.0 license.
