@@ -5,7 +5,7 @@ import queue
 from Imaging import *
 from MotorControl import *#check for issues with names-this refairs to the local file as opposed to the library
 
-import MeasureMotorSpecs
+from MeasureMotorSpecsLib import *
 import sys
 import time
 

@@ -2,7 +2,7 @@
 import _thread
 import threading
 import time
-from MotorControl import Motor
+from MotorControlLib import Motor
 #from DataStore import *
 from Config import *
 class MotorControl:
