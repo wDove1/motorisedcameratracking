@@ -1,10 +1,11 @@
 import multiprocessing
 import queue
-#import _thread
-from textUI import *
+
+
 from Imaging import *
-from MotorControl import *
-#from GUI import *
+from MotorControl import *#check for issues with names-this refairs to the local file as opposed to the library
+
+import MeasureMotorSpecs
 import sys
 import time
 
@@ -49,3 +50,15 @@ class CameraTrackingPython:
         self.controlQueue.put(1)
         #code 1 is for termination
         #other codes may be added for other purposes
+
+
+    def calibrateInteractive(self):
+        y=MeasureMotorSpecs()
+        y.measureInteractive()
+
+
+    #add functions for positioning motors
+
+
+
+
