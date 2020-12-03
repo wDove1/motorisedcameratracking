@@ -78,11 +78,11 @@ class MotorisedCameraTracking:
     
     #add functions for positioning motors
     
-    def aim(self,distance):
+    def aim(self,distance,axis):
         """Used to aim the motors through the GUI before tracking begins
         Args:
             distance: The distance to move
         """
-        pass
+        MC.runDisplacement(distance,axis)
 
 

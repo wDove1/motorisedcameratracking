@@ -1,10 +1,10 @@
-from CameraTrackingPython import *
+from motorisedcameratracking import *
 from GUI import *
 import sys
 import time
 import multiprocessing
 import queue
-x=CameraTrackingPython()
+x=MotorisedCameraTracking()
 
 
 
@@ -17,8 +17,6 @@ while q.empty():
     print('x')
 target=q.get()
 print(target)
-#x.track(target)
-#q1=multiprocessing.Queue()
 t1=threading.Thread(target=x.track,args=(target,))
 t2=threading.Thread(target=G.main,args=())
 t2.start()

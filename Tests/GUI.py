@@ -1,11 +1,11 @@
 import tkinter
 #import threadng
-from CameraTrackingPython import *
+from motorisedcameratracking import *
 from MotorControl import *
 
 class GUI:
-    x=CameraTrackingPython()
-    MC=MotorControl()
+    x=MotorisedCameraTracking()
+    #MC=MotorControl()
     q=None
     def __init__(self,q): 
         self.q=q

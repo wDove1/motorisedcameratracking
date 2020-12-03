@@ -123,6 +123,15 @@ class MotorControl:
     def getVelocity(self):
         return self.xV,self.yV
 
-    def runDisplacement(self,distance):
-        """Runs the motor a set distance """
-        pass
+    def runDisplacement(self,distance,axis):
+        """Runs the motor a set distance useful for aiming the motors
+            Args:
+                distance: The displacement the motor will move
+                axis: The axis to be manipulated
+        """
+        if axis == "x":
+            M1.runDispalcement(distance)
+        elif axis == "y":
+            M2.runDispalcement(distance)
+
+        
