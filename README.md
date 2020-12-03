@@ -2,7 +2,7 @@
 A python library designed to create a tracking tripod head with the help of a raspberry pi and some 3D printed components.
 
 ## Installation 
-THis can be installed through pip.
+This can be installed through pip with pip install motorisedcameratracking
 ## Usage
 
 ## Release Notes
