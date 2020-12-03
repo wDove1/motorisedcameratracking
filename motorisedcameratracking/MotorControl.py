@@ -3,34 +3,39 @@ import _thread
 import threading
 import time
 from MotorControlLib import Motor
-#from DataStore import *
+from typing import *
 from Config import *
 class MotorControl:
+    """A class to control the motors operation
+    Attributes:
+        M1: The first motor (x axis)
+        M2: The second motor (y axis)
+        timeUnit: How frequently the velocity will be updated etc
+        xVelocity: The velocity M1 will run at
+        yVelocity: The velocity M2 will run at
+        xAcceleration: Currently unused
+        yAcceleration: Currently unused
+        q: The queue used for transmitting velocity information
+    Todo:
+        *rename q to dataQueue
+        *investigate adding acceleration support
+    """
+    
     M1=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[17,22,23,24]})
     M2=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[13,6,5,12]})
-    #DataStore=DataStore()
     #Config=Config()
-    timeUnit=0.25
-    xVelocity=0
-    yVelocity=0
-    xAcceleration=0
-    yAcceleration=0
-
-    xVtemp=0
-    yVtemp=0
+    timeUnit: float = 0.25
+    xVelocity: float = 0
+    yVelocity: float = 0
+    xAcceleration: float = 0
+    yAcceleration: float = 0
     q=None
-
-
-        
-
-    def setVelocity(self,x,y):
-        print('setting velocity')
-        print('velocity=',xVtemp)
-        xVtemp=x
-        yYtemp=y
-
-
+    
     def incrementer(self,controlQueue):
+        """updates the velocity with the accelerations
+        Args:
+            controlQueue: Used for shutting down the program
+        """
         while True:
             t1=time.time()
             self.xVelocity+=self.xAcceleration
@@ -41,6 +46,10 @@ class MotorControl:
             #print('a')
 
     def updater(self,controlQueue):#fix this
+        """updates the velocities as new ones are calculated
+        Args:
+            controlQueue: Used for shutting down the program
+        """
         print('c')
         while True:
             
@@ -57,6 +66,10 @@ class MotorControl:
                 
 
     def xMotor(self,controlQueue):
+        """The method to control the motor that moves on the x axis
+        Args:
+            controlQueue: Used for shutting down the program
+        """
         while True:
             #print(self.xVelocity)
             if self.xVelocity !=0:
@@ -65,6 +78,10 @@ class MotorControl:
                 break
 
     def yMotor(self,controlQueue):
+        """The method to control the motor that moves on the y axis
+        Args:
+            controlQueue: Used for shutting down the program
+        """
         print('e')
         while True:
             
@@ -74,6 +91,11 @@ class MotorControl:
                 break
 
     def main(self,q,controlQueue):
+        """The main method that starts the threads to allow the motors to run
+        Args:
+            q:The queue for transmitting velocity data
+            controlQueue: Used for shutting down the program
+        """
         print('y')
         self.q=q
         #_thread.start_new_thread(self.incrementer,())
@@ -100,3 +122,7 @@ class MotorControl:
 
     def getVelocity(self):
         return self.xV,self.yV
+
+    def runDisplacement(self,distance):
+        """Runs the motor a set distance """
+        pass

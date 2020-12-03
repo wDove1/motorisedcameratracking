@@ -1,0 +1,14 @@
+site_name: Camera Tracking Python
+nav:
+    - Home: index.md
+    - About: about.md
+    - API code: API-reference.md
+    - Image Processing code: Imaging-reference.md 
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings
+

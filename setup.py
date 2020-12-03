@@ -1,6 +1,6 @@
 from setuptools import find_packages, setup
 setup(
-    name='CameraTrackingLib',
+    name='motorisedcameratracking',
     packages=find_packages(),
     version='0.0.0',
     description='Used to create a tracking tripod head',

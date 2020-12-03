@@ -1,4 +1,6 @@
+
 class Config():
+    """Hello"""
     timeUnit=None
     
 
@@ -11,6 +13,7 @@ class Config():
 
 
     def __init__(self,timeUnit):
+        """The __init__ method"""
         self.timeUnit=timeUnit
 
 

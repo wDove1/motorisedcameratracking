@@ -9,14 +9,29 @@ from MeasureMotorSpecsLib import *
 import sys
 import time
 
-class CameraTrackingPython:
+class MotorisedCameraTracking:
+
+    """The API for the Camera Tracking Library
+
+    This class contains all the methods required to operate a motorised tracking camera
+    
+    Attributes:
+        controlQueue: The queue used for controlling the other classes
+    """
     controlQueue=multiprocessing.Queue()
 
-    def track(self,target):#the queue is used for sending a termination signal
+    def track(self,target,options=None):#the queue is used for sending a termination signal
+        """Tracks the object until a terminate signal is sent
+
+    
+        Args:
+            target(str): The target to be tracked
+            options(dict): A dictionary of options that may be changed every time tracking is started
+        """
         print('z')
         a=Imaging(target)
         MC=MotorControl()
-        #controlQueue=multiprocessing.Queue()
+        controlQueue=multiprocessing.Queue()
         q=multiprocessing.Queue()
 
         if __name__ == 'CameraTrackingPython':
@@ -47,6 +62,10 @@ class CameraTrackingPython:
 
 
     def terminate(self):
+        """Used to end the tracking
+
+        Puts signal "1" on the control Queue
+        """
         self.controlQueue.put(1)
         #code 1 is for termination
         #other codes may be added for other purposes
@@ -56,9 +75,14 @@ class CameraTrackingPython:
         y=MeasureMotorSpecs()
         y.measureInteractive()
 
-
+    
     #add functions for positioning motors
-
-
+    
+    def aim(self,distance):
+        """Used to aim the motors through the GUI before tracking begins
+        Args:
+            distance: The distance to move
+        """
+        pass
 
 
