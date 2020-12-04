@@ -1,7 +1,7 @@
 import tkinter
 #import threadng
 from motorisedcameratracking import *
-from MotorControl import *
+
 
 class GUI:
     x=MotorisedCameraTracking()
@@ -13,13 +13,13 @@ class GUI:
     def initialise(self):
         window=tkinter.Tk()
         window.title('Target selection')
-        upAdjust=tkinter.Button(window,text='Motor Up',command=lambda:self.MC.yAdjustU())
+        upAdjust=tkinter.Button(window,text='Motor Up',command=lambda:self.x.aim(5,"y"))
         upAdjust.pack()
-        downAdjust=tkinter.Button(window,text='Motor Down',command=lambda:self.MC.yAdjustD())
+        downAdjust=tkinter.Button(window,text='Motor Down',command=lambda:self.x.aim(-5,"y"))
         downAdjust.pack()
-        leftAdjust=tkinter.Button(window,text='Motor Left',command=lambda:self.MC.xAdjustL())
+        leftAdjust=tkinter.Button(window,text='Motor Left',command=lambda:self.x.aim(5,"x"))
         leftAdjust.pack()
-        rightAdjust=tkinter.Button(window,text='Motor Right',command=lambda:self.MC.xAdjustR())
+        rightAdjust=tkinter.Button(window,text='Motor Right',command=lambda:self.x.x(-5,"x"))
         rightAdjust.pack()
         x=tkinter.Entry(window)
         x.pack()

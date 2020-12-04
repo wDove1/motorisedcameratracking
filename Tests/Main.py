@@ -1,3 +1,8 @@
+"""This is an example application built around the library.
+
+While the GUI needs work the quzlity is acceptable and is useful for testing the library as new features are added.
+"""
+
 from motorisedcameratracking import *
 from GUI import *
 import sys

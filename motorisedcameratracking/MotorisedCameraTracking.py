@@ -82,6 +82,7 @@ class MotorisedCameraTracking:
         """Used to aim the motors through the GUI before tracking begins
         Args:
             distance: The distance to move
+            axis: the axis to move on
         """
         MC.runDisplacement(distance,axis)
 
