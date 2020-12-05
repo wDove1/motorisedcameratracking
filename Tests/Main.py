@@ -9,6 +9,7 @@ import sys
 import time
 import multiprocessing
 import queue
+import threading
 x=MotorisedCameraTracking()
 
 
@@ -19,7 +20,8 @@ G=GUI(q)
 t1=threading.Thread(target=G.initialise,args=())
 t1.start()
 while q.empty():
-    print('x')
+    #print('x')
+    pass
 target=q.get()
 print(target)
 t1=threading.Thread(target=x.track,args=(target,))

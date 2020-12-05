@@ -2,9 +2,9 @@
 import _thread
 import threading
 import time
-from MotorControlLib import Motor
+from motorcontrollib import Motor
 from typing import *
-from Config import *
+from .Config import *
 class MotorControl:
     """A class to control the motors operation
     Attributes:
@@ -22,6 +22,7 @@ class MotorControl:
     """
     
     M1=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[17,22,23,24]})
+    #M1=Motor('virtual','virtual','virtual',{})
     M2=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[13,6,5,12]})
     #Config=Config()
     timeUnit: float = 0.25
@@ -73,6 +74,7 @@ class MotorControl:
         while True:
             #print(self.xVelocity)
             if self.xVelocity !=0:
+                print('running')#keeps printimng while motor is meant to be running
                 self.M1.runVelocityT(self.xVelocity,self.timeUnit)
             if not controlQueue.empty():
                 break
@@ -102,10 +104,10 @@ class MotorControl:
         print('d')
         t1=threading.Thread(target=self.updater,args=(controlQueue,))
         t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-        t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+        #t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
         t1.start()
         t2.start()
-        t3.start()
+        #t3.start()
         #t4.start()
 
     def xAdjustL(self):

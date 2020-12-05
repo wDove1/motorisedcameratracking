@@ -1,13 +1,16 @@
 import multiprocessing
+import threading
 import queue
-
-
-from Imaging import *
-from MotorControl import *#check for issues with names-this refairs to the local file as opposed to the library
-
-from MeasureMotorSpecsLib import *
 import sys
 import time
+
+from measuremotorspecslib import *
+
+from .Imaging import *
+from .MotorControl import *#check for issues with names-this refairs to the local file as opposed to the library
+
+
+
 
 class MotorisedCameraTracking:
 
@@ -18,7 +21,7 @@ class MotorisedCameraTracking:
     Attributes:
         controlQueue: The queue used for controlling the other classes
     """
-    controlQueue=multiprocessing.Queue()
+    controlQueue=queue.Queue()
 
     def track(self,target,options=None):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
@@ -31,26 +34,25 @@ class MotorisedCameraTracking:
         print('z')
         a=Imaging(target)
         MC=MotorControl()
-        controlQueue=multiprocessing.Queue()
-        q=multiprocessing.Queue()
+        dataQueue=queue.Queue()
+        #print(__name__)
 
-        if __name__ == 'CameraTrackingPython':
-            p1 = multiprocessing.Process(target=a.main,args=(q, self.controlQueue,))
+        if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
+            #print('###########')
+            p1 = threading.Thread(target=a.main,args=(dataQueue, self.controlQueue,))
+            #print('###########')
             p1.start()
-            p2 = multiprocessing.Process(target=MC.main,args=(q, self.controlQueue,))
+            #print('###########')
+            p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
+            #print('###########')
             p2.start()
+            #print('###########')
             p1.join()
+            print('###########')
             p2.join()
+            #print('###########')
         print('f')
-        #while queue.empty():
-        #    print('f')
-        #command=q.get()
-        #if command == 1:
-        #    print('stoppimg')
-        #    controlQueue.put(True)
-        #    while p1.is_alive() and p2.is_alive():
-        #        pass
-            
+        
         p1.kill()
         p2.kill()
         print('exiting')

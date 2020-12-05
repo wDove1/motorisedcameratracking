@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import cvlib as cv
 import time
 from cvlib.object_detection import draw_bbox
-from RPICam import *
 
-from MotorControl import *
+from .RPICam import *
+from .MotorControl import *
 
 class Imaging:
     """The Imaging class is responsible for calculating the velocities etc for Motor Control
@@ -36,6 +36,7 @@ class Imaging:
     q=None
     previousTime=time.time()
     def __init__(self,target: str):
+        print('hello')
         
         self.target=target
 

@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 setup(
     name='motorisedcameratracking',
     packages=find_packages(),
-    version='0.0.0',
+    version='0.0.19',
     description='Used to create a tracking tripod head',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
@@ -10,7 +10,7 @@ setup(
     author_email='williamtdove@gmail.com',
     url='https://github.com/wDove1/Camera-Tracking-Python',
     license='Apache 2.0',
-    install_requires=[MotorControl,MeasureMotorSpecs],
+    #install_requires=[motorcontrollib,measuremotorspecs],
     classifiers=["Programming language :: Python :: 3",
                  "License :: OSI Approved :: Apache License 2.0",
                  "Operating System :: OS Independent"],
