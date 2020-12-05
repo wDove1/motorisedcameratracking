@@ -2,7 +2,7 @@
 import _thread
 import threading
 import time
-from motorcontrollib import Motor
+from motorcontrollib import M_28BJY48_ULN2003_RPI
 from typing import *
 from .Config import *
 class MotorControl:
@@ -21,11 +21,11 @@ class MotorControl:
         *investigate adding acceleration support
     """
     
-    M1=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[17,22,23,24]})
+    M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24])
     #M1=Motor('virtual','virtual','virtual',{})
-    M2=Motor('28BJY-48','ULN2003','RPi-4-B',{'GPIOPins':[13,6,5,12]})
+    M2=M_28BJY48_ULN2003_RPI(stepPins=[13,6,5,12])#2 motors of same type not working currently
     #Config=Config()
-    timeUnit: float = 0.25
+    timeUnit: float = 2.0#test value instead of 0.25 for issue with loop
     xVelocity: float = 0
     yVelocity: float = 0
     xAcceleration: float = 0
