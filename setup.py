@@ -10,7 +10,7 @@ setup(
     author_email='williamtdove@gmail.com',
     url='https://github.com/wDove1/Camera-Tracking-Python',
     license='Apache 2.0',
-    #install_requires=[motorcontrollib,measuremotorspecs],
+    install_requires=[motorcontrollib,measuremotorspecs,cvlib,opencv-python],
     classifiers=["Programming language :: Python :: 3",
                  "License :: OSI Approved :: Apache License 2.0",
                  "Operating System :: OS Independent"],
