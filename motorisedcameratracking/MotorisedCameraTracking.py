@@ -37,23 +37,17 @@ class MotorisedCameraTracking:
         #print(__name__)
 
         if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-            #print('###########')
             p1 = threading.Thread(target=a.main,args=(dataQueue, self.controlQueue,))
-            #print('###########')
             p1.start()
-            #print('###########')
             p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
-            #print('###########')
             p2.start()
-            #print('###########')
             p1.join()
-            print('###########')
             p2.join()
-            #print('###########')
-        print('f')
+
+
         
-        p1.kill()
-        p2.kill()
+        #p1.kill()
+        #p2.kill()
         print('exiting')
         sys.exit()
         
@@ -68,8 +62,8 @@ class MotorisedCameraTracking:
             p2.start()
             p1.join()
             p2.join()
-        p1.kill()
-        p2.kill()
+        #p1.kill()
+        #p2.kill()
         sys.exit()
 
     def followPath(self,path):

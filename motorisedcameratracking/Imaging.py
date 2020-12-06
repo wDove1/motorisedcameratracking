@@ -150,7 +150,39 @@ class ObjectRecognition:
     OR=None
 
     def __init__(self,target):
-        functions=[['face',self.ORFaces]]
+        functions=[
+            ['face',self.ORFaces],
+            ['person',self.ORBackUp],
+            ['bicycle',self.ORBackUp],
+            ['car',self.ORBackUp],
+            ['motorcycle',self.ORBackUp],
+            ['airplane',self.ORBackUp],
+            ['bus',self.ORBackUp],
+            ['train',self.ORBackUp],
+            ['truck',self.ORBackUp],
+            ['boat',self.ORBackUp],
+            ['traffic light',self.ORBackUp],
+            ['fire hydrant',self.ORBackUp],
+            ['stop sign',self.ORBackUp],
+            ['parking meter',self.ORBackUp],
+            ['bench',self.ORBackUp],
+            ['bird',self.ORBackUp],
+            ['cat',self.ORBackUp],
+            ['dog',self.ORBackUp],
+            ['horse',self.ORBackUp],
+            ['sheep',self.ORBackUp],
+            ['cow',self.ORBackUp],
+            ['elephant',self.ORBackUp],
+            ['bear',self.ORBackUp],
+            ['zebra',self.ORBackUp],
+            ['giraffe',self.ORBackUp],
+            ['backpack',self.ORBackUp],
+            ['umbrella',self.ORBackUp],
+            ['handbag',self.ORBackUp],
+            ['tie',self.ORBackUp],
+            ['suitcase',self.ORBackUp],
+            ['frisbee',self.ORBackUp]
+            ]
         self.target=target
         for i in functions:
             if i[0]==target:
@@ -176,7 +208,7 @@ class ObjectRecognition:
 
     def ORFaces(self,img):
         """for faces"""
-        faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + ("haarcascade_frontalface_default.xml"))
         # converting image from color to grayscale 
         imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         # Getting corners around the face
