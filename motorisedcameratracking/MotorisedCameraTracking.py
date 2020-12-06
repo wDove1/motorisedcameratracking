@@ -25,12 +25,11 @@ class MotorisedCameraTracking:
 
     def track(self,target,options=None):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
-
-    
         Args:
             target(str): The target to be tracked
             options(dict): A dictionary of options that may be changed every time tracking is started
         """
+
         print('z')
         a=Imaging(target)
         MC=MotorControl()
@@ -58,9 +57,24 @@ class MotorisedCameraTracking:
         print('exiting')
         sys.exit()
         
+    def trackLimited(self,target,limit1=0,limit2=0):
+        a=Imaging(target)
+        MC=MotorControl()
+        dataQueue=queue.Queue()
+        if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
+            p1 = threading.Thread(target=a.mainLimited,args=(dataQueue, self.controlQueue, limit1, limit2,))
+            p1.start()
+            p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
+            p2.start()
+            p1.join()
+            p2.join()
+        p1.kill()
+        p2.kill()
+        sys.exit()
 
+    def followPath(self,path):
+        pass
 
-    
 
 
     def terminate(self):

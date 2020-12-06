@@ -25,6 +25,7 @@ class Imaging:
 
     imagePath='/home/pi/Desktop/image%s.jpg'
     camera=RPICam(imagePath,180)
+    OR=None
     coordinates=[]
     positions=[]#sub arrays should be of the the form [time,xdegrees,ydegrees]
     #MC=MotorControl()
@@ -35,10 +36,13 @@ class Imaging:
     currentVelocity=[0,0]
     q=None
     previousTime=time.time()
+
     def __init__(self,target: str):
         print('hello')
-        
         self.target=target
+        self.OR=ObjectRecognition(target)
+
+
 
     def main(self,q,controlQueue):
         """The main loop for processing images
@@ -61,6 +65,32 @@ class Imaging:
             self.calculateVelocity()#calculates velocity
             if not controlQueue.empty():
                 break
+
+    def mainLimited(self,q,controlQueue,limit1,limit2):
+        self.q=q
+        print('x')
+        while True:#allow it to loop multiple times
+            x=self.camera.capture()
+            previousTime=self.currentPosition[1]#saves the time of the previous movement
+            self.getCurrentPosition()
+            self.currentPosition[1]=time.time()#assigns the current time
+            self.positions.append([self.currentPosition[1],None,None])#adds the current time to the list of positions
+            self.calculateCoordinates(x)#calculates the coordinates of the object in the image
+            self.calculatePosition()#adds current angles of target to list
+            self.calculateVelocity()#calculates velocity
+            if self.positions[-1][1]<=limit1 or self.positions[-1][1]>=limit2 :
+                self.recentre(self.positions[-1][1])
+            if not controlQueue.empty():
+                break
+
+    def recentre(position):
+        xV=20
+        timeToCentre=position/xV
+        if timeToCentre<0:
+            timeToCentre=-timeToCentre
+        self.q.put([xV,0])
+        time.sleep(timeToCentre)
+        self.q.put(0,0)
 
     def getCurrentPosition(self):
         """calculates current position of motors"""
@@ -92,29 +122,7 @@ class Imaging:
         Args:
             img: A colour numpy array of the image
         """
-
-        try:        
-            #start=time.time()
-            bbox, label, conf = cv.detect_common_objects(img)
-            #end=time.time()
-            #print(start-end)
-            #print(bbox,label)
-            #output_image = draw_bbox(img, bbox, label, conf)
-            #plt.imshow(output_image)
-            #plt.show()            
-
-            for i in range(0,len(label)):#x not being assigned-not finding target in list of images
-                if label[i] == self.target:
-                    x=bbox[i]
-
-
-                
-            xCo=(x[0]+x[2])/2
-            yCo=(x[1]+x[3])/2
-        except:
-            xCo=0
-            yCo=0
-
+        xCo,yCo=self.OR.getCoordinates(img)
         self.coordinates.append([xCo,yCo])
         print(self.coordinates[-1])
 
@@ -135,3 +143,49 @@ class Imaging:
     def determinevelocity(self):
         return (self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
 
+########## OR functions
+
+class ObjectRecognition:
+    target=None
+    OR=None
+
+    def __init__(self,target):
+        functions=[['face',self.ORFaces]]
+        self.target=target
+        for i in functions:
+            if i[0]==target:
+                self.OR=i[1]
+
+
+    def ORBackUp(self,img):
+        """Calculates the ccordintes of the object in the image
+        Args:
+            img: A colour numpy array of the image
+        """
+        try:        
+            bbox, label, conf = cv.detect_common_objects(img)
+            for i in range(0,len(label)):#x not being assigned-not finding target in list of images
+                if label[i] == self.target:
+                    x=bbox[i]
+            xCo=(x[0]+x[2])/2
+            yCo=(x[1]+x[3])/2
+        except:
+            xCo=0
+            yCo=0
+        return xCo,yCo
+
+    def ORFaces(self,img):
+        """for faces"""
+        faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+        # converting image from color to grayscale 
+        imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        # Getting corners around the face
+        # 1.3 = scale factor, 5 = minimum neighbor can be detected
+        faces = faceCascade.detectMultiScale(imgGray, 1.3, 5)  
+        xCo=faces[0][0]+(faces[0][2]/2)
+        yCo=faces[0][1]+(faces[0][3]/2)
+        return xCo,yCo
+
+    def getCoordinates(self,img):
+        """returns the ccordnates of the object in the image"""
+        return self.OR(img)
