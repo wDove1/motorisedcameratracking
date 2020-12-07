@@ -84,7 +84,7 @@ class MotorControl:
         Args:
             controlQueue: Used for shutting down the program
         """
-        print('e')
+
         while True:
             
             if self.yVelocity !=0:
@@ -104,10 +104,10 @@ class MotorControl:
         print('d')
         t1=threading.Thread(target=self.updater,args=(controlQueue,))
         t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-        #t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+        t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
         t1.start()
         t2.start()
-        #t3.start()
+        t3.start()
         #t4.start()
 
     def xAdjustL(self):

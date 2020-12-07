@@ -23,7 +23,7 @@ class MotorisedCameraTracking:
     """
     controlQueue=queue.Queue()
 
-    def track(self,target,options=None):#the queue is used for sending a termination signal
+    def track(self,target):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
         Args:
             target(str): The target to be tracked
