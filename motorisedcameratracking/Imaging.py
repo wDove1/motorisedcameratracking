@@ -32,7 +32,7 @@ class Imaging:
     target: str = None
     xMid:int = 640
     yMid: int = 360
-    currentPosition=[0,0,time.time()]#positionx,positiony,time
+    currentPosition=[0,0,None]#positionx,positiony,time
     currentVelocity=[0,0]
     q=None
     previousTime=time.time()
@@ -52,13 +52,17 @@ class Imaging:
         """
         self.q=q
         #yV=0
+        self.currentPosition[-1]=time.time()
+        self.positions.append([self.currentPosition[-1],0,0])
+        print(self.currentPosition)
         print('x')
         while True:#allow it to loop multiple times
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]#saves the time of the previous movement
             self.getCurrentPosition()
-            self.currentPosition[1]=time.time()#assigns the current time
+            self.currentPosition[-1]=time.time()#assigns the current time
             self.positions.append([self.currentPosition[-1],None,None])#adds the current time to the list of positions
+            print(self.currentPosition)
             print('b')
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
@@ -73,8 +77,8 @@ class Imaging:
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]#saves the time of the previous movement
             self.getCurrentPosition()
-            self.currentPosition[1]=time.time()#assigns the current time
-            self.positions.append([self.currentPosition[1],None,None])#adds the current time to the list of positions
+            self.currentPosition[-1]=time.time()#assigns the current time
+            self.positions.append([self.currentPosition[-1],None,None])#adds the current time to the list of positions
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
             self.calculateVelocity()#calculates velocity
@@ -103,7 +107,7 @@ class Imaging:
     def calculatePosition(self):
         """calculates the current relative position of the object"""
         self.positions[-1][1]=self.currentPosition[0]+(self.calculateAngleImage(self.coordinates[-1][0],[1920,1080],'x'))
-        self.positions[-1][2]=self.currentPosition[1]+(self.calculateAngleImage(self.ccordinates[-1][1],[1920,1080],'y'))
+        self.positions[-1][2]=self.currentPosition[1]+(self.calculateAngleImage(self.coordinates[-1][1],[1920,1080],'y'))
         
     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:
         """calculates the angle of the object within the image
@@ -116,11 +120,11 @@ class Imaging:
         """
         if XorY=='x':
             anglePerPixel=0.0191
-            print((coordinates-self.xMid)*anglePerPixel)
+            #print((coordinates-self.xMid)*anglePerPixel)
             return (coordinates-self.xMid)*anglePerPixel
         if XorY=='y':
             anglePerPixel=0.0198
-            return (coordinates-self.yMid)*angleperPixel
+            return (coordinates-self.yMid)*anglePerPixel
 
     def calculateCoordinates(self,img):
         """Calculates the ccordintes of the object in the image
@@ -133,27 +137,33 @@ class Imaging:
 
     def calculateVelocity(self):
         """calculates and transmits the velocity to the Motor control class"""
-        if self.coordinates[-1][0]<self.xMid:
-            xV=-10
-        else:
-            xV=10
-        if self.coordinates[-1][1]<self.yMid:
-            yV=-10
-        else:
-            yV=10
+        #if self.coordinates[-1][0]<self.xMid:
+        #    xV=-10
+        #else:
+        #    xV=10
+        #if self.coordinates[-1][1]<self.yMid:
+        #    yV=-10
+        #else:
+        #    yV=10
+        xV,yV=self.determineVelocity()
         self.q.put([xV,yV])
         print('xV',xV)
         self.currentVelocity=[xV,yV]
         
-    def determinevelocity(self):
-        return (self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
+    def determineVelocity(self):
+        print(self.positions)
+        print(self.positions[-1][0])
+        print(self.positions[-2][0])       
+        xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
+        yV=(self.positions[-1][2]-self.positions[-2][2])/(self.positions[-1][0]-self.positions[-2][0])
+        return xV,yV
 
 ########## OR class and functions ################
 
 class ObjectRecognition:
     target=None
     OR=None
-
+    targets=[]
     def __init__(self,target):
         functions=[
             ['face',self.ORFaces],
@@ -231,6 +241,8 @@ class ObjectRecognition:
             ]
         self.target=target
         for i in functions:
+            self.targets.append(i[0])
+        for i in functions:
             if i[0]==target:
                 self.OR=i[1]
 
@@ -281,3 +293,6 @@ class ObjectRecognition:
     def getCoordinates(self,img):
         """returns the ccordnates of the object in the image"""
         return self.OR(img)
+
+    def getTargets(self):
+        return self.targets

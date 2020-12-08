@@ -1,14 +1,22 @@
-site_name: Camera Tracking Python
+site_name: Motorised Camera Tracking
 nav:
     - Home: index.md
     - About: about.md
+    - Usage: usage.md
     - API code: API-reference.md
-    - Image Processing code: Imaging-reference.md 
+    - Image Processing code: Imaging-reference.md
+    - Motor Control code: MotorControl-reference.md
+    - Camera code: RPICam-reference.md
 
 theme:
   name: "material"
 
 plugins:
   - search
-  - mkdocstrings
+  - mkdocstrings:
+      watch:
+          - motorisedcameratracking/MotorisedCameraTracking
+          - motorisedcameratracking/Imaging
+          - motorisedcameratracking/MotorControl
+          - motorisedcameratracking/RPICam 
 

@@ -21,9 +21,9 @@ class MotorControl:
         *investigate adding acceleration support
     """
     
-    M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24])
+    M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=24)
     #M1=Motor('virtual','virtual','virtual',{})
-    M2=M_28BJY48_ULN2003_RPI(stepPins=[13,6,5,12])#2 motors of same type not working currently
+    M2=M_28BJY48_ULN2003_RPI(stepPins=[13,6,5,12],maxSpeed=24)
     #Config=Config()
     timeUnit: float = 2.0#test value instead of 0.25 for issue with loop
     xVelocity: float = 0

@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 setup(
     name='motorisedcameratracking',
     packages=find_packages(),
-    version='0.1.0',
+    version='0.3.0',
     description='Used to create a tracking tripod head',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",

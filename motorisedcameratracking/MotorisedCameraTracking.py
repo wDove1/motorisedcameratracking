@@ -7,7 +7,7 @@ import time
 from measuremotorspecslib import *
 
 from .Imaging import *
-from .MotorControl import *#check for issues with names-this refairs to the local file as opposed to the library
+from .MotorControl import *
 
 
 
@@ -21,7 +21,7 @@ class MotorisedCameraTracking:
     Attributes:
         controlQueue: The queue used for controlling the other classes
     """
-    controlQueue=queue.Queue()
+    controlQueue=multiprocessing.Queue()
 
     def track(self,target):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
@@ -30,41 +30,47 @@ class MotorisedCameraTracking:
             options(dict): A dictionary of options that may be changed every time tracking is started
         """
 
-        print('z')
-        a=Imaging(target)
-        MC=MotorControl()
-        dataQueue=queue.Queue()
-        #print(__name__)
+        if self.checkTargetSupported(target):
+            a=Imaging(target)
+            MC=MotorControl()
+            dataQueue=multiprocessing.Queue()
+            #print(__name__)
 
-        if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-            p1 = threading.Thread(target=a.main,args=(dataQueue, self.controlQueue,))
-            p1.start()
-            p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
-            p2.start()
-            p1.join()
-            p2.join()
+            if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
+                p1 = multiprocessing.Process(target=a.main,args=(dataQueue, self.controlQueue,))
+                p1.start()
+                p2 = multiprocessing.Process(target=MC.main,args=(dataQueue, self.controlQueue,))
+                p2.start()
+                p1.join()
+                p2.join()
 
 
-        
-        #p1.kill()
-        #p2.kill()
-        print('exiting')
-        sys.exit()
+            
+            p1.kill()
+            p2.kill()
+            print('exiting')
+            sys.exit()
+        else:
+            raise ValueError('target not supported')
         
     def trackLimited(self,target,limit1=0,limit2=0):
-        a=Imaging(target)
-        MC=MotorControl()
-        dataQueue=queue.Queue()
-        if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-            p1 = threading.Thread(target=a.mainLimited,args=(dataQueue, self.controlQueue, limit1, limit2,))
-            p1.start()
-            p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
-            p2.start()
-            p1.join()
-            p2.join()
-        #p1.kill()
-        #p2.kill()
-        sys.exit()
+        if self.checkTargetSupported(target):
+            a=Imaging(target)
+            MC=MotorControl()
+            dataQueue=queue.Queue()
+            if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
+                p1 = threading.Thread(target=a.mainLimited,args=(dataQueue, self.controlQueue, limit1, limit2,))
+                p1.start()
+                p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
+                p2.start()
+                p1.join()
+                p2.join()
+            #p1.kill()
+            #p2.kill()
+            sys.exit()
+
+        else:
+            raise ValueError('target not supported')
 
     def followPath(self,path):
         pass
@@ -85,8 +91,22 @@ class MotorisedCameraTracking:
         y=MeasureMotorSpecs()
         y.measureInteractive()
 
-    
-    #add functions for positioning motors
+    def getSupportedTargets(self):
+        OR=ObjectRecognition(None)
+        return OR.getTargets()
+        
+
+    def checkTargetSupported(self,target):
+        """checks if the target is supported
+
+        Args:
+            target: The target to check for
+        """
+        if target in self.getSupportedTargets():
+            return True
+        else:
+            return False
+        
     
     def aim(self,distance,axis):
         """Used to aim the motors through the GUI before tracking begins
