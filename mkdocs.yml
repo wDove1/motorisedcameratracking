@@ -3,10 +3,15 @@ nav:
     - Home: index.md
     - About: about.md
     - Usage: usage.md
-    - API code: API-reference.md
-    - Image Processing code: Imaging-reference.md
-    - Motor Control code: MotorControl-reference.md
-    - Camera code: RPICam-reference.md
+    - Library Code:
+        - API code: API-reference.md
+        - Image Processing code: Imaging-reference.md
+        - Motor Control code: MotorControl-reference.md
+        - Camera code: RPICam-reference.md
+    - Application Code:
+        - simple application:
+            - Main: Main-reference.md
+            - GUI: GUI-reference.md
 
 theme:
   name: "material"

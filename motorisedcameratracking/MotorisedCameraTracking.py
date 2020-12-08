@@ -26,7 +26,7 @@ class MotorisedCameraTracking:
     def track(self,target: str):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
         Args:
-            target(str): The target to be tracked
+            target: The target to be tracked
 
         """
 
@@ -56,7 +56,7 @@ class MotorisedCameraTracking:
     def trackLimited(self, target:str, limit1:float = 0, limit2:float = 0):
         """Tracks the object until a terminate signal is sent
         Args:
-            target(str): The target to be tracked
+            target: The target to be tracked
             limit1: the first limit
             limit2: the second limit
 
