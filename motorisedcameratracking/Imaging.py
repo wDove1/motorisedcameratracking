@@ -19,23 +19,21 @@ class Imaging:
         yMid: The vertical midpoint of the image
         currentPosition: The current position of the x and y motor and the time of that position
         currentVelocity: The cuurent velocity the mnotros are runnnig at
-
-
     """
 
-    imagePath='/home/pi/Desktop/image%s.jpg'
+    imagePath: str = '/home/pi/Desktop/image%s.jpg'
     camera=RPICam(imagePath,180)
     OR=None
-    coordinates=[]
-    positions=[]#sub arrays should be of the the form [time,xdegrees,ydegrees]
-    #MC=MotorControl()
+    coordinates: list = []
+    positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
+
     target: str = None
     xMid:int = 640
     yMid: int = 360
-    currentPosition=[0,0,None]#positionx,positiony,time
-    currentVelocity=[0,0]
+    currentPosition: list = [0,0,None]#positionx,positiony,time
+    currentVelocity:list = [0,0]
     q=None
-    previousTime=time.time()
+    previousTime: float = time.time()
 
     def __init__(self,target: str):
         print('hello')
@@ -67,10 +65,10 @@ class Imaging:
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
             self.calculateVelocity()#calculates velocity
-            if not controlQueue.empty():
+            if not controlQueue.empty():#breaks when the signal is sent
                 break
 
-    def mainLimited(self,q,controlQueue,limit1,limit2):
+    def mainLimited(self, q, controlQueue, limit1: float, limit2: float):
         self.q=q
         print('x')
         while True:#allow it to loop multiple times
@@ -87,7 +85,7 @@ class Imaging:
             if not controlQueue.empty():
                 break
 
-    def recentre(position):
+    def recentre(self, position: float):
         xV=20
         timeToCentre=position/xV
         if timeToCentre<0:
@@ -137,20 +135,16 @@ class Imaging:
 
     def calculateVelocity(self):
         """calculates and transmits the velocity to the Motor control class"""
-        #if self.coordinates[-1][0]<self.xMid:
-        #    xV=-10
-        #else:
-        #    xV=10
-        #if self.coordinates[-1][1]<self.yMid:
-        #    yV=-10
-        #else:
-        #    yV=10
         xV,yV=self.determineVelocity()
         self.q.put([xV,yV])
         print('xV',xV)
         self.currentVelocity=[xV,yV]
         
     def determineVelocity(self):
+        """determines the velocity the object is moving at
+        Returns:
+            xV,yV: The velocities of the x and y motors respectively
+        """
         print(self.positions)
         print(self.positions[-1][0])
         print(self.positions[-2][0])       
@@ -161,10 +155,10 @@ class Imaging:
 ########## OR class and functions ################
 
 class ObjectRecognition:
-    target=None
+    target: str = None
     OR=None
-    targets=[]
-    def __init__(self,target):
+    targets: list = []
+    def __init__(self,target: str):
         functions=[
             ['face',self.ORFaces],
             ['person',self.ORBackUp],
@@ -251,6 +245,9 @@ class ObjectRecognition:
         """Calculates the ccordintes of the object in the image
         Args:
             img: A colour numpy array of the image
+
+        Returns:
+            coordinates: the coordinates of the object in the image
         """
         try:        
             bbox, label, conf = cv.detect_common_objects(img)
@@ -265,24 +262,33 @@ class ObjectRecognition:
         return xCo,yCo
 
     def ORFaces(self,img):
-        """for faces"""
+        """for faces
+        Args:
+            img: A colour numpy array of the image
+
+        Returns:
+            coordinates: the coordinates of the object in the image
+        """
         faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + ("haarcascade_frontalface_default.xml"))
-        # converting image from color to grayscale 
+
         imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        # Getting corners around the face
-        # 1.3 = scale factor, 5 = minimum neighbor can be detected
+
         faces = faceCascade.detectMultiScale(imgGray, 1.3, 5)  
         xCo=faces[0][0]+(faces[0][2]/2)
         yCo=faces[0][1]+(faces[0][3]/2)
         return xCo,yCo
 
     def ORCatFace(self,img):
-        """for cat faces"""
+        """for cat faces
+        Args:
+            img: A colour numpy array of the image
+
+        Returns:
+            coordinates: the coordinates of the object in the image
+        """
         catCascade = cv2.CascadeClassifier(cv2.data.haarcascades + ("haarcascade_frontalcatface_extended.xml"))
-        # converting image from color to grayscale 
         imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-        # Getting corners around the face
-        # 1.3 = scale factor, 5 = minimum neighbor can be detected
+
         faces = catCascade.detectMultiScale(imgGray, 1.3, 5)  
         xCo=faces[0][0]+(faces[0][2]/2)
         yCo=faces[0][1]+(faces[0][3]/2)
@@ -291,8 +297,15 @@ class ObjectRecognition:
         
 
     def getCoordinates(self,img):
-        """returns the ccordnates of the object in the image"""
+        """returns the ccordnates of the object in the image
+        Returns:
+            coordinates: the coordinates of the object in the image
+        """
         return self.OR(img)
 
-    def getTargets(self):
+    def getTargets(self) -> list:
+        """returns a list of the targets
+        Returns:
+            targest: the posible targets
+        """
         return self.targets

@@ -60,8 +60,7 @@ class MotorControl:
                 print('x=',x)
                 self.xVelocity=x[0]
                 time.sleep(self.timeUnit)
-            #else:
-                #print('empty')
+
             if not controlQueue.empty():
                 break
                 
@@ -72,9 +71,7 @@ class MotorControl:
             controlQueue: Used for shutting down the program
         """
         while True:
-            #print(self.xVelocity)
             if self.xVelocity !=0:
-                print('running')#keeps printimng while motor is meant to be running
                 self.M1.runVelocityT(self.xVelocity,self.timeUnit)
             if not controlQueue.empty():
                 break
@@ -86,7 +83,6 @@ class MotorControl:
         """
 
         while True:
-            
             if self.yVelocity !=0:
                 self.M2.runVelocityT(self.yVelocity,self.timeUnit)
             if not controlQueue.empty():

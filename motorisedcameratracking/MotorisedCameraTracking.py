@@ -23,11 +23,11 @@ class MotorisedCameraTracking:
     """
     controlQueue=multiprocessing.Queue()
 
-    def track(self,target):#the queue is used for sending a termination signal
+    def track(self,target: str):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
         Args:
             target(str): The target to be tracked
-            options(dict): A dictionary of options that may be changed every time tracking is started
+
         """
 
         if self.checkTargetSupported(target):
@@ -53,7 +53,14 @@ class MotorisedCameraTracking:
         else:
             raise ValueError('target not supported')
         
-    def trackLimited(self,target,limit1=0,limit2=0):
+    def trackLimited(self, target:str, limit1:float = 0, limit2:float = 0):
+        """Tracks the object until a terminate signal is sent
+        Args:
+            target(str): The target to be tracked
+            limit1: the first limit
+            limit2: the second limit
+
+        """
         if self.checkTargetSupported(target):
             a=Imaging(target)
             MC=MotorControl()
@@ -92,6 +99,7 @@ class MotorisedCameraTracking:
         y.measureInteractive()
 
     def getSupportedTargets(self):
+        """returns a list of the supported targets"""
         OR=ObjectRecognition(None)
         return OR.getTargets()
         
@@ -108,7 +116,7 @@ class MotorisedCameraTracking:
             return False
         
     
-    def aim(self,distance,axis):
+    def aim(self, distance: float, axis: str):
         """Used to aim the motors through the GUI before tracking begins
         Args:
             distance: The distance to move

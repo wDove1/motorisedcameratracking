@@ -24,7 +24,7 @@ class RPICam:
                 self.imagePath=imagePath
                 self.orientation=orientation
 
-        def getImage(self,resolution=[1280,720]):
+        def getImage(self,resolution: list = [1280,720]):
                 """Gets the image from the camera
                 Args:
                     resolution:The resolution the camera will run at
