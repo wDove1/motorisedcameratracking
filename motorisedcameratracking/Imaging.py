@@ -17,7 +17,7 @@ class Imaging:
         target: what the user wants to track
         xMid: The horizontal midpoint of the image
         yMid: The vertical midpoint of the image
-        currentPosition: The current position of the x motor and the time of that position
+        currentPosition: The current position of the x and y motor and the time of that position
         currentVelocity: The cuurent velocity the mnotros are runnnig at
 
 
@@ -32,7 +32,7 @@ class Imaging:
     target: str = None
     xMid:int = 640
     yMid: int = 360
-    currentPosition=[0,time.time()]#position,time-position of x motor
+    currentPosition=[0,0,time.time()]#positionx,positiony,time
     currentVelocity=[0,0]
     q=None
     previousTime=time.time()
@@ -55,10 +55,10 @@ class Imaging:
         print('x')
         while True:#allow it to loop multiple times
             x=self.camera.capture()
-            previousTime=self.currentPosition[1]#saves the time of the previous movement
+            previousTime=self.currentPosition[-1]#saves the time of the previous movement
             self.getCurrentPosition()
             self.currentPosition[1]=time.time()#assigns the current time
-            self.positions.append([self.currentPosition[1],None,None])#adds the current time to the list of positions
+            self.positions.append([self.currentPosition[-1],None,None])#adds the current time to the list of positions
             print('b')
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
@@ -71,7 +71,7 @@ class Imaging:
         print('x')
         while True:#allow it to loop multiple times
             x=self.camera.capture()
-            previousTime=self.currentPosition[1]#saves the time of the previous movement
+            previousTime=self.currentPosition[-1]#saves the time of the previous movement
             self.getCurrentPosition()
             self.currentPosition[1]=time.time()#assigns the current time
             self.positions.append([self.currentPosition[1],None,None])#adds the current time to the list of positions
@@ -94,14 +94,16 @@ class Imaging:
 
     def getCurrentPosition(self):
         """calculates current position of motors"""
-        print(self.currentVelocity[0])
-        print(self.currentPosition[1]-self.previousTime)
-        self.currentPosition[0]=self.currentPosition[0]+(self.currentVelocity[0]*(self.currentPosition[1]-self.previousTime))
+        #print(self.currentVelocity[0])
+        #print(self.currentPosition[1]-self.previousTime)
+        self.currentPosition[0]=self.currentPosition[0]+(self.currentVelocity[0]*(self.currentPosition[-1]-self.previousTime))
+        self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[1]*(self.currentPosition[-1]-self.previousTime))
         
 
     def calculatePosition(self):
         """calculates the current relative position of the object"""
         self.positions[-1][1]=self.currentPosition[0]+(self.calculateAngleImage(self.coordinates[-1][0],[1920,1080],'x'))
+        self.positions[-1][2]=self.currentPosition[1]+(self.calculateAngleImage(self.ccordinates[-1][1],[1920,1080],'y'))
         
     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:
         """calculates the angle of the object within the image
@@ -116,6 +118,9 @@ class Imaging:
             anglePerPixel=0.0191
             print((coordinates-self.xMid)*anglePerPixel)
             return (coordinates-self.xMid)*anglePerPixel
+        if XorY=='y':
+            anglePerPixel=0.0198
+            return (coordinates-self.yMid)*angleperPixel
 
     def calculateCoordinates(self,img):
         """Calculates the ccordintes of the object in the image
@@ -143,7 +148,7 @@ class Imaging:
     def determinevelocity(self):
         return (self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
 
-########## OR functions
+########## OR class and functions ################
 
 class ObjectRecognition:
     target=None
@@ -168,6 +173,7 @@ class ObjectRecognition:
             ['bench',self.ORBackUp],
             ['bird',self.ORBackUp],
             ['cat',self.ORBackUp],
+            ['cat face',self.ORCatFace],
             ['dog',self.ORBackUp],
             ['horse',self.ORBackUp],
             ['sheep',self.ORBackUp],
@@ -221,7 +227,7 @@ class ObjectRecognition:
             ['scissors',self.ORBackUp],
             ['teddy bear',self.ORBackUp],
             ['hair drier',self.ORBackUp],
-             ['toothbrush',self.ORBackUp],
+            ['toothbrush',self.ORBackUp],
             ]
         self.target=target
         for i in functions:
@@ -257,6 +263,20 @@ class ObjectRecognition:
         xCo=faces[0][0]+(faces[0][2]/2)
         yCo=faces[0][1]+(faces[0][3]/2)
         return xCo,yCo
+
+    def ORCatFace(self,img):
+        """for cat faces"""
+        catCascade = cv2.CascadeClassifier(cv2.data.haarcascades + ("haarcascade_frontalcatface_extended.xml"))
+        # converting image from color to grayscale 
+        imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        # Getting corners around the face
+        # 1.3 = scale factor, 5 = minimum neighbor can be detected
+        faces = catCascade.detectMultiScale(imgGray, 1.3, 5)  
+        xCo=faces[0][0]+(faces[0][2]/2)
+        yCo=faces[0][1]+(faces[0][3]/2)
+        return xCo,yCo
+        
+        
 
     def getCoordinates(self,img):
         """returns the ccordnates of the object in the image"""
