@@ -21,16 +21,21 @@ class MotorControl:
         *investigate adding acceleration support
     """
     
-    M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=24)
-    #M1=Motor('virtual','virtual','virtual',{})
-    M2=M_28BJY48_ULN2003_RPI(stepPins=[13,6,5,12],maxSpeed=24)
+    M1=None
+    M2=None
     #Config=Config()
-    timeUnit: float = 2.0#test value instead of 0.25 for issue with loop
+    timeUnit: float = 0.25#test value instead of 0.25 for issue with loop
     xVelocity: float = 0
     yVelocity: float = 0
     xAcceleration: float = 0
     yAcceleration: float = 0
     q=None
+
+    def __init__(self, motorOne: dict, motorTwo: dict):
+        if motorOne['name']=="28BJY48_ULN2003_RPI":
+            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorOne['maxSpeed'])
+        if motorTwo['name']=="28BJY48_ULN2003_RPI":
+            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorTwo['maxSpeed'])
     
     def incrementer(self,controlQueue):
         """updates the velocity with the accelerations

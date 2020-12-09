@@ -4,7 +4,7 @@ import cvlib as cv
 import time
 from cvlib.object_detection import draw_bbox
 
-from .RPICam import *
+from .Cameras import *
 from .MotorControl import *
 
 class Imaging:
@@ -22,7 +22,7 @@ class Imaging:
     """
 
     imagePath: str = '/home/pi/Desktop/image%s.jpg'
-    camera=RPICam(imagePath,180)
+    camera=
     OR=None
     coordinates: list = []
     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
@@ -35,7 +35,9 @@ class Imaging:
     q=None
     previousTime: float = time.time()
 
-    def __init__(self,target: str):
+    def __init__(self,target: str,camera: dict = {'name': 'RPICam'}):
+        if camera['name']=='RPICam':
+            self.camera=RPICam(self.imagePath,180)
         print('hello')
         self.target=target
         self.OR=ObjectRecognition(target)

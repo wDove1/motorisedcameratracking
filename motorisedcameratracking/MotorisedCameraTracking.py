@@ -13,7 +13,6 @@ from .MotorControl import *
 
 
 class MotorisedCameraTracking:
-
     """The API for the Camera Tracking Library
 
     This class contains all the methods required to operate a motorised tracking camera
@@ -22,6 +21,16 @@ class MotorisedCameraTracking:
         controlQueue: The queue used for controlling the other classes
     """
     controlQueue=multiprocessing.Queue()
+    camera: dict = None
+    motorOne: dict = None
+    motorTwo: dict = None
+    computer: dict = None
+    
+
+    def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, computer: dict = None):
+        
+
+    
 
     def track(self,target: str):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
@@ -32,7 +41,7 @@ class MotorisedCameraTracking:
 
         if self.checkTargetSupported(target):
             a=Imaging(target)
-            MC=MotorControl()
+            MC=MotorControl(motorOne=self.motorOne, motorTwo=self.motorTwo)
             dataQueue=multiprocessing.Queue()
             #print(__name__)
 
@@ -53,7 +62,7 @@ class MotorisedCameraTracking:
         else:
             raise ValueError('target not supported')
         
-    def trackLimited(self, target:str, limit1:float = 0, limit2:float = 0):
+    def trackLimited(self, target: str, limit1: float = 0, limit2: float = 0):
         """Tracks the object until a terminate signal is sent
         Args:
             target: The target to be tracked

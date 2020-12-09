@@ -77,3 +77,9 @@ class RPICam:
         def getModelDetails(self):
                 return self.modelDetails
 
+class captureFromCamera:
+        camera=cv2.VideoCapture(1)
+        def capture(self):
+                x,frame = camera.read()
+                return frame
+
