@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import cvlib as cv
 import time
 from cvlib.object_detection import draw_bbox
-
+from numba import jit
 from .Cameras import *
 from .MotorControl import *
 
@@ -22,7 +22,7 @@ class Imaging:
     """
 
     imagePath: str = '/home/pi/Desktop/image%s.jpg'
-    camera=
+    camera=None
     OR=None
     coordinates: list = []
     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
@@ -43,7 +43,7 @@ class Imaging:
         self.OR=ObjectRecognition(target)
 
 
-
+    @jit(nopython=True)
     def main(self,q,controlQueue):
         """The main loop for processing images
         Args:
@@ -54,16 +54,12 @@ class Imaging:
         #yV=0
         self.currentPosition[-1]=time.time()
         self.positions.append([self.currentPosition[-1],0,0])
-        print(self.currentPosition)
-        print('x')
         while True:#allow it to loop multiple times
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]#saves the time of the previous movement
             self.getCurrentPosition()
             self.currentPosition[-1]=time.time()#assigns the current time
             self.positions.append([self.currentPosition[-1],None,None])#adds the current time to the list of positions
-            print(self.currentPosition)
-            print('b')
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
             self.calculateVelocity()#calculates velocity
@@ -72,7 +68,6 @@ class Imaging:
 
     def mainLimited(self, q, controlQueue, limit1: float, limit2: float):
         self.q=q
-        print('x')
         while True:#allow it to loop multiple times
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]#saves the time of the previous movement
@@ -98,8 +93,6 @@ class Imaging:
 
     def getCurrentPosition(self):
         """calculates current position of motors"""
-        #print(self.currentVelocity[0])
-        #print(self.currentPosition[1]-self.previousTime)
         self.currentPosition[0]=self.currentPosition[0]+(self.currentVelocity[0]*(self.currentPosition[-1]-self.previousTime))
         self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[1]*(self.currentPosition[-1]-self.previousTime))
         
@@ -120,7 +113,6 @@ class Imaging:
         """
         if XorY=='x':
             anglePerPixel=0.0191
-            #print((coordinates-self.xMid)*anglePerPixel)
             return (coordinates-self.xMid)*anglePerPixel
         if XorY=='y':
             anglePerPixel=0.0198

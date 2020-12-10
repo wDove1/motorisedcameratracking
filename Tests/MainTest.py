@@ -1,6 +1,7 @@
 from motorisedcameratracking import *
 from GUI import *
 import threading
+import queue
 
 x=MotorisedCameraTracking()
 q=queue.Queue()

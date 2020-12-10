@@ -4,7 +4,6 @@ import queue
 import sys
 import time
 
-from measuremotorspecslib import *
 
 from .Imaging import *
 from .MotorControl import *
@@ -28,6 +27,10 @@ class MotorisedCameraTracking:
     
 
     def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, computer: dict = None):
+        self.camera=camera
+        self.motorOne=motorOne
+        self.motorTwo=motorTwo
+        self.computer=computer
         
 
     
@@ -43,7 +46,6 @@ class MotorisedCameraTracking:
             a=Imaging(target)
             MC=MotorControl(motorOne=self.motorOne, motorTwo=self.motorTwo)
             dataQueue=multiprocessing.Queue()
-            #print(__name__)
 
             if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
                 p1 = multiprocessing.Process(target=a.main,args=(dataQueue, self.controlQueue,))
@@ -53,12 +55,11 @@ class MotorisedCameraTracking:
                 p1.join()
                 p2.join()
 
-
-            
             p1.kill()
             p2.kill()
             print('exiting')
             sys.exit()
+            
         else:
             raise ValueError('target not supported')
         
@@ -104,8 +105,23 @@ class MotorisedCameraTracking:
 
 
     def calibrateInteractive(self):
-        y=MeasureMotorSpecs()
-        y.measureInteractive()
+        print('welcome to the calibration tool')
+        waitTime=float(input('please enter the first wait time. The default is: ','0.016'))
+        while True:
+            speed1,speed2=MC.measureMotorSpecsOne(distance,waitTime)
+            worked=input('please enter (Y/n) for whether it worked')
+            if worked='n':
+                break
+            waitTime-=0.001
+        waitTime+=1
+        print('the changes are being set')
+        self.motorOne['maxSpeed']=speed1
+        self.motorOne['minWaitTime']=waitTime
+        self.motorTwo['maxSpeed']=speed2
+        self.motorTwo['minWaitTime']=waitTime
+        
+        
+        
 
     def getSupportedTargets(self):
         """returns a list of the supported targets"""

@@ -2,6 +2,8 @@
 import _thread
 import threading
 import time
+import queue
+from numba import *
 from motorcontrollib import M_28BJY48_ULN2003_RPI
 from typing import *
 from .Config import *
@@ -64,6 +66,7 @@ class MotorControl:
                 x=self.q.get()
                 print('x=',x)
                 self.xVelocity=x[0]
+                self.yVelocity=x[1]
                 time.sleep(self.timeUnit)
 
             if not controlQueue.empty():
@@ -136,5 +139,35 @@ class MotorControl:
             M1.runDispalcement(distance)
         elif axis == "y":
             M2.runDispalcement(distance)
+
+    def xMotorTest(self,distance,returnQueue):
+        t1=time.time()
+        self.M1.runDisplacement(distance)
+        t2=time.time()
+        returnQueue.put(t2-t1)
+    
+    def yMotorTest(self,distance,returnQueue):
+        t1=time.time()
+        self.M2.runDisplacement(distance)
+        t2=time.time()
+        returnQueue.put(t2-t1)
+    
+    def measureMotorSpeedOne(self,distance):
+        """for measuring the motor speed with 2 default motors"""
+        controlQueue=queue.Queue()
+        returnQueue1=queue.Queue()
+        returnQueue2=queue.Queue()
+        t1=threading.Thread(target=self.updater,args=(controlQueue,))
+        t2=threading.Thread(target=self.xMotorTest,args=(distance,returnQueue1,))
+        t3=threading.Thread(target=self.yMotorTest,args=(distance,returnQueue2,))
+        t1.start()
+        t2.start()
+        t3.start()
+        while returnQueue1.empty() and returnQueue2.empty():
+            pass
+        speed1=distance/returnQueue1.get()
+        speed2=distance/returnQueue2.get()
+        return speed1,speed2
+        
 
         
