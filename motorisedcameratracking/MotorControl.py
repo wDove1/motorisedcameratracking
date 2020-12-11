@@ -19,7 +19,7 @@ class MotorControl:
         yAcceleration: Currently unused
         q: The queue used for transmitting velocity information
     Todo:
-        *rename q to dataQueue
+        
         *investigate adding acceleration support
     """
     
@@ -31,13 +31,13 @@ class MotorControl:
     yVelocity: float = 0
     xAcceleration: float = 0
     yAcceleration: float = 0
-    q=None
+    dataQueue=None
 
     def __init__(self, motorOne: dict, motorTwo: dict):
         if motorOne['name']=="28BJY48_ULN2003_RPI":
-            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorOne['maxSpeed'])
+            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorOne['maxSpeed'],minWaitTime=motorOne['minwaitTime'])
         if motorTwo['name']=="28BJY48_ULN2003_RPI":
-            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorTwo['maxSpeed'])
+            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorTwo['maxSpeed'],minWaitTime=motorOne['minwaitTime'])
     
     def incrementer(self,controlQueue):
         """updates the velocity with the accelerations
@@ -62,8 +62,8 @@ class MotorControl:
         while True:
             
 
-            if not self.q.empty():
-                x=self.q.get()
+            if not self.dataQueue.empty():
+                x=self.dataQueue.get()
                 print('x=',x)
                 self.xVelocity=x[0]
                 self.yVelocity=x[1]
@@ -103,7 +103,7 @@ class MotorControl:
             controlQueue: Used for shutting down the program
         """
         print('y')
-        self.q=q
+        self.dataQueue=q
         #_thread.start_new_thread(self.incrementer,())
         print('d')
         t1=threading.Thread(target=self.updater,args=(controlQueue,))

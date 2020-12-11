@@ -3,7 +3,7 @@ import threading
 import queue
 import sys
 import time
-
+import warnings
 
 from .Imaging import *
 from .MotorControl import *
@@ -27,6 +27,7 @@ class MotorisedCameraTracking:
     
 
     def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, computer: dict = None):
+        warnings.warn('the library only supports a limited range of hardware currently')
         self.camera=camera
         self.motorOne=motorOne
         self.motorTwo=motorTwo
@@ -105,12 +106,13 @@ class MotorisedCameraTracking:
 
 
     def calibrateInteractive(self):
+        """An interactive calibration tool"""
         print('welcome to the calibration tool')
         waitTime=float(input('please enter the first wait time. The default is: ','0.016'))
         while True:
             speed1,speed2=MC.measureMotorSpecsOne(distance,waitTime)
             worked=input('please enter (Y/n) for whether it worked')
-            if worked='n':
+            if worked=='n':
                 break
             waitTime-=0.001
         waitTime+=1
@@ -119,6 +121,7 @@ class MotorisedCameraTracking:
         self.motorOne['minWaitTime']=waitTime
         self.motorTwo['maxSpeed']=speed2
         self.motorTwo['minWaitTime']=waitTime
+        
         
         
         
