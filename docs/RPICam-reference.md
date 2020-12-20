@@ -1,2 +1,2 @@
-# RPICam code
-:::motorisedcameratracking.RPICam
+# Camera code
+:::motorisedcameratracking.Cameras

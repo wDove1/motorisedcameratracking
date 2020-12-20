@@ -20,18 +20,24 @@ class MotorisedCameraTracking:
         controlQueue: The queue used for controlling the other classes
     """
     controlQueue=multiprocessing.Queue()
+    dataQueue=multiprocessing.Queue()
     camera: dict = None
     motorOne: dict = None
     motorTwo: dict = None
     computer: dict = None
+
+    MC=None
+    Im=None
     
 
-    def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24}, computer: dict = None):
+    def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, computer: dict = None):
         warnings.warn('the library only supports a limited range of hardware currently')
         self.camera=camera
         self.motorOne=motorOne
         self.motorTwo=motorTwo
         self.computer=computer
+        self.MC = MotorControl(motorOne=self.motorOne, motorTwo=self.motorTwo)
+        #self.Im = 
         
 
     
@@ -44,14 +50,16 @@ class MotorisedCameraTracking:
         """
 
         if self.checkTargetSupported(target):
-            a=Imaging(target)
-            MC=MotorControl(motorOne=self.motorOne, motorTwo=self.motorTwo)
-            dataQueue=multiprocessing.Queue()
+            #dataQueue=multiprocessing.Queue()
+            a=Imaging(self.dataQueue,self.controlQueue,target)
+
+            
 
             if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-                p1 = multiprocessing.Process(target=a.main,args=(dataQueue, self.controlQueue,))
+                warnings.warn('tracking starting')
+                p1 = multiprocessing.Process(target=a.main,args=())
                 p1.start()
-                p2 = multiprocessing.Process(target=MC.main,args=(dataQueue, self.controlQueue,))
+                p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueue,))
                 p2.start()
                 p1.join()
                 p2.join()
@@ -91,7 +99,9 @@ class MotorisedCameraTracking:
             raise ValueError('target not supported')
 
     def followPath(self,path):
+        """A function to track along a path"""
         pass
+            
 
 
 
@@ -101,29 +111,43 @@ class MotorisedCameraTracking:
         Puts signal "1" on the control Queue
         """
         self.controlQueue.put(1)
+        warnings.warn('terminating')
         #code 1 is for termination
         #other codes may be added for other purposes
 
 
     def calibrateInteractive(self):
         """An interactive calibration tool"""
+
         print('welcome to the calibration tool')
-        waitTime=float(input('please enter the first wait time. The default is: ','0.016'))
+        waitTime=float(input('please enter the first wait time. The default is: '+'0.0016'+': '))
+        distance=float(input('please enter the distance, higher is better: '))
+        increment=float(input('please enter the wait time increment. The recommended is 0.0001:  '))
         while True:
-            speed1,speed2=MC.measureMotorSpecsOne(distance,waitTime)
+            self.MC.setWaitTime(waitTime)
+
+
+            speed1=self.MC.measureMotorSpecsOne(distance)
+            print('x motor speed is: ',speed1)
+            #print('y motor speed is: ',speed2)
             worked=input('please enter (Y/n) for whether it worked')
             if worked=='n':
                 break
-            waitTime-=0.001
-        waitTime+=1
+            waitTime-=increment
+        waitTime+=increment
         print('the changes are being set')
-        self.motorOne['maxSpeed']=speed1
-        self.motorOne['minWaitTime']=waitTime
-        self.motorTwo['maxSpeed']=speed2
-        self.motorTwo['minWaitTime']=waitTime
+        self.MC.setMaxSpeed(speed1)
+        self.MC.setWaitTime(waitTime)
         
-        
-        
+
+    def calibrateZero(self,waitTime,distance):
+        self.MC.setWaitTime(waitTime)
+        speed1,speed2=self.MC.measureMotorSpecsOne(distance)
+        return speed1,speed2
+
+    def setSpecsZero(self,waitTime,speed1,speed2):
+        self.MC.setWaitTime(waitTime)
+        self.MC.setMaxSpeed(speed1)        
         
 
     def getSupportedTargets(self):
@@ -151,5 +175,7 @@ class MotorisedCameraTracking:
             axis: the axis to move on
         """
         MC.runDisplacement(distance,axis)
+
+
 
 

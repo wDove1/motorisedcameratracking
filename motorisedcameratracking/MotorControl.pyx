@@ -1,9 +1,7 @@
 #modified for compatability with new motor1 class
-import _thread
 import threading
 import time
 import queue
-from numba import *
 from motorcontrollib import M_28BJY48_ULN2003_RPI
 from typing import *
 from .Config import *
@@ -26,7 +24,7 @@ class MotorControl:
     M1=None
     M2=None
     #Config=Config()
-    timeUnit: float = 0.25#test value instead of 0.25 for issue with loop
+    timeUnit: float = 0.5#test value instead of 0.25 for issue with loop
     xVelocity: float = 0
     yVelocity: float = 0
     xAcceleration: float = 0
@@ -35,9 +33,9 @@ class MotorControl:
 
     def __init__(self, motorOne: dict, motorTwo: dict):
         if motorOne['name']=="28BJY48_ULN2003_RPI":
-            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorOne['maxSpeed'],minWaitTime=motorOne['minwaitTime'])
+            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorOne['maxSpeed'],minWaitTime=motorOne['minWaitTime'])
         if motorTwo['name']=="28BJY48_ULN2003_RPI":
-            self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorTwo['maxSpeed'],minWaitTime=motorOne['minwaitTime'])
+            self.M2=M_28BJY48_ULN2003_RPI(stepPins=[13,6,5,12],maxSpeed=motorTwo['maxSpeed'],minWaitTime=motorTwo['minWaitTime'])
     
     def incrementer(self,controlQueue):
         """updates the velocity with the accelerations
@@ -58,19 +56,42 @@ class MotorControl:
         Args:
             controlQueue: Used for shutting down the program
         """
-        print('c')
+
         while True:
             
 
             if not self.dataQueue.empty():
+
                 x=self.dataQueue.get()
-                print('x=',x)
-                self.xVelocity=x[0]
-                self.yVelocity=x[1]
-                time.sleep(self.timeUnit)
+                if self.dataQueue.empty():
+
+                    self.xVelocity=x[0]
+                    self.yVelocity=x[1]
+                    t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+                    t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+        
+                    t2.start()
+                    t3.start()
+                    t2.join()
+                    t3.join()
+
+                else:
+                    while not self.dataQueue.empty():
+                        x=self.dataQueue.get()
+                        self.xVelocity=x[0]
+                        self.yVelocity=x[1]
+                    t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+                    t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+        
+                    t2.start()
+                    t3.start()
+                    t2.join()
+                    t3.join()
+                
 
             if not controlQueue.empty():
                 break
+
                 
 
     def xMotor(self,controlQueue):
@@ -102,17 +123,16 @@ class MotorControl:
             q:The queue for transmitting velocity data
             controlQueue: Used for shutting down the program
         """
-        print('y')
+
         self.dataQueue=q
-        #_thread.start_new_thread(self.incrementer,())
-        print('d')
+
         t1=threading.Thread(target=self.updater,args=(controlQueue,))
-        t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-        t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+        #t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+        #t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
         t1.start()
-        t2.start()
-        t3.start()
-        #t4.start()
+        #t2.start()
+        #t3.start()
+
 
     def xAdjustL(self):
         self.M1.runDisplacement(-5)
@@ -140,34 +160,68 @@ class MotorControl:
         elif axis == "y":
             M2.runDispalcement(distance)
 
-    def xMotorTest(self,distance,returnQueue):
-        t1=time.time()
+    def xMotorTest(self,distance):#,returnQueue):
+        #t1=time.time()
         self.M1.runDisplacement(distance)
-        t2=time.time()
-        returnQueue.put(t2-t1)
+        #t2=time.time()
+        #returnQueue.put(t2-t1)
     
-    def yMotorTest(self,distance,returnQueue):
-        t1=time.time()
+    def yMotorTest(self,distance):#,returnQueue):
+        #t1=time.time()
         self.M2.runDisplacement(distance)
-        t2=time.time()
-        returnQueue.put(t2-t1)
-    
-    def measureMotorSpeedOne(self,distance):
-        """for measuring the motor speed with 2 default motors"""
-        controlQueue=queue.Queue()
-        returnQueue1=queue.Queue()
-        returnQueue2=queue.Queue()
-        t1=threading.Thread(target=self.updater,args=(controlQueue,))
-        t2=threading.Thread(target=self.xMotorTest,args=(distance,returnQueue1,))
-        t3=threading.Thread(target=self.yMotorTest,args=(distance,returnQueue2,))
-        t1.start()
+        #t2=time.time()
+        #returnQueue.put(t2-t1)
+
+    def updaterTest(self,distance,returnQueue1):
+        #print('x')
+        tA=time.time()
+        #x=self.dataQueue.get()
+        #if self.dataQueue.empty():
+
+        #self.xVelocity=x[0]
+        #self.yVelocity=x[1]
+        t2=threading.Thread(target=self.xMotorTest,args=(distance,))
+        t3=threading.Thread(target=self.yMotorTest,args=(distance,))
+        
         t2.start()
         t3.start()
-        while returnQueue1.empty() and returnQueue2.empty():
+        t2.join()
+        t3.join()
+
+        tB=time.time()
+        #print('x')
+        returnQueue1.put(tB-tA)
+
+                
+
+                
+    
+    def measureMotorSpecsOne(self,distance):
+        """for measuring the motor speed with 2 default motors"""
+        #self.dataQueue=queue.Queue()
+        #controlQueue=queue.Queue()
+        returnQueue1=queue.Queue()
+        #returnQueue2=queue.Queue()
+        
+        t1=threading.Thread(target=self.updaterTest,args=(distance,returnQueue1,))
+        #t2=threading.Thread(target=self.xMotorTest,args=(distance,returnQueue1,))
+        #t3=threading.Thread(target=self.yMotorTest,args=(distance,returnQueue2,))
+        t1.start()
+        #t2.start()
+        #t3.start()
+        while returnQueue1.empty():# and returnQueue2.empty():
             pass
+
+
         speed1=distance/returnQueue1.get()
-        speed2=distance/returnQueue2.get()
-        return speed1,speed2
+        #speed2=distance/returnQueue2.get()
+        return speed1#,speed2
         
 
-        
+    def setWaitTime(self, waitTime):
+        self.M1.setMinWaitTime(waitTime)
+        self.M2.setMinWaitTime(waitTime)
+
+    def setMaxSpeed(self,maxSpeed):
+        self.M1.setMaxSpeed(maxSpeed)
+        self.M2.setMaxSpeed(maxSpeed)

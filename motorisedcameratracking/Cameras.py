@@ -79,6 +79,11 @@ class RPICam:
 
 class captureFromCamera:
         camera=cv2.VideoCapture(1)
+
+        def __init__(self):
+            pass
+
+
         def capture(self):
                 x,frame = camera.read()
                 return frame

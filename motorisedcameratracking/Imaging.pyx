@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import cvlib as cv
 import time
 from cvlib.object_detection import draw_bbox
-from numba import jit
+
 from .Cameras import *
 from .MotorControl import *
 
@@ -28,30 +28,29 @@ class Imaging:
     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
 
     target: str = None
-    xMid:int = 640
+    xMid: int = 640
     yMid: int = 360
     currentPosition: list = [0,0,None]#positionx,positiony,time
-    currentVelocity:list = [0,0]
+    currentVelocity: list = [0,0]
     q=None
     previousTime: float = time.time()
 
-    def __init__(self,target: str,camera: dict = {'name': 'RPICam'}):
+    def __init__(self, q, controlQueue, target: str, camera: dict = {'name': 'RPICam'}):
         if camera['name']=='RPICam':
             self.camera=RPICam(self.imagePath,180)
         print('hello')
         self.target=target
         self.OR=ObjectRecognition(target)
+        self.q=q
+        self.controlQueue=controlQueue
 
 
-    @jit(nopython=True)
-    def main(self,q,controlQueue):
+    def main(self):
         """The main loop for processing images
         Args:
             q: The queue for transmitting velocity data
             controlQueue: the queue used for shutting down operation
         """
-        self.q=q
-        #yV=0
         self.currentPosition[-1]=time.time()
         self.positions.append([self.currentPosition[-1],0,0])
         while True:#allow it to loop multiple times
@@ -63,7 +62,7 @@ class Imaging:
             self.calculateCoordinates(x)#calculates the coordinates of the object in the image
             self.calculatePosition()#adds current angles of target to list
             self.calculateVelocity()#calculates velocity
-            if not controlQueue.empty():#breaks when the signal is sent
+            if not self.controlQueue.empty():#breaks when the signal is sent
                 break
 
     def mainLimited(self, q, controlQueue, limit1: float, limit2: float):
@@ -79,8 +78,18 @@ class Imaging:
             self.calculateVelocity()#calculates velocity
             if self.positions[-1][1]<=limit1 or self.positions[-1][1]>=limit2 :
                 self.recentre(self.positions[-1][1])
-            if not controlQueue.empty():
+            if not self.controlQueue.empty():
                 break
+
+    def reset(self):
+        coordinates = []
+        positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
+
+
+        currentPosition = [0,0,None]#positionx,positiony,time
+        currentVelocity = [0,0]
+
+        previousTime = time.time()
 
     def recentre(self, position: float):
         xV=20
@@ -124,14 +133,19 @@ class Imaging:
             img: A colour numpy array of the image
         """
         xCo,yCo=self.OR.getCoordinates(img)
-        self.coordinates.append([xCo,yCo])
-        print(self.coordinates[-1])
+        if xCo != None:
+            self.coordinates.append([xCo,yCo])
+        elif xCo == None:
+            self.search()
+        #print(self.coordinates[-1])
 
     def calculateVelocity(self):
         """calculates and transmits the velocity to the Motor control class"""
         xV,yV=self.determineVelocity()
+
+
         self.q.put([xV,yV])
-        print('xV',xV)
+
         self.currentVelocity=[xV,yV]
         
     def determineVelocity(self):
@@ -139,12 +153,24 @@ class Imaging:
         Returns:
             xV,yV: The velocities of the x and y motors respectively
         """
-        print(self.positions)
-        print(self.positions[-1][0])
-        print(self.positions[-2][0])       
+      
         xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
         yV=(self.positions[-1][2]-self.positions[-2][2])/(self.positions[-1][0]-self.positions[-2][0])
         return xV,yV
+
+    def search(self):
+        self.q.put([-10,0])#pick a better search pattern
+        while True:
+            img=self.camera.capture()
+            xCo,yCo=self.OR.getCoordinates(img)
+            if xCo != None:
+                #reset the first steps of main
+                self.reset()
+                self.main()
+                #restart tracking
+
+
+
 
 ########## OR class and functions ################
 
@@ -251,8 +277,8 @@ class ObjectRecognition:
             xCo=(x[0]+x[2])/2
             yCo=(x[1]+x[3])/2
         except:
-            xCo=0
-            yCo=0
+            xCo=None
+            yCo=None
         return xCo,yCo
 
     def ORFaces(self,img):
