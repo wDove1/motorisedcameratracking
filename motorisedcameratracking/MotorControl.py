@@ -58,35 +58,24 @@ class MotorControl:
         """
 
         while True:
+            empty=self.dataQueue.empty()
+            print(empty)
             
-
-            if not self.dataQueue.empty():
-
+            if not empty:
                 x=self.dataQueue.get()
-                if self.dataQueue.empty():
+                self.xVelocity=x[0]
+                self.yVelocity=x[1]
+            print(self.xVelocity)
 
-                    self.xVelocity=x[0]
-                    self.yVelocity=x[1]
-                    t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-                    t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
-        
-                    t2.start()
-                    t3.start()
-                    t2.join()
-                    t3.join()
 
-                else:
-                    while not self.dataQueue.empty():
-                        x=self.dataQueue.get()
-                        self.xVelocity=x[0]
-                        self.yVelocity=x[1]
-                    t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-                    t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
-        
-                    t2.start()
-                    t3.start()
-                    t2.join()
-                    t3.join()
+
+            t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+            t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+
+            t2.start()
+            t3.start()
+            t2.join()
+            t3.join()
                 
 
             if not controlQueue.empty():
@@ -99,11 +88,11 @@ class MotorControl:
         Args:
             controlQueue: Used for shutting down the program
         """
-        while True:
-            if self.xVelocity !=0:
-                self.M1.runVelocityT(self.xVelocity,self.timeUnit)
-            if not controlQueue.empty():
-                break
+        #while True:
+        if self.xVelocity !=0:
+            self.M1.runVelocityT(self.xVelocity,self.timeUnit)
+            #if not controlQueue.empty():
+            #    break
 
     def yMotor(self,controlQueue):
         """The method to control the motor that moves on the y axis
@@ -111,11 +100,11 @@ class MotorControl:
             controlQueue: Used for shutting down the program
         """
 
-        while True:
-            if self.yVelocity !=0:
-                self.M2.runVelocityT(self.yVelocity,self.timeUnit)
-            if not controlQueue.empty():
-                break
+        #while True:
+        if self.yVelocity !=0:
+            self.M2.runVelocityT(self.yVelocity,self.timeUnit)
+        #    if not controlQueue.empty():
+        #        break
 
     def main(self,q,controlQueue):
         """The main method that starts the threads to allow the motors to run
@@ -173,7 +162,7 @@ class MotorControl:
         #returnQueue.put(t2-t1)
 
     def updaterTest(self,distance,returnQueue1):
-        #print('x')
+        print('x')
         tA=time.time()
         #x=self.dataQueue.get()
         #if self.dataQueue.empty():
@@ -207,6 +196,7 @@ class MotorControl:
         #t2=threading.Thread(target=self.xMotorTest,args=(distance,returnQueue1,))
         #t3=threading.Thread(target=self.yMotorTest,args=(distance,returnQueue2,))
         t1.start()
+        t1.join()
         #t2.start()
         #t3.start()
         while returnQueue1.empty():# and returnQueue2.empty():

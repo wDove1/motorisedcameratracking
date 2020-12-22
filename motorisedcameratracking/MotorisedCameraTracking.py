@@ -50,7 +50,7 @@ class MotorisedCameraTracking:
         """
 
         if self.checkTargetSupported(target):
-            #dataQueue=multiprocessing.Queue()
+            
             a=Imaging(self.dataQueue,self.controlQueue,target)
 
             
@@ -66,7 +66,7 @@ class MotorisedCameraTracking:
 
             p1.kill()
             p2.kill()
-            print('exiting')
+            #print('exiting')
             sys.exit()
             
         else:
@@ -81,18 +81,18 @@ class MotorisedCameraTracking:
 
         """
         if self.checkTargetSupported(target):
-            a=Imaging(target)
-            MC=MotorControl()
-            dataQueue=queue.Queue()
+            a=Imaging(self.dataQueue,self.controlQueue,target)
+            #MC=MotorControl()
+            #dataQueue=queue.Queue()
             if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-                p1 = threading.Thread(target=a.mainLimited,args=(dataQueue, self.controlQueue, limit1, limit2,))
+                p1 = multiprocessing.Process(target=a.mainLimited,args=(limit1, limit2,))
                 p1.start()
-                p2 = threading.Thread(target=MC.main,args=(dataQueue, self.controlQueue,))
+                p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueue,))
                 p2.start()
                 p1.join()
                 p2.join()
-            #p1.kill()
-            #p2.kill()
+            p1.kill()
+            p2.kill()
             sys.exit()
 
         else:
@@ -142,8 +142,8 @@ class MotorisedCameraTracking:
 
     def calibrateZero(self,waitTime,distance):
         self.MC.setWaitTime(waitTime)
-        speed1,speed2=self.MC.measureMotorSpecsOne(distance)
-        return speed1,speed2
+        speed=self.MC.measureMotorSpecsOne(distance)
+        return speed,speed
 
     def setSpecsZero(self,waitTime,speed1,speed2):
         self.MC.setWaitTime(waitTime)

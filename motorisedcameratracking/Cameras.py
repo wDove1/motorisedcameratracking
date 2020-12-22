@@ -54,13 +54,13 @@ class RPICam:
                 img = img.rotate(-self.orientation)#rotates the image
                 img = img.save(self.imagePath)#saves the image to the same location
 
-        def capture(self):
+        def capture(self,resolution: list =[1280,720]):
                 """The outward facing method to capture an image
 
                 returns:
                     numPy array: contains the image
                 """
-                self.getImage()#gets the image
+                self.getImage(resolution)#gets the image
                 self.orientationCorrection()#corrects the orientation
                 return self.postProcessing()#returns the image as a numPy array
                 
@@ -77,7 +77,7 @@ class RPICam:
         def getModelDetails(self):
                 return self.modelDetails
 
-class captureFromCamera:
+class GenericCamera:
         camera=cv2.VideoCapture(1)
 
         def __init__(self):

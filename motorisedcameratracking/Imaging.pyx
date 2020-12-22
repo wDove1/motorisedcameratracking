@@ -35,9 +35,13 @@ class Imaging:
     q=None
     previousTime: float = time.time()
 
-    def __init__(self, q, controlQueue, target: str, camera: dict = {'name': 'RPICam'}):
+    def __init__(self, q, controlQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720}):
         if camera['name']=='RPICam':
-            self.camera=RPICam(self.imagePath,180)
+            self.camera=RPICam(self.imagePath,camera['orientation'])
+        else:
+            camera=GenericCamera()
+        self.xMid=camera['Width']/2
+        self.yMid=camera['Height']/2
         print('hello')
         self.target=target
         self.OR=ObjectRecognition(target)
@@ -65,8 +69,8 @@ class Imaging:
             if not self.controlQueue.empty():#breaks when the signal is sent
                 break
 
-    def mainLimited(self, q, controlQueue, limit1: float, limit2: float):
-        self.q=q
+    def mainLimited(self,  limit1: float, limit2: float):
+        
         while True:#allow it to loop multiple times
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]#saves the time of the previous movement
