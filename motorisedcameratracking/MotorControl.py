@@ -58,25 +58,42 @@ class MotorControl:
         """
 
         while True:
-            empty=self.dataQueue.empty()
-            print(empty)
+            if self.dataQueue.qsize() <= 1:
+                empty=self.dataQueue.empty()
+                #print(empty)
             
-            if not empty:
-                x=self.dataQueue.get()
+                if not empty:
+                    x=self.dataQueue.get()
+                    self.xVelocity=x[0]
+                    self.yVelocity=x[1]
+                #print(self.xVelocity)
+
+
+
+                t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+                t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+
+                t2.start()
+                t3.start()
+                t2.join()
+                t3.join()
+            else:
+                while self.dataQueue.qsize() >= 1:
+                    x=self.dataQueue.get()
+                #x=self.dataQueue.get()
                 self.xVelocity=x[0]
                 self.yVelocity=x[1]
-            print(self.xVelocity)
+                #print(self.xVelocity)
 
 
 
-            t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-            t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+                t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
+                t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
 
-            t2.start()
-            t3.start()
-            t2.join()
-            t3.join()
-                
+                t2.start()
+                t3.start()
+                t2.join()
+                t3.join()
 
             if not controlQueue.empty():
                 break
@@ -145,9 +162,9 @@ class MotorControl:
                 axis: The axis to be manipulated
         """
         if axis == "x":
-            M1.runDispalcement(distance)
+            self.M1.runDisplacement(distance)
         elif axis == "y":
-            M2.runDispalcement(distance)
+            self.M2.runDisplacement(distance)
 
     def xMotorTest(self,distance):#,returnQueue):
         #t1=time.time()

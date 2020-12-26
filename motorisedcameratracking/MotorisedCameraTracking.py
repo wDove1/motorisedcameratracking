@@ -7,9 +7,11 @@ import warnings
 
 from .Imaging import *
 from .MotorControl import *
+from .errors import *
 
-
-
+import cv2
+from cvlib.object_detection import draw_bbox
+from PIL import Image, ImageTk
 
 class MotorisedCameraTracking:
     """The API for the Camera Tracking Library
@@ -19,8 +21,14 @@ class MotorisedCameraTracking:
     Attributes:
         controlQueue: The queue used for controlling the other classes
     """
+    enableWarnings=False
+    enableFeedback=False
+    GUIFeatures=False
+
     controlQueue=multiprocessing.Queue()
     dataQueue=multiprocessing.Queue()
+    imageReturnQueue=multiprocessing.Queue()
+
     camera: dict = None
     motorOne: dict = None
     motorTwo: dict = None
@@ -28,7 +36,12 @@ class MotorisedCameraTracking:
 
     MC=None
     Im=None
+
+    running: bool = False#
+
+    target:str = None
     
+    images=[]
 
     def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, computer: dict = None):
         warnings.warn('the library only supports a limited range of hardware currently')
@@ -40,7 +53,15 @@ class MotorisedCameraTracking:
         #self.Im = 
         
 
-    
+    def recordFrames(self):
+        if self.GUIFeatures:
+            while True:
+                if not self.imageReturnQueue.empty():
+                    x=self.imageReturnQueue.get()
+                    self.images.append(x)
+        else:
+            raise GUIFeaturesNotEnabled('To use this function GUI features needs to be enabled')
+
 
     def track(self,target: str):#the queue is used for sending a termination signal
         """Tracks the object until a terminate signal is sent
@@ -48,15 +69,18 @@ class MotorisedCameraTracking:
             target: The target to be tracked
 
         """
-
+        self.target=target
         if self.checkTargetSupported(target):
             
-            a=Imaging(self.dataQueue,self.controlQueue,target)
+            a=Imaging(self.dataQueue,self.controlQueue,self.imageReturnQueue,target)
 
-            
+            if self.GUIFeatures:
+                t=threading.Thread(target=self.recordFrames,args=())
+                t.start()
 
             if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
                 warnings.warn('tracking starting')
+                self.running=True
                 p1 = multiprocessing.Process(target=a.main,args=())
                 p1.start()
                 p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueue,))
@@ -80,6 +104,7 @@ class MotorisedCameraTracking:
             limit2: the second limit
 
         """
+        self.target=target
         if self.checkTargetSupported(target):
             a=Imaging(self.dataQueue,self.controlQueue,target)
             #MC=MotorControl()
@@ -110,8 +135,9 @@ class MotorisedCameraTracking:
 
         Puts signal "1" on the control Queue
         """
-        self.controlQueue.put(1)
-        warnings.warn('terminating')
+        if self.running:
+            self.controlQueue.put(1)
+            warnings.warn('terminating')
         #code 1 is for termination
         #other codes may be added for other purposes
 
@@ -147,7 +173,7 @@ class MotorisedCameraTracking:
 
     def setSpecsZero(self,waitTime,speed1,speed2):
         self.MC.setWaitTime(waitTime)
-        self.MC.setMaxSpeed(speed1)        
+        self.MC.setMaxSpeed(speed1)  
         
 
     def getSupportedTargets(self):
@@ -174,8 +200,84 @@ class MotorisedCameraTracking:
             distance: The distance to move
             axis: the axis to move on
         """
-        MC.runDisplacement(distance,axis)
+        self.MC.runDisplacement(distance,axis)
 
+    
 
+    def getFrame(self):
+        """returns the most recent frame from the camera"""
+        
+        #empty the queue
 
+        if not self.GUIFeatures:
+            if self.imageReturnQueue.empty():
+                #warnings.warn('no image availble')
+                raise NoImageAvailable('no image available to be returned')
+            
+            while not self.imageReturnQueue.empty():
+                x=self.imageReturnQueue.get()
+                if self.imageReturnQueue.empty():
+                    break
+        
+            img=x['img']
+            box=x['box']
+            confidence=0.8#find a proper valur for this
+            return img, box, confidence
+        else:
+            if len(self.images)==0:
+                raise NoImageAvailable('no image available to be returned')
+            img=self.images[-1]['img']
+            box=self.images[-1]['box']
+            confidence=0.8
+            return img, box, confidence
 
+    def getAllFrames(self):
+        """returns all frames"""
+        if self.GUIFeatures:
+            return self.images
+        else:
+            raise GUIFeaturesNotEnabled('To use this function GUI features needs to be enabled')
+    
+    def getFrameAsImage(self,resolution:list):
+        """used to return a frame as an image.
+
+        Ideal for use when the user has little experience with the required libraries
+        """
+        i,b,c=self.getFrame()
+        label=self.target
+        image = draw_bbox(i, b, label, c)
+        image=cv2.resize(image,(resolution[0],resolution[1]),interpolation = cv2.INTER_AREA)
+        return image
+
+    def getCurrentAnalytics(self):
+        pass
+
+    def getSessionAnalytics(self):
+        pass
+
+    def setWarnings(self,warningMode):
+        self.enableWarnings=warningMode
+        if not self.enableWarnings:
+            warnings.filterwarnings('ignore')
+
+    def setGUIFeatures(self,choice):
+        """use True if you want to use a GUI else False.
+        This is likely to have a performance imapct so only activate if necesary
+        """
+        self.GUIFeatures=choice
+
+    def setFeedback(self):
+        pass
+
+    def isRunning(self):
+        return self.running
+
+    class GUI_Utilities:
+
+        def convertImageTkinter(image):
+            """convers an image created by the program to one suitable for tkinter"""
+            b,g,r = cv2.split(image)
+            img = cv2.merge((r,g,b))
+            img = Image.fromarray(img)
+            return ImageTk.PhotoImage(image=img)
+            

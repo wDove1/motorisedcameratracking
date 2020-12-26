@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import cvlib as cv
 import time
 from cvlib.object_detection import draw_bbox
-
+import warnings
 from .Cameras import *
 from .MotorControl import *
 
@@ -23,6 +23,7 @@ class Imaging:
 
     imagePath: str = '/home/pi/Desktop/image%s.jpg'
     camera=None
+    
     OR=None
     coordinates: list = []
     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
@@ -33,20 +34,22 @@ class Imaging:
     currentPosition: list = [0,0,None]#positionx,positiony,time
     currentVelocity: list = [0,0]
     q=None
-    previousTime: float = time.time()
+    previousTime: float = None
 
-    def __init__(self, q, controlQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720}):
+    
+
+    def __init__(self, q, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720}):
         if camera['name']=='RPICam':
             self.camera=RPICam(self.imagePath,camera['orientation'])
         else:
             camera=GenericCamera()
         self.xMid=camera['Width']/2
         self.yMid=camera['Height']/2
-        print('hello')
         self.target=target
-        self.OR=ObjectRecognition(target)
+        self.OR=ObjectRecognition(target,imageReturnQueue)
         self.q=q
         self.controlQueue=controlQueue
+        #self.imageReturnQueue=imageReturnQueue
 
 
     def main(self):
@@ -55,11 +58,12 @@ class Imaging:
             q: The queue for transmitting velocity data
             controlQueue: the queue used for shutting down operation
         """
+        warnings.warn('imaging main is active')
         self.currentPosition[-1]=time.time()
         self.positions.append([self.currentPosition[-1],0,0])
         while True:#allow it to loop multiple times
             x=self.camera.capture()
-            previousTime=self.currentPosition[-1]#saves the time of the previous movement
+            self.previousTime=self.currentPosition[-1]#saves the time of the previous movement
             self.getCurrentPosition()
             self.currentPosition[-1]=time.time()#assigns the current time
             self.positions.append([self.currentPosition[-1],None,None])#adds the current time to the list of positions
@@ -69,7 +73,7 @@ class Imaging:
             if not self.controlQueue.empty():#breaks when the signal is sent
                 break
 
-    def mainLimited(self,  limit1: float, limit2: float):
+    def mainLimited(self, limit1: float, limit2: float):
         
         while True:#allow it to loop multiple times
             x=self.camera.capture()
@@ -83,6 +87,7 @@ class Imaging:
             if self.positions[-1][1]<=limit1 or self.positions[-1][1]>=limit2 :
                 self.recentre(self.positions[-1][1])
             if not self.controlQueue.empty():
+                self.reset()
                 break
 
     def reset(self):
@@ -163,12 +168,14 @@ class Imaging:
         return xV,yV
 
     def search(self):
+        warnings.warn('attempting to aquire a new target')
         self.q.put([-10,0])#pick a better search pattern
         while True:
             img=self.camera.capture()
             xCo,yCo=self.OR.getCoordinates(img)
             if xCo != None:
                 #reset the first steps of main
+                warnings.warn('new target aquired')
                 self.reset()
                 self.main()
                 #restart tracking
@@ -182,7 +189,7 @@ class ObjectRecognition:
     target: str = None
     OR=None
     targets: list = []
-    def __init__(self,target: str):
+    def __init__(self,target: str,imageReturnQueue=None):
         functions=[
             ['face',self.ORFaces],
             ['person',self.ORBackUp],
@@ -258,6 +265,7 @@ class ObjectRecognition:
             ['toothbrush',self.ORBackUp],
             ]
         self.target=target
+        self.imageReturnQueue=imageReturnQueue
         for i in functions:
             self.targets.append(i[0])
         for i in functions:
@@ -283,6 +291,8 @@ class ObjectRecognition:
         except:
             xCo=None
             yCo=None
+        if self.imageReturnQueue!=None:     
+            self.imageReturnQueue.put({'img':img,'box':bbox})
         return xCo,yCo
 
     def ORFaces(self,img):
