@@ -49,7 +49,7 @@ class Imaging:
         self.OR=ObjectRecognition(target,imageReturnQueue)
         self.q=q
         self.controlQueue=controlQueue
-        #self.imageReturnQueue=imageReturnQueue
+
 
 
     def main(self):
@@ -271,6 +271,8 @@ class ObjectRecognition:
         for i in functions:
             if i[0]==target:
                 self.OR=i[1]
+        if self.imageReturnQueue==None:
+            warnings.warn('imageReturnQueue not set')
 
 
     def ORBackUp(self,img):
@@ -281,18 +283,26 @@ class ObjectRecognition:
         Returns:
             coordinates: the coordinates of the object in the image
         """
-        try:        
-            bbox, label, conf = cv.detect_common_objects(img)
+        #try:        
+        bbox, label, conf = cv.detect_common_objects(img)
+        if len(label)!=0:
+            xCo=None
+            yCo=None
             for i in range(0,len(label)):#x not being assigned-not finding target in list of images
                 if label[i] == self.target:
                     x=bbox[i]
-            xCo=(x[0]+x[2])/2
-            yCo=(x[1]+x[3])/2
-        except:
+                    xCo=(x[0]+x[2])/2
+                    yCo=(x[1]+x[3])/2
+                    break
+        #except:
+        else:
             xCo=None
             yCo=None
-        if self.imageReturnQueue!=None:     
-            self.imageReturnQueue.put({'img':img,'box':bbox})
+        if self.imageReturnQueue!=None:
+            warnings.warn('placing an image on the return Queue')
+            self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})
+        else:
+            warning.warn('no queue found')
         return xCo,yCo
 
     def ORFaces(self,img):

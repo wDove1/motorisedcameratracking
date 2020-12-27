@@ -85,7 +85,7 @@ class MotorisedCameraTracking:
             #if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
             warnings.warn('tracking starting')
             self.running=True
-            print(self.running)
+            #print(self.running)
             self.p1 = multiprocessing.Process(target=a.main,args=())
             self.p1.start()
             self.p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,))
@@ -140,7 +140,7 @@ class MotorisedCameraTracking:
 
         Puts signal "1" on the control Queue
         """
-        print(self.running)
+        #print(self.running)
         if self.running == True:
             self.controlQueueMC.put(1)
             self.controlQueueImg.put(1)
@@ -236,15 +236,17 @@ class MotorisedCameraTracking:
         
             img=x['img']
             box=x['box']
-            confidence=0.8#find a proper valur for this
-            return img, box, confidence
+            confidence=x['confidence']
+            label=x['label']
+            return img, box, label, confidence
         else:
             if len(self.images)==0:
                 raise NoImageAvailable('no image available to be returned')
             img=self.images[-1]['img']
             box=self.images[-1]['box']
-            confidence=0.8
-            return img, box, confidence
+            confidence=self.images[-1]['confidence']
+            label=self.images[-1]['label']
+            return img, box, label, confidence
 
     def getAllFrames(self):
         """returns all frames"""
@@ -258,9 +260,9 @@ class MotorisedCameraTracking:
 
         Ideal for use when the user has little experience with the required libraries
         """
-        i,b,c=self.getFrame()
-        label=self.target
-        image = draw_bbox(i, b, label, c)
+        i,b,l,c=self.getFrame()
+
+        image = draw_bbox(i, b, l, c)
         image=cv2.resize(image,(resolution[0],resolution[1]),interpolation = cv2.INTER_AREA)
         return image
 
