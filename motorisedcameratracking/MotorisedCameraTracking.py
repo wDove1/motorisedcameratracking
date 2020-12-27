@@ -25,9 +25,13 @@ class MotorisedCameraTracking:
     enableFeedback=False
     GUIFeatures=False
 
-    controlQueue=multiprocessing.Queue()
+    controlQueueMC=multiprocessing.Queue()
+    controlQueueImg=multiprocessing.Queue()
     dataQueue=multiprocessing.Queue()
     imageReturnQueue=multiprocessing.Queue()
+
+    p1=None
+    p2=None
 
     camera: dict = None
     motorOne: dict = None
@@ -72,26 +76,27 @@ class MotorisedCameraTracking:
         self.target=target
         if self.checkTargetSupported(target):
             
-            a=Imaging(self.dataQueue,self.controlQueue,self.imageReturnQueue,target)
+            a=Imaging(self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target)
 
             if self.GUIFeatures:
                 t=threading.Thread(target=self.recordFrames,args=())
                 t.start()
 
-            if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-                warnings.warn('tracking starting')
-                self.running=True
-                p1 = multiprocessing.Process(target=a.main,args=())
-                p1.start()
-                p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueue,))
-                p2.start()
-                p1.join()
-                p2.join()
+            #if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
+            warnings.warn('tracking starting')
+            self.running=True
+            print(self.running)
+            self.p1 = multiprocessing.Process(target=a.main,args=())
+            self.p1.start()
+            self.p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,))
+            self.p2.start()
+                #self.p1.join()
+                #self.p2.join()
 
-            p1.kill()
-            p2.kill()
+            #self.p1.kill()
+            #self.p2.kill()
             #print('exiting')
-            sys.exit()
+            #sys.exit()
             
         else:
             raise ValueError('target not supported')
@@ -106,19 +111,19 @@ class MotorisedCameraTracking:
         """
         self.target=target
         if self.checkTargetSupported(target):
-            a=Imaging(self.dataQueue,self.controlQueue,target)
+            a=Imaging(self.dataQueue,self.controlQueueImg,target)
             #MC=MotorControl()
             #dataQueue=queue.Queue()
             if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
-                p1 = multiprocessing.Process(target=a.mainLimited,args=(limit1, limit2,))
-                p1.start()
-                p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueue,))
-                p2.start()
-                p1.join()
-                p2.join()
-            p1.kill()
-            p2.kill()
-            sys.exit()
+                self.p1 = multiprocessing.Process(target=a.mainLimited,args=(limit1, limit2,))
+                self.p1.start()
+                self.p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,))
+                self.p2.start()
+                #self.p1.join()
+                #self.p2.join()
+            #self.p1.kill()
+            #self.p2.kill()
+            #sys.exit()
 
         else:
             raise ValueError('target not supported')
@@ -135,9 +140,19 @@ class MotorisedCameraTracking:
 
         Puts signal "1" on the control Queue
         """
-        if self.running:
-            self.controlQueue.put(1)
+        print(self.running)
+        if self.running == True:
+            self.controlQueueMC.put(1)
+            self.controlQueueImg.put(1)
             warnings.warn('terminating')
+            while True:
+                if not (self.p1.is_alive() and self.p2.is_alive()):
+                    self.p1.kill()
+                    self.p2.kill()
+                    break
+        else:
+            raise NotTracking('nothing to terminate')
+        
         #code 1 is for termination
         #other codes may be added for other purposes
 

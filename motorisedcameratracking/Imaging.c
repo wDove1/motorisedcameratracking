@@ -1487,7 +1487,6 @@ static const char __pyx_k_microwave[] = "microwave";
 static const char __pyx_k_positions[] = "positions";
 static const char __pyx_k_snowboard[] = "snowboard";
 static const char __pyx_k_stop_sign[] = "stop sign";
-static const char __pyx_k_warinings[] = "warinings";
 static const char __pyx_k_catCascade[] = "catCascade";
 static const char __pyx_k_cell_phone[] = "cell phone";
 static const char __pyx_k_getTargets[] = "getTargets";
@@ -1754,7 +1753,6 @@ static PyObject *__pyx_n_s_truck;
 static PyObject *__pyx_n_s_tv;
 static PyObject *__pyx_n_s_umbrella;
 static PyObject *__pyx_n_s_vase;
-static PyObject *__pyx_n_s_warinings;
 static PyObject *__pyx_n_s_warn;
 static PyObject *__pyx_n_s_warnings;
 static PyObject *__pyx_n_s_x;
@@ -5194,7 +5192,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22search(C
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:             # <<<<<<<<<<<<<<
  *                 #reset the first steps of main
- *                 warinings.warn('new target aquired')
+ *                 warnings.warn('new target aquired')
  */
     __pyx_t_1 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 176, __pyx_L1_error)
     __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 176, __pyx_L1_error)
@@ -5204,11 +5202,11 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22search(C
       /* "motorisedcameratracking/Imaging.pyx":178
  *             if xCo != None:
  *                 #reset the first steps of main
- *                 warinings.warn('new target aquired')             # <<<<<<<<<<<<<<
+ *                 warnings.warn('new target aquired')             # <<<<<<<<<<<<<<
  *                 self.reset()
  *                 self.main()
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_warinings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_warnings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
@@ -5232,7 +5230,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22search(C
 
       /* "motorisedcameratracking/Imaging.pyx":179
  *                 #reset the first steps of main
- *                 warinings.warn('new target aquired')
+ *                 warnings.warn('new target aquired')
  *                 self.reset()             # <<<<<<<<<<<<<<
  *                 self.main()
  *                 #restart tracking
@@ -5257,7 +5255,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22search(C
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
       /* "motorisedcameratracking/Imaging.pyx":180
- *                 warinings.warn('new target aquired')
+ *                 warnings.warn('new target aquired')
  *                 self.reset()
  *                 self.main()             # <<<<<<<<<<<<<<
  *                 #restart tracking
@@ -5287,7 +5285,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22search(C
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:             # <<<<<<<<<<<<<<
  *                 #reset the first steps of main
- *                 warinings.warn('new target aquired')
+ *                 warnings.warn('new target aquired')
  */
     }
   }
@@ -9032,7 +9030,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_tv, __pyx_k_tv, sizeof(__pyx_k_tv), 0, 0, 1, 1},
   {&__pyx_n_s_umbrella, __pyx_k_umbrella, sizeof(__pyx_k_umbrella), 0, 0, 1, 1},
   {&__pyx_n_s_vase, __pyx_k_vase, sizeof(__pyx_k_vase), 0, 0, 1, 1},
-  {&__pyx_n_s_warinings, __pyx_k_warinings, sizeof(__pyx_k_warinings), 0, 0, 1, 1},
   {&__pyx_n_s_warn, __pyx_k_warn, sizeof(__pyx_k_warn), 0, 0, 1, 1},
   {&__pyx_n_s_warnings, __pyx_k_warnings, sizeof(__pyx_k_warnings), 0, 0, 1, 1},
   {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},

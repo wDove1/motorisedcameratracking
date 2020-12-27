@@ -1,7 +1,16 @@
 import tkinter
-#import threadng
+
 from motorisedcameratracking import *
 
+import matplotlib.pyplot as plt
+import cvlib as cv
+from cvlib.object_detection import draw_bbox
+
+import sys
+import time
+import multiprocessing
+import queue
+import threading
 
 class GUI:
     x=MotorisedCameraTracking()
@@ -36,13 +45,40 @@ class GUI:
         window=tkinter.Tk()
         exit=tkinter.Button(window,text='Exit',command=lambda:self.x.terminate())
         exit.pack()
+        
         window.mainloop()
 
 
     def change(self,target):
         self.q.put(target)
         self.main()
+ 
+    def imageDisplay(self):
+        window=tkinter.Tk()
+        imageDisplay=tkinter.Label(window,text='no image to display')
+        imageDisplay.pack()
         
+        #while True:
+            #print('hello')
+            #time.sleep(10)
+            #try:
+        #print('hello')
+        image,box,confidence=self.x.getFrame()
+        print(confidence)
+        #a=x.getAllFrames()
+        #print(a)
+        #print('hello')
+        label='person'
+        image = draw_bbox(image, box, label, confidence)
+        image=cv2.resize(image,(1000,500),interpolation = cv2.INTER_AREA)
+        b,g,r = cv2.split(image)
+        img = cv2.merge((r,g,b))
+        img = Image.fromarray(img)
+        img = ImageTk.PhotoImage(image=img)
+        imageDisplay.config(image=img)
+        window.mainloop()
+            #except:
+            #    print('no image found')
 
 #GUI=GUI()
 #GUI.initialise()

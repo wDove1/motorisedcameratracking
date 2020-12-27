@@ -29,6 +29,8 @@ t2=threading.Thread(target=G.main,args=())
 t2.start()
 #run in threads
 t1.start()
+time.sleep(10)
+G.imageDisplay()
 
 
 
