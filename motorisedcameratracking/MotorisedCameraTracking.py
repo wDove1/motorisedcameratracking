@@ -58,6 +58,7 @@ class MotorisedCameraTracking:
         
 
     def recordFrames(self):
+        """if called and GUI features are activated it will record all the frames from the camera"""
         if self.GUIFeatures:
             while True:
                 if not self.imageReturnQueue.empty():
@@ -249,7 +250,7 @@ class MotorisedCameraTracking:
             return img, box, label, confidence
 
     def getAllFrames(self):
-        """returns all frames"""
+        """returns all frames as an array"""
         if self.GUIFeatures:
             return self.images
         else:
@@ -272,29 +273,54 @@ class MotorisedCameraTracking:
     def getSessionAnalytics(self):
         pass
 
-    def setWarnings(self,warningMode):
+    def setWarnings(self,warningMode:bool):
+        """sets whether the user wants warnings or not"""
         self.enableWarnings=warningMode
         if not self.enableWarnings:
             warnings.filterwarnings('ignore')
 
-    def setGUIFeatures(self,choice):
+    def setGUIFeatures(self,choice:bool):
         """use True if you want to use a GUI else False.
         This is likely to have a performance imapct so only activate if necesary
         """
         self.GUIFeatures=choice
 
-    def setFeedback(self):
-        pass
+    def setFeedback(self,choice:bool):
+        """sets whether feedback recording will be used"""
+        self.enableFeedback=choice
+        
 
     def isRunning(self):
+        """returns if the tracking is active"""
         return self.running
 
-    class GUI_Utilities:
 
-        def convertImageTkinter(image):
-            """convers an image created by the program to one suitable for tkinter"""
-            b,g,r = cv2.split(image)
-            img = cv2.merge((r,g,b))
-            img = Image.fromarray(img)
-            return ImageTk.PhotoImage(image=img)
+    def isImageAvailable(self):
+        """checks if an image is available to return"""
+        if not self.GUIFeatures:
+            if self.imageReturnQueue.empty():
+                return False
+            else:
+                return True
+
+        else:
+            if len(self.images)==0:
+                return False
+            else:
+                return True
+
+
+        
+
+
+
+def convertImageTkinter(image):
+    """convers an image created by the program to one suitable for tkinter
+    Args:
+        image: The image to be converted
+    """
+    b,g,r = cv2.split(image)
+    img = cv2.merge((r,g,b))
+    img = Image.fromarray(img)
+    return ImageTk.PhotoImage(image=img)
             

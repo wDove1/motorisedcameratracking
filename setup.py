@@ -9,7 +9,7 @@ setup(
     ext_modules = cythonize("motorisedcameratracking/Imaging.pyx",annotate=True ),
     name='motorisedcameratracking',
     packages=find_packages(include=['motorisedcameratracking','motorisedcameratracking.*']),
-    version='0.4.0',
+    version='0.4.1.dev0',
     description='Used to create a tracking tripod head',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",

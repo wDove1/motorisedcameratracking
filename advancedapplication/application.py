@@ -8,7 +8,8 @@ import time
 import multiprocessing
 import queue
 import threading
-
+import cv2
+from PIL import Image, ImageTk
 def calibrate():
     calibrate=tkinter.Tk()
     calibrate.title('calibration')
@@ -17,8 +18,8 @@ def calibrate():
 def startTrackingA():
     #print('hi')
     target=targetEntry.get()
-    A=multiprocessing.Process(target=x.track,args=(target,))
-    A.start()
+    x.track(target)
+    
 
     upAdjust.pack_forget()
     downAdjust.pack_forget()
@@ -28,39 +29,53 @@ def startTrackingA():
     startTracking.pack_forget()
     
     stopTracking.pack()
-    a=threading.Thread(target=imageDisplay)
-    a.start()
+    global imageDisplayThread
+    imageDisplayThread=threading.Thread(target=imageDisplay)
+    imageDisplayThread.start()
     
 def exit():
     if x.isRunning():
         x.terminate()
         window.destroy()
+        sys.exit()
     else:
         window.destroy()
+        sys.exit()
     
 def imageDisplay():
     
     imageDisplay=tkinter.Label(window,text='no image to display')
     imageDisplay.pack()
+    #time.sleep(30)
+    lastImage=None
+    
     while True:
         #print('hello')
-        time.sleep(10)
-        try:
-            print('hello')
-            #image,box,confidence=x.getFrame()
-            a=x.getAllFrames()
-            print(a)
-            print('hello')
-            label='person'
-            image = draw_bbox(image, box, label, confidence)
-            image=cv2.resize(image,(1000,500),interpolation = cv2.INTER_AREA)
-            b,g,r = cv2.split(image)
-            img = cv2.merge((r,g,b))
-            img = Image.fromarray(img)
-            img = ImageTk.PhotoImage(image=img)
-            imageDisplay.config(image=img)
-        except:
-            print('no image found')
+        time.sleep(2)
+        
+        #try:
+            
+        
+        #a=x.getAllFrames()
+        #print(a)
+            
+            
+        #
+        if x.isImageAvalible():
+            image,box,label,confidence=x.getFrame()
+            a = image == lastImage
+            if not a.all():
+                lastImage=image
+            
+                image = draw_bbox(image, box, label, confidence)
+                image=cv2.resize(image,(1000,500),interpolation = cv2.INTER_AREA)
+                b,g,r = cv2.split(image)
+                img = cv2.merge((r,g,b))
+                img = Image.fromarray(img)
+                img = ImageTk.PhotoImage(image=img)
+                imageDisplay.config(image=img)
+        #except:
+        #    print('no image found')
             
 
         
@@ -80,9 +95,9 @@ downAdjust=tkinter.Button(window,text='Motor Down',command=lambda: x.aim(-5,"y")
 leftAdjust=tkinter.Button(window,text='Motor Left',command=lambda: x.aim(-5,"x"))
 rightAdjust=tkinter.Button(window,text='Motor Right',command=lambda: x.aim(5,"x"))
 targetEntry=tkinter.Entry(window)
-startTracking=tkinter.Button(window,text='get target',command=lambda:startTrackingA())
+startTracking=tkinter.Button(window,text='get target',command=lambda: startTrackingA())
 
-stopTracking=tkinter.Button(window,text='stop tracking',command=lambda:x.terminate())
+stopTracking=tkinter.Button(window,text='stop tracking',command=lambda: x.terminate())
         
 
 
