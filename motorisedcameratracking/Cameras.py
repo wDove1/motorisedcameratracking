@@ -81,10 +81,18 @@ class GenericCamera:
         camera=cv2.VideoCapture(1)
 
         def __init__(self):
-            pass
+                pass
 
 
         def capture(self):
                 x,frame = camera.read()
                 return frame
 
+class VirtualCamera:
+        images=[]
+        #images.append(np.array())
+        def __init__(self):
+                pass
+
+        def capture(self):
+                return None

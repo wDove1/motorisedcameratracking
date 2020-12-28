@@ -2,6 +2,7 @@
 import threading
 import time
 import queue
+import warnings
 from motorcontrollib import M_28BJY48_ULN2003_RPI
 from typing import *
 from .Config import *
@@ -34,8 +35,13 @@ class MotorControl:
     def __init__(self, motorOne: dict, motorTwo: dict):
         if motorOne['name']=="28BJY48_ULN2003_RPI":
             self.M1=M_28BJY48_ULN2003_RPI(stepPins=[17,22,23,24],maxSpeed=motorOne['maxSpeed'],minWaitTime=motorOne['minWaitTime'])
+        else:
+            self.M1=M_Virtual()
+            
         if motorTwo['name']=="28BJY48_ULN2003_RPI":
             self.M2=M_28BJY48_ULN2003_RPI(stepPins=[13,6,5,12],maxSpeed=motorTwo['maxSpeed'],minWaitTime=motorTwo['minWaitTime'])
+        else:
+            self.M2=M_Virtual()
     
     def incrementer(self,controlQueue):
         """updates the velocity with the accelerations
@@ -56,9 +62,12 @@ class MotorControl:
         Args:
             controlQueue: Used for shutting down the program
         """
-
+        warnings.warn('MotorControl main is now active')
         while True:
+            #warnings.warn('MotorControl has looped')
             if self.dataQueue.qsize() <= 1:
+                
+                #print('MotorControl running as ideal')
                 empty=self.dataQueue.empty()
                 #print(empty)
             
@@ -68,7 +77,8 @@ class MotorControl:
                     self.yVelocity=x[1]
                 #print(self.xVelocity)
 
-
+                #print('x ',self.xVelocity)
+                #print('y ',self.yVelocity)
 
                 t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
                 t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
@@ -77,7 +87,10 @@ class MotorControl:
                 t3.start()
                 t2.join()
                 t3.join()
+                #print('threads closed')
+                
             else:
+                #print('clearing excess items from the queue')
                 while self.dataQueue.qsize() >= 1:
                     x=self.dataQueue.get()
                 #x=self.dataQueue.get()
@@ -96,6 +109,7 @@ class MotorControl:
                 t3.join()
 
             if not controlQueue.empty():
+                warnings.warn('MotorControl is Exiting')
                 break
 
                 
@@ -232,3 +246,7 @@ class MotorControl:
     def setMaxSpeed(self,maxSpeed):
         self.M1.setMaxSpeed(maxSpeed)
         self.M2.setMaxSpeed(maxSpeed)
+
+    def getMaxSpeed(self):
+        return self.M1.getMaxSpeed(),self.M2.getMaxSpeed()
+

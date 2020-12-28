@@ -25,6 +25,8 @@ class MotorisedCameraTracking:
     enableFeedback=False
     GUIFeatures=False
 
+    config:dict=None
+
     controlQueueMC=multiprocessing.Queue()
     controlQueueImg=multiprocessing.Queue()
     dataQueue=multiprocessing.Queue()
@@ -47,7 +49,7 @@ class MotorisedCameraTracking:
     
     images=[]
 
-    def __init__(self,camera: dict = None, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, computer: dict = None):
+    def __init__(self, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720}, motorOne: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, motorTwo: dict = {'name': "28BJY48_ULN2003_RPI", 'maxSpeed': 24, 'minWaitTime': 0.0016}, computer: dict = None,config:dict={'imagingMode':'advanced'}):
         warnings.warn('the library only supports a limited range of hardware currently')
         self.camera=camera
         self.motorOne=motorOne
@@ -55,6 +57,7 @@ class MotorisedCameraTracking:
         self.computer=computer
         self.MC = MotorControl(motorOne=self.motorOne, motorTwo=self.motorTwo)
         #self.Im = 
+        self.config=config
         
 
     def recordFrames(self):
@@ -76,8 +79,8 @@ class MotorisedCameraTracking:
         """
         self.target=target
         if self.checkTargetSupported(target):
-            
-            a=Imaging(self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target)
+            xMaxSpeed,yMaxSpeed=self.MC.getMaxSpeed()
+            a=Imaging(self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target,camera=self.camera,mode=self.config['imagingMode'],extras={'xMaxSpeed':xMaxSpeed,'yMaxSpeed':yMaxSpeed})
 
             if self.GUIFeatures:
                 t=threading.Thread(target=self.recordFrames,args=())

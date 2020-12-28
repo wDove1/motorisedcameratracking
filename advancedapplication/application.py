@@ -61,13 +61,14 @@ def imageDisplay():
             
             
         #
-        if x.isImageAvalible():
+        if x.isImageAvailable():
             image,box,label,confidence=x.getFrame()
             a = image == lastImage
             if not a.all():
                 lastImage=image
             
                 image = draw_bbox(image, box, label, confidence)
+                print(box)
                 image=cv2.resize(image,(1000,500),interpolation = cv2.INTER_AREA)
                 b,g,r = cv2.split(image)
                 img = cv2.merge((r,g,b))
@@ -82,9 +83,9 @@ def imageDisplay():
         
 
 
-motorisedCameraTracking=MotorisedCameraTracking()
+motorisedCameraTracking=MotorisedCameraTracking(camera={'name': 'RPICam','orientation': 180,'Width':3000,'Height':2000},config={'imagingMode':'simple'})
 x=motorisedCameraTracking
-x.setWarnings(False)
+#x.setWarnings(False)
 x.setGUIFeatures(True)
 window=tkinter.Tk()
 window.title('motorisedcameratracking')
