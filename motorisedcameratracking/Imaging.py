@@ -13,6 +13,8 @@ class Imaging:
     Attributes:
         imagePath: The path to the images
         camera: The camera being used to get the images
+        OR: The object for object recognition
+        dataQueue: The queue for transmitting veolcities
         coordinates: The coordinates of the object within the image
         positions: Stores sub arrays of form [time,xdegrees,ydegrees] where x and y are angles relative to the start position
         target: what the user wants to track
@@ -20,12 +22,13 @@ class Imaging:
         yMid: The vertical midpoint of the image
         currentPosition: The current position of the x and y motor and the time of that position
         currentVelocity: The cuurent velocity the mnotros are runnnig at
+        previousTime: The time the proevious image was captured
     """
 
     imagePath: str = '/home/pi/Desktop/image%s.jpg'
     camera=None
     OR=None
-    q=None  
+    dataQueue=None  
 
 
     target: str = None
@@ -40,27 +43,27 @@ class Imaging:
 
     
 
-    def __init__(self, q, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40}):
+    def __init__(self, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40}):
         if camera['name']=='RPICam':
-            self.camera=RPICam(self.imagePath,camera['orientation'])
+            self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
         elif camera['name']=='Virtual':
             self.camera=VirtualCamera()
         else:
             camera=GenericCamera()
-        self.resolution=[camera['Width'],camera['Height']]
+        self.resolution=[camera['Width'],camera['Height']]#sets the resolution
         self.xMid=camera['Width']/2
         self.yMid=camera['Height']/2
         self.target=target
-        self.OR=ObjectRecognition(target,imageReturnQueue)
-        self.q=q
+        self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object
+        self.dataQueue=dataQueue
         self.controlQueue=controlQueue
         self.mode=mode
 
-        self.xMaxSpeed=extras['xMaxSpeed']
+        self.xMaxSpeed=extras['xMaxSpeed']#sets the maxspeeds as they are needed in some calculations
         self.yMaxSpeed=extras['yMaxSpeed']
         
 
-    def main(self):
+    def main(self):#offers a choice of mode
         
         if self.mode=='advanced':
             self.advancedTracking()
@@ -74,8 +77,16 @@ class Imaging:
         else:
             self.simpleTracking()
 
-    def advancedTracking(self):#fix this
+    def mainLimited(self,limit1,limit2):#only supports one mode currently
+
+        if self.mode=='advanced':
+            self.advancedTrackingLimited(limit1,limit2)
+
+    def advancedTracking(self):
         """The main loop for processing images
+
+        While this works it has an issue where due to how it calculates the objects velocity it matches velocity meaning objects end up against the end of the frame and therefore more acceleration can not occur 
+
         Args:
             q: The queue for transmitting velocity data
             controlQueue: the queue used for shutting down operation
@@ -105,7 +116,17 @@ class Imaging:
                 break
 
     def advancedTrackingLimited(self, limit1: float, limit2: float):
-        
+        """The limited version of the tracking
+       
+        Args:
+            limit1: The first limit
+            limit2: The second limit 
+        """
+        warnings.warn('imaging main is active')
+        self.currentPosition[0]=time.time()#saves the time the tracking starts
+        self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
+        self.positions.append(self.currentPosition)
+
         while True:#allow it to loop multiple times
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement
@@ -122,6 +143,9 @@ class Imaging:
                 break
 
     def reset(self):
+        """Resets the variables
+        Likely to be removed once varaibles are converted to non global        
+        """
         coordinates = []
         positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
         currentPosition = [None,0,0]#positionx,positiony,time
@@ -129,13 +153,14 @@ class Imaging:
         previousTime = time.time()
 
     def recentre(self, position: float):
+        """Recentres the motors for limited tracking """
         xV=20
         timeToCentre=position/xV
         if timeToCentre<0:
             timeToCentre=-timeToCentre
-        self.q.put([xV,0])
+        self.dataQueue.put([xV,0])
         time.sleep(timeToCentre)
-        self.q.put(0,0)
+        self.dataQueue.put(0,0)
 
     def getCurrentPositionOfMotors(self):
         """calculates current position of motors"""
@@ -184,7 +209,7 @@ class Imaging:
         xV,yV=self.determineVelocity()
 
 
-        self.q.put([xV,yV])
+        self.dataQueue.put([xV,yV])
 
         self.currentVelocity=[xV,yV]
         
@@ -209,8 +234,9 @@ class Imaging:
         return self.velocityCheck(xV,yV)
 
     def search(self):
+        """used for reacquirig a lock when a target is lost"""
         warnings.warn('attempting to aquire a new target')
-        self.q.put([-10,0])#pick a better search pattern
+        self.dataQueue.put([-10,0])#pick a better search pattern
         while True:
             img=self.camera.capture()
             xCo,yCo=self.OR.getCoordinates(img)
@@ -218,46 +244,61 @@ class Imaging:
                 #reset the first steps of main
                 warnings.warn('new target aquired')
                 self.reset()
-                self.main()
+                self.advancedTracking()
                 #restart tracking
 
     def simpleTracking(self):
+        """A simple tracking function that sets the velocity based on how far from the centre of the image the target is"""
         while True:
             img=self.camera.capture(resolution=self.resolution)
             xCo,yCo=self.OR.getCoordinates(img)
             if xCo != None:
                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
-                self.q.put([xV,yV])
+                self.dataQueue.put([xV,yV])
             else:
                 xV=10
                 yV=0
-                self.q.put([xV,yV])
+                self.dataQueue.put([xV,yV])
 
             if not self.controlQueue.empty():#breaks when the signal is sent
                 break
-    def simpleVelocityCalculation(self,xCo,yCo):
+
+    def simpleVelocityCalculation(self,xCo,yCo,maxSpeed: float = 20):
+        """used to determine the velocity based on how far from the centre of the the target is
+        
+        This is likely to work best when the images are being taken frequently
+        """
         xDis=xCo-self.xMid
         yDis=yCo-self.yMid
         x=xDis/self.xMid
         y=yDis/self.yMid
-        maxSpeed=50
+        
         xV=x*maxSpeed
         yV=y*maxSpeed
         return self.velocityCheck(xV,yV)
 
     def intermediateTracking(self):
+        """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
         xV=0
         yV=0
         while True:
-            img=self.camera.capture(resolution=self.resolution)
+            img=self.camera.capture(resolution=self.resolution)#captures the image
 
-            xCo,yCo=self.OR.getCoordinates(img)
-            if xCo != None:
+            xCo,yCo=self.OR.getCoordinates(img)#gets the coordinates of the objects
+            if xCo != None:#checks the coordinates are not none
 
                 xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
-                self.q.put([xV,yV])
+                self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
         
     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):
+        """used to calculate velocities for intermediate tracking
+        Args:
+            xV: the current x velocity
+            yV: the current y velocity
+            xCo: the xCoordinate of the target in the image
+            yCo: the yCoordinate of the target in the image
+
+        """
         xDis=xCo-self.xMid
         yDis=yCo-self.yMid
         x=xDis/self.xMid
@@ -268,6 +309,7 @@ class Imaging:
         return self.velocityCheck(xV,yV)
 
     def velocityCheck(self,xV,yV):
+        """used for ensuring the velocity is below the maxSpeed"""
         if xV <0:
             xSpeed=-xV
         else:
@@ -301,7 +343,7 @@ class ObjectRecognition:
     OR=None
     targets: list = []
     def __init__(self,target: str,imageReturnQueue=None):
-        functions=[
+        functions=[#defines the targets and the corresponding functions
             ['face',self.ORFaces],
             ['person',self.ORBackUp],
             ['bicycle',self.ORBackUp],
@@ -395,14 +437,14 @@ class ObjectRecognition:
             coordinates: the coordinates of the object in the image
         """
         #try:        
-        bbox, label, conf = cv.detect_common_objects(img)
+        bbox, label, conf = cv.detect_common_objects(img)#detects objects
         if len(label)!=0:
             xCo=None
             yCo=None
-            for i in range(0,len(label)):#x not being assigned-not finding target in list of images
-                if label[i] == self.target:
+            for i in range(0,len(label)):#loops through the labels
+                if label[i] == self.target:#checks if the label is equal to the target
                     x=bbox[i]
-                    xCo=(x[0]+x[2])/2
+                    xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
                     yCo=(x[1]+x[3])/2
                     break
         #except:
@@ -411,7 +453,7 @@ class ObjectRecognition:
             yCo=None
         if self.imageReturnQueue!=None:
             warnings.warn('placing an image on the return Queue')
-            self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})
+            self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
         else:
             warning.warn('no queue found')
         return xCo,yCo

@@ -4,6 +4,7 @@ from cv2 import *
 import numpy as np
 import os
 from PIL import Image
+from .errors import *
 class RPICam:
         """A class for the raspberry pi camera
         Attributes:
@@ -27,12 +28,12 @@ class RPICam:
         def getImage(self,resolution: list = [1280,720]):
                 """Gets the image from the camera
                 Args:
-                    resolution:The resolution the camera will run at
+                    resolution: The resolution the camera will capture at
                 """
-                camera=PiCamera()
-                camera.resolution=(resolution[0],resolution[1])
-                camera.capture(self.imagePath)
-                camera.close()
+                camera=PiCamera()#creates a camera object
+                camera.resolution=(resolution[0],resolution[1])#sets the resolution
+                camera.capture(self.imagePath)#captures the image
+                camera.close()#closes the camera to prevent errros
 
 
         def postProcessing(self):
@@ -41,7 +42,7 @@ class RPICam:
                     img: A numPy array containing the image                
                 """
                 img=cv2.imread(self.imagePath,1)#convert image to a colour array
-                os.remove(self.imagePath)
+                os.remove(self.imagePath)#removes the image from the location it was saved
 
                 return img
 
@@ -78,6 +79,7 @@ class RPICam:
                 return self.modelDetails
 
 class GenericCamera:
+        """A generic camera using openCV"""
         camera=cv2.VideoCapture(1)
 
         def __init__(self):
@@ -89,10 +91,12 @@ class GenericCamera:
                 return frame
 
 class VirtualCamera:
+        """A virtual camera primarily for testing as it has no practical purpose other than this"""
         images=[]
         #images.append(np.array())
         def __init__(self):
                 pass
 
         def capture(self):
-                return None
+            raise FeatureNotImplemented()#raise an error as this is not implemented
+                #return None
