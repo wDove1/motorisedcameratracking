@@ -1,0 +1,6 @@
+{
+    "motors":{
+        "xMotor":{"maxSpeed":50,"minWaitTime":0.0016},
+        "yMotor":{"maxSpeed":50,"minWaitTime":0.0016}
+    }
+}

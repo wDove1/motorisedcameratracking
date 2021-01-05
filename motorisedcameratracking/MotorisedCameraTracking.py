@@ -112,7 +112,7 @@ class MotorisedCameraTracking:
                     x=self.imageReturnQueue.get()#gets the image and appends it to the array
                     self.images.append(x)
         else:
-            raise GUIFeaturesNotEnabled('To use this function GUI features needs to be enabled')#raises an error if GUIFeatures are not enabled
+            raise GUIFeaturesNotEnabledError('To use this function GUI features needs to be enabled')#raises an error if GUIFeatures are not enabled
 
 
     def track(self,target: str,options: dict = {}):
@@ -180,7 +180,7 @@ class MotorisedCameraTracking:
         Args:
             path: The path to follow
         """
-        raise FeatureNotImplemented()
+        raise FeatureNotImplementedError()
         
             
 
@@ -203,7 +203,7 @@ class MotorisedCameraTracking:
                     self.running=False#sets running to false
                     break
         else:
-            raise NotTracking('nothing to terminate')#raises an error which can be caught
+            raise NotTrackingError('nothing to terminate')#raises an error which can be caught
        
         #code 1 is for termination
         #other codes may be added for other purposes
@@ -275,8 +275,10 @@ class MotorisedCameraTracking:
             distance: The distance to move
             axis: the axis to move on
         """
-        self.MC.runDisplacement(distance,axis)
-
+        if not self.running:
+            self.MC.runDisplacement(distance,axis)
+        else:
+            raise TrackingActiveError('The motors can not be aimed while the tracking is ative')
     
 
     def getFrame(self):
@@ -285,12 +287,10 @@ class MotorisedCameraTracking:
             img, box, label, confidence where img is the image as a numpy array, box is an array of bounding boxes, label is an array of bounding boxes, confidence is an array of confidences for the labels
         """
         
-        
-
         if not self.GUIFeatures:#checks if GUIFeatures is True as this changes how the function should behave
             if self.imageReturnQueue.empty():#raises an error if the queue is empty
                 #warnings.warn('no image availble')
-                raise NoImageAvailable('no image available to be returned')
+                raise NoImageAvailableError('no image available to be returned')
             
             while not self.imageReturnQueue.empty():#keeps getting until the queue is empty
                 x=self.imageReturnQueue.get()
@@ -304,7 +304,7 @@ class MotorisedCameraTracking:
             return img, box, label, confidence
         else:
             if len(self.images)==0:#raises an error if the list is empty
-                raise NoImageAvailable('no image available to be returned')
+                raise NoImageAvailableError('no image available to be returned')
 
             img=self.images[-1]['img']#gets the data to be returned from the dict
             box=self.images[-1]['box']
@@ -317,15 +317,15 @@ class MotorisedCameraTracking:
         Returns:
             An array of dictionaries where each dictionary is a frame.
             The dicts contain:
-            'img':The image
-            'box':A list of bounding boxes
-            'confidence':A list of confidences
-            'label':A list of labels
+            'img': The image
+            'box': A list of bounding boxes
+            'confidence': A list of confidences
+            'label': A list of labels
         """
         if self.GUIFeatures:
             return self.images
         else:
-            raise GUIFeaturesNotEnabled('To use this function GUI features needs to be enabled')
+            raise GUIFeaturesNotEnabledError('To use this function GUI features needs to be enabled')
     
     def getFrameAsImage(self,resolution: list):
         """used to return a frame as an image.
@@ -344,11 +344,11 @@ class MotorisedCameraTracking:
 
     def getCurrentAnalytics(self) -> dict:
         """returns current analytics data such as speed or target acquisition status """
-        raise FeatureNotImplemented()
+        raise FeatureNotImplementedError()
 
     def getSessionAnalytics(self) -> dict:
         """get analytics about the session such as percentage of time the target was acquired for"""
-        raise FeatureNotImplemented()
+        raise FeatureNotImplementedError()
 
     def setWarnings(self,warningMode: bool):
         """sets whether the user wants warnings or not"""
@@ -396,11 +396,6 @@ class MotorisedCameraTracking:
                 return False
             else:
                 return True
-
-
-        
-
-
 
 def convertImageTkinter(image):
     """converts an image created by the program to one suitable for tkinter

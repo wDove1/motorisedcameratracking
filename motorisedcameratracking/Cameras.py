@@ -98,5 +98,5 @@ class VirtualCamera:
                 pass
 
         def capture(self):
-            raise FeatureNotImplemented()#raise an error as this is not implemented
+            raise FeatureNotImplementedError()#raise an error as this is not implemented
                 #return None
