@@ -344,7 +344,6 @@ class ObjectRecognition:
     targets: list = []
     def __init__(self,target: str,imageReturnQueue=None):
         functions=[#defines the targets and the corresponding functions
-            ['face',self.ORFaces],
             ['person',self.ORBackUp],
             ['bicycle',self.ORBackUp],
             ['car',self.ORBackUp],
@@ -361,7 +360,6 @@ class ObjectRecognition:
             ['bench',self.ORBackUp],
             ['bird',self.ORBackUp],
             ['cat',self.ORBackUp],
-            ['cat face',self.ORCatFace],
             ['dog',self.ORBackUp],
             ['horse',self.ORBackUp],
             ['sheep',self.ORBackUp],
@@ -458,59 +456,7 @@ class ObjectRecognition:
             warning.warn('no queue found')
         return xCo,yCo
 
-    def ORFaces(self,img):
-        """for faces
-        Args:
-            img: A colour numpy array of the image
 
-        Returns:
-            coordinates: the coordinates of the object in the image
-        """
-        #a=Config(0.5)
-        #print(a.getFaceClassifiersPath())
-        faceCascade = cv2.CascadeClassifier("/usr/local/lib/python3.7/dist-packages/cv2/data/haarcascade_frontalface_alt2.xml")
-        
-        imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-        faces = faceCascade.detectMultiScale(imgGray, 1.3, 5)
-        if len(faces) != 0:
-            warnings.warn('face detected')
-            xCo=faces[0][0]+(faces[0][2]/2)
-            yCo=faces[0][1]+(faces[0][3]/2)
-        
-
-        else:
-            xCo=0
-            yCo=0
-        if self.imageReturnQueue!=None:
-            warnings.warn('placing an image on the return Queue')
-            bbox=[]
-            label=[]
-            conf=[]
-            for i in faces:
-                bbox.append([i[0],i[1],i[0]+i[2],i[1]+i[3]])
-                label.append('face')
-                conf.append(0.5)
-            self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})
-        return xCo,yCo
-
-    def ORCatFace(self,img):
-        """for cat faces
-        Args:
-            img: A colour numpy array of the image
-
-        Returns:
-            coordinates: the coordinates of the object in the image
-        """
-        catCascade = cv2.CascadeClassifier(cv2.data.haarcascades + ("haarcascade_frontalcatface_extended.xml"))
-        imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-        faces = catCascade.detectMultiScale(imgGray, 1.3, 5)  
-        xCo=faces[0][0]+(faces[0][2]/2)
-        yCo=faces[0][1]+(faces[0][3]/2)
-        return xCo,yCo
-        
-        
 
     def getCoordinates(self,img):
         """returns the ccordnates of the object in the image
