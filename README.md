@@ -6,7 +6,11 @@ This can be installed through pip with pip install motorisedcameratracking or th
 ## Usage
 
 ## Release Notes
-0.4.0-the first version with GUI features
+0.5.0:
++ Limited tracking is now functional
++ The displacement can now be added to the images that are returned
++ there have been numerous changes to how the tracking works
++ crowded scenes should be somewhat handled now 
 ## Plans
 add support for more cameras. 
 ## License
