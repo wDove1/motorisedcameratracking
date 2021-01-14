@@ -11,7 +11,7 @@ setup(
     packages=find_packages(include=['motorisedcameratracking','motorisedcameratracking.*']),
     package_dir={'motorisedcameratracking':'motorisedcameratracking'},
     package_data={'motorisedcameratracking':['data.*']},
-    version='0.4.2.dev1',
+    version='0.5.0.dev19',
     description='Used to create a tracking tripod head',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",

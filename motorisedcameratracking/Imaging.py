@@ -29,11 +29,12 @@ class Imaging:
     camera=None
     OR=None
     dataQueue=None  
-
+    MCPipe=None
 
     target: str = None
     xMid: int = 640
     yMid: int = 360
+    centralBox=None
 
     coordinates: list = []
     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
@@ -41,9 +42,14 @@ class Imaging:
     currentVelocity: list = [0,0]
     previousTime: float = None
 
+    xV=0
+    yV=0
+    xD=0
+    yD=0
+
     
 
-    def __init__(self, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40}):
+    def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):
         if camera['name']=='RPICam':
             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
         elif camera['name']=='Virtual':
@@ -53,18 +59,31 @@ class Imaging:
         self.resolution=[camera['Width'],camera['Height']]#sets the resolution
         self.xMid=camera['Width']/2
         self.yMid=camera['Height']/2
+        self.centralBox=[camera['Width']/4,camera['Width']*3/4,camera['Height']/4,camera['Height']*3/4]
         self.target=target
         self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object
         self.dataQueue=dataQueue
         self.controlQueue=controlQueue
         self.mode=mode
-
+        self.MC=MC
         self.xMaxSpeed=extras['xMaxSpeed']#sets the maxspeeds as they are needed in some calculations
         self.yMaxSpeed=extras['yMaxSpeed']
+
+    def MotorUpdater(self):
+        while True:
+            data=self.MCPipe.recv()
+            #print(data)
+            self.xV=data['xV']
+            self.yV=data['yV']
+            self.xD=data['xD']
+            self.yD=data['xD']
         
 
-    def main(self):#offers a choice of mode
-        
+    def main(self,MC,MCPipe):#offers a choice of mode
+        self.MC=MC
+        self.MCPipe=MCPipe
+        t=threading.Thread(target=self.MotorUpdater)
+        t.start()
         if self.mode=='advanced':
             self.advancedTracking()
 
@@ -77,10 +96,23 @@ class Imaging:
         else:
             self.simpleTracking()
 
-    def mainLimited(self,limit1,limit2):#only supports one mode currently
-
+    def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently
+        self.MC=MC
+        self.MCPipe=MCPipe
+        t=threading.Thread(target=self.MotorUpdater)
+        t.start()
         if self.mode=='advanced':
-            self.advancedTrackingLimited(limit1,limit2)
+            self.advancedTrackingLimited(xLimit1,xLimit2)
+
+        elif self.mode=='intermediate':
+            self.intermediateTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
+
+        elif self.mode=='simple':
+            self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
+        else:
+            self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
+
+
 
     def advancedTracking(self):
         """The main loop for processing images
@@ -110,8 +142,8 @@ class Imaging:
             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
             self.calculatePositionOfObject()                    #adds current angles of target to list
             print('self.positions A ',self.positions)
-            self.calculateVelocity()                            #calculates velocity
-            
+            xV,yV=self.determineVelocity()                            #calculates velocity
+            self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
             if not self.controlQueue.empty():#breaks when the signal is sent
                 break
 
@@ -128,6 +160,7 @@ class Imaging:
         self.positions.append(self.currentPosition)
 
         while True:#allow it to loop multiple times
+            recentre=False
             x=self.camera.capture()
             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement
             self.getCurrentPositionOfMotors()
@@ -135,9 +168,18 @@ class Imaging:
             self.positions.append([self.currentPosition[-1],None,None])                                                 #adds the current time to the list of positions
             self.calculateCoordinates(x)                                                                                #calculates the coordinates of the object in the image
             self.calculatePositionOfObject()                                                                            #adds current angles of target to list
-            self.calculateVelocity()                                                                                    #calculates velocity
-            if self.positions[-1][1]<=limit1 or self.positions[-1][1]>=limit2 :
-                self.recentre(self.positions[-1][1])
+            xV,yV=self.determineVelocity()                                                                                    #calculates velocity
+
+                        
+            if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
+                xV=0
+                yV=0
+                recentre=True
+                self.reset()
+
+            self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
+
+
             if not self.controlQueue.empty():
                 self.reset()
                 break
@@ -152,15 +194,7 @@ class Imaging:
         currentVelocity = [0,0]
         previousTime = time.time()
 
-    def recentre(self, position: float):
-        """Recentres the motors for limited tracking """
-        xV=20
-        timeToCentre=position/xV
-        if timeToCentre<0:
-            timeToCentre=-timeToCentre
-        self.dataQueue.put([xV,0])
-        time.sleep(timeToCentre)
-        self.dataQueue.put(0,0)
+
 
     def getCurrentPositionOfMotors(self):
         """calculates current position of motors"""
@@ -204,14 +238,14 @@ class Imaging:
             self.search()
         #print(self.coordinates[-1])
 
-    def calculateVelocity(self):
-        """calculates and transmits the velocity to the Motor control class"""
-        xV,yV=self.determineVelocity()
+    #def calculateVelocity(self):
+    #    """calculates and transmits the velocity to the Motor control class"""
+    #    xV,yV=self.determineVelocity()
 
 
-        self.dataQueue.put([xV,yV])
+    #    self.dataQueue.put([xV,yV])
 
-        self.currentVelocity=[xV,yV]
+    #    self.currentVelocity=[xV,yV]
         
     def determineVelocity(self):
         """determines the velocity the object is moving at
@@ -231,7 +265,9 @@ class Imaging:
             yV=0
         print('xV ',xV)
         print('yV ',yV)
-        return self.velocityCheck(xV,yV)
+        xV,yV=self.velocityCheck(xV,yV)
+        self.currentVelocity=[xV,yV]
+        return xV,yV
 
     def search(self):
         """used for reacquirig a lock when a target is lost"""
@@ -247,6 +283,8 @@ class Imaging:
                 self.advancedTracking()
                 #restart tracking
 
+###############################################################
+
     def simpleTracking(self):
         """A simple tracking function that sets the velocity based on how far from the centre of the image the target is"""
         while True:
@@ -254,14 +292,40 @@ class Imaging:
             xCo,yCo=self.OR.getCoordinates(img)
             if xCo != None:
                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
-                self.dataQueue.put([xV,yV])
+                #self.dataQueue.put([xV,yV])
             else:
                 xV=10
                 yV=0
-                self.dataQueue.put([xV,yV])
+                #self.dataQueue.put([xV,yV])
+
+            self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
 
             if not self.controlQueue.empty():#breaks when the signal is sent
                 break
+
+    def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
+        while True:
+            recentre=False
+            img=self.camera.capture(resolution=self.resolution)
+            xCo,yCo=self.OR.getCoordinates(img)
+            if xCo != None:
+                xV,yV=self.simpleVelocityCalculation(xCo,yCo)
+                #self.dataQueue.put([xV,yV])
+            else:
+                xV=10
+                yV=0
+                #self.dataQueue.put([xV,yV])
+
+            if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
+                xV=0
+                yV=0
+                recentre=True
+
+            self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
+
+            if not self.controlQueue.empty():#breaks when the signal is sent
+                break
+
 
     def simpleVelocityCalculation(self,xCo,yCo,maxSpeed: float = 20):
         """used to determine the velocity based on how far from the centre of the the target is
@@ -284,12 +348,56 @@ class Imaging:
         while True:
             img=self.camera.capture(resolution=self.resolution)#captures the image
 
-            xCo,yCo=self.OR.getCoordinates(img)#gets the coordinates of the objects
-            if xCo != None:#checks the coordinates are not none
+            targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects
+            if targetsList==None:#checks none has not been returned
+                pass
+            elif len(targetsList) == 1:
+                xCo=targetsList[0][1]
+                yCo=targetsList[0][2]
+                if not self.inCentralBox(xCo,yCo):
+                    xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
+                    #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
+            elif self.isMultiple(targetsList):
+                pass#maintains the same velocity
+                #tweak the tracking for the scenario
+            
+            self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
+            
+            if not self.controlQueue.empty():#breaks when the signal is sent
+                break
 
-                xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
-                self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
-        
+    def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
+        xV=0
+        yV=0
+        while True:
+            recentre=False
+            img=self.camera.capture(resolution=self.resolution)#captures the image
+
+            targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects
+            if targetsList==None:#checks none has not been returned
+                pass
+            elif len(targetsList) == 1:
+                xCo=targetsList[0][1]
+                yCo=targetsList[0][2]
+                if not self.inCentralBox(xCo,yCo):
+                    xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
+                    #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
+            elif self.isMultiple(targetsList):
+                pass#maintains the same velocity
+                #tweak the tracking for the scenario
+
+
+            if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
+                warnings.warn('outside limits')
+                xV=0
+                yV=0
+                recentre=True
+                #self.MC.recentre()
+            self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
+                
+            if not self.controlQueue.empty():#breaks when the signal is sent
+                break
+
     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):
         """used to calculate velocities for intermediate tracking
         Args:
@@ -307,6 +415,34 @@ class Imaging:
         xV=xV+x*maxAdditionalSpeed
         yV=xV+y*maxAdditionalSpeed
         return self.velocityCheck(xV,yV)
+
+###############################################################
+
+    def inCentralBox(self,xCo,yCo):
+        if self.centralBox[0]<xCo<self.centralBox[1] and self.centralBox[2]<yCo<self.centralBox[3] :
+            return True
+        else:
+            return False
+
+    def isMultiple(self,targetList):
+        if len(targetList)>1:
+            return True
+        else:
+            return False
+
+    def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):
+        print('xl1',xLimit1)
+        print('xl2',xLimit2)
+        print('yl1',yLimit1)
+        print('yl2',yLimit2)
+        print('xD',self.xD)
+        print('yD',self.yD)
+        if not (xLimit1<self.xD<xLimit2 and yLimit1<self.yD<yLimit2):
+            return True
+        else:
+            return False
+
+
 
     def velocityCheck(self,xV,yV):
         """used for ensuring the velocity is below the maxSpeed"""
@@ -333,6 +469,9 @@ class Imaging:
                 yV=self.yMaxSpeed
 
         return xV,yV
+
+
+
 
 
 
@@ -435,7 +574,7 @@ class ObjectRecognition:
             coordinates: the coordinates of the object in the image
         """
         #try:        
-        bbox, label, conf = cv.detect_common_objects(img)#detects objects
+        bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
         if len(label)!=0:
             xCo=None
             yCo=None
@@ -456,7 +595,31 @@ class ObjectRecognition:
             warning.warn('no queue found')
         return xCo,yCo
 
-
+    def getCoordinatesMultiTargetLP(self,img,targets=[]):
+        if len(targets)==0:
+            targets.append(self.target)
+        bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
+        returnTargets=[]#creates the array for returning the objects
+        if len(label)!=0:
+            #xCo=None
+            #yCo=None
+            for i in range(0,len(label)):#loops through the labels
+                if label[i] in self.targets:#checks if the label is equal to one of the targets
+                    x=bbox[i]
+                    xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
+                    yCo=(x[1]+x[3])/2
+                    returnTargets.append([label[i],xCo,yCo])#appends the label and coordiates to the list
+        #except:
+        else:
+            #xCo=None
+            #yCo=None
+            returnTargets=None#sets the list to None
+        if self.imageReturnQueue!=None:
+            warnings.warn('placing an image on the return Queue')
+            self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
+        else:
+            warning.warn('no queue found')
+        return returnTargets
 
     def getCoordinates(self,img):
         """returns the ccordnates of the object in the image

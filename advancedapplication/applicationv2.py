@@ -12,70 +12,39 @@ from PIL import Image, ImageTk
 import webbrowser
 import json
 
-class Calibrate:
-    speed1=None
-    speed2=None
-    waitTime=None
-
-    distance=None
-    increment=None
-
-
-    def calibrate(self,x):
-        self.waitTime=0.002
-        self.distance=360
-        self.increment=0.0001
-
-
-        with open("saveFile.json", "r") as saveFile:
-            saveData = json.load(saveFile)
-
-
-
-        calibratePopUp=tkinter.Tk()
-        calibratePopUp.title('calibration')
-        calibrateButton=Button(calibratePopUp,text='run calibration',command=lambda:self.runCalibration())
-        calibrateButton.pack()
-        stopButton=Button(calibratePopUp,text='stop',command=lambda:self.end(calibratePopUp))
-        stopButton.pack()
-        calibratePopUp.mainloop()
-        
-    def end(self,window):
-        return self.speed1,self.speed2,self.waitTime
-        window.destroy()
-                          
-    def runCalibration(self):
-        print(self.waitTime)
-        self.waitTime-=self.increment
-        self.speed1,self.speed2=x.calibrateZero(self.waitTime,self.distance)
-
-
 
 def calibrate():
+    global saveData
+    print(saveData)
     with open("saveFile.json", "r") as saveFile:
         saveData = json.load(saveFile)
     print(saveData)
-    a=Calibrate()
-    speed1,speed2,waitTime=a.calibrate(x)
+    waitTime=0.0012
+    speed1,speed2=x.calibrateZero(waitTime,360)
     print(speed1)
     saveData['motors']['xMotor']['minWaitTime']=waitTime
     saveData['motors']['yMotor']['minWaitTime']=waitTime
     saveData['motors']['xMotor']['maxSpeed']=speed1
     saveData['motors']['yMotor']['maxSpeed']=speed2
+    x.setSpecsZero(waitTime=saveData['motors']['xMotor']['minWaitTime'],speed1=saveData['motors']['xMotor']['maxSpeed'],speed2=None)
     print(saveData)
 
 def importCalibration():
+    global saveData
     with open("saveFile.json", "r") as saveFile:
         saveData = json.load(saveFile)
     x.setSpecsZero(waitTime=saveData['motors']['xMotor']['minWaitTime'],speed1=saveData['motors']['xMotor']['maxSpeed'],speed2=None)
-    #print(data)
+    print(saveData)
     #print(data['motors']['xMotor'])
 
 
 def saveCalibration():
     print(saveData)
-    #with open("saveFile.json", "w") as saveFile:
-    #    json.dump(saveData, saveFile)
+    with open("saveFile.json", "w") as saveFile:
+        json.dump(saveData, saveFile)
+    
+def setCalibration():
+    pass
         
 def disableAimButtons():#disables the buttons when the tracking is active to prevent an error being raised
     upAdjust.config(state=DISABLED)
@@ -118,89 +87,99 @@ def imageDisplayA():
             
         #
         if x.isImageAvailable():
-            image,box,label,confidence=x.getFrame()
-            a = image == lastImage
-            if not a.all():
-                lastImage=image
+            image=x.getFrameAsImage([1000,500])
+            #a = image == lastImage
+            #if not a.all():
+                #lastImage=image
             
-                image = draw_bbox(image, box, label, confidence)
-                print(box)
-                image=cv2.resize(image,(1000,500),interpolation = cv2.INTER_AREA)
-                b,g,r = cv2.split(image)
-                img = cv2.merge((r,g,b))
-                img = Image.fromarray(img)
-                img = ImageTk.PhotoImage(image=img)
-                imageDisplay.config(image=img)
+                #image = draw_bbox(image, box, label, confidence)
+                #print(box)
+            #image=cv2.resize(image,(1000,500),interpolation = cv2.INTER_AREA)
+            b,g,r = cv2.split(image)
+            img = cv2.merge((r,g,b))
+            img = Image.fromarray(img)
+            img = ImageTk.PhotoImage(image=img)
+            imageDisplay.config(image=img)
         #except:
         #    print('no image found')
             
 
 def startTracking():
-    popUp=tkinter.Tk()
-    popUp.title('start Tracking')
-    popUp.geometry("200x200")
-    targets=x.getSupportedTargets()
+    if not x.isRunning():
+        popUp=tkinter.Tk()
+        popUp.title('start Tracking')
+        popUp.geometry("200x200")
+        targets=x.getSupportedTargets()
 
 
-    
-
-    default = tkinter.StringVar(popUp)
-    default.set(targets[0]) # default value
-    
-
-    w = OptionMenu(popUp, default, *targets)
-    w.pack()
-
-    def track():
-        x.track(default.get())
-        imageDisplayThread=threading.Thread(target=imageDisplayA)
-        imageDisplayThread.start()
-        disableAimButtons()
-        popUp.destroy()
         
 
-    button = tkinter.Button(popUp, text="startTracking", command=track)
-    button.pack()
+        default = tkinter.StringVar(popUp)
+        default.set(targets[0]) # default value
+        
 
-    
-    popUp.mainloop()
+        w = OptionMenu(popUp, default, *targets)
+        w.pack()
+
+        def track():
+            x.track(default.get())
+            imageDisplayThread=threading.Thread(target=imageDisplayA)
+            imageDisplayThread.start()
+            disableAimButtons()
+            popUp.destroy()
+            
+
+        button = tkinter.Button(popUp, text="startTracking", command=track)
+        button.pack()
+
+        
+        popUp.mainloop()
     
 def startTrackingLimited():
-    popUp=tkinter.Tk()
-    popUp.title('start Tracking')
-    popUp.geometry("200x200")
-    targets=x.getSupportedTargets()
+    if not x.isRunning():
+        popUp=tkinter.Tk()
+        popUp.title('start Tracking')
+        popUp.geometry("200x200")
+        targets=x.getSupportedTargets()
 
-
-    
-
-    default = tkinter.StringVar(popUp)
-    default.set(targets[0]) # default value
-    
-
-    targetSelector = OptionMenu(popUp, default, *targets)
-    targetSelector.pack()
-    
-    l1=tkinter.Entry(popUp)
-    l2=tkinter.Entry(popUp)
-    l1.pack()
-    l2.pack()
-
-    def track():
-        x.trackLimited(default.get(),l1.get(),l2.get())
-        imageDisplayThread=threading.Thread(target=imageDisplayA)
-        imageDisplayThread.start()
-        popUp.destroy()
 
         
 
-    button = tkinter.Button(popUp, text="startTracking", command=track)
-    button.pack()
+        default = tkinter.StringVar(popUp)
+        default.set(targets[0]) # default value
+        
+
+        targetSelector = OptionMenu(popUp, default, *targets)
+        targetSelector.pack()
+        
+        xl1=tkinter.Entry(popUp)
+        xl2=tkinter.Entry(popUp)
+        yl1=tkinter.Entry(popUp)
+        yl2=tkinter.Entry(popUp)
+        xl1.pack()
+        xl2.pack()
+        yl1.pack()
+        yl2.pack()
+
+        def track():
+            x.trackLimited(default.get(),int(xl1.get()),int(xl2.get()),int(yl1.get()),int(yl2.get()))
+            imageDisplayThread=threading.Thread(target=imageDisplayA)
+            imageDisplayThread.start()
+            disableAimButtons()
+            popUp.destroy()
+
+            
+
+        button = tkinter.Button(popUp, text="startTracking", command=track)
+        button.pack()
 
 def stopTracking():
     if x.isRunning():
         x.terminate()
         activateAimButtons()
+        
+def startUp():
+    importCalibration()
 
         
 def help():
@@ -208,10 +187,12 @@ def help():
 
 saveData=None
 
-motorisedCameraTracking=MotorisedCameraTracking(camera={'name': 'RPICam','orientation': 180,'Width':3000,'Height':2000},config={'imagingMode':'simple'})
+motorisedCameraTracking=MotorisedCameraTracking(camera={'name': 'RPICam','orientation': 180,'Width':3000,'Height':2000},config={'imagingMode':'intermediate'})
 x=motorisedCameraTracking
 #x.setWarnings(False)
 x.setGUIFeatures(True)
+
+startUp()
 
 window=tkinter.Tk()
 window.title('motorisedcameratracking')
@@ -232,7 +213,7 @@ calibrationMenu=Menu(menuBar,tearoff=0)
 calibrationMenu.add_command(label='motorCalibration',command=calibrate)
 calibrationMenu.add_command(label='saveCalibration',command=saveCalibration)
 calibrationMenu.add_command(label='importCalibration',command=importCalibration)
-
+calibrationMenu.add_command(label='setCalibration',command=setCalibration)
 
 menuBar.add_cascade(label='Tracking',menu=trackingMenu)
 menuBar.add_cascade(label='Help',menu=helpMenu)

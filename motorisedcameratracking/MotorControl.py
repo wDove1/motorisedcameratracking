@@ -2,6 +2,7 @@
 import threading
 import time
 import queue
+import multiprocessing
 import warnings
 from motorcontrollib import M_28BJY48_ULN2003_RPI
 from typing import *
@@ -31,6 +32,18 @@ class MotorControl:
     xAcceleration: float = 0
     yAcceleration: float = 0
     dataQueue=None
+    xVQueue=None
+    yVQueue=None
+    
+    ImPipe=None
+
+    xDisplacement=0
+    yDisplacement=0
+    xDQueue=None
+    yDQueue=None
+
+    trackingThread=None
+    tracking=False
 
     def __init__(self, motorOne: dict, motorTwo: dict):
         if motorOne['name']=="28BJY48_ULN2003_RPI":
@@ -57,87 +70,212 @@ class MotorControl:
             time.sleep(self.timeUnit-t)
             #print('a')
 
-    def updater(self,controlQueue):#fix this
-        """updates the velocities as new ones are calculated
-        Args:
-            controlQueue: Used for shutting down the program
-        """
-        warnings.warn('MotorControl main is now active')
-        while True:
-            #warnings.warn('MotorControl has looped')
-            if self.dataQueue.qsize() <= 1:
+    #def updater(self,xVQueue,yVQueue,xDQueue,yDQueue):#fix this
+    #    """updates the velocities as new ones are calculated
+    #    Args:
+    #        controlQueue: Used for shutting down the program
+    #    """
+        
+    #    warnings.warn('MotorControl main is now active')
+    #    self.xDisplacement=0
+    #    self.yDisplacement=0
+    #    while True:
+    #        print('xV a',self.xVelocity)
+    #        print('xD a',self.xDisplacement)
+    #        #warnings.warn('MotorControl has looped')
+    #        if self.dataQueue.qsize() <= 1:
                 
-                #print('MotorControl running as ideal')
-                empty=self.dataQueue.empty()
-                #print(empty)
+    #            #print('MotorControl running as ideal')
+    #            empty=self.dataQueue.empty()
+    #            #print(empty)
             
-                if not empty:
-                    x=self.dataQueue.get()
-                    self.xVelocity=x[0]
-                    self.yVelocity=x[1]
-                #print(self.xVelocity)
+    #            if not empty:
+    #                x=self.dataQueue.get()
+    #                self.xVelocity=x[0]
+    #                self.yVelocity=x[1]
+                    
 
-                #print('x ',self.xVelocity)
-                #print('y ',self.yVelocity)
+    #            #print(self.xVelocity)
 
-                t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-                t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+    #            #print('x ',self.xVelocity)
+    #            #print('y ',self.yVelocity)
 
-                t2.start()
-                t3.start()
-                t2.join()
-                t3.join()
-                #print('threads closed')
+    #            t2=threading.Thread(target=self.xMotor)
+    #            t3=threading.Thread(target=self.yMotor)
+
+    #            t2.start()
+    #            t3.start()
+    #            t2.join()
+    #            t3.join()
+    #            #print('threads closed')
                 
+    #        else:
+    #            #print('clearing excess items from the queue')
+    #            while self.dataQueue.qsize() >= 1:
+    #                x=self.dataQueue.get()
+    #            #x=self.dataQueue.get()
+    #            self.xVelocity=x[0]
+    #            self.yVelocity=x[1]
+
+    #            #print(self.xVelocity)
+
+            
+
+    #            t2=threading.Thread(target=self.xMotor)
+    #            t3=threading.Thread(target=self.yMotor)
+
+    #            t2.start()
+    #            t3.start()
+    #            t2.join()
+    #            t3.join()
+
+    #        self.xDisplacement+=self.xVelocity*self.timeUnit
+    #        self.yDisplacement+=self.yVelocity*self.timeUnit
+    #        #print('x ',self.xVelocity)
+    #        xVQueue.put(self.xVelocity)
+    #        #print('queue size 1: ', xVQueue.qsize())
+    #        #print('xV from queue:', xVQueue.get())
+    #        yVQueue.put(self.yVelocity)
+
+    #        xDQueue.put(self.xDisplacement)
+    #        yDQueue.put(self.yDisplacement)
+
+    #        self.ImPipe.send({'xV':self.xVelocity,'yV':self.yVelocity,'xD':self.xDisplacement,'yD':self.yDisplacement})
+
+    #        if self.ImPipe.poll():
+    #            data=self.ImPipe.recv()
+    #            if data['recentre']:
+    #                warnings.warn('recentring')
+    #                self.xVelocity=0
+    #                self.yVelocity=0
+    #                self.M1.runDisplacement(-self.xDisplacement)
+    #                self.M2.runDisplacement(-self.yDisplacement)
+    #                self.xDisplacement=0
+    #                self.yDisplacement=0
+    #        if not self.controlQueue.empty():
+    #            warnings.warn('MotorControl is Exiting')
+    #            break
+
+    def updater(self,xVQueue,yVQueue,xDQueue,yDQueue):
+        warnings.warn('MotorControl main is now active')
+        self.xDisplacement=0
+        self.yDisplacement=0
+        data={'xV':0,'yV':0,'recentre':False}
+        while True:
+            if self.ImPipe.poll():
+                while True:
+                    if self.ImPipe.poll():
+                        data=self.ImPipe.recv()
+                    else:
+                        break
+
+            if data['recentre']:
+                warnings.warn('recentring')
+                self.xVelocity=0
+                self.yVelocity=0
+                self.M1.runDisplacement(-self.xDisplacement)
+                self.M2.runDisplacement(-self.yDisplacement)
+                self.xDisplacement=0
+                self.yDisplacement=0
             else:
-                #print('clearing excess items from the queue')
-                while self.dataQueue.qsize() >= 1:
-                    x=self.dataQueue.get()
-                #x=self.dataQueue.get()
-                self.xVelocity=x[0]
-                self.yVelocity=x[1]
-                #print(self.xVelocity)
+                self.xVelocity=data['xV']
+                self.yVelocity=data['yV']
 
+            t2=threading.Thread(target=self.xMotor)
+            t3=threading.Thread(target=self.yMotor)
 
+            t2.start()
+            t3.start()
+            t2.join()
+            t3.join()
 
-                t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-                t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
+            self.xDisplacement+=self.xVelocity*self.timeUnit
+            self.yDisplacement+=self.yVelocity*self.timeUnit
+            
+            self.ImPipe.send({'xV':self.xVelocity,'yV':self.yVelocity,'xD':self.xDisplacement,'yD':self.yDisplacement})
 
-                t2.start()
-                t3.start()
-                t2.join()
-                t3.join()
+            xVQueue.put(self.xVelocity)
+            yVQueue.put(self.yVelocity)
+            xDQueue.put(self.xDisplacement)
+            yDQueue.put(self.yDisplacement)
 
-            if not controlQueue.empty():
+            if not self.controlQueue.empty():
                 warnings.warn('MotorControl is Exiting')
                 break
 
-                
-
-    def xMotor(self,controlQueue):
+    def xMotor(self):
         """The method to control the motor that moves on the x axis
         Args:
             controlQueue: Used for shutting down the program
         """
-        #while True:
         if self.xVelocity !=0:
             self.M1.runVelocityT(self.xVelocity,self.timeUnit)
-            #if not controlQueue.empty():
-            #    break
 
-    def yMotor(self,controlQueue):
+
+    def yMotor(self):
         """The method to control the motor that moves on the y axis
         Args:
             controlQueue: Used for shutting down the program
         """
-
-        #while True:
         if self.yVelocity !=0:
             self.M2.runVelocityT(self.yVelocity,self.timeUnit)
-        #    if not controlQueue.empty():
-        #        break
 
-    def main(self,q,controlQueue):
+
+    def getXDisplacement(self):
+        if self.tracking:
+            if not self.xDQueue.empty():
+                
+                while self.xDQueue.qsize()>=1:
+
+                    x=self.xDQueue.get()
+                    #print(x)
+                return x
+            else:
+                print('no displacement found')
+                return 0
+        else:
+            print('not tracking')
+            return 0
+
+    def getYDisplacement(self):
+        if self.tracking:
+            if not self.yDQueue.empty():
+                
+                while self.yDQueue.qsize()>=1:
+                    #print("Getting velocity")
+                    y=self.yDQueue.get()
+                return y
+            else:
+                #print("no velocity found")
+                return 0
+        else:
+            return 0
+
+    def getXVelocity(self):
+        #return self.xVelocity
+        #print('queue size 2: ', self.xVQueue.qsize())
+        if not self.xVQueue.empty():
+            
+            while self.xVQueue.qsize()>=1:
+                #print("Getting velocity")
+                x=self.xVQueue.get()
+            return x
+        else:
+            #print("no velocity found")
+            return 0
+
+    def getYVelocity(self):
+        #return self.yVelocity
+        if not self.yVQueue.empty():
+            
+            while self.yVQueue.qsize()>=1:
+                #print("Getting velocity")
+                y=self.yVQueue.get()
+            return y
+        else:
+            return 0
+
+    def main(self,q,controlQueue,ImPipe):
         """The main method that starts the threads to allow the motors to run
         Args:
             q:The queue for transmitting velocity data
@@ -145,13 +283,36 @@ class MotorControl:
         """
 
         self.dataQueue=q
+        self.controlQueue=controlQueue
+        
+        self.ImPipe=ImPipe
 
-        t1=threading.Thread(target=self.updater,args=(controlQueue,))
-        #t2=threading.Thread(target=self.xMotor,args=(controlQueue,))
-        #t3=threading.Thread(target=self.yMotor,args=(controlQueue,))
-        t1.start()
-        #t2.start()
-        #t3.start()
+        xVQueue=multiprocessing.Queue()
+        yVQueue=multiprocessing.Queue()
+
+        xDQueue=multiprocessing.Queue()
+        yDQueue=multiprocessing.Queue()
+        
+        self.trackingThread=multiprocessing.Process(target=self.updater,args=(xVQueue,yVQueue,xDQueue,yDQueue,))
+        self.trackingThread.start()
+
+        self.xVQueue=xVQueue
+        self.yVQueue=yVQueue
+
+        self.xDQueue=xDQueue
+        self.yDQueue=yDQueue
+
+        self.tracking=True
+
+        
+                
+
+
+
+    def endTracking(self):
+        while self.trackingThread.is_alive():
+            pass
+        self.trackingThread.kill()
 
 
     def xAdjustL(self):
@@ -250,3 +411,8 @@ class MotorControl:
     def getMaxSpeed(self):
         return self.M1.getMaxSpeed(),self.M2.getMaxSpeed()
 
+    def xRunVelcoityT(self,velocity,time):
+        self.M1.runVelocityT(velocity,time)
+
+    def yRunVelcoityT(self,velocity,time):
+        self.M2.runVelocityT(velocity,time)

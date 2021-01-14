@@ -58,6 +58,8 @@ class MotorisedCameraTracking:
     dataQueue=multiprocessing.Queue()
     imageReturnQueue=multiprocessing.Queue()
 
+    MCPipeEnd,ImPipeEnd=multiprocessing.Pipe(True)
+
     p1=None
     p2=None
 
@@ -126,7 +128,7 @@ class MotorisedCameraTracking:
         self.target=target
         if self.checkTargetSupported(target):#checks the target is supported
             xMaxSpeed,yMaxSpeed=self.MC.getMaxSpeed()#gets the motors max speeds
-            a=Imaging(self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target,camera=self.camera,mode=self.config['imagingMode'],extras={'xMaxSpeed':xMaxSpeed,'yMaxSpeed':yMaxSpeed})#creates an imaging object
+            a=Imaging(self.MC,self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target,camera=self.camera,mode=self.config['imagingMode'],extras={'xMaxSpeed':xMaxSpeed,'yMaxSpeed':yMaxSpeed})#creates an imaging object
 
             if self.GUIFeatures:#starts the recording of frames if GUI features is enabled
                 t=threading.Thread(target=self.recordFrames,args=())
@@ -134,16 +136,16 @@ class MotorisedCameraTracking:
 
             #if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
             warnings.warn('tracking starting')#warns the user tracking is starting
-            self.p1 = multiprocessing.Process(target=a.main,args=())#creates and starts the processes - They are not joined so the code can continue executing
+            self.p1 = multiprocessing.Process(target=a.main,args=(self.MC,self.ImPipeEnd,))#creates and starts the processes - They are not joined so the code can continue executing
             self.p1.start()
-            self.p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,))
+            self.p2 = threading.Thread(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,self.MCPipeEnd,))
             self.p2.start()
             self.running=True#sets running to true
             
         else:
             raise ValueError('target not supported')
         
-    def trackLimited(self, target: str, limit1: float = 0, limit2: float = 0,options: dict = {}):
+    def trackLimited(self, target: str, xLimit1: float = 0, xLimit2: float = 0, yLimit1: float = 0, yLimit2: float = 0, options: dict = {}):
         """starts the tracking of the given target but limits the movement of the x motor 
 
         Aside from the limits on the x axis range it can track it is pretty much a clone of track() so the same usage reccomendations and restrictions apply
@@ -157,7 +159,8 @@ class MotorisedCameraTracking:
         """
         self.target=target
         if self.checkTargetSupported(target):
-            a=Imaging(self.dataQueue,self.controlQueueImg,target,camera=self.camera,mode=self.config['imagingMode'],extras={'xMaxSpeed':xMaxSpeed,'yMaxSpeed':yMaxSpeed})
+            xMaxSpeed,yMaxSpeed=self.MC.getMaxSpeed()#gets the motors max speeds
+            a=Imaging(self.MC,self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target,camera=self.camera,mode=self.config['imagingMode'],extras={'xMaxSpeed':xMaxSpeed,'yMaxSpeed':yMaxSpeed})
  
             if self.GUIFeatures:
                 t=threading.Thread(target=self.recordFrames,args=())
@@ -165,9 +168,9 @@ class MotorisedCameraTracking:
             
             if __name__ == 'motorisedcameratracking.MotorisedCameraTracking':
                 warnings.warn('tracking starting')
-                self.p1 = multiprocessing.Process(target=a.mainLimited,args=(limit1, limit2,))
+                self.p1 = multiprocessing.Process(target=a.mainLimited,args=(self.MC,self.ImPipeEnd,xLimit1, xLimit2, yLimit1, yLimit2,))
                 self.p1.start()
-                self.p2 = multiprocessing.Process(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,))
+                self.p2 = threading.Thread(target=self.MC.main,args=(self.dataQueue, self.controlQueueMC,self.MCPipeEnd))
                 self.p2.start()
                 self.running=True
 
@@ -183,7 +186,20 @@ class MotorisedCameraTracking:
         raise FeatureNotImplementedError()
         
             
-
+    def followPathSimple(self,path):
+        """A function to track along a path
+        
+        the path will take the form[[xV,yV,time]...]
+        Args:
+            path: The path to follow
+        """
+        for i in range(len(path)):
+            t1=threading.Thread(target=self.MC.xRunVelocityT,args=(path[i][0],path[i][2],))
+            t2=threading.Thread(target=self.MC.yRunVelocityT,args=(path[i][1],path[i][2],))
+            t1.start()
+            t2.start()
+            t1.join()
+            t2.join()
 
 
     def terminate(self):
@@ -199,7 +215,8 @@ class MotorisedCameraTracking:
             while True:#loops as the processes have to finish what they are doing
                 if not (self.p1.is_alive() and self.p2.is_alive()):#waits for them to be finished
                     self.p1.kill()#kills them
-                    self.p2.kill()
+                    #self.p2.kill()
+                    self.MC.endTracking()#used as it is now started through a thread
                     self.running=False#sets running to false
                     break
         else:
@@ -327,7 +344,7 @@ class MotorisedCameraTracking:
         else:
             raise GUIFeaturesNotEnabledError('To use this function GUI features needs to be enabled')
     
-    def getFrameAsImage(self,resolution: list):
+    def getFrameAsImage(self,resolution: list,includeVelocity: bool = True,includeTime: bool = False,includeDisplacement=False):
         """used to return a frame as an image.
 
         Ideal for use when the user has little experience with the required libraries for processing the image
@@ -339,8 +356,24 @@ class MotorisedCameraTracking:
         i,b,l,c=self.getFrame()#calls the get frame function
 
         image = draw_bbox(i, b, l, c)#adds bounding boxes etc to the image
+        #image=cv2.resize(image,(resolution[0],resolution[1]),interpolation = cv2.INTER_AREA)#resizes it
+        dataString=""
+        if includeVelocity:
+            dataString=("The x velocity is: "+str(self.MC.getXVelocity())+". The y velocity is: "+str(self.MC.getYVelocity())+". ")
+
+        if includeDisplacement:
+            pass
+        if includeTime:
+            dataString+=("The Time is: "+time.asctime(time.localtime(time.time()))+".")
+        if includeVelocity or includeTime:
+            image=cv2.putText(image,dataString,(10,40),cv2.FONT_HERSHEY_SIMPLEX,1,(255,0,0),1,cv2.LINE_AA)
+
         image=cv2.resize(image,(resolution[0],resolution[1]),interpolation = cv2.INTER_AREA)#resizes it
+
         return image
+
+    def getVelocity(self):
+        return self.MC.getXVelocity(),self.MC.getYVelocity()
 
     def getCurrentAnalytics(self) -> dict:
         """returns current analytics data such as speed or target acquisition status """
