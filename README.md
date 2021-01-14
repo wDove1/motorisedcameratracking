@@ -4,7 +4,7 @@ A python library designed to create a tracking tripod head with the help of a ra
 ## Installation 
 This can be installed through pip with pip install motorisedcameratracking or the appropriate command on linux
 ## Usage
-
+Can be used with the GUI
 ## Release Notes
 0.5.0:
 + Limited tracking is now functional
