@@ -158,30 +158,30 @@ class MotorControl:
 
     def updater(self,xVQueue,yVQueue,xDQueue,yDQueue):
         warnings.warn('MotorControl main is now active')
-        self.xDisplacement=0
+        self.xDisplacement=0#sets the initial value of the variables
         self.yDisplacement=0
         data={'xV':0,'yV':0,'recentre':False}
         while True:
-            if self.ImPipe.poll():
+            if self.ImPipe.poll():#gets the most recent data from the pipe
                 while True:
                     if self.ImPipe.poll():
                         data=self.ImPipe.recv()
                     else:
                         break
 
-            if data['recentre']:
+            if data['recentre']:#checks if recentring is required
                 warnings.warn('recentring')
                 self.xVelocity=0
                 self.yVelocity=0
-                self.M1.runDisplacement(-self.xDisplacement)
+                self.M1.runDisplacement(-self.xDisplacement)#returns it to the start
                 self.M2.runDisplacement(-self.yDisplacement)
-                self.xDisplacement=0
+                self.xDisplacement=0#resets the displacement
                 self.yDisplacement=0
             else:
-                self.xVelocity=data['xV']
+                self.xVelocity=data['xV']#sets the velocity
                 self.yVelocity=data['yV']
 
-            t2=threading.Thread(target=self.xMotor)
+            t2=threading.Thread(target=self.xMotor)#runs the motors
             t3=threading.Thread(target=self.yMotor)
 
             t2.start()
@@ -189,12 +189,12 @@ class MotorControl:
             t2.join()
             t3.join()
 
-            self.xDisplacement+=self.xVelocity*self.timeUnit
+            self.xDisplacement+=self.xVelocity*self.timeUnit#updates the displacement
             self.yDisplacement+=self.yVelocity*self.timeUnit
             
             self.ImPipe.send({'xV':self.xVelocity,'yV':self.yVelocity,'xD':self.xDisplacement,'yD':self.yDisplacement})
 
-            xVQueue.put(self.xVelocity)
+            xVQueue.put(self.xVelocity)#puts the values on the respective queues for getters etc.
             yVQueue.put(self.yVelocity)
             xDQueue.put(self.xDisplacement)
             yDQueue.put(self.yDisplacement)
@@ -304,15 +304,14 @@ class MotorControl:
 
         self.tracking=True
 
-        
+        while True:
+            if not self.trackingThread.is_alive():
+                self.trackingThread.kill()
+                break
                 
 
 
 
-    def endTracking(self):
-        while self.trackingThread.is_alive():
-            pass
-        self.trackingThread.kill()
 
 
     def xAdjustL(self):
@@ -411,8 +410,8 @@ class MotorControl:
     def getMaxSpeed(self):
         return self.M1.getMaxSpeed(),self.M2.getMaxSpeed()
 
-    def xRunVelcoityT(self,velocity,time):
+    def xRunVelocityT(self,velocity,time):
         self.M1.runVelocityT(velocity,time)
 
-    def yRunVelcoityT(self,velocity,time):
+    def yRunVelocityT(self,velocity,time):
         self.M2.runVelocityT(velocity,time)

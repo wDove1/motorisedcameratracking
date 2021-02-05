@@ -8,7 +8,7 @@ import warnings
 from .Imaging import *
 from .MotorControl import *
 from .errors import *
-
+import numpy
 import cv2
 from cvlib.object_detection import draw_bbox
 from PIL import Image, ImageTk
@@ -145,7 +145,7 @@ class MotorisedCameraTracking:
         else:
             raise ValueError('target not supported')
         
-    def trackLimited(self, target: str, xLimit1: float = 0, xLimit2: float = 0, yLimit1: float = 0, yLimit2: float = 0, options: dict = {}):
+    def trackLimited(self, target: str, xLimit1: float, xLimit2: float, yLimit1: float, yLimit2: float, options: dict = {}):
         """starts the tracking of the given target but limits the movement of the x motor 
 
         Aside from the limits on the x axis range it can track it is pretty much a clone of track() so the same usage reccomendations and restrictions apply
@@ -158,11 +158,14 @@ class MotorisedCameraTracking:
 
         """
         self.target=target
-        if self.checkTargetSupported(target):
+        if not self.checkLimits(xLimit1, xLimit2, yLimit1, yLimit2):#cehcks the limits
+            raise ValueError("invalid limits")
+
+        if self.checkTargetSupported(target):#checks the targets
             xMaxSpeed,yMaxSpeed=self.MC.getMaxSpeed()#gets the motors max speeds
             a=Imaging(self.MC,self.dataQueue,self.controlQueueImg,self.imageReturnQueue,target,camera=self.camera,mode=self.config['imagingMode'],extras={'xMaxSpeed':xMaxSpeed,'yMaxSpeed':yMaxSpeed})
  
-            if self.GUIFeatures:
+            if self.GUIFeatures:#activates the GUI features
                 t=threading.Thread(target=self.recordFrames,args=())
                 t.start()
             
@@ -176,6 +179,16 @@ class MotorisedCameraTracking:
 
         else:
             raise ValueError('target not supported')
+
+    def checkLimits(self, xLimit1, xLimit2, yLimit1, yLimit2):
+        if isinstance(xLimit1,(float,int)) and isinstance(xLimit2,(float,int)) and isinstance(yLimit1,(float,int)) and isinstance(yLimit2,(float,int)):#checks the limits type
+            if xLimit1<0 and xLimit2>0 and yLimit1<0 and yLimit2>0:#checks the limits range
+                return True
+
+            else:
+                return False
+        else:
+            return False
 
     def followPath(self,path):
         """A function to track along a path-Not implemented
@@ -193,13 +206,16 @@ class MotorisedCameraTracking:
         Args:
             path: The path to follow
         """
-        for i in range(len(path)):
-            t1=threading.Thread(target=self.MC.xRunVelocityT,args=(path[i][0],path[i][2],))
-            t2=threading.Thread(target=self.MC.yRunVelocityT,args=(path[i][1],path[i][2],))
-            t1.start()
-            t2.start()
-            t1.join()
-            t2.join()
+        if not self.running:#checks the tracking is not active
+            for i in range(len(path)):#loops throught the elements
+                t1=threading.Thread(target=self.MC.xRunVelocityT,args=(path[i][0],path[i][2],))#runs the x and y velocities together
+                t2=threading.Thread(target=self.MC.yRunVelocityT,args=(path[i][1],path[i][2],))
+                t1.start()
+                t2.start()
+                t1.join()
+                t2.join()
+        else:
+            raise TrackingActiveError("This can not be run while the tracking is active")
 
 
     def terminate(self):
@@ -208,16 +224,17 @@ class MotorisedCameraTracking:
         Puts signal "1" on the control Queues and then waits until the processes have stopped before issuing kill commands
         """
         #print(self.running)
-        if self.running == True:#checks running is true as otherwise an error will occur from attempting is_alive() on a none object
+        if self.running:#checks running is true as otherwise an error will occur from attempting is_alive() on a none object
             self.controlQueueMC.put(1)#signals the objects
             self.controlQueueImg.put(1)
             warnings.warn('terminating')
             while True:#loops as the processes have to finish what they are doing
-                if not (self.p1.is_alive() and self.p2.is_alive()):#waits for them to be finished
+                if not (self.p1.is_alive()):#waits for them to be finished
                     self.p1.kill()#kills them
-                    #self.p2.kill()
-                    self.MC.endTracking()#used as it is now started through a thread
+
+
                     self.running=False#sets running to false
+                    warnings.warn("Termination complete")
                     break
         else:
             raise NotTrackingError('nothing to terminate')#raises an error which can be caught
@@ -230,6 +247,8 @@ class MotorisedCameraTracking:
         """An interactive calibration tool
         This will likely be removed in a future verson
         """
+        if self.running:
+            raise TrackingActiveError("This can not be run while the tracking is active")
 
         print('welcome to the calibration tool')
         waitTime=float(input('please enter the first wait time. The default is: '+'0.0016'+': '))#gather the data required
@@ -252,14 +271,30 @@ class MotorisedCameraTracking:
 
     def calibrateZero(self,waitTime,distance):
         """A non interactive version of the calibration tool that is likely to be removed in a future version"""
+        if self.running:
+            raise TrackingActiveError("This can not be run while the tracking is active")
+
+        if not (isinstance(waitTime,(float,int)) and isinstance(distance,(float,int))):#checks if the variables are numbers
+            raise ValueError("incorrect arguments given")
+
+        if not (waitTime>0 and distance>0):#checks the variables are positive
+            raise ValueError("incorrect arguments given")
+
         self.MC.setWaitTime(waitTime)#sets the wait time
         speed=self.MC.measureMotorSpecsOne(distance)#measures the speed
         return speed,speed#returns the speed
 
     def setSpecsZero(self,waitTime,speed1,speed2):
         """A method for setting changes such as waitTime and speed but may be removed in future versions due to only supporting the basic motors"""
-        self.MC.setWaitTime(waitTime)#sets the wait time
-        self.MC.setMaxSpeed(speed1) #sets the max speed
+        if not (isinstance(waitTime,(float,int)) and isinstance(speed1,(float,int)) and isinstance(speed2,(float,int))):
+            raise ValueError("incorrect arguments given")
+
+        if waitTime>0 and speed1>0 and speed2>0:#checks the variables are positive
+
+            self.MC.setWaitTime(waitTime)#sets the wait time
+            self.MC.setMaxSpeed(speed1) #sets the max speed
+        else:
+            raise ValueError("incorrect arguments given")
         
 
     def getSupportedTargets(self) -> list:
@@ -292,7 +327,13 @@ class MotorisedCameraTracking:
             distance: The distance to move
             axis: the axis to move on
         """
-        if not self.running:
+        if not(axis == 'x' or axis == 'y'):#checks the axis is x or y
+            raise ValueError("incorrect axis value")
+
+        if not(isinstance(distance,(float,int))):#checks the distance is a number
+            raise ValueError("distance must be float or int")
+
+        if not self.running:#checks the tracking is not active
             self.MC.runDisplacement(distance,axis)
         else:
             raise TrackingActiveError('The motors can not be aimed while the tracking is ative')
@@ -340,7 +381,7 @@ class MotorisedCameraTracking:
             'label': A list of labels
         """
         if self.GUIFeatures:
-            return self.images
+            return self.images#returns the array of images
         else:
             raise GUIFeaturesNotEnabledError('To use this function GUI features needs to be enabled')
     
@@ -353,20 +394,28 @@ class MotorisedCameraTracking:
         Returns:
             An image with the boxes and labels etc already applied
         """
+
+        if type(resolution)!= list:
+            raise ValueError("incorrect resolution")
+        if len(resolution)!=2:
+            raise ValueError("incorrect resolution")
+        if not (resolution[0] >0 and resolution[1]>0):
+            raise ValueError("incorrect resolution")
+            
         i,b,l,c=self.getFrame()#calls the get frame function
 
         image = draw_bbox(i, b, l, c)#adds bounding boxes etc to the image
         #image=cv2.resize(image,(resolution[0],resolution[1]),interpolation = cv2.INTER_AREA)#resizes it
         dataString=""
         if includeVelocity:
-            dataString=("The x velocity is: "+str(self.MC.getXVelocity())+". The y velocity is: "+str(self.MC.getYVelocity())+". ")
+            dataString=("The x velocity is: "+str(self.MC.getXVelocity())+". The y velocity is: "+str(self.MC.getYVelocity())+". ")#adds velocities to the string
 
         if includeDisplacement:
             pass
         if includeTime:
-            dataString+=("The Time is: "+time.asctime(time.localtime(time.time()))+".")
+            dataString+=("The Time is: "+time.asctime(time.localtime(time.time()))+".")#adds the time to the string
         if includeVelocity or includeTime:
-            image=cv2.putText(image,dataString,(10,40),cv2.FONT_HERSHEY_SIMPLEX,1,(255,0,0),1,cv2.LINE_AA)
+            image=cv2.putText(image,dataString,(10,40),cv2.FONT_HERSHEY_SIMPLEX,1,(255,0,0),1,cv2.LINE_AA)#adds the text to the image
 
         image=cv2.resize(image,(resolution[0],resolution[1]),interpolation = cv2.INTER_AREA)#resizes it
 
@@ -385,6 +434,9 @@ class MotorisedCameraTracking:
 
     def setWarnings(self,warningMode: bool):
         """sets whether the user wants warnings or not"""
+        if type(warningMode)!= bool:
+            raise ValueError("warningMode must be a boolean")
+
         self.enableWarnings=warningMode
         if not self.enableWarnings:
             warnings.filterwarnings('ignore')#if warnings not enabled disable them
@@ -395,6 +447,8 @@ class MotorisedCameraTracking:
         Args:
             choice: whether the features should be enabled or not
         """
+        if type(choice)!=bool:
+            raise ValueError("choice must be a boolean")
         self.GUIFeatures=choice
 
     def setFeedback(self,choice: bool):
@@ -402,6 +456,9 @@ class MotorisedCameraTracking:
         Args:
             choice: whether feedback should be enabled or not
         """
+        if type(choice)!=bool:
+            raise ValueError("choice must be a boolean")
+
         self.enableFeedback=choice
         
 
@@ -438,8 +495,10 @@ def convertImageTkinter(image):
     Returns:
         An image in the format required for displaying in tkinter
     """
-    b,g,r = cv2.split(image)
-    img = cv2.merge((r,g,b))
+    if not isinstance(image,numpy.ndarray):
+        raise ValueError("image must be of type numpy array")
+    b,g,r = cv2.split(image)#splits the image into its colour componenets
+    img = cv2.merge((r,g,b))#remerges them in the correct order
     img = Image.fromarray(img)
     return ImageTk.PhotoImage(image=img)
             

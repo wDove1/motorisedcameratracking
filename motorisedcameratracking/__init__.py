@@ -1,1 +1,1 @@
-from motorisedcameratracking.MotorisedCameraTracking import MotorisedCameraTracking
+from motorisedcameratracking.MotorisedCameraTracking import *

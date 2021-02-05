@@ -11,7 +11,7 @@ setup(
     packages=find_packages(include=['motorisedcameratracking','motorisedcameratracking.*']),
     package_dir={'motorisedcameratracking':'motorisedcameratracking'},
     package_data={'motorisedcameratracking':['data.*']},
-    version='0.5.0.dev19',
+    version='0.5.0.dev47',
     description='Used to create a tracking tripod head',
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
@@ -25,5 +25,5 @@ setup(
                  "Programming Language :: Python :: 3.8",
                  "License :: OSI Approved :: Apache Software License",
                  "Operating System :: OS Independent"],
-    python_requires='>=3.7,<=3.8'
+    python_requires='>=3.7,<3.9'
 )

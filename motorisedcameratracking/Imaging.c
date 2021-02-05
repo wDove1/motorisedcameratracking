@@ -1380,13 +1380,14 @@ static const char __pyx_k_plt[] = "plt";
 static const char __pyx_k_put[] = "put";
 static const char __pyx_k_str[] = "str";
 static const char __pyx_k_tie[] = "tie";
-static const char __pyx_k_xCo[] = "xCo ";
+static const char __pyx_k_xCo[] = "xCo";
 static const char __pyx_k_xl1[] = "xl1";
 static const char __pyx_k_xl2[] = "xl2";
-static const char __pyx_k_yCo[] = "yCo ";
+static const char __pyx_k_yCo[] = "yCo";
 static const char __pyx_k_yl1[] = "yl1";
 static const char __pyx_k_yl2[] = "yl2";
 static const char __pyx_k_XorY[] = "XorY";
+static const char __pyx_k_args[] = "args";
 static const char __pyx_k_bbox[] = "bbox";
 static const char __pyx_k_bear[] = "bear";
 static const char __pyx_k_bird[] = "bird";
@@ -1405,6 +1406,7 @@ static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
 static const char __pyx_k_oven[] = "oven";
+static const char __pyx_k_poll[] = "poll";
 static const char __pyx_k_recv[] = "recv";
 static const char __pyx_k_self[] = "self";
 static const char __pyx_k_send[] = "send";
@@ -1420,6 +1422,7 @@ static const char __pyx_k_xV_2[] = "xV ";
 static const char __pyx_k_yDis[] = "yDis";
 static const char __pyx_k_yMid[] = "yMid";
 static const char __pyx_k_yV_2[] = "yV ";
+static const char __pyx_k_Queue[] = "Queue";
 static const char __pyx_k_Width[] = "Width";
 static const char __pyx_k_apple[] = "apple";
 static const char __pyx_k_bench[] = "bench";
@@ -1436,6 +1439,7 @@ static const char __pyx_k_model[] = "model";
 static const char __pyx_k_mouse[] = "mouse";
 static const char __pyx_k_pizza[] = "pizza";
 static const char __pyx_k_print[] = "print";
+static const char __pyx_k_queue[] = "queue";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_reset[] = "reset";
 static const char __pyx_k_sheep[] = "sheep";
@@ -1443,8 +1447,6 @@ static const char __pyx_k_spoon[] = "spoon";
 static const char __pyx_k_start[] = "start";
 static const char __pyx_k_train[] = "train";
 static const char __pyx_k_truck[] = "truck";
-static const char __pyx_k_xCo_2[] = "xCo";
-static const char __pyx_k_yCo_2[] = "yCo";
 static const char __pyx_k_zebra[] = "zebra";
 static const char __pyx_k_Config[] = "Config";
 static const char __pyx_k_Height[] = "Height";
@@ -1458,8 +1460,6 @@ static const char __pyx_k_carrot[] = "carrot";
 static const char __pyx_k_extras[] = "extras";
 static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_laptop[] = "laptop";
-static const char __pyx_k_limit1[] = "limit1";
-static const char __pyx_k_limit2[] = "limit2";
 static const char __pyx_k_main_2[] = "main";
 static const char __pyx_k_module[] = "__module__";
 static const char __pyx_k_name_2[] = "__name__";
@@ -1564,6 +1564,7 @@ static const char __pyx_k_outside_limits[] = "outside limits";
 static const char __pyx_k_simpleTracking[] = "simpleTracking";
 static const char __pyx_k_currentPosition[] = "currentPosition";
 static const char __pyx_k_currentVelocity[] = "currentVelocity";
+static const char __pyx_k_threadKillQueue[] = "threadKillQueue";
 static const char __pyx_k_advancedTracking[] = "advancedTracking";
 static const char __pyx_k_imageReturnQueue[] = "imageReturnQueue";
 static const char __pyx_k_self_positions_1[] = "self.positions[-1] ";
@@ -1577,6 +1578,7 @@ static const char __pyx_k_maxAdditionalSpeed[] = "maxAdditionalSpeed";
 static const char __pyx_k_new_target_aquired[] = "new target aquired";
 static const char __pyx_k_Imaging_mainLimited[] = "Imaging.mainLimited";
 static const char __pyx_k_calculateAngleImage[] = "calculateAngleImage";
+static const char __pyx_k_imaging_terminating[] = "imaging terminating";
 static const char __pyx_k_Imaging_MotorUpdater[] = "Imaging.MotorUpdater";
 static const char __pyx_k_Imaging_inCentralBox[] = "Imaging.inCentralBox";
 static const char __pyx_k_calculateCoordinates[] = "calculateCoordinates";
@@ -1605,6 +1607,7 @@ static const char __pyx_k_intermediateTrackingLimited[] = "intermediateTrackingL
 static const char __pyx_k_Imaging_calculateCoordinates[] = "Imaging.calculateCoordinates";
 static const char __pyx_k_Imaging_intermediateTracking[] = "Imaging.intermediateTracking";
 static const char __pyx_k_ObjectRecognition_getTargets[] = "ObjectRecognition.getTargets";
+static const char __pyx_k_Imaging_motor_updater_is_dead[] = "Imaging motor updater is dead";
 static const char __pyx_k_Imaging_simpleTrackingLimited[] = "Imaging.simpleTrackingLimited";
 static const char __pyx_k_Imaging_advancedTrackingLimited[] = "Imaging.advancedTrackingLimited";
 static const char __pyx_k_intermediateVelocityCalculation[] = "intermediateVelocityCalculation";
@@ -1642,6 +1645,7 @@ static PyObject *__pyx_n_s_Imaging_intermediateVelocityCalc;
 static PyObject *__pyx_n_s_Imaging_isMultiple;
 static PyObject *__pyx_n_s_Imaging_main;
 static PyObject *__pyx_n_s_Imaging_mainLimited;
+static PyObject *__pyx_kp_s_Imaging_motor_updater_is_dead;
 static PyObject *__pyx_n_s_Imaging_outsideLimits;
 static PyObject *__pyx_n_s_Imaging_reset;
 static PyObject *__pyx_n_s_Imaging_search;
@@ -1661,6 +1665,7 @@ static PyObject *__pyx_n_s_ObjectRecognition___init;
 static PyObject *__pyx_n_s_ObjectRecognition_getCoordinates;
 static PyObject *__pyx_n_s_ObjectRecognition_getCoordinates_2;
 static PyObject *__pyx_n_s_ObjectRecognition_getTargets;
+static PyObject *__pyx_n_s_Queue;
 static PyObject *__pyx_n_s_RPICam;
 static PyObject *__pyx_kp_s_The_Imaging_class_is_responsible;
 static PyObject *__pyx_n_s_Thread;
@@ -1675,6 +1680,7 @@ static PyObject *__pyx_n_s_airplane;
 static PyObject *__pyx_n_s_anglePerPixel;
 static PyObject *__pyx_n_s_append;
 static PyObject *__pyx_n_s_apple;
+static PyObject *__pyx_n_s_args;
 static PyObject *__pyx_kp_s_attempting_to_aquire_a_new_targe;
 static PyObject *__pyx_n_s_backpack;
 static PyObject *__pyx_n_s_banana;
@@ -1752,6 +1758,7 @@ static PyObject *__pyx_n_s_imagePath;
 static PyObject *__pyx_n_s_imageReturnQueue;
 static PyObject *__pyx_kp_s_imageReturnQueue_not_set;
 static PyObject *__pyx_kp_s_imaging_main_is_active;
+static PyObject *__pyx_kp_s_imaging_terminating;
 static PyObject *__pyx_n_s_img;
 static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_inCentralBox;
@@ -1766,8 +1773,6 @@ static PyObject *__pyx_n_s_keyboard;
 static PyObject *__pyx_n_s_kite;
 static PyObject *__pyx_n_s_label;
 static PyObject *__pyx_n_s_laptop;
-static PyObject *__pyx_n_s_limit1;
-static PyObject *__pyx_n_s_limit2;
 static PyObject *__pyx_n_u_list;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mainLimited;
@@ -1798,6 +1803,7 @@ static PyObject *__pyx_n_s_person;
 static PyObject *__pyx_n_s_pizza;
 static PyObject *__pyx_kp_s_placing_an_image_on_the_return_Q;
 static PyObject *__pyx_n_s_plt;
+static PyObject *__pyx_n_s_poll;
 static PyObject *__pyx_n_s_positions;
 static PyObject *__pyx_kp_s_positions_2;
 static PyObject *__pyx_kp_s_potted_plant;
@@ -1806,6 +1812,7 @@ static PyObject *__pyx_n_s_previousTime;
 static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_put;
 static PyObject *__pyx_n_s_qualname;
+static PyObject *__pyx_n_s_queue;
 static PyObject *__pyx_n_s_range;
 static PyObject *__pyx_n_s_recentre;
 static PyObject *__pyx_n_s_recv;
@@ -1844,6 +1851,7 @@ static PyObject *__pyx_n_s_targets;
 static PyObject *__pyx_n_s_targetsList;
 static PyObject *__pyx_kp_s_teddy_bear;
 static PyObject *__pyx_n_s_test;
+static PyObject *__pyx_n_s_threadKillQueue;
 static PyObject *__pyx_n_s_threading;
 static PyObject *__pyx_n_s_tie;
 static PyObject *__pyx_n_s_time;
@@ -1861,8 +1869,7 @@ static PyObject *__pyx_n_s_warn;
 static PyObject *__pyx_n_s_warning;
 static PyObject *__pyx_n_s_warnings;
 static PyObject *__pyx_n_s_x;
-static PyObject *__pyx_kp_s_xCo;
-static PyObject *__pyx_n_s_xCo_2;
+static PyObject *__pyx_n_s_xCo;
 static PyObject *__pyx_n_s_xD;
 static PyObject *__pyx_n_s_xDis;
 static PyObject *__pyx_n_s_xLimit1;
@@ -1875,8 +1882,7 @@ static PyObject *__pyx_kp_s_xV_2;
 static PyObject *__pyx_n_s_xl1;
 static PyObject *__pyx_n_s_xl2;
 static PyObject *__pyx_n_s_y;
-static PyObject *__pyx_kp_s_yCo;
-static PyObject *__pyx_n_s_yCo_2;
+static PyObject *__pyx_n_s_yCo;
 static PyObject *__pyx_n_s_yD;
 static PyObject *__pyx_n_s_yDis;
 static PyObject *__pyx_n_s_yLimit1;
@@ -1892,12 +1898,12 @@ static PyObject *__pyx_kp_s_yolov4_tiny;
 static PyObject *__pyx_n_s_zebra;
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging___defaults__(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_MC, PyObject *__pyx_v_dataQueue, PyObject *__pyx_v_controlQueue, PyObject *__pyx_v_imageReturnQueue, PyObject *__pyx_v_target, PyObject *__pyx_v_camera, PyObject *__pyx_v_mode, PyObject *__pyx_v_extras); /* proto */
-static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpdater(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpdater(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_queue); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_MC, PyObject *__pyx_v_MCPipe); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimited(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_MC, PyObject *__pyx_v_MCPipe, PyObject *__pyx_v_xLimit1, PyObject *__pyx_v_xLimit2, PyObject *__pyx_v_yLimit1, PyObject *__pyx_v_yLimit2); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedTracking(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
-static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED double __pyx_v_limit1, CYTHON_UNUSED double __pyx_v_limit2); /* proto */
-static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self); /* proto */
+static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, double __pyx_v_xLimit1, double __pyx_v_xLimit2, PyObject *__pyx_v_yLimit1, PyObject *__pyx_v_yLimit2); /* proto */
+static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_14getCurrentPositionOfMotors(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculatePositionOfObject(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_18calculateAngleImage(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_coordinates, CYTHON_UNUSED PyObject *__pyx_v_resolution, PyObject *__pyx_v_XorY); /* proto */
@@ -1921,9 +1927,10 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition_6getCoordinates(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_img); /* proto */
 static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition_8getTargets(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self); /* proto */
 static PyObject *__pyx_int_0;
+static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
 static PyObject *__pyx_int_3;
-static PyObject *__pyx_int_4;
+static PyObject *__pyx_int_5;
 static PyObject *__pyx_int_10;
 static PyObject *__pyx_int_40;
 static PyObject *__pyx_int_180;
@@ -1991,7 +1998,7 @@ static PyObject *__pyx_codeobj__56;
 static PyObject *__pyx_codeobj__58;
 /* Late includes */
 
-/* "motorisedcameratracking/Imaging.py":52
+/* "motorisedcameratracking/Imaging.py":54
  * 
  * 
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):             # <<<<<<<<<<<<<<
@@ -2009,7 +2016,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging___defaults__(CYTHON
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_self)->__pyx_arg_camera);
   __Pyx_GIVEREF(__Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_self)->__pyx_arg_camera);
@@ -2020,7 +2027,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging___defaults__(CYTHON
   __Pyx_INCREF(__Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_self)->__pyx_arg_extras);
   __Pyx_GIVEREF(__Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_self)->__pyx_arg_extras);
   PyTuple_SET_ITEM(__pyx_t_1, 2, __Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_self)->__pyx_arg_extras);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -2104,31 +2111,31 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_1__init__(
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_MC)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 1); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 1); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_dataQueue)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 2); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 2); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_controlQueue)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 3); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 3); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_imageReturnQueue)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 4); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 4); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 5); __PYX_ERR(0, 52, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, 5); __PYX_ERR(0, 54, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
@@ -2150,7 +2157,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_1__init__(
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 52, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 54, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -2182,14 +2189,14 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_1__init__(
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 52, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 6, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 54, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target), (&PyString_Type), 1, "target", 1))) __PYX_ERR(0, 52, __pyx_L1_error)
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_camera), (&PyDict_Type), 1, "camera", 1))) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target), (&PyString_Type), 1, "target", 1))) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_camera), (&PyDict_Type), 1, "camera", 1))) __PYX_ERR(0, 54, __pyx_L1_error)
   __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(__pyx_self, __pyx_v_self, __pyx_v_MC, __pyx_v_dataQueue, __pyx_v_controlQueue, __pyx_v_imageReturnQueue, __pyx_v_target, __pyx_v_camera, __pyx_v_mode, __pyx_v_extras);
 
   /* function exit code */
@@ -2218,7 +2225,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
   __Pyx_RefNannySetupContext("__init__", 0);
   __Pyx_INCREF(__pyx_v_camera);
 
-  /* "motorisedcameratracking/Imaging.py":53
+  /* "motorisedcameratracking/Imaging.py":55
  * 
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):
  *         if camera['name']=='RPICam':             # <<<<<<<<<<<<<<
@@ -2227,30 +2234,30 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
  */
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 53, __pyx_L1_error)
+    __PYX_ERR(0, 55, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_RPICam, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 53, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_RPICam, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 55, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":54
+    /* "motorisedcameratracking/Imaging.py":56
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):
  *         if camera['name']=='RPICam':
  *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected             # <<<<<<<<<<<<<<
  *         elif camera['name']=='Virtual':
  *             self.camera=VirtualCamera()
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_RPICam); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 54, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_RPICam); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imagePath); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imagePath); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     if (unlikely(__pyx_v_camera == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 54, __pyx_L1_error)
+      __PYX_ERR(0, 56, __pyx_L1_error)
     }
-    __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_orientation); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 54, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_orientation); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __pyx_t_6 = NULL;
     __pyx_t_7 = 0;
@@ -2267,7 +2274,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_4, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2277,7 +2284,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_4, __pyx_t_5};
-      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -2285,7 +2292,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
     } else
     #endif
     {
-      __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_8);
       if (__pyx_t_6) {
         __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -2296,15 +2303,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
       PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_t_5);
       __pyx_t_4 = 0;
       __pyx_t_5 = 0;
-      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     }
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_camera, __pyx_t_1) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_camera, __pyx_t_1) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":53
+    /* "motorisedcameratracking/Imaging.py":55
  * 
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):
  *         if camera['name']=='RPICam':             # <<<<<<<<<<<<<<
@@ -2314,7 +2321,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":55
+  /* "motorisedcameratracking/Imaging.py":57
  *         if camera['name']=='RPICam':
  *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
  *         elif camera['name']=='Virtual':             # <<<<<<<<<<<<<<
@@ -2323,60 +2330,22 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
  */
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 55, __pyx_L1_error)
+    __PYX_ERR(0, 57, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_name); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_Virtual, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 55, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_t_1, __pyx_n_s_Virtual, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 57, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":56
+    /* "motorisedcameratracking/Imaging.py":58
  *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
  *         elif camera['name']=='Virtual':
  *             self.camera=VirtualCamera()             # <<<<<<<<<<<<<<
  *         else:
  *             camera=GenericCamera()
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_VirtualCamera); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 56, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_8 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_8)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_8);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_3, function);
-      }
-    }
-    __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 56, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_camera, __pyx_t_1) < 0) __PYX_ERR(0, 56, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "motorisedcameratracking/Imaging.py":55
- *         if camera['name']=='RPICam':
- *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
- *         elif camera['name']=='Virtual':             # <<<<<<<<<<<<<<
- *             self.camera=VirtualCamera()
- *         else:
- */
-    goto __pyx_L3;
-  }
-
-  /* "motorisedcameratracking/Imaging.py":58
- *             self.camera=VirtualCamera()
- *         else:
- *             camera=GenericCamera()             # <<<<<<<<<<<<<<
- *         self.resolution=[camera['Width'],camera['Height']]#sets the resolution
- *         self.xMid=camera['Width']/2
- */
-  /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_GenericCamera); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_VirtualCamera); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 58, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_8 = NULL;
     if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
@@ -2393,13 +2362,51 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
     if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 58, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (!(likely(PyDict_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "dict", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 58, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_camera, __pyx_t_1) < 0) __PYX_ERR(0, 58, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+    /* "motorisedcameratracking/Imaging.py":57
+ *         if camera['name']=='RPICam':
+ *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
+ *         elif camera['name']=='Virtual':             # <<<<<<<<<<<<<<
+ *             self.camera=VirtualCamera()
+ *         else:
+ */
+    goto __pyx_L3;
+  }
+
+  /* "motorisedcameratracking/Imaging.py":60
+ *             self.camera=VirtualCamera()
+ *         else:
+ *             camera=GenericCamera()             # <<<<<<<<<<<<<<
+ *         self.resolution=[camera['Width'],camera['Height']]#sets the resolution
+ *         self.xMid=camera['Width']/2
+ */
+  /*else*/ {
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_GenericCamera); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_8 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_8)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+        __Pyx_INCREF(__pyx_t_8);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_3, function);
+      }
+    }
+    __pyx_t_1 = (__pyx_t_8) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_8) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 60, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (!(likely(PyDict_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "dict", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 60, __pyx_L1_error)
     __Pyx_DECREF_SET(__pyx_v_camera, ((PyObject*)__pyx_t_1));
     __pyx_t_1 = 0;
   }
   __pyx_L3:;
 
-  /* "motorisedcameratracking/Imaging.py":59
+  /* "motorisedcameratracking/Imaging.py":61
  *         else:
  *             camera=GenericCamera()
  *         self.resolution=[camera['Width'],camera['Height']]#sets the resolution             # <<<<<<<<<<<<<<
@@ -2408,17 +2415,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
  */
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 59, __pyx_L1_error)
+    __PYX_ERR(0, 61, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 59, __pyx_L1_error)
+    __PYX_ERR(0, 61, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_8 = PyList_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 59, __pyx_L1_error)
+  __pyx_t_8 = PyList_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_GIVEREF(__pyx_t_1);
   PyList_SET_ITEM(__pyx_t_8, 0, __pyx_t_1);
@@ -2426,240 +2433,246 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
   PyList_SET_ITEM(__pyx_t_8, 1, __pyx_t_3);
   __pyx_t_1 = 0;
   __pyx_t_3 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_resolution, __pyx_t_8) < 0) __PYX_ERR(0, 59, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_resolution, __pyx_t_8) < 0) __PYX_ERR(0, 61, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":60
+  /* "motorisedcameratracking/Imaging.py":62
  *             camera=GenericCamera()
  *         self.resolution=[camera['Width'],camera['Height']]#sets the resolution
  *         self.xMid=camera['Width']/2             # <<<<<<<<<<<<<<
  *         self.yMid=camera['Height']/2
- *         self.centralBox=[camera['Width']/4,camera['Width']*3/4,camera['Height']/4,camera['Height']*3/4]
+ *         self.centralBox=[camera['Width']*2/5,camera['Width']*3/5,camera['Height']*2/5,camera['Height']*3/5]
  */
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 60, __pyx_L1_error)
+    __PYX_ERR(0, 62, __pyx_L1_error)
   }
-  __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_8, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 60, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_8, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xMid, __pyx_t_3) < 0) __PYX_ERR(0, 60, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xMid, __pyx_t_3) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":61
+  /* "motorisedcameratracking/Imaging.py":63
  *         self.resolution=[camera['Width'],camera['Height']]#sets the resolution
  *         self.xMid=camera['Width']/2
  *         self.yMid=camera['Height']/2             # <<<<<<<<<<<<<<
- *         self.centralBox=[camera['Width']/4,camera['Width']*3/4,camera['Height']/4,camera['Height']*3/4]
+ *         self.centralBox=[camera['Width']*2/5,camera['Width']*3/5,camera['Height']*2/5,camera['Height']*3/5]
  *         self.target=target
  */
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 61, __pyx_L1_error)
+    __PYX_ERR(0, 63, __pyx_L1_error)
   }
-  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 61, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yMid, __pyx_t_8) < 0) __PYX_ERR(0, 61, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yMid, __pyx_t_8) < 0) __PYX_ERR(0, 63, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":62
+  /* "motorisedcameratracking/Imaging.py":64
  *         self.xMid=camera['Width']/2
  *         self.yMid=camera['Height']/2
- *         self.centralBox=[camera['Width']/4,camera['Width']*3/4,camera['Height']/4,camera['Height']*3/4]             # <<<<<<<<<<<<<<
+ *         self.centralBox=[camera['Width']*2/5,camera['Width']*3/5,camera['Height']*2/5,camera['Height']*3/5]             # <<<<<<<<<<<<<<
  *         self.target=target
  *         self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object
  */
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 62, __pyx_L1_error)
+    __PYX_ERR(0, 64, __pyx_L1_error)
   }
-  __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_8, __pyx_int_4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Multiply(__pyx_t_8, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+  __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_8);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 62, __pyx_L1_error)
+    __PYX_ERR(0, 64, __pyx_L1_error)
   }
-  __pyx_t_8 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_t_8, __pyx_int_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Width); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_int_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_4); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 62, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 62, __pyx_L1_error)
+    __PYX_ERR(0, 64, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_int_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   if (unlikely(__pyx_v_camera == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-    __PYX_ERR(0, 62, __pyx_L1_error)
+    __PYX_ERR(0, 64, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyNumber_Multiply(__pyx_t_1, __pyx_int_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_camera, __pyx_n_s_Height); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = PyNumber_Multiply(__pyx_t_5, __pyx_int_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 62, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_5); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyList_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_8);
-  PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_8);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyList_SET_ITEM(__pyx_t_4, 2, __pyx_t_5);
+  PyList_SET_ITEM(__pyx_t_4, 0, __pyx_t_8);
+  __Pyx_GIVEREF(__pyx_t_3);
+  PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
-  PyList_SET_ITEM(__pyx_t_4, 3, __pyx_t_1);
-  __pyx_t_3 = 0;
+  PyList_SET_ITEM(__pyx_t_4, 2, __pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_5);
+  PyList_SET_ITEM(__pyx_t_4, 3, __pyx_t_5);
   __pyx_t_8 = 0;
-  __pyx_t_5 = 0;
+  __pyx_t_3 = 0;
   __pyx_t_1 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_centralBox, __pyx_t_4) < 0) __PYX_ERR(0, 62, __pyx_L1_error)
+  __pyx_t_5 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_centralBox, __pyx_t_4) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":63
+  /* "motorisedcameratracking/Imaging.py":65
  *         self.yMid=camera['Height']/2
- *         self.centralBox=[camera['Width']/4,camera['Width']*3/4,camera['Height']/4,camera['Height']*3/4]
+ *         self.centralBox=[camera['Width']*2/5,camera['Width']*3/5,camera['Height']*2/5,camera['Height']*3/5]
  *         self.target=target             # <<<<<<<<<<<<<<
  *         self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object
  *         self.dataQueue=dataQueue
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_target, __pyx_v_target) < 0) __PYX_ERR(0, 63, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_target, __pyx_v_target) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":64
- *         self.centralBox=[camera['Width']/4,camera['Width']*3/4,camera['Height']/4,camera['Height']*3/4]
+  /* "motorisedcameratracking/Imaging.py":66
+ *         self.centralBox=[camera['Width']*2/5,camera['Width']*3/5,camera['Height']*2/5,camera['Height']*3/5]
  *         self.target=target
  *         self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object             # <<<<<<<<<<<<<<
  *         self.dataQueue=dataQueue
  *         self.controlQueue=controlQueue
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_ObjectRecognition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 64, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = NULL;
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_ObjectRecognition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 66, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_1 = NULL;
   __pyx_t_7 = 0;
-  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_5);
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
+    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_5);
+    if (likely(__pyx_t_1)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_1, function);
+      __Pyx_DECREF_SET(__pyx_t_5, function);
       __pyx_t_7 = 1;
     }
   }
   #if CYTHON_FAST_PYCALL
-  if (PyFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_v_target, __pyx_v_imageReturnQueue};
-    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (PyFunction_Check(__pyx_t_5)) {
+    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_target, __pyx_v_imageReturnQueue};
+    __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
-  if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_v_target, __pyx_v_imageReturnQueue};
-    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
+    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_target, __pyx_v_imageReturnQueue};
+    __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_4);
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    if (__pyx_t_5) {
-      __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __pyx_t_5 = NULL;
+    __pyx_t_3 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 66, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (__pyx_t_1) {
+      __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1); __pyx_t_1 = NULL;
     }
     __Pyx_INCREF(__pyx_v_target);
     __Pyx_GIVEREF(__pyx_v_target);
-    PyTuple_SET_ITEM(__pyx_t_8, 0+__pyx_t_7, __pyx_v_target);
+    PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_7, __pyx_v_target);
     __Pyx_INCREF(__pyx_v_imageReturnQueue);
     __Pyx_GIVEREF(__pyx_v_imageReturnQueue);
-    PyTuple_SET_ITEM(__pyx_t_8, 1+__pyx_t_7, __pyx_v_imageReturnQueue);
-    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_8, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
+    PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_7, __pyx_v_imageReturnQueue);
+    __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 66, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_OR, __pyx_t_4) < 0) __PYX_ERR(0, 64, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_OR, __pyx_t_4) < 0) __PYX_ERR(0, 66, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":65
+  /* "motorisedcameratracking/Imaging.py":67
  *         self.target=target
  *         self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object
  *         self.dataQueue=dataQueue             # <<<<<<<<<<<<<<
  *         self.controlQueue=controlQueue
  *         self.mode=mode
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dataQueue, __pyx_v_dataQueue) < 0) __PYX_ERR(0, 65, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_dataQueue, __pyx_v_dataQueue) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":66
+  /* "motorisedcameratracking/Imaging.py":68
  *         self.OR=ObjectRecognition(target,imageReturnQueue)#creates the object recognition object
  *         self.dataQueue=dataQueue
  *         self.controlQueue=controlQueue             # <<<<<<<<<<<<<<
  *         self.mode=mode
  *         self.MC=MC
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue, __pyx_v_controlQueue) < 0) __PYX_ERR(0, 66, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue, __pyx_v_controlQueue) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":67
+  /* "motorisedcameratracking/Imaging.py":69
  *         self.dataQueue=dataQueue
  *         self.controlQueue=controlQueue
  *         self.mode=mode             # <<<<<<<<<<<<<<
  *         self.MC=MC
  *         self.xMaxSpeed=extras['xMaxSpeed']#sets the maxspeeds as they are needed in some calculations
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_mode, __pyx_v_mode) < 0) __PYX_ERR(0, 67, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_mode, __pyx_v_mode) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":68
+  /* "motorisedcameratracking/Imaging.py":70
  *         self.controlQueue=controlQueue
  *         self.mode=mode
  *         self.MC=MC             # <<<<<<<<<<<<<<
  *         self.xMaxSpeed=extras['xMaxSpeed']#sets the maxspeeds as they are needed in some calculations
  *         self.yMaxSpeed=extras['yMaxSpeed']
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MC, __pyx_v_MC) < 0) __PYX_ERR(0, 68, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MC, __pyx_v_MC) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":69
+  /* "motorisedcameratracking/Imaging.py":71
  *         self.mode=mode
  *         self.MC=MC
  *         self.xMaxSpeed=extras['xMaxSpeed']#sets the maxspeeds as they are needed in some calculations             # <<<<<<<<<<<<<<
  *         self.yMaxSpeed=extras['yMaxSpeed']
  * 
  */
-  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_extras, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 69, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_extras, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed, __pyx_t_4) < 0) __PYX_ERR(0, 69, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed, __pyx_t_4) < 0) __PYX_ERR(0, 71, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":70
+  /* "motorisedcameratracking/Imaging.py":72
  *         self.MC=MC
  *         self.xMaxSpeed=extras['xMaxSpeed']#sets the maxspeeds as they are needed in some calculations
  *         self.yMaxSpeed=extras['yMaxSpeed']             # <<<<<<<<<<<<<<
  * 
- *     def MotorUpdater(self):
+ *     def MotorUpdater(self,queue):
  */
-  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_extras, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 70, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Dict_GetItem(__pyx_v_extras, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed, __pyx_t_4) < 0) __PYX_ERR(0, 70, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed, __pyx_t_4) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":52
+  /* "motorisedcameratracking/Imaging.py":54
  * 
  * 
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):             # <<<<<<<<<<<<<<
@@ -2686,59 +2699,112 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging___init__(C
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":72
+/* "motorisedcameratracking/Imaging.py":74
  *         self.yMaxSpeed=extras['yMaxSpeed']
  * 
- *     def MotorUpdater(self):             # <<<<<<<<<<<<<<
+ *     def MotorUpdater(self,queue):             # <<<<<<<<<<<<<<
  *         while True:
- *             data=self.MCPipe.recv()
+ *             if self.MCPipe.poll():
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater(PyObject *__pyx_self, PyObject *__pyx_v_self); /*proto*/
-static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater = {"MotorUpdater", (PyCFunction)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater, METH_O, 0};
-static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater(PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater = {"MotorUpdater", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+  PyObject *__pyx_v_self = 0;
+  PyObject *__pyx_v_queue = 0;
+  int __pyx_lineno = 0;
+  const char *__pyx_filename = NULL;
+  int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("MotorUpdater (wrapper)", 0);
-  __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpdater(__pyx_self, ((PyObject *)__pyx_v_self));
+  {
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_queue,0};
+    PyObject* values[2] = {0,0};
+    if (unlikely(__pyx_kwds)) {
+      Py_ssize_t kw_args;
+      const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
+      switch (pos_args) {
+        case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+        CYTHON_FALLTHROUGH;
+        case  1: values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+        CYTHON_FALLTHROUGH;
+        case  0: break;
+        default: goto __pyx_L5_argtuple_error;
+      }
+      kw_args = PyDict_Size(__pyx_kwds);
+      switch (pos_args) {
+        case  0:
+        if (likely((values[0] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_self)) != 0)) kw_args--;
+        else goto __pyx_L5_argtuple_error;
+        CYTHON_FALLTHROUGH;
+        case  1:
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_queue)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("MotorUpdater", 1, 2, 2, 1); __PYX_ERR(0, 74, __pyx_L3_error)
+        }
+      }
+      if (unlikely(kw_args > 0)) {
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "MotorUpdater") < 0)) __PYX_ERR(0, 74, __pyx_L3_error)
+      }
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
+      goto __pyx_L5_argtuple_error;
+    } else {
+      values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
+      values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
+    }
+    __pyx_v_self = values[0];
+    __pyx_v_queue = values[1];
+  }
+  goto __pyx_L4_argument_unpacking_done;
+  __pyx_L5_argtuple_error:;
+  __Pyx_RaiseArgtupleInvalid("MotorUpdater", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 74, __pyx_L3_error)
+  __pyx_L3_error:;
+  __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.MotorUpdater", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_RefNannyFinishContext();
+  return NULL;
+  __pyx_L4_argument_unpacking_done:;
+  __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpdater(__pyx_self, __pyx_v_self, __pyx_v_queue);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpdater(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
+static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpdater(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, PyObject *__pyx_v_queue) {
   PyObject *__pyx_v_data = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
+  int __pyx_t_4;
+  int __pyx_t_5;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("MotorUpdater", 0);
 
-  /* "motorisedcameratracking/Imaging.py":73
+  /* "motorisedcameratracking/Imaging.py":75
  * 
- *     def MotorUpdater(self):
+ *     def MotorUpdater(self,queue):
  *         while True:             # <<<<<<<<<<<<<<
- *             data=self.MCPipe.recv()
- *             #print(data)
+ *             if self.MCPipe.poll():
+ *                 data=self.MCPipe.recv()
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":74
- *     def MotorUpdater(self):
+    /* "motorisedcameratracking/Imaging.py":76
+ *     def MotorUpdater(self,queue):
  *         while True:
- *             data=self.MCPipe.recv()             # <<<<<<<<<<<<<<
- *             #print(data)
- *             self.xV=data['xV']
+ *             if self.MCPipe.poll():             # <<<<<<<<<<<<<<
+ *                 data=self.MCPipe.recv()
+ *                 #print(data)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 74, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_recv); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 74, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_poll); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -2753,67 +2819,184 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpda
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 74, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_data, __pyx_t_1);
-    __pyx_t_1 = 0;
-
-    /* "motorisedcameratracking/Imaging.py":76
- *             data=self.MCPipe.recv()
- *             #print(data)
- *             self.xV=data['xV']             # <<<<<<<<<<<<<<
- *             self.yV=data['yV']
- *             self.xD=data['xD']
- */
-    __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_xV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xV, __pyx_t_1) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 76, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (__pyx_t_4) {
 
-    /* "motorisedcameratracking/Imaging.py":77
- *             #print(data)
- *             self.xV=data['xV']
- *             self.yV=data['yV']             # <<<<<<<<<<<<<<
- *             self.xD=data['xD']
- *             self.yD=data['xD']
+      /* "motorisedcameratracking/Imaging.py":77
+ *         while True:
+ *             if self.MCPipe.poll():
+ *                 data=self.MCPipe.recv()             # <<<<<<<<<<<<<<
+ *                 #print(data)
+ *                 self.xV=data['xV']
  */
-    __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_yV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yV, __pyx_t_1) < 0) __PYX_ERR(0, 77, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_recv); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __pyx_t_3 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_3)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_3);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 77, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_XDECREF_SET(__pyx_v_data, __pyx_t_1);
+      __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":78
- *             self.xV=data['xV']
- *             self.yV=data['yV']
- *             self.xD=data['xD']             # <<<<<<<<<<<<<<
- *             self.yD=data['xD']
+      /* "motorisedcameratracking/Imaging.py":79
+ *                 data=self.MCPipe.recv()
+ *                 #print(data)
+ *                 self.xV=data['xV']             # <<<<<<<<<<<<<<
+ *                 self.yV=data['yV']
+ *                 self.xD=data['xD']
+ */
+      __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_xV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xV, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":80
+ *                 #print(data)
+ *                 self.xV=data['xV']
+ *                 self.yV=data['yV']             # <<<<<<<<<<<<<<
+ *                 self.xD=data['xD']
+ *                 self.yD=data['xD']
+ */
+      __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_yV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yV, __pyx_t_1) < 0) __PYX_ERR(0, 80, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":81
+ *                 self.xV=data['xV']
+ *                 self.yV=data['yV']
+ *                 self.xD=data['xD']             # <<<<<<<<<<<<<<
+ *                 self.yD=data['xD']
+ *             if not queue.empty():
+ */
+      __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 81, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xD, __pyx_t_1) < 0) __PYX_ERR(0, 81, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":82
+ *                 self.yV=data['yV']
+ *                 self.xD=data['xD']
+ *                 self.yD=data['xD']             # <<<<<<<<<<<<<<
+ *             if not queue.empty():
+ *                 warnings.warn('Imaging motor updater is dead')
+ */
+      __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yD, __pyx_t_1) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":76
+ *     def MotorUpdater(self,queue):
+ *         while True:
+ *             if self.MCPipe.poll():             # <<<<<<<<<<<<<<
+ *                 data=self.MCPipe.recv()
+ *                 #print(data)
+ */
+    }
+
+    /* "motorisedcameratracking/Imaging.py":83
+ *                 self.xD=data['xD']
+ *                 self.yD=data['xD']
+ *             if not queue.empty():             # <<<<<<<<<<<<<<
+ *                 warnings.warn('Imaging motor updater is dead')
+ *                 break#breaks the loop when data is put on its terminationQueue
+ */
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_queue, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_3)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+      }
+    }
+    __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 83, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_5 = ((!__pyx_t_4) != 0);
+    if (__pyx_t_5) {
+
+      /* "motorisedcameratracking/Imaging.py":84
+ *                 self.yD=data['xD']
+ *             if not queue.empty():
+ *                 warnings.warn('Imaging motor updater is dead')             # <<<<<<<<<<<<<<
+ *                 break#breaks the loop when data is put on its terminationQueue
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_xD, __pyx_t_1) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_3, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_s_Imaging_motor_updater_is_dead) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_s_Imaging_motor_updater_is_dead);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 84, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":79
- *             self.yV=data['yV']
- *             self.xD=data['xD']
- *             self.yD=data['xD']             # <<<<<<<<<<<<<<
+      /* "motorisedcameratracking/Imaging.py":85
+ *             if not queue.empty():
+ *                 warnings.warn('Imaging motor updater is dead')
+ *                 break#breaks the loop when data is put on its terminationQueue             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_Dict_GetItem(__pyx_v_data, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_yD, __pyx_t_1) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      goto __pyx_L4_break;
+
+      /* "motorisedcameratracking/Imaging.py":83
+ *                 self.xD=data['xD']
+ *                 self.yD=data['xD']
+ *             if not queue.empty():             # <<<<<<<<<<<<<<
+ *                 warnings.warn('Imaging motor updater is dead')
+ *                 break#breaks the loop when data is put on its terminationQueue
+ */
+    }
   }
+  __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":72
+  /* "motorisedcameratracking/Imaging.py":74
  *         self.yMaxSpeed=extras['yMaxSpeed']
  * 
- *     def MotorUpdater(self):             # <<<<<<<<<<<<<<
+ *     def MotorUpdater(self,queue):             # <<<<<<<<<<<<<<
  *         while True:
- *             data=self.MCPipe.recv()
+ *             if self.MCPipe.poll():
  */
 
   /* function exit code */
@@ -2832,7 +3015,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_2MotorUpda
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":82
+/* "motorisedcameratracking/Imaging.py":88
  * 
  * 
  *     def main(self,MC,MCPipe):#offers a choice of mode             # <<<<<<<<<<<<<<
@@ -2878,17 +3061,17 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_5main(PyOb
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_MC)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("main", 1, 3, 3, 1); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("main", 1, 3, 3, 1); __PYX_ERR(0, 88, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_MCPipe)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("main", 1, 3, 3, 2); __PYX_ERR(0, 82, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("main", 1, 3, 3, 2); __PYX_ERR(0, 88, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "main") < 0)) __PYX_ERR(0, 82, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "main") < 0)) __PYX_ERR(0, 88, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -2903,7 +3086,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_5main(PyOb
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("main", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 82, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("main", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 88, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.main", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -2923,122 +3106,162 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTH
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
-  int __pyx_t_4;
+  PyObject *__pyx_t_4 = NULL;
+  int __pyx_t_5;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("main", 0);
 
-  /* "motorisedcameratracking/Imaging.py":83
+  /* "motorisedcameratracking/Imaging.py":89
  * 
  *     def main(self,MC,MCPipe):#offers a choice of mode
  *         self.MC=MC             # <<<<<<<<<<<<<<
  *         self.MCPipe=MCPipe
- *         t=threading.Thread(target=self.MotorUpdater)
+ *         self.threadKillQueue=queue.Queue()#creates a queue for killing the thread
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MC, __pyx_v_MC) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MC, __pyx_v_MC) < 0) __PYX_ERR(0, 89, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":84
+  /* "motorisedcameratracking/Imaging.py":90
  *     def main(self,MC,MCPipe):#offers a choice of mode
  *         self.MC=MC
  *         self.MCPipe=MCPipe             # <<<<<<<<<<<<<<
- *         t=threading.Thread(target=self.MotorUpdater)
- *         t.start()
+ *         self.threadKillQueue=queue.Queue()#creates a queue for killing the thread
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))#starts the thread to get the data from the motor
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe, __pyx_v_MCPipe) < 0) __PYX_ERR(0, 84, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe, __pyx_v_MCPipe) < 0) __PYX_ERR(0, 90, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":85
+  /* "motorisedcameratracking/Imaging.py":91
  *         self.MC=MC
  *         self.MCPipe=MCPipe
- *         t=threading.Thread(target=self.MotorUpdater)             # <<<<<<<<<<<<<<
+ *         self.threadKillQueue=queue.Queue()#creates a queue for killing the thread             # <<<<<<<<<<<<<<
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))#starts the thread to get the data from the motor
+ *         t.start()
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_queue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Queue); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue, __pyx_t_1) < 0) __PYX_ERR(0, 91, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "motorisedcameratracking/Imaging.py":92
+ *         self.MCPipe=MCPipe
+ *         self.threadKillQueue=queue.Queue()#creates a queue for killing the thread
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))#starts the thread to get the data from the motor             # <<<<<<<<<<<<<<
  *         t.start()
  *         if self.mode=='advanced':
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_threading); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_threading); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Thread); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Thread); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MotorUpdater); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 85, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MotorUpdater); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 85, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_target, __pyx_t_3) < 0) __PYX_ERR(0, 85, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 85, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_target, __pyx_t_2) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2);
+  __pyx_t_2 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_4) < 0) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 92, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_t = __pyx_t_3;
-  __pyx_t_3 = 0;
+  __pyx_v_t = __pyx_t_4;
+  __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":86
- *         self.MCPipe=MCPipe
- *         t=threading.Thread(target=self.MotorUpdater)
+  /* "motorisedcameratracking/Imaging.py":93
+ *         self.threadKillQueue=queue.Queue()#creates a queue for killing the thread
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))#starts the thread to get the data from the motor
  *         t.start()             # <<<<<<<<<<<<<<
  *         if self.mode=='advanced':
  *             self.advancedTracking()
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_t, __pyx_n_s_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 86, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_t, __pyx_n_s_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 93, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = NULL;
+  __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_2)) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_3)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_1, function);
     }
   }
-  __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 86, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 93, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":87
- *         t=threading.Thread(target=self.MotorUpdater)
+  /* "motorisedcameratracking/Imaging.py":94
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))#starts the thread to get the data from the motor
  *         t.start()
  *         if self.mode=='advanced':             # <<<<<<<<<<<<<<
  *             self.advancedTracking()
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 87, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_advanced, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 87, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__pyx_t_4) {
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_advanced, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 94, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_5) {
 
-    /* "motorisedcameratracking/Imaging.py":88
+    /* "motorisedcameratracking/Imaging.py":95
  *         t.start()
  *         if self.mode=='advanced':
  *             self.advancedTracking()             # <<<<<<<<<<<<<<
  * 
  *         elif self.mode=='intermediate':
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_advancedTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 88, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_advancedTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 95, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = NULL;
+    __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
       }
     }
-    __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 95, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":87
- *         t=threading.Thread(target=self.MotorUpdater)
+    /* "motorisedcameratracking/Imaging.py":94
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))#starts the thread to get the data from the motor
  *         t.start()
  *         if self.mode=='advanced':             # <<<<<<<<<<<<<<
  *             self.advancedTracking()
@@ -3047,46 +3270,46 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTH
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":90
+  /* "motorisedcameratracking/Imaging.py":97
  *             self.advancedTracking()
  * 
  *         elif self.mode=='intermediate':             # <<<<<<<<<<<<<<
  *             self.intermediateTracking()
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 90, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_intermediate, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 90, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__pyx_t_4) {
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_intermediate, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 97, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_5) {
 
-    /* "motorisedcameratracking/Imaging.py":91
+    /* "motorisedcameratracking/Imaging.py":98
  * 
  *         elif self.mode=='intermediate':
  *             self.intermediateTracking()             # <<<<<<<<<<<<<<
  * 
  *         elif self.mode=='simple':
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = NULL;
+    __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
       }
     }
-    __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 98, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":90
+    /* "motorisedcameratracking/Imaging.py":97
  *             self.advancedTracking()
  * 
  *         elif self.mode=='intermediate':             # <<<<<<<<<<<<<<
@@ -3096,46 +3319,46 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTH
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":93
+  /* "motorisedcameratracking/Imaging.py":100
  *             self.intermediateTracking()
  * 
  *         elif self.mode=='simple':             # <<<<<<<<<<<<<<
  *             self.simpleTracking()
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 93, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_simple, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 93, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__pyx_t_4) {
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_simple, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 100, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_5) {
 
-    /* "motorisedcameratracking/Imaging.py":94
+    /* "motorisedcameratracking/Imaging.py":101
  * 
  *         elif self.mode=='simple':
  *             self.simpleTracking()             # <<<<<<<<<<<<<<
  * 
  *         else:
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 94, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = NULL;
+    __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
       }
     }
-    __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 94, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 101, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":93
+    /* "motorisedcameratracking/Imaging.py":100
  *             self.intermediateTracking()
  * 
  *         elif self.mode=='simple':             # <<<<<<<<<<<<<<
@@ -3145,36 +3368,36 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTH
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":97
+  /* "motorisedcameratracking/Imaging.py":104
  * 
  *         else:
- *             self.simpleTracking()             # <<<<<<<<<<<<<<
+ *             self.simpleTracking()#defaults to simple tracking             # <<<<<<<<<<<<<<
  * 
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently
+ *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTracking); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 104, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = NULL;
+    __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
       }
     }
-    __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 97, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+    __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 104, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_L3:;
 
-  /* "motorisedcameratracking/Imaging.py":82
+  /* "motorisedcameratracking/Imaging.py":88
  * 
  * 
  *     def main(self,MC,MCPipe):#offers a choice of mode             # <<<<<<<<<<<<<<
@@ -3189,6 +3412,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTH
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_4);
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.main", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -3198,17 +3422,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_4main(CYTH
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":99
- *             self.simpleTracking()
+/* "motorisedcameratracking/Imaging.py":106
+ *             self.simpleTracking()#defaults to simple tracking
  * 
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently             # <<<<<<<<<<<<<<
+ *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """ identical to main but starts the limited versions of methods"""
  *         self.MC=MC
- *         self.MCPipe=MCPipe
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited = {"mainLimited", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited, METH_VARARGS|METH_KEYWORDS, 0};
+static char __pyx_doc_23motorisedcameratracking_7Imaging_7Imaging_6mainLimited[] = " identical to main but starts the limited versions of methods";
+static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited = {"mainLimited", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited, METH_VARARGS|METH_KEYWORDS, __pyx_doc_23motorisedcameratracking_7Imaging_7Imaging_6mainLimited};
 static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_MC = 0;
@@ -3256,41 +3481,41 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_7mainLimit
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_MC)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 1); __PYX_ERR(0, 99, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 1); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_MCPipe)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 2); __PYX_ERR(0, 99, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 2); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 3); __PYX_ERR(0, 99, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 3); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 4); __PYX_ERR(0, 99, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 4); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 5); __PYX_ERR(0, 99, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 5); __PYX_ERR(0, 106, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 6); __PYX_ERR(0, 99, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, 6); __PYX_ERR(0, 106, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "mainLimited") < 0)) __PYX_ERR(0, 99, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "mainLimited") < 0)) __PYX_ERR(0, 106, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 7) {
       goto __pyx_L5_argtuple_error;
@@ -3313,7 +3538,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_7mainLimit
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 99, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("mainLimited", 1, 7, 7, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 106, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.mainLimited", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3333,239 +3558,284 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimit
   PyObject *__pyx_t_1 = NULL;
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
-  int __pyx_t_4;
+  PyObject *__pyx_t_4 = NULL;
   int __pyx_t_5;
-  PyObject *__pyx_t_6 = NULL;
+  int __pyx_t_6;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("mainLimited", 0);
 
-  /* "motorisedcameratracking/Imaging.py":100
- * 
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently
+  /* "motorisedcameratracking/Imaging.py":108
+ *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):
+ *         """ identical to main but starts the limited versions of methods"""
  *         self.MC=MC             # <<<<<<<<<<<<<<
  *         self.MCPipe=MCPipe
- *         t=threading.Thread(target=self.MotorUpdater)
+ *         self.threadKillQueue=queue.Queue()
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MC, __pyx_v_MC) < 0) __PYX_ERR(0, 100, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MC, __pyx_v_MC) < 0) __PYX_ERR(0, 108, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":101
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently
+  /* "motorisedcameratracking/Imaging.py":109
+ *         """ identical to main but starts the limited versions of methods"""
  *         self.MC=MC
  *         self.MCPipe=MCPipe             # <<<<<<<<<<<<<<
- *         t=threading.Thread(target=self.MotorUpdater)
- *         t.start()
+ *         self.threadKillQueue=queue.Queue()
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe, __pyx_v_MCPipe) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe, __pyx_v_MCPipe) < 0) __PYX_ERR(0, 109, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":102
+  /* "motorisedcameratracking/Imaging.py":110
  *         self.MC=MC
  *         self.MCPipe=MCPipe
- *         t=threading.Thread(target=self.MotorUpdater)             # <<<<<<<<<<<<<<
+ *         self.threadKillQueue=queue.Queue()             # <<<<<<<<<<<<<<
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))
+ *         t.start()
+ */
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_queue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_Queue); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = NULL;
+  if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_3))) {
+    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+    if (likely(__pyx_t_2)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
+      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(function);
+      __Pyx_DECREF_SET(__pyx_t_3, function);
+    }
+  }
+  __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 110, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue, __pyx_t_1) < 0) __PYX_ERR(0, 110, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "motorisedcameratracking/Imaging.py":111
+ *         self.MCPipe=MCPipe
+ *         self.threadKillQueue=queue.Queue()
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))             # <<<<<<<<<<<<<<
  *         t.start()
  *         if self.mode=='advanced':
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_threading); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_threading); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Thread); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 102, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_Thread); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_3);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MotorUpdater); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 102, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MotorUpdater); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_target, __pyx_t_3) < 0) __PYX_ERR(0, 102, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 102, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_target, __pyx_t_2) < 0) __PYX_ERR(0, 111, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_GIVEREF(__pyx_t_2);
+  PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2);
+  __pyx_t_2 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_4) < 0) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_v_t = __pyx_t_3;
-  __pyx_t_3 = 0;
+  __pyx_v_t = __pyx_t_4;
+  __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":103
- *         self.MCPipe=MCPipe
- *         t=threading.Thread(target=self.MotorUpdater)
+  /* "motorisedcameratracking/Imaging.py":112
+ *         self.threadKillQueue=queue.Queue()
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))
  *         t.start()             # <<<<<<<<<<<<<<
  *         if self.mode=='advanced':
- *             self.advancedTrackingLimited(xLimit1,xLimit2)
+ *             self.advancedTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_t, __pyx_n_s_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_t, __pyx_n_s_start); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = NULL;
+  __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-    __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-    if (likely(__pyx_t_2)) {
+    __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_3)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-      __Pyx_INCREF(__pyx_t_2);
+      __Pyx_INCREF(__pyx_t_3);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_1, function);
     }
   }
-  __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-  __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 103, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
+  __pyx_t_4 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+  __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+  if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":104
- *         t=threading.Thread(target=self.MotorUpdater)
+  /* "motorisedcameratracking/Imaging.py":113
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))
  *         t.start()
  *         if self.mode=='advanced':             # <<<<<<<<<<<<<<
- *             self.advancedTrackingLimited(xLimit1,xLimit2)
+ *             self.advancedTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 104, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_advanced, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 104, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__pyx_t_4) {
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_advanced, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 113, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_5) {
 
-    /* "motorisedcameratracking/Imaging.py":105
+    /* "motorisedcameratracking/Imaging.py":114
  *         t.start()
  *         if self.mode=='advanced':
- *             self.advancedTrackingLimited(xLimit1,xLimit2)             # <<<<<<<<<<<<<<
+ *             self.advancedTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)             # <<<<<<<<<<<<<<
  * 
  *         elif self.mode=='intermediate':
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_advancedTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 105, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_advancedTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = NULL;
-    __pyx_t_5 = 0;
+    __pyx_t_3 = NULL;
+    __pyx_t_6 = 0;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
+        __pyx_t_6 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_3, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 2+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_3, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(2+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 105, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      if (__pyx_t_2) {
-        __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      __pyx_t_2 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      if (__pyx_t_3) {
+        __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3); __pyx_t_3 = NULL;
       }
       __Pyx_INCREF(__pyx_v_xLimit1);
       __Pyx_GIVEREF(__pyx_v_xLimit1);
-      PyTuple_SET_ITEM(__pyx_t_6, 0+__pyx_t_5, __pyx_v_xLimit1);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_6, __pyx_v_xLimit1);
       __Pyx_INCREF(__pyx_v_xLimit2);
       __Pyx_GIVEREF(__pyx_v_xLimit2);
-      PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_xLimit2);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 105, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_v_xLimit2);
+      __Pyx_INCREF(__pyx_v_yLimit1);
+      __Pyx_GIVEREF(__pyx_v_yLimit1);
+      PyTuple_SET_ITEM(__pyx_t_2, 2+__pyx_t_6, __pyx_v_yLimit1);
+      __Pyx_INCREF(__pyx_v_yLimit2);
+      __Pyx_GIVEREF(__pyx_v_yLimit2);
+      PyTuple_SET_ITEM(__pyx_t_2, 3+__pyx_t_6, __pyx_v_yLimit2);
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 114, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":104
- *         t=threading.Thread(target=self.MotorUpdater)
+    /* "motorisedcameratracking/Imaging.py":113
+ *         t=threading.Thread(target=self.MotorUpdater, args=(self.threadKillQueue,))
  *         t.start()
  *         if self.mode=='advanced':             # <<<<<<<<<<<<<<
- *             self.advancedTrackingLimited(xLimit1,xLimit2)
+ *             self.advancedTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  */
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":107
- *             self.advancedTrackingLimited(xLimit1,xLimit2)
+  /* "motorisedcameratracking/Imaging.py":116
+ *             self.advancedTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  *         elif self.mode=='intermediate':             # <<<<<<<<<<<<<<
  *             self.intermediateTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 107, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_intermediate, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 107, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__pyx_t_4) {
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_intermediate, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 116, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_5) {
 
-    /* "motorisedcameratracking/Imaging.py":108
+    /* "motorisedcameratracking/Imaging.py":117
  * 
  *         elif self.mode=='intermediate':
  *             self.intermediateTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)             # <<<<<<<<<<<<<<
  * 
  *         elif self.mode=='simple':
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = NULL;
-    __pyx_t_5 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_6 = 0;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_6)) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
+        __pyx_t_6 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 4+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 4+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(4+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      if (__pyx_t_6) {
-        __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6); __pyx_t_6 = NULL;
+      __pyx_t_3 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      if (__pyx_t_2) {
+        __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2); __pyx_t_2 = NULL;
       }
       __Pyx_INCREF(__pyx_v_xLimit1);
       __Pyx_GIVEREF(__pyx_v_xLimit1);
-      PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_5, __pyx_v_xLimit1);
+      PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_6, __pyx_v_xLimit1);
       __Pyx_INCREF(__pyx_v_xLimit2);
       __Pyx_GIVEREF(__pyx_v_xLimit2);
-      PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_5, __pyx_v_xLimit2);
+      PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_6, __pyx_v_xLimit2);
       __Pyx_INCREF(__pyx_v_yLimit1);
       __Pyx_GIVEREF(__pyx_v_yLimit1);
-      PyTuple_SET_ITEM(__pyx_t_2, 2+__pyx_t_5, __pyx_v_yLimit1);
+      PyTuple_SET_ITEM(__pyx_t_3, 2+__pyx_t_6, __pyx_v_yLimit1);
       __Pyx_INCREF(__pyx_v_yLimit2);
       __Pyx_GIVEREF(__pyx_v_yLimit2);
-      PyTuple_SET_ITEM(__pyx_t_2, 3+__pyx_t_5, __pyx_v_yLimit2);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 108, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      PyTuple_SET_ITEM(__pyx_t_3, 3+__pyx_t_6, __pyx_v_yLimit2);
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 117, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":107
- *             self.advancedTrackingLimited(xLimit1,xLimit2)
+    /* "motorisedcameratracking/Imaging.py":116
+ *             self.advancedTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  *         elif self.mode=='intermediate':             # <<<<<<<<<<<<<<
  *             self.intermediateTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
@@ -3574,82 +3844,82 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimit
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":110
+  /* "motorisedcameratracking/Imaging.py":119
  *             self.intermediateTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  *         elif self.mode=='simple':             # <<<<<<<<<<<<<<
  *             self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  *         else:
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 110, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_3, __pyx_n_s_simple, Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 110, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__pyx_t_4) {
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_mode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 119, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = (__Pyx_PyString_Equals(__pyx_t_4, __pyx_n_s_simple, Py_EQ)); if (unlikely(__pyx_t_5 < 0)) __PYX_ERR(0, 119, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (__pyx_t_5) {
 
-    /* "motorisedcameratracking/Imaging.py":111
+    /* "motorisedcameratracking/Imaging.py":120
  * 
  *         elif self.mode=='simple':
  *             self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)             # <<<<<<<<<<<<<<
  *         else:
  *             self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 111, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = NULL;
-    __pyx_t_5 = 0;
+    __pyx_t_3 = NULL;
+    __pyx_t_6 = 0;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_2)) {
+      __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_3)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_3);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
+        __pyx_t_6 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 4+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_3, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 120, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 4+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_3, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 120, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_6 = PyTuple_New(4+__pyx_t_5); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      if (__pyx_t_2) {
-        __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_2); __pyx_t_2 = NULL;
+      __pyx_t_2 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 120, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      if (__pyx_t_3) {
+        __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_3); __pyx_t_3 = NULL;
       }
       __Pyx_INCREF(__pyx_v_xLimit1);
       __Pyx_GIVEREF(__pyx_v_xLimit1);
-      PyTuple_SET_ITEM(__pyx_t_6, 0+__pyx_t_5, __pyx_v_xLimit1);
+      PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_6, __pyx_v_xLimit1);
       __Pyx_INCREF(__pyx_v_xLimit2);
       __Pyx_GIVEREF(__pyx_v_xLimit2);
-      PyTuple_SET_ITEM(__pyx_t_6, 1+__pyx_t_5, __pyx_v_xLimit2);
+      PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_v_xLimit2);
       __Pyx_INCREF(__pyx_v_yLimit1);
       __Pyx_GIVEREF(__pyx_v_yLimit1);
-      PyTuple_SET_ITEM(__pyx_t_6, 2+__pyx_t_5, __pyx_v_yLimit1);
+      PyTuple_SET_ITEM(__pyx_t_2, 2+__pyx_t_6, __pyx_v_yLimit1);
       __Pyx_INCREF(__pyx_v_yLimit2);
       __Pyx_GIVEREF(__pyx_v_yLimit2);
-      PyTuple_SET_ITEM(__pyx_t_6, 3+__pyx_t_5, __pyx_v_yLimit2);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 111, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
+      PyTuple_SET_ITEM(__pyx_t_2, 3+__pyx_t_6, __pyx_v_yLimit2);
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 120, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":110
+    /* "motorisedcameratracking/Imaging.py":119
  *             self.intermediateTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  * 
  *         elif self.mode=='simple':             # <<<<<<<<<<<<<<
@@ -3659,7 +3929,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimit
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":113
+  /* "motorisedcameratracking/Imaging.py":122
  *             self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)
  *         else:
  *             self.simpleTrackingLimited(xLimit1,xLimit2,yLimit1,yLimit2)             # <<<<<<<<<<<<<<
@@ -3667,69 +3937,69 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimit
  * 
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 113, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleTrackingLimited); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 122, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = NULL;
-    __pyx_t_5 = 0;
+    __pyx_t_2 = NULL;
+    __pyx_t_6 = 0;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_6)) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_6);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_5 = 1;
+        __pyx_t_6 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 4+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 122, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_6, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_5, 4+__pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_GOTREF(__pyx_t_3);
+      PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 122, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_GOTREF(__pyx_t_4);
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(4+__pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 113, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      if (__pyx_t_6) {
-        __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6); __pyx_t_6 = NULL;
+      __pyx_t_3 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 122, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      if (__pyx_t_2) {
+        __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2); __pyx_t_2 = NULL;
       }
       __Pyx_INCREF(__pyx_v_xLimit1);
       __Pyx_GIVEREF(__pyx_v_xLimit1);
-      PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_5, __pyx_v_xLimit1);
+      PyTuple_SET_ITEM(__pyx_t_3, 0+__pyx_t_6, __pyx_v_xLimit1);
       __Pyx_INCREF(__pyx_v_xLimit2);
       __Pyx_GIVEREF(__pyx_v_xLimit2);
-      PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_5, __pyx_v_xLimit2);
+      PyTuple_SET_ITEM(__pyx_t_3, 1+__pyx_t_6, __pyx_v_xLimit2);
       __Pyx_INCREF(__pyx_v_yLimit1);
       __Pyx_GIVEREF(__pyx_v_yLimit1);
-      PyTuple_SET_ITEM(__pyx_t_2, 2+__pyx_t_5, __pyx_v_yLimit1);
+      PyTuple_SET_ITEM(__pyx_t_3, 2+__pyx_t_6, __pyx_v_yLimit1);
       __Pyx_INCREF(__pyx_v_yLimit2);
       __Pyx_GIVEREF(__pyx_v_yLimit2);
-      PyTuple_SET_ITEM(__pyx_t_2, 3+__pyx_t_5, __pyx_v_yLimit2);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 113, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      PyTuple_SET_ITEM(__pyx_t_3, 3+__pyx_t_6, __pyx_v_yLimit2);
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 122, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_L3:;
 
-  /* "motorisedcameratracking/Imaging.py":99
- *             self.simpleTracking()
+  /* "motorisedcameratracking/Imaging.py":106
+ *             self.simpleTracking()#defaults to simple tracking
  * 
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently             # <<<<<<<<<<<<<<
+ *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """ identical to main but starts the limited versions of methods"""
  *         self.MC=MC
- *         self.MCPipe=MCPipe
  */
 
   /* function exit code */
@@ -3739,7 +4009,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimit
   __Pyx_XDECREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
-  __Pyx_XDECREF(__pyx_t_6);
+  __Pyx_XDECREF(__pyx_t_4);
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.mainLimited", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -3749,7 +4019,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_6mainLimit
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":117
+/* "motorisedcameratracking/Imaging.py":126
  * 
  * 
  *     def advancedTracking(self):             # <<<<<<<<<<<<<<
@@ -3791,16 +4061,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("advancedTracking", 0);
 
-  /* "motorisedcameratracking/Imaging.py":126
+  /* "motorisedcameratracking/Imaging.py":135
  *             controlQueue: the queue used for shutting down operation
  *         """
  *         warnings.warn('imaging main is active')             # <<<<<<<<<<<<<<
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 126, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -3815,21 +4085,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_s_imaging_main_is_active) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_s_imaging_main_is_active);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 126, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":127
+  /* "motorisedcameratracking/Imaging.py":136
  *         """
  *         warnings.warn('imaging main is active')
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts             # <<<<<<<<<<<<<<
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
  *         self.positions.append(self.currentPosition)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -3844,116 +4114,104 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 127, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 127, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 0, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 127, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 0, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 136, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":128
+  /* "motorisedcameratracking/Imaging.py":137
  *         warnings.warn('imaging main is active')
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used             # <<<<<<<<<<<<<<
  *         self.positions.append(self.currentPosition)
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_2); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 128, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_2); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 137, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":129
+  /* "motorisedcameratracking/Imaging.py":138
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
  *         self.positions.append(self.currentPosition)             # <<<<<<<<<<<<<<
  * 
  *         while True:#allow it to loop multiple times
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 129, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 138, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":131
+  /* "motorisedcameratracking/Imaging.py":140
  *         self.positions.append(self.currentPosition)
  * 
  *         while True:#allow it to loop multiple times             # <<<<<<<<<<<<<<
  *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement
- *             print(self.previousTime)
+ *             #print(self.previousTime)
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":132
+    /* "motorisedcameratracking/Imaging.py":141
  * 
  *         while True:#allow it to loop multiple times
  *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement             # <<<<<<<<<<<<<<
- *             print(self.previousTime)
+ *             #print(self.previousTime)
  *             img=self.camera.capture(resolution=self.resolution)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 132, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 141, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 132, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 141, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_previousTime, __pyx_t_2) < 0) __PYX_ERR(0, 132, __pyx_L1_error)
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_previousTime, __pyx_t_2) < 0) __PYX_ERR(0, 141, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":133
- *         while True:#allow it to loop multiple times
+    /* "motorisedcameratracking/Imaging.py":143
  *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement
- *             print(self.previousTime)             # <<<<<<<<<<<<<<
- *             img=self.camera.capture(resolution=self.resolution)
- *             self.currentPosition[0]=time.time()                 #assigns the current time
- */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_previousTime); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 133, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 133, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-    /* "motorisedcameratracking/Imaging.py":134
- *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement
- *             print(self.previousTime)
+ *             #print(self.previousTime)
  *             img=self.camera.capture(resolution=self.resolution)             # <<<<<<<<<<<<<<
  *             self.currentPosition[0]=time.time()                 #assigns the current time
  *             #print(self.currentPosition)
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_capture); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_capture); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 134, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 134, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":135
- *             print(self.previousTime)
+    /* "motorisedcameratracking/Imaging.py":144
+ *             #print(self.previousTime)
  *             img=self.camera.capture(resolution=self.resolution)
  *             self.currentPosition[0]=time.time()                 #assigns the current time             # <<<<<<<<<<<<<<
  *             #print(self.currentPosition)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 135, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -3968,23 +4226,23 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 135, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 135, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 0, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 135, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 0, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 144, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":138
+    /* "motorisedcameratracking/Imaging.py":147
  *             #print(self.currentPosition)
  * 
  *             self.getCurrentPositionOfMotors()             # <<<<<<<<<<<<<<
  * 
  *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_getCurrentPositionOfMotors); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 138, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_getCurrentPositionOfMotors); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -3998,26 +4256,26 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":140
+    /* "motorisedcameratracking/Imaging.py":149
  *             self.getCurrentPositionOfMotors()
  * 
  *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions             # <<<<<<<<<<<<<<
  * 
  *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_GIVEREF(__pyx_t_2);
     PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
@@ -4028,18 +4286,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     __Pyx_GIVEREF(Py_None);
     PyList_SET_ITEM(__pyx_t_1, 2, Py_None);
     __pyx_t_2 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_3, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 140, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_3, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 149, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":142
+    /* "motorisedcameratracking/Imaging.py":151
  *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions
  * 
  *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image             # <<<<<<<<<<<<<<
  *             self.calculatePositionOfObject()                    #adds current angles of target to list
  *             print('self.positions A ',self.positions)
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateCoordinates); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 142, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateCoordinates); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -4053,19 +4311,19 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_img);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 142, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 151, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":143
+    /* "motorisedcameratracking/Imaging.py":152
  * 
  *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
  *             self.calculatePositionOfObject()                    #adds current angles of target to list             # <<<<<<<<<<<<<<
  *             print('self.positions A ',self.positions)
  *             xV,yV=self.determineVelocity()                            #calculates velocity
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculatePositionOfObject); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 143, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculatePositionOfObject); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
@@ -4079,21 +4337,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 143, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 152, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":144
+    /* "motorisedcameratracking/Imaging.py":153
  *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
  *             self.calculatePositionOfObject()                    #adds current angles of target to list
  *             print('self.positions A ',self.positions)             # <<<<<<<<<<<<<<
  *             xV,yV=self.determineVelocity()                            #calculates velocity
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 144, __pyx_L1_error)
+    __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_kp_s_self_positions_A);
     __Pyx_GIVEREF(__pyx_kp_s_self_positions_A);
@@ -4101,17 +4359,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
     __pyx_t_1 = 0;
-    if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 144, __pyx_L1_error)
+    if (__Pyx_PrintOne(0, __pyx_t_3) < 0) __PYX_ERR(0, 153, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":145
+    /* "motorisedcameratracking/Imaging.py":154
  *             self.calculatePositionOfObject()                    #adds current angles of target to list
  *             print('self.positions A ',self.positions)
  *             xV,yV=self.determineVelocity()                            #calculates velocity             # <<<<<<<<<<<<<<
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  *             if not self.controlQueue.empty():#breaks when the signal is sent
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_determineVelocity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_determineVelocity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -4125,7 +4383,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 145, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 154, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if ((likely(PyTuple_CheckExact(__pyx_t_3))) || (PyList_CheckExact(__pyx_t_3))) {
@@ -4134,7 +4392,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 145, __pyx_L1_error)
+        __PYX_ERR(0, 154, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -4147,15 +4405,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
       __Pyx_INCREF(__pyx_t_1);
       __Pyx_INCREF(__pyx_t_2);
       #else
-      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 145, __pyx_L1_error)
+      __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       #endif
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 145, __pyx_L1_error)
+      __pyx_t_5 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 154, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_6 = Py_TYPE(__pyx_t_5)->tp_iternext;
@@ -4163,7 +4421,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
       __Pyx_GOTREF(__pyx_t_1);
       index = 1; __pyx_t_2 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_2)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_2);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < 0) __PYX_ERR(0, 145, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < 0) __PYX_ERR(0, 154, __pyx_L1_error)
       __pyx_t_6 = NULL;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       goto __pyx_L6_unpacking_done;
@@ -4171,7 +4429,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_6 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 145, __pyx_L1_error)
+      __PYX_ERR(0, 154, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_xV, __pyx_t_1);
@@ -4179,23 +4437,23 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_t_2);
     __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":146
+    /* "motorisedcameratracking/Imaging.py":155
  *             print('self.positions A ',self.positions)
  *             xV,yV=self.determineVelocity()                            #calculates velocity
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})             # <<<<<<<<<<<<<<
  *             if not self.controlQueue.empty():#breaks when the signal is sent
- *                 break
+ *                 self.reset()
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_send); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_send); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 146, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_recentre, Py_False) < 0) __PYX_ERR(0, 146, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_recentre, Py_False) < 0) __PYX_ERR(0, 155, __pyx_L1_error)
     __pyx_t_5 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
       __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
@@ -4209,21 +4467,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_5, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 146, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 155, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":147
+    /* "motorisedcameratracking/Imaging.py":156
  *             xV,yV=self.determineVelocity()                            #calculates velocity
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.reset()
+ *                 self.threadKillQueue.put(1)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -4238,35 +4496,119 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 147, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 147, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_7 < 0)) __PYX_ERR(0, 156, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_8 = ((!__pyx_t_7) != 0);
     if (__pyx_t_8) {
 
-      /* "motorisedcameratracking/Imaging.py":148
+      /* "motorisedcameratracking/Imaging.py":157
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.reset()             # <<<<<<<<<<<<<<
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
+ */
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":158
+ *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.reset()
+ *                 self.threadKillQueue.put(1)             # <<<<<<<<<<<<<<
+ *                 warnings.warn("imaging terminating")
+ *                 break
+ */
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_put); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_1, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_int_1) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_int_1);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":159
+ *                 self.reset()
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")             # <<<<<<<<<<<<<<
+ *                 break
+ * 
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_kp_s_imaging_terminating) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_imaging_terminating);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 159, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":160
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  *                 break             # <<<<<<<<<<<<<<
  * 
- *     def advancedTrackingLimited(self, limit1: float, limit2: float):
+ *     def advancedTrackingLimited(self, xLimit1: float, xLimit2: float,yLimit1,yLimit2):
  */
       goto __pyx_L4_break;
 
-      /* "motorisedcameratracking/Imaging.py":147
+      /* "motorisedcameratracking/Imaging.py":156
  *             xV,yV=self.determineVelocity()                            #calculates velocity
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.reset()
+ *                 self.threadKillQueue.put(1)
  */
     }
   }
   __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":117
+  /* "motorisedcameratracking/Imaging.py":126
  * 
  * 
  *     def advancedTracking(self):             # <<<<<<<<<<<<<<
@@ -4293,10 +4635,10 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_8advancedT
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":150
+/* "motorisedcameratracking/Imaging.py":162
  *                 break
  * 
- *     def advancedTrackingLimited(self, limit1: float, limit2: float):             # <<<<<<<<<<<<<<
+ *     def advancedTrackingLimited(self, xLimit1: float, xLimit2: float,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         """The limited version of the tracking
  * 
  */
@@ -4307,8 +4649,10 @@ static char __pyx_doc_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrac
 static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_11advancedTrackingLimited = {"advancedTrackingLimited", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_11advancedTrackingLimited, METH_VARARGS|METH_KEYWORDS, __pyx_doc_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited};
 static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_11advancedTrackingLimited(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
-  CYTHON_UNUSED double __pyx_v_limit1;
-  CYTHON_UNUSED double __pyx_v_limit2;
+  double __pyx_v_xLimit1;
+  double __pyx_v_xLimit2;
+  PyObject *__pyx_v_yLimit1 = 0;
+  PyObject *__pyx_v_yLimit2 = 0;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -4316,12 +4660,16 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_11advanced
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("advancedTrackingLimited (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_limit1,&__pyx_n_s_limit2,0};
-    PyObject* values[3] = {0,0,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xLimit1,&__pyx_n_s_xLimit2,&__pyx_n_s_yLimit1,&__pyx_n_s_yLimit2,0};
+    PyObject* values[5] = {0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
+        CYTHON_FALLTHROUGH;
+        case  4: values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+        CYTHON_FALLTHROUGH;
         case  3: values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
         CYTHON_FALLTHROUGH;
         case  2: values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
@@ -4338,50 +4686,65 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_11advanced
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_limit1)) != 0)) kw_args--;
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 3, 3, 1); __PYX_ERR(0, 150, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 5, 5, 1); __PYX_ERR(0, 162, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_limit2)) != 0)) kw_args--;
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 3, 3, 2); __PYX_ERR(0, 150, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 5, 5, 2); __PYX_ERR(0, 162, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  3:
+        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit1)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 5, 5, 3); __PYX_ERR(0, 162, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  4:
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit2)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 5, 5, 4); __PYX_ERR(0, 162, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "advancedTrackingLimited") < 0)) __PYX_ERR(0, 150, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "advancedTrackingLimited") < 0)) __PYX_ERR(0, 162, __pyx_L3_error)
       }
-    } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
+    } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
     } else {
       values[0] = PyTuple_GET_ITEM(__pyx_args, 0);
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
+      values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
+      values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
     }
     __pyx_v_self = values[0];
-    __pyx_v_limit1 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_limit1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L3_error)
-    __pyx_v_limit2 = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_limit2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L3_error)
+    __pyx_v_xLimit1 = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_xLimit1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 162, __pyx_L3_error)
+    __pyx_v_xLimit2 = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_xLimit2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 162, __pyx_L3_error)
+    __pyx_v_yLimit1 = values[3];
+    __pyx_v_yLimit2 = values[4];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 150, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("advancedTrackingLimited", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 162, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.advancedTrackingLimited", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited(__pyx_self, __pyx_v_self, __pyx_v_limit1, __pyx_v_limit2);
+  __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited(__pyx_self, __pyx_v_self, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, CYTHON_UNUSED double __pyx_v_limit1, CYTHON_UNUSED double __pyx_v_limit2) {
+static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advancedTrackingLimited(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self, double __pyx_v_xLimit1, double __pyx_v_xLimit2, PyObject *__pyx_v_yLimit1, PyObject *__pyx_v_yLimit2) {
   int __pyx_v_recentre;
-  PyObject *__pyx_v_x = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v_previousTime = NULL;
+  PyObject *__pyx_v_img = NULL;
   PyObject *__pyx_v_xV = NULL;
   PyObject *__pyx_v_yV = NULL;
   PyObject *__pyx_r = NULL;
@@ -4393,27 +4756,25 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
   PyObject *__pyx_t_5 = NULL;
   PyObject *(*__pyx_t_6)(PyObject *);
   PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
+  int __pyx_t_8;
   PyObject *__pyx_t_9 = NULL;
   int __pyx_t_10;
-  PyObject *__pyx_t_11 = NULL;
-  int __pyx_t_12;
-  int __pyx_t_13;
+  int __pyx_t_11;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("advancedTrackingLimited", 0);
 
-  /* "motorisedcameratracking/Imaging.py":157
+  /* "motorisedcameratracking/Imaging.py":169
  *             limit2: The second limit
  *         """
  *         warnings.warn('imaging main is active')             # <<<<<<<<<<<<<<
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -4428,21 +4789,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_s_imaging_main_is_active) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_s_imaging_main_is_active);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":158
+  /* "motorisedcameratracking/Imaging.py":170
  *         """
  *         warnings.warn('imaging main is active')
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts             # <<<<<<<<<<<<<<
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
  *         self.positions.append(self.currentPosition)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __pyx_t_3 = NULL;
@@ -4457,116 +4818,144 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 0, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 158, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 0, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 170, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":159
+  /* "motorisedcameratracking/Imaging.py":171
  *         warnings.warn('imaging main is active')
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used             # <<<<<<<<<<<<<<
  *         self.positions.append(self.currentPosition)
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_2); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_2); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 171, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":160
+  /* "motorisedcameratracking/Imaging.py":172
  *         self.currentPosition[0]=time.time()#saves the time the tracking starts
  *         self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
  *         self.positions.append(self.currentPosition)             # <<<<<<<<<<<<<<
  * 
  *         while True:#allow it to loop multiple times
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 160, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_2, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 172, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":162
+  /* "motorisedcameratracking/Imaging.py":174
  *         self.positions.append(self.currentPosition)
  * 
  *         while True:#allow it to loop multiple times             # <<<<<<<<<<<<<<
  *             recentre=False
- *             x=self.camera.capture()
+ * 
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":163
+    /* "motorisedcameratracking/Imaging.py":175
  * 
  *         while True:#allow it to loop multiple times
  *             recentre=False             # <<<<<<<<<<<<<<
- *             x=self.camera.capture()
- *             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement
+ * 
+ *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement
  */
     __pyx_v_recentre = 0;
 
-    /* "motorisedcameratracking/Imaging.py":164
- *         while True:#allow it to loop multiple times
+    /* "motorisedcameratracking/Imaging.py":177
  *             recentre=False
- *             x=self.camera.capture()             # <<<<<<<<<<<<<<
- *             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement
- *             self.getCurrentPositionOfMotors()
+ * 
+ *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement             # <<<<<<<<<<<<<<
+ *             img=self.camera.capture(resolution=self.resolution)
+ *             self.currentPosition[0]=time.time()                 #assigns the current time
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 164, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_capture); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 164, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_previousTime, __pyx_t_2) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_2)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_2);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_3, function);
-      }
-    }
-    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 164, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_1);
-    __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":165
- *             recentre=False
- *             x=self.camera.capture()
- *             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement             # <<<<<<<<<<<<<<
+    /* "motorisedcameratracking/Imaging.py":178
+ * 
+ *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement
+ *             img=self.camera.capture(resolution=self.resolution)             # <<<<<<<<<<<<<<
+ *             self.currentPosition[0]=time.time()                 #assigns the current time
  *             self.getCurrentPositionOfMotors()
- *             self.currentPosition[-1]=time.time()                                                                        #assigns the current time
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_capture); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 178, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 178, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_previousTime, __pyx_t_3);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":166
- *             x=self.camera.capture()
- *             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement
- *             self.getCurrentPositionOfMotors()             # <<<<<<<<<<<<<<
- *             self.currentPosition[-1]=time.time()                                                                        #assigns the current time
- *             self.positions.append([self.currentPosition[-1],None,None])                                                 #adds the current time to the list of positions
+    /* "motorisedcameratracking/Imaging.py":179
+ *             self.previousTime=self.currentPosition[0]           #saves the time of the previous movement
+ *             img=self.camera.capture(resolution=self.resolution)
+ *             self.currentPosition[0]=time.time()                 #assigns the current time             # <<<<<<<<<<<<<<
+ *             self.getCurrentPositionOfMotors()
+ *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_getCurrentPositionOfMotors); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_2);
+        __Pyx_INCREF(function);
+        __Pyx_DECREF_SET(__pyx_t_1, function);
+      }
+    }
+    __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 0, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 179, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+    /* "motorisedcameratracking/Imaging.py":180
+ *             img=self.camera.capture(resolution=self.resolution)
+ *             self.currentPosition[0]=time.time()                 #assigns the current time
+ *             self.getCurrentPositionOfMotors()             # <<<<<<<<<<<<<<
+ *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions
+ *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
+ */
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_getCurrentPositionOfMotors); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -4580,185 +4969,152 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 180, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":167
- *             previousTime=self.currentPosition[-1]                                                                       #saves the time of the previous movement
+    /* "motorisedcameratracking/Imaging.py":181
+ *             self.currentPosition[0]=time.time()                 #assigns the current time
  *             self.getCurrentPositionOfMotors()
- *             self.currentPosition[-1]=time.time()                                                                        #assigns the current time             # <<<<<<<<<<<<<<
- *             self.positions.append([self.currentPosition[-1],None,None])                                                 #adds the current time to the list of positions
- *             self.calculateCoordinates(x)                                                                                #calculates the coordinates of the object in the image
+ *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions             # <<<<<<<<<<<<<<
+ *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
+ *             self.calculatePositionOfObject()                    #adds current angles of target to list
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 181, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_3);
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = NULL;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_2))) {
-      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
-      if (likely(__pyx_t_1)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
-        __Pyx_INCREF(__pyx_t_1);
-        __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_2, function);
-      }
-    }
-    __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 167, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 167, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    if (unlikely(__Pyx_SetItemInt(__pyx_t_2, -1L, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 1, 1) < 0)) __PYX_ERR(0, 167, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-
-    /* "motorisedcameratracking/Imaging.py":168
- *             self.getCurrentPositionOfMotors()
- *             self.currentPosition[-1]=time.time()                                                                        #assigns the current time
- *             self.positions.append([self.currentPosition[-1],None,None])                                                 #adds the current time to the list of positions             # <<<<<<<<<<<<<<
- *             self.calculateCoordinates(x)                                                                                #calculates the coordinates of the object in the image
- *             self.calculatePositionOfObject()                                                                            #adds current angles of target to list
- */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 168, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 168, __pyx_L1_error)
+    __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = PyList_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 168, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyList_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
+    __Pyx_GIVEREF(__pyx_t_2);
+    PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
     __Pyx_INCREF(Py_None);
     __Pyx_GIVEREF(Py_None);
-    PyList_SET_ITEM(__pyx_t_2, 1, Py_None);
+    PyList_SET_ITEM(__pyx_t_1, 1, Py_None);
     __Pyx_INCREF(Py_None);
     __Pyx_GIVEREF(Py_None);
-    PyList_SET_ITEM(__pyx_t_2, 2, Py_None);
-    __pyx_t_1 = 0;
-    __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_3, __pyx_t_2); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 168, __pyx_L1_error)
+    PyList_SET_ITEM(__pyx_t_1, 2, Py_None);
+    __pyx_t_2 = 0;
+    __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_3, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 181, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":169
- *             self.currentPosition[-1]=time.time()                                                                        #assigns the current time
- *             self.positions.append([self.currentPosition[-1],None,None])                                                 #adds the current time to the list of positions
- *             self.calculateCoordinates(x)                                                                                #calculates the coordinates of the object in the image             # <<<<<<<<<<<<<<
- *             self.calculatePositionOfObject()                                                                            #adds current angles of target to list
- *             xV,yV=self.determineVelocity()                                                                                    #calculates velocity
+    /* "motorisedcameratracking/Imaging.py":182
+ *             self.getCurrentPositionOfMotors()
+ *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions
+ *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image             # <<<<<<<<<<<<<<
+ *             self.calculatePositionOfObject()                    #adds current angles of target to list
+ *             xV,yV=self.determineVelocity()                                                                                #calculates velocity
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateCoordinates); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateCoordinates); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 182, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = NULL;
+    __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_1)) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_3, function);
       }
     }
-    __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_1, __pyx_v_x) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_x);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_img);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 182, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":170
- *             self.positions.append([self.currentPosition[-1],None,None])                                                 #adds the current time to the list of positions
- *             self.calculateCoordinates(x)                                                                                #calculates the coordinates of the object in the image
- *             self.calculatePositionOfObject()                                                                            #adds current angles of target to list             # <<<<<<<<<<<<<<
- *             xV,yV=self.determineVelocity()                                                                                    #calculates velocity
+    /* "motorisedcameratracking/Imaging.py":183
+ *             self.positions.append([self.currentPosition[0],None,None])         #adds the current time to the list of positions
+ *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
+ *             self.calculatePositionOfObject()                    #adds current angles of target to list             # <<<<<<<<<<<<<<
+ *             xV,yV=self.determineVelocity()                                                                                #calculates velocity
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculatePositionOfObject); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 170, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculatePositionOfObject); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 183, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = NULL;
+    __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_1)) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_3, function);
       }
     }
-    __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 170, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":171
- *             self.calculateCoordinates(x)                                                                                #calculates the coordinates of the object in the image
- *             self.calculatePositionOfObject()                                                                            #adds current angles of target to list
- *             xV,yV=self.determineVelocity()                                                                                    #calculates velocity             # <<<<<<<<<<<<<<
+    /* "motorisedcameratracking/Imaging.py":184
+ *             self.calculateCoordinates(img)                      #calculates the coordinates of the object in the image
+ *             self.calculatePositionOfObject()                    #adds current angles of target to list
+ *             xV,yV=self.determineVelocity()                                                                                #calculates velocity             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_determineVelocity); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_determineVelocity); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = NULL;
+    __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_3))) {
-      __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_3);
-      if (likely(__pyx_t_1)) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_3);
+      if (likely(__pyx_t_2)) {
         PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_3);
-        __Pyx_INCREF(__pyx_t_1);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
         __Pyx_DECREF_SET(__pyx_t_3, function);
       }
     }
-    __pyx_t_2 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 171, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if ((likely(PyTuple_CheckExact(__pyx_t_2))) || (PyList_CheckExact(__pyx_t_2))) {
-      PyObject* sequence = __pyx_t_2;
+    if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
+      PyObject* sequence = __pyx_t_1;
       Py_ssize_t size = __Pyx_PySequence_SIZE(sequence);
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 171, __pyx_L1_error)
+        __PYX_ERR(0, 184, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
         __pyx_t_3 = PyTuple_GET_ITEM(sequence, 0); 
-        __pyx_t_1 = PyTuple_GET_ITEM(sequence, 1); 
+        __pyx_t_2 = PyTuple_GET_ITEM(sequence, 1); 
       } else {
         __pyx_t_3 = PyList_GET_ITEM(sequence, 0); 
-        __pyx_t_1 = PyList_GET_ITEM(sequence, 1); 
+        __pyx_t_2 = PyList_GET_ITEM(sequence, 1); 
       }
       __Pyx_INCREF(__pyx_t_3);
-      __Pyx_INCREF(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_2);
       #else
-      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
       #endif
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_5 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 171, __pyx_L1_error)
+      __pyx_t_5 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 184, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_6 = Py_TYPE(__pyx_t_5)->tp_iternext;
       index = 0; __pyx_t_3 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_3)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_3);
-      index = 1; __pyx_t_1 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_1)) goto __pyx_L5_unpacking_failed;
-      __Pyx_GOTREF(__pyx_t_1);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < 0) __PYX_ERR(0, 171, __pyx_L1_error)
+      index = 1; __pyx_t_2 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_2)) goto __pyx_L5_unpacking_failed;
+      __Pyx_GOTREF(__pyx_t_2);
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 2) < 0) __PYX_ERR(0, 184, __pyx_L1_error)
       __pyx_t_6 = NULL;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       goto __pyx_L6_unpacking_done;
@@ -4766,95 +5122,87 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_6 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 171, __pyx_L1_error)
+      __PYX_ERR(0, 184, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_xV, __pyx_t_3);
     __pyx_t_3 = 0;
-    __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_t_1);
-    __pyx_t_1 = 0;
+    __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_t_2);
+    __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":174
+    /* "motorisedcameratracking/Imaging.py":187
  * 
  * 
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *                 xV=0
  *                 yV=0
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_outsideLimits); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 174, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_xLimit1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_outsideLimits); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_3 = PyFloat_FromDouble(__pyx_v_xLimit1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 187, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_xLimit2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 174, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_xLimit2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 187, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_yLimit1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 174, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_GetModuleGlobalName(__pyx_t_8, __pyx_n_s_yLimit2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 174, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_9 = NULL;
-    __pyx_t_10 = 0;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_9)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_9);
+    __pyx_t_7 = NULL;
+    __pyx_t_8 = 0;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_7)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_7);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
-        __pyx_t_10 = 1;
+        __Pyx_DECREF_SET(__pyx_t_2, function);
+        __pyx_t_8 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_9, __pyx_t_3, __pyx_t_5, __pyx_t_7, __pyx_t_8};
-      __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_10, 4+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __Pyx_GOTREF(__pyx_t_2);
+    if (PyFunction_Check(__pyx_t_2)) {
+      PyObject *__pyx_temp[5] = {__pyx_t_7, __pyx_t_3, __pyx_t_5, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_8, 4+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-      PyObject *__pyx_temp[5] = {__pyx_t_9, __pyx_t_3, __pyx_t_5, __pyx_t_7, __pyx_t_8};
-      __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_10, 4+__pyx_t_10); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
-      __Pyx_GOTREF(__pyx_t_2);
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
+      PyObject *__pyx_temp[5] = {__pyx_t_7, __pyx_t_3, __pyx_t_5, __pyx_v_yLimit1, __pyx_v_yLimit2};
+      __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_8, 4+__pyx_t_8); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     } else
     #endif
     {
-      __pyx_t_11 = PyTuple_New(4+__pyx_t_10); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 174, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_11);
-      if (__pyx_t_9) {
-        __Pyx_GIVEREF(__pyx_t_9); PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_9); __pyx_t_9 = NULL;
+      __pyx_t_9 = PyTuple_New(4+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 187, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      if (__pyx_t_7) {
+        __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
       }
       __Pyx_GIVEREF(__pyx_t_3);
-      PyTuple_SET_ITEM(__pyx_t_11, 0+__pyx_t_10, __pyx_t_3);
+      PyTuple_SET_ITEM(__pyx_t_9, 0+__pyx_t_8, __pyx_t_3);
       __Pyx_GIVEREF(__pyx_t_5);
-      PyTuple_SET_ITEM(__pyx_t_11, 1+__pyx_t_10, __pyx_t_5);
-      __Pyx_GIVEREF(__pyx_t_7);
-      PyTuple_SET_ITEM(__pyx_t_11, 2+__pyx_t_10, __pyx_t_7);
-      __Pyx_GIVEREF(__pyx_t_8);
-      PyTuple_SET_ITEM(__pyx_t_11, 3+__pyx_t_10, __pyx_t_8);
+      PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_8, __pyx_t_5);
+      __Pyx_INCREF(__pyx_v_yLimit1);
+      __Pyx_GIVEREF(__pyx_v_yLimit1);
+      PyTuple_SET_ITEM(__pyx_t_9, 2+__pyx_t_8, __pyx_v_yLimit1);
+      __Pyx_INCREF(__pyx_v_yLimit2);
+      __Pyx_GIVEREF(__pyx_v_yLimit2);
+      PyTuple_SET_ITEM(__pyx_t_9, 3+__pyx_t_8, __pyx_v_yLimit2);
       __pyx_t_3 = 0;
       __pyx_t_5 = 0;
-      __pyx_t_7 = 0;
-      __pyx_t_8 = 0;
-      __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_11, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 174, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+      __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_9, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
     }
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (__pyx_t_12) {
+    __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 187, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+    if (__pyx_t_10) {
 
-      /* "motorisedcameratracking/Imaging.py":175
+      /* "motorisedcameratracking/Imaging.py":188
  * 
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
  *                 xV=0             # <<<<<<<<<<<<<<
@@ -4864,7 +5212,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_DECREF_SET(__pyx_v_xV, __pyx_int_0);
 
-      /* "motorisedcameratracking/Imaging.py":176
+      /* "motorisedcameratracking/Imaging.py":189
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
  *                 xV=0
  *                 yV=0             # <<<<<<<<<<<<<<
@@ -4874,42 +5222,105 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_DECREF_SET(__pyx_v_yV, __pyx_int_0);
 
-      /* "motorisedcameratracking/Imaging.py":177
+      /* "motorisedcameratracking/Imaging.py":190
  *                 xV=0
  *                 yV=0
  *                 recentre=True             # <<<<<<<<<<<<<<
  *                 self.reset()
- * 
+ *                 self.currentPosition[0]=time.time()#saves the time the tracking starts
  */
       __pyx_v_recentre = 1;
 
-      /* "motorisedcameratracking/Imaging.py":178
+      /* "motorisedcameratracking/Imaging.py":191
  *                 yV=0
  *                 recentre=True
  *                 self.reset()             # <<<<<<<<<<<<<<
+ *                 self.currentPosition[0]=time.time()#saves the time the tracking starts
+ *                 self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
+ */
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_9 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_9)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_9);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_9) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
+      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":192
+ *                 recentre=True
+ *                 self.reset()
+ *                 self.currentPosition[0]=time.time()#saves the time the tracking starts             # <<<<<<<<<<<<<<
+ *                 self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
+ *                 self.positions.append(self.currentPosition)
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 192, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 192, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_9))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_9);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_9);
+          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_9, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_9);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 192, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      if (unlikely(__Pyx_SetItemInt(__pyx_t_9, 0, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 192, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":193
+ *                 self.reset()
+ *                 self.currentPosition[0]=time.time()#saves the time the tracking starts
+ *                 self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used             # <<<<<<<<<<<<<<
+ *                 self.positions.append(self.currentPosition)
+ * 
+ */
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 193, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_9); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 193, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":194
+ *                 self.currentPosition[0]=time.time()#saves the time the tracking starts
+ *                 self.positions.append(self.currentPosition)#appends the position twice to show velocity is zero-probably not used
+ *                 self.positions.append(self.currentPosition)             # <<<<<<<<<<<<<<
  * 
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 194, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_11 = NULL;
-      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-        __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_1);
-        if (likely(__pyx_t_11)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-          __Pyx_INCREF(__pyx_t_11);
-          __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_1, function);
-        }
-      }
-      __pyx_t_2 = (__pyx_t_11) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_11) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 178, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_4 = __Pyx_PyObject_Append(__pyx_t_9, __pyx_t_1); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 194, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":174
+      /* "motorisedcameratracking/Imaging.py":187
  * 
  * 
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
@@ -4918,126 +5329,184 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
  */
     }
 
-    /* "motorisedcameratracking/Imaging.py":180
- *                 self.reset()
+    /* "motorisedcameratracking/Imaging.py":196
+ *                 self.positions.append(self.currentPosition)
  * 
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_send); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 180, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 180, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
-    __pyx_t_8 = __Pyx_PyBool_FromLong(__pyx_v_recentre); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 180, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_recentre, __pyx_t_8) < 0) __PYX_ERR(0, 180, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __pyx_t_8 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_11))) {
-      __pyx_t_8 = PyMethod_GET_SELF(__pyx_t_11);
-      if (likely(__pyx_t_8)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_11);
-        __Pyx_INCREF(__pyx_t_8);
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_send); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __pyx_t_9 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyBool_FromLong(__pyx_v_recentre); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_5);
+    if (PyDict_SetItem(__pyx_t_9, __pyx_n_s_recentre, __pyx_t_5) < 0) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __pyx_t_5 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+      __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_2);
+      if (likely(__pyx_t_5)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+        __Pyx_INCREF(__pyx_t_5);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_11, function);
+        __Pyx_DECREF_SET(__pyx_t_2, function);
       }
     }
-    __pyx_t_2 = (__pyx_t_8) ? __Pyx_PyObject_Call2Args(__pyx_t_11, __pyx_t_8, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_11, __pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_8); __pyx_t_8 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 180, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+    __pyx_t_1 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_5, __pyx_t_9) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_9);
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 196, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":183
+    /* "motorisedcameratracking/Imaging.py":199
  * 
  * 
  *             if not self.controlQueue.empty():             # <<<<<<<<<<<<<<
  *                 self.reset()
- *                 break
+ *                 self.threadKillQueue.put(1)
  */
-    __pyx_t_11 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_11);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_11, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-    __pyx_t_11 = NULL;
-    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-      __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_1);
-      if (likely(__pyx_t_11)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-        __Pyx_INCREF(__pyx_t_11);
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_9);
+    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+    __pyx_t_2 = NULL;
+    if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_9))) {
+      __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_9);
+      if (likely(__pyx_t_2)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_9);
+        __Pyx_INCREF(__pyx_t_2);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_1, function);
+        __Pyx_DECREF_SET(__pyx_t_9, function);
       }
     }
-    __pyx_t_2 = (__pyx_t_11) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_11) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-    __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_9);
+    __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
+    __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+    __pyx_t_10 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_10 < 0)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 183, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_13 = ((!__pyx_t_12) != 0);
-    if (__pyx_t_13) {
+    __pyx_t_11 = ((!__pyx_t_10) != 0);
+    if (__pyx_t_11) {
 
-      /* "motorisedcameratracking/Imaging.py":184
+      /* "motorisedcameratracking/Imaging.py":200
  * 
  *             if not self.controlQueue.empty():
  *                 self.reset()             # <<<<<<<<<<<<<<
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
+ */
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 200, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_9))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_9);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_9);
+          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_9, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_9);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 200, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":201
+ *             if not self.controlQueue.empty():
+ *                 self.reset()
+ *                 self.threadKillQueue.put(1)             # <<<<<<<<<<<<<<
+ *                 warnings.warn("imaging terminating")
+ *                 break
+ */
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_9, __pyx_n_s_put); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
+      __pyx_t_9 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_9 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_9)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_9);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_1 = (__pyx_t_9) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_9, __pyx_int_1) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_int_1);
+      __Pyx_XDECREF(__pyx_t_9); __pyx_t_9 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":202
+ *                 self.reset()
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")             # <<<<<<<<<<<<<<
  *                 break
  * 
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 184, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_11 = NULL;
-      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
-        __pyx_t_11 = PyMethod_GET_SELF(__pyx_t_1);
-        if (likely(__pyx_t_11)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
-          __Pyx_INCREF(__pyx_t_11);
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 202, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_9 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 202, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_9);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_9))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_9);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_9);
+          __Pyx_INCREF(__pyx_t_2);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_1, function);
+          __Pyx_DECREF_SET(__pyx_t_9, function);
         }
       }
-      __pyx_t_2 = (__pyx_t_11) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_11) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
-      __Pyx_XDECREF(__pyx_t_11); __pyx_t_11 = 0;
-      if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 184, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_9, __pyx_t_2, __pyx_kp_s_imaging_terminating) : __Pyx_PyObject_CallOneArg(__pyx_t_9, __pyx_kp_s_imaging_terminating);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":185
- *             if not self.controlQueue.empty():
- *                 self.reset()
+      /* "motorisedcameratracking/Imaging.py":203
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  *                 break             # <<<<<<<<<<<<<<
  * 
  *     def reset(self):
  */
       goto __pyx_L4_break;
 
-      /* "motorisedcameratracking/Imaging.py":183
+      /* "motorisedcameratracking/Imaging.py":199
  * 
  * 
  *             if not self.controlQueue.empty():             # <<<<<<<<<<<<<<
  *                 self.reset()
- *                 break
+ *                 self.threadKillQueue.put(1)
  */
     }
   }
   __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":150
+  /* "motorisedcameratracking/Imaging.py":162
  *                 break
  * 
- *     def advancedTrackingLimited(self, limit1: float, limit2: float):             # <<<<<<<<<<<<<<
+ *     def advancedTrackingLimited(self, xLimit1: float, xLimit2: float,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         """The limited version of the tracking
  * 
  */
@@ -5051,14 +5520,11 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_XDECREF(__pyx_t_11);
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.advancedTrackingLimited", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_x);
-  __Pyx_XDECREF(__pyx_v_previousTime);
+  __Pyx_XDECREF(__pyx_v_img);
   __Pyx_XDECREF(__pyx_v_xV);
   __Pyx_XDECREF(__pyx_v_yV);
   __Pyx_XGIVEREF(__pyx_r);
@@ -5066,7 +5532,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_10advanced
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":187
+/* "motorisedcameratracking/Imaging.py":205
  *                 break
  * 
  *     def reset(self):             # <<<<<<<<<<<<<<
@@ -5089,12 +5555,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_13reset(Py
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CYTHON_UNUSED PyObject *__pyx_self, CYTHON_UNUSED PyObject *__pyx_v_self) {
-  CYTHON_UNUSED PyObject *__pyx_v_coordinates = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v_positions = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v_currentPosition = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v_currentVelocity = NULL;
-  CYTHON_UNUSED PyObject *__pyx_v_previousTime = NULL;
+static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -5105,38 +5566,38 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CY
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("reset", 0);
 
-  /* "motorisedcameratracking/Imaging.py":191
+  /* "motorisedcameratracking/Imaging.py":209
  *         Likely to be removed once varaibles are converted to non global
  *         """
- *         coordinates = []             # <<<<<<<<<<<<<<
- *         positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
- *         currentPosition = [None,0,0]#positionx,positiony,time
+ *         self.coordinates = []             # <<<<<<<<<<<<<<
+ *         self.positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
+ *         self.currentPosition = [None,0,0]#positionx,positiony,time
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_coordinates = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_coordinates, __pyx_t_1) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":192
+  /* "motorisedcameratracking/Imaging.py":210
  *         """
- *         coordinates = []
- *         positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]             # <<<<<<<<<<<<<<
- *         currentPosition = [None,0,0]#positionx,positiony,time
- *         currentVelocity = [0,0]
+ *         self.coordinates = []
+ *         self.positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]             # <<<<<<<<<<<<<<
+ *         self.currentPosition = [None,0,0]#positionx,positiony,time
+ *         self.currentVelocity = [0,0]
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_v_positions = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_positions, __pyx_t_1) < 0) __PYX_ERR(0, 210, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":193
- *         coordinates = []
- *         positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
- *         currentPosition = [None,0,0]#positionx,positiony,time             # <<<<<<<<<<<<<<
- *         currentVelocity = [0,0]
- *         previousTime = time.time()
+  /* "motorisedcameratracking/Imaging.py":211
+ *         self.coordinates = []
+ *         self.positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
+ *         self.currentPosition = [None,0,0]#positionx,positiony,time             # <<<<<<<<<<<<<<
+ *         self.currentVelocity = [0,0]
+ *         self.previousTime = time.time()
  */
-  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
@@ -5147,17 +5608,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CY
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
   PyList_SET_ITEM(__pyx_t_1, 2, __pyx_int_0);
-  __pyx_v_currentPosition = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition, __pyx_t_1) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":194
- *         positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
- *         currentPosition = [None,0,0]#positionx,positiony,time
- *         currentVelocity = [0,0]             # <<<<<<<<<<<<<<
- *         previousTime = time.time()
+  /* "motorisedcameratracking/Imaging.py":212
+ *         self.positions = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
+ *         self.currentPosition = [None,0,0]#positionx,positiony,time
+ *         self.currentVelocity = [0,0]             # <<<<<<<<<<<<<<
+ *         self.previousTime = time.time()
  * 
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 194, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 212, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
@@ -5165,19 +5626,19 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CY
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_int_0);
-  __pyx_v_currentVelocity = ((PyObject*)__pyx_t_1);
-  __pyx_t_1 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity, __pyx_t_1) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":195
- *         currentPosition = [None,0,0]#positionx,positiony,time
- *         currentVelocity = [0,0]
- *         previousTime = time.time()             # <<<<<<<<<<<<<<
+  /* "motorisedcameratracking/Imaging.py":213
+ *         self.currentPosition = [None,0,0]#positionx,positiony,time
+ *         self.currentVelocity = [0,0]
+ *         self.previousTime = time.time()             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_time); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -5192,13 +5653,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CY
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 213, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_previousTime = __pyx_t_1;
-  __pyx_t_1 = 0;
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_previousTime, __pyx_t_1) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":187
+  /* "motorisedcameratracking/Imaging.py":205
  *                 break
  * 
  *     def reset(self):             # <<<<<<<<<<<<<<
@@ -5216,17 +5677,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_12reset(CY
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.reset", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
-  __Pyx_XDECREF(__pyx_v_coordinates);
-  __Pyx_XDECREF(__pyx_v_positions);
-  __Pyx_XDECREF(__pyx_v_currentPosition);
-  __Pyx_XDECREF(__pyx_v_currentVelocity);
-  __Pyx_XDECREF(__pyx_v_previousTime);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":199
+/* "motorisedcameratracking/Imaging.py":217
  * 
  * 
  *     def getCurrentPositionOfMotors(self):             # <<<<<<<<<<<<<<
@@ -5262,100 +5718,100 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_14getCurre
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getCurrentPositionOfMotors", 0);
 
-  /* "motorisedcameratracking/Imaging.py":201
+  /* "motorisedcameratracking/Imaging.py":219
  *     def getCurrentPositionOfMotors(self):
  *         """calculates current position of motors"""
  *         self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[0]*(self.currentPosition[0]-self.previousTime))             # <<<<<<<<<<<<<<
  *         self.currentPosition[2]=self.currentPosition[2]+(self.currentVelocity[1]*(self.currentPosition[0]-self.previousTime))
  *         print('self.currentPosition ',self.currentPosition)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_previousTime); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_previousTime); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyNumber_Subtract(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Subtract(__pyx_t_4, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 1, __pyx_t_5, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 201, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_1, 1, __pyx_t_5, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 219, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":202
+  /* "motorisedcameratracking/Imaging.py":220
  *         """calculates current position of motors"""
  *         self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[0]*(self.currentPosition[0]-self.previousTime))
  *         self.currentPosition[2]=self.currentPosition[2]+(self.currentVelocity[1]*(self.currentPosition[0]-self.previousTime))             # <<<<<<<<<<<<<<
  *         print('self.currentPosition ',self.currentPosition)
  * 
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_5, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_5, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_previousTime); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_previousTime); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Subtract(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = PyNumber_Multiply(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_5 = PyNumber_Multiply(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_5, 2, __pyx_t_4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 202, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_5, 2, __pyx_t_4, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 220, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":203
+  /* "motorisedcameratracking/Imaging.py":221
  *         self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[0]*(self.currentPosition[0]-self.previousTime))
  *         self.currentPosition[2]=self.currentPosition[2]+(self.currentVelocity[1]*(self.currentPosition[0]-self.previousTime))
  *         print('self.currentPosition ',self.currentPosition)             # <<<<<<<<<<<<<<
  * 
  *     def calculatePositionOfObject(self):
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_kp_s_self_currentPosition);
   __Pyx_GIVEREF(__pyx_kp_s_self_currentPosition);
@@ -5363,10 +5819,10 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_14getCurre
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_4);
   __pyx_t_4 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_5) < 0) __PYX_ERR(0, 203, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_5) < 0) __PYX_ERR(0, 221, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":199
+  /* "motorisedcameratracking/Imaging.py":217
  * 
  * 
  *     def getCurrentPositionOfMotors(self):             # <<<<<<<<<<<<<<
@@ -5391,7 +5847,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_14getCurre
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":205
+/* "motorisedcameratracking/Imaging.py":223
  *         print('self.currentPosition ',self.currentPosition)
  * 
  *     def calculatePositionOfObject(self):             # <<<<<<<<<<<<<<
@@ -5430,29 +5886,29 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calculatePositionOfObject", 0);
 
-  /* "motorisedcameratracking/Imaging.py":207
+  /* "motorisedcameratracking/Imaging.py":225
  *     def calculatePositionOfObject(self):
  *         """calculates the current relative position of the object"""
  *         self.positions[-1][1]=self.currentPosition[1]+(self.calculateAngleImage(self.coordinates[-1][0],self.resolution,'x'))             # <<<<<<<<<<<<<<
  *         self.positions[-1][2]=self.currentPosition[2]+(self.calculateAngleImage(self.coordinates[-1][1],self.resolution,'y'))
  *         print('self.positions[-1] ',self.positions[-1])
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateAngleImage); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateAngleImage); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_coordinates); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_coordinates); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_6 = NULL;
   __pyx_t_7 = 0;
@@ -5469,7 +5925,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_t_4, __pyx_t_5, __pyx_n_s_x};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -5479,7 +5935,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[4] = {__pyx_t_6, __pyx_t_4, __pyx_t_5, __pyx_n_s_x};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
@@ -5487,7 +5943,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   } else
   #endif
   {
-    __pyx_t_8 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_8 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 225, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     if (__pyx_t_6) {
       __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -5501,47 +5957,47 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
     PyTuple_SET_ITEM(__pyx_t_8, 2+__pyx_t_7, __pyx_n_s_x);
     __pyx_t_4 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Add(__pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 207, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 1, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 207, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 1, __pyx_t_3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 225, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":208
+  /* "motorisedcameratracking/Imaging.py":226
  *         """calculates the current relative position of the object"""
  *         self.positions[-1][1]=self.currentPosition[1]+(self.calculateAngleImage(self.coordinates[-1][0],self.resolution,'x'))
  *         self.positions[-1][2]=self.currentPosition[2]+(self.calculateAngleImage(self.coordinates[-1][1],self.resolution,'y'))             # <<<<<<<<<<<<<<
  *         print('self.positions[-1] ',self.positions[-1])
  * 
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_currentPosition); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateAngleImage); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_calculateAngleImage); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_coordinates); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_coordinates); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_8, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_8, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_4 = NULL;
   __pyx_t_7 = 0;
@@ -5558,7 +6014,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_1)) {
     PyObject *__pyx_temp[4] = {__pyx_t_4, __pyx_t_8, __pyx_t_5, __pyx_n_s_y};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 226, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -5568,7 +6024,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
     PyObject *__pyx_temp[4] = {__pyx_t_4, __pyx_t_8, __pyx_t_5, __pyx_n_s_y};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 3+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 226, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
@@ -5576,7 +6032,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   } else
   #endif
   {
-    __pyx_t_6 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 208, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3+__pyx_t_7); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 226, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -5590,37 +6046,37 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
     PyTuple_SET_ITEM(__pyx_t_6, 2+__pyx_t_7, __pyx_n_s_y);
     __pyx_t_8 = 0;
     __pyx_t_5 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_6, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 226, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 208, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 2, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 208, __pyx_L1_error)
+  if (unlikely(__Pyx_SetItemInt(__pyx_t_2, 2, __pyx_t_1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1) < 0)) __PYX_ERR(0, 226, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":209
+  /* "motorisedcameratracking/Imaging.py":227
  *         self.positions[-1][1]=self.currentPosition[1]+(self.calculateAngleImage(self.coordinates[-1][0],self.resolution,'x'))
  *         self.positions[-1][2]=self.currentPosition[2]+(self.calculateAngleImage(self.coordinates[-1][1],self.resolution,'y'))
  *         print('self.positions[-1] ',self.positions[-1])             # <<<<<<<<<<<<<<
  * 
  *     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_kp_s_self_positions_1);
   __Pyx_GIVEREF(__pyx_kp_s_self_positions_1);
@@ -5628,10 +6084,10 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
   __pyx_t_2 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 209, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 227, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":205
+  /* "motorisedcameratracking/Imaging.py":223
  *         print('self.currentPosition ',self.currentPosition)
  * 
  *     def calculatePositionOfObject(self):             # <<<<<<<<<<<<<<
@@ -5658,7 +6114,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_16calculat
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":211
+/* "motorisedcameratracking/Imaging.py":229
  *         print('self.positions[-1] ',self.positions[-1])
  * 
  *     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:             # <<<<<<<<<<<<<<
@@ -5708,23 +6164,23 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_19calculat
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_coordinates)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, 1); __PYX_ERR(0, 211, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, 1); __PYX_ERR(0, 229, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_resolution)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, 2); __PYX_ERR(0, 211, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, 2); __PYX_ERR(0, 229, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_XorY)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, 3); __PYX_ERR(0, 211, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, 3); __PYX_ERR(0, 229, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "calculateAngleImage") < 0)) __PYX_ERR(0, 211, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "calculateAngleImage") < 0)) __PYX_ERR(0, 229, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -5741,13 +6197,13 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_19calculat
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 211, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calculateAngleImage", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 229, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.calculateAngleImage", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_XorY), (&PyString_Type), 1, "XorY", 1))) __PYX_ERR(0, 211, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_XorY), (&PyString_Type), 1, "XorY", 1))) __PYX_ERR(0, 229, __pyx_L1_error)
   __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_18calculateAngleImage(__pyx_self, __pyx_v_self, __pyx_v_coordinates, __pyx_v_resolution, __pyx_v_XorY);
 
   /* function exit code */
@@ -5773,42 +6229,42 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_18calculat
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calculateAngleImage", 0);
 
-  /* "motorisedcameratracking/Imaging.py":220
+  /* "motorisedcameratracking/Imaging.py":238
  * 
  *         """
  *         if XorY=='x':             # <<<<<<<<<<<<<<
- *             anglePerPixel=0.0191
+ *             anglePerPixel=0.0191#defines the angle per pixel for the x axis
  *             return (coordinates-self.xMid)*anglePerPixel
  */
-  __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_XorY, __pyx_n_s_x, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 220, __pyx_L1_error)
+  __pyx_t_1 = (__Pyx_PyString_Equals(__pyx_v_XorY, __pyx_n_s_x, Py_EQ)); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 238, __pyx_L1_error)
   __pyx_t_2 = (__pyx_t_1 != 0);
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":221
+    /* "motorisedcameratracking/Imaging.py":239
  *         """
  *         if XorY=='x':
- *             anglePerPixel=0.0191             # <<<<<<<<<<<<<<
+ *             anglePerPixel=0.0191#defines the angle per pixel for the x axis             # <<<<<<<<<<<<<<
  *             return (coordinates-self.xMid)*anglePerPixel
  *         if XorY=='y':
  */
     __pyx_v_anglePerPixel = 0.0191;
 
-    /* "motorisedcameratracking/Imaging.py":222
+    /* "motorisedcameratracking/Imaging.py":240
  *         if XorY=='x':
- *             anglePerPixel=0.0191
+ *             anglePerPixel=0.0191#defines the angle per pixel for the x axis
  *             return (coordinates-self.xMid)*anglePerPixel             # <<<<<<<<<<<<<<
  *         if XorY=='y':
- *             anglePerPixel=0.0198
+ *             anglePerPixel=0.0198#defines the angle per pixel for the y axis
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 240, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = PyNumber_Subtract(__pyx_v_coordinates, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_Subtract(__pyx_v_coordinates, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 240, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyFloat_FromDouble(__pyx_v_anglePerPixel); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_3 = PyFloat_FromDouble(__pyx_v_anglePerPixel); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 240, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = PyNumber_Multiply(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 222, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_Multiply(__pyx_t_4, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 240, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -5816,51 +6272,51 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_18calculat
     __pyx_t_5 = 0;
     goto __pyx_L0;
 
-    /* "motorisedcameratracking/Imaging.py":220
+    /* "motorisedcameratracking/Imaging.py":238
  * 
  *         """
  *         if XorY=='x':             # <<<<<<<<<<<<<<
- *             anglePerPixel=0.0191
+ *             anglePerPixel=0.0191#defines the angle per pixel for the x axis
  *             return (coordinates-self.xMid)*anglePerPixel
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":223
- *             anglePerPixel=0.0191
+  /* "motorisedcameratracking/Imaging.py":241
+ *             anglePerPixel=0.0191#defines the angle per pixel for the x axis
  *             return (coordinates-self.xMid)*anglePerPixel
  *         if XorY=='y':             # <<<<<<<<<<<<<<
- *             anglePerPixel=0.0198
- *             return (coordinates-self.yMid)*anglePerPixel
+ *             anglePerPixel=0.0198#defines the angle per pixel for the y axis
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  */
-  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_XorY, __pyx_n_s_y, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 223, __pyx_L1_error)
+  __pyx_t_2 = (__Pyx_PyString_Equals(__pyx_v_XorY, __pyx_n_s_y, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 241, __pyx_L1_error)
   __pyx_t_1 = (__pyx_t_2 != 0);
   if (__pyx_t_1) {
 
-    /* "motorisedcameratracking/Imaging.py":224
+    /* "motorisedcameratracking/Imaging.py":242
  *             return (coordinates-self.xMid)*anglePerPixel
  *         if XorY=='y':
- *             anglePerPixel=0.0198             # <<<<<<<<<<<<<<
- *             return (coordinates-self.yMid)*anglePerPixel
+ *             anglePerPixel=0.0198#defines the angle per pixel for the y axis             # <<<<<<<<<<<<<<
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  * 
  */
     __pyx_v_anglePerPixel = 0.0198;
 
-    /* "motorisedcameratracking/Imaging.py":225
+    /* "motorisedcameratracking/Imaging.py":243
  *         if XorY=='y':
- *             anglePerPixel=0.0198
- *             return (coordinates-self.yMid)*anglePerPixel             # <<<<<<<<<<<<<<
+ *             anglePerPixel=0.0198#defines the angle per pixel for the y axis
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame             # <<<<<<<<<<<<<<
  * 
  *     def calculateCoordinates(self,img):
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 225, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_3 = PyNumber_Subtract(__pyx_v_coordinates, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 225, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(__pyx_v_coordinates, __pyx_t_5); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_anglePerPixel); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 225, __pyx_L1_error)
+    __pyx_t_5 = PyFloat_FromDouble(__pyx_v_anglePerPixel); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = PyNumber_Multiply(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 225, __pyx_L1_error)
+    __pyx_t_4 = PyNumber_Multiply(__pyx_t_3, __pyx_t_5); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 243, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
@@ -5868,16 +6324,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_18calculat
     __pyx_t_4 = 0;
     goto __pyx_L0;
 
-    /* "motorisedcameratracking/Imaging.py":223
- *             anglePerPixel=0.0191
+    /* "motorisedcameratracking/Imaging.py":241
+ *             anglePerPixel=0.0191#defines the angle per pixel for the x axis
  *             return (coordinates-self.xMid)*anglePerPixel
  *         if XorY=='y':             # <<<<<<<<<<<<<<
- *             anglePerPixel=0.0198
- *             return (coordinates-self.yMid)*anglePerPixel
+ *             anglePerPixel=0.0198#defines the angle per pixel for the y axis
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":211
+  /* "motorisedcameratracking/Imaging.py":229
  *         print('self.positions[-1] ',self.positions[-1])
  * 
  *     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:             # <<<<<<<<<<<<<<
@@ -5900,8 +6356,8 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_18calculat
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":227
- *             return (coordinates-self.yMid)*anglePerPixel
+/* "motorisedcameratracking/Imaging.py":245
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  * 
  *     def calculateCoordinates(self,img):             # <<<<<<<<<<<<<<
  *         """Calculates the ccordintes of the object in the image
@@ -5944,11 +6400,11 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_21calculat
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_img)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("calculateCoordinates", 1, 2, 2, 1); __PYX_ERR(0, 227, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("calculateCoordinates", 1, 2, 2, 1); __PYX_ERR(0, 245, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "calculateCoordinates") < 0)) __PYX_ERR(0, 227, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "calculateCoordinates") < 0)) __PYX_ERR(0, 245, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -5961,7 +6417,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_21calculat
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("calculateCoordinates", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 227, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("calculateCoordinates", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 245, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.calculateCoordinates", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -5991,16 +6447,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("calculateCoordinates", 0);
 
-  /* "motorisedcameratracking/Imaging.py":232
+  /* "motorisedcameratracking/Imaging.py":250
  *             img: A colour numpy array of the image
  *         """
- *         xCo,yCo=self.OR.getCoordinates(img)             # <<<<<<<<<<<<<<
- *         if xCo != None:
+ *         xCo,yCo=self.OR.getCoordinates(img)#gets the coordinates of the object in the image             # <<<<<<<<<<<<<<
+ *         if xCo != None:#checks the object is in the image
  *             self.coordinates.append([xCo,yCo])
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 232, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 250, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -6015,7 +6471,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_v_img);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 232, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 250, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
@@ -6024,7 +6480,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
     if (unlikely(size != 2)) {
       if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 232, __pyx_L1_error)
+      __PYX_ERR(0, 250, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -6037,15 +6493,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
     __Pyx_INCREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_t_2);
     #else
-    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 250, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_2 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 250, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     #endif
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 232, __pyx_L1_error)
+    __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 250, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
@@ -6053,7 +6509,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
     __Pyx_GOTREF(__pyx_t_3);
     index = 1; __pyx_t_2 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_2)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_2);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 232, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 250, __pyx_L1_error)
     __pyx_t_5 = NULL;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     goto __pyx_L4_unpacking_done;
@@ -6061,7 +6517,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_5 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 232, __pyx_L1_error)
+    __PYX_ERR(0, 250, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_xCo = __pyx_t_3;
@@ -6069,28 +6525,28 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
   __pyx_v_yCo = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":233
+  /* "motorisedcameratracking/Imaging.py":251
  *         """
- *         xCo,yCo=self.OR.getCoordinates(img)
- *         if xCo != None:             # <<<<<<<<<<<<<<
+ *         xCo,yCo=self.OR.getCoordinates(img)#gets the coordinates of the object in the image
+ *         if xCo != None:#checks the object is in the image             # <<<<<<<<<<<<<<
  *             self.coordinates.append([xCo,yCo])
- *             print('xCo ',xCo)
+ *             #print('xCo ',xCo)
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 233, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 233, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 251, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 251, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_6) {
 
-    /* "motorisedcameratracking/Imaging.py":234
- *         xCo,yCo=self.OR.getCoordinates(img)
- *         if xCo != None:
+    /* "motorisedcameratracking/Imaging.py":252
+ *         xCo,yCo=self.OR.getCoordinates(img)#gets the coordinates of the object in the image
+ *         if xCo != None:#checks the object is in the image
  *             self.coordinates.append([xCo,yCo])             # <<<<<<<<<<<<<<
- *             print('xCo ',xCo)
- *             print('yCo ',yCo)
+ *             #print('xCo ',xCo)
+ *             #print('yCo ',yCo)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_coordinates); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 234, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_coordinates); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 234, __pyx_L1_error)
+    __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_xCo);
     __Pyx_GIVEREF(__pyx_v_xCo);
@@ -6098,76 +6554,40 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
     __Pyx_INCREF(__pyx_v_yCo);
     __Pyx_GIVEREF(__pyx_v_yCo);
     PyList_SET_ITEM(__pyx_t_2, 1, __pyx_v_yCo);
-    __pyx_t_7 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_2); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 234, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_Append(__pyx_t_1, __pyx_t_2); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 252, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":235
- *         if xCo != None:
- *             self.coordinates.append([xCo,yCo])
- *             print('xCo ',xCo)             # <<<<<<<<<<<<<<
- *             print('yCo ',yCo)
- *         elif xCo == None:
- */
-    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 235, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_INCREF(__pyx_kp_s_xCo);
-    __Pyx_GIVEREF(__pyx_kp_s_xCo);
-    PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_kp_s_xCo);
-    __Pyx_INCREF(__pyx_v_xCo);
-    __Pyx_GIVEREF(__pyx_v_xCo);
-    PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_xCo);
-    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 235, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-    /* "motorisedcameratracking/Imaging.py":236
- *             self.coordinates.append([xCo,yCo])
- *             print('xCo ',xCo)
- *             print('yCo ',yCo)             # <<<<<<<<<<<<<<
- *         elif xCo == None:
- *             self.search()
- */
-    __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 236, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __Pyx_INCREF(__pyx_kp_s_yCo);
-    __Pyx_GIVEREF(__pyx_kp_s_yCo);
-    PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_kp_s_yCo);
-    __Pyx_INCREF(__pyx_v_yCo);
-    __Pyx_GIVEREF(__pyx_v_yCo);
-    PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_yCo);
-    if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 236, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-    /* "motorisedcameratracking/Imaging.py":233
+    /* "motorisedcameratracking/Imaging.py":251
  *         """
- *         xCo,yCo=self.OR.getCoordinates(img)
- *         if xCo != None:             # <<<<<<<<<<<<<<
+ *         xCo,yCo=self.OR.getCoordinates(img)#gets the coordinates of the object in the image
+ *         if xCo != None:#checks the object is in the image             # <<<<<<<<<<<<<<
  *             self.coordinates.append([xCo,yCo])
- *             print('xCo ',xCo)
+ *             #print('xCo ',xCo)
  */
     goto __pyx_L5;
   }
 
-  /* "motorisedcameratracking/Imaging.py":237
- *             print('xCo ',xCo)
- *             print('yCo ',yCo)
+  /* "motorisedcameratracking/Imaging.py":255
+ *             #print('xCo ',xCo)
+ *             #print('yCo ',yCo)
  *         elif xCo == None:             # <<<<<<<<<<<<<<
- *             self.search()
- *         #print(self.coordinates[-1])
+ *             self.search()#calls the search function
+ * 
  */
-  __pyx_t_2 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 237, __pyx_L1_error)
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 237, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 255, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_6) {
 
-    /* "motorisedcameratracking/Imaging.py":238
- *             print('yCo ',yCo)
+    /* "motorisedcameratracking/Imaging.py":256
+ *             #print('yCo ',yCo)
  *         elif xCo == None:
- *             self.search()             # <<<<<<<<<<<<<<
- *         #print(self.coordinates[-1])
+ *             self.search()#calls the search function             # <<<<<<<<<<<<<<
+ * 
  * 
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_search); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 238, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_search); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 256, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -6181,23 +6601,23 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
     }
     __pyx_t_2 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 238, __pyx_L1_error)
+    if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 256, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":237
- *             print('xCo ',xCo)
- *             print('yCo ',yCo)
+    /* "motorisedcameratracking/Imaging.py":255
+ *             #print('xCo ',xCo)
+ *             #print('yCo ',yCo)
  *         elif xCo == None:             # <<<<<<<<<<<<<<
- *             self.search()
- *         #print(self.coordinates[-1])
+ *             self.search()#calls the search function
+ * 
  */
   }
   __pyx_L5:;
 
-  /* "motorisedcameratracking/Imaging.py":227
- *             return (coordinates-self.yMid)*anglePerPixel
+  /* "motorisedcameratracking/Imaging.py":245
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  * 
  *     def calculateCoordinates(self,img):             # <<<<<<<<<<<<<<
  *         """Calculates the ccordintes of the object in the image
@@ -6222,8 +6642,8 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_20calculat
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":250
- *     #    self.currentVelocity=[xV,yV]
+/* "motorisedcameratracking/Imaging.py":261
+ * 
  * 
  *     def determineVelocity(self):             # <<<<<<<<<<<<<<
  *         """determines the velocity the object is moving at
@@ -6263,46 +6683,46 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("determineVelocity", 0);
 
-  /* "motorisedcameratracking/Imaging.py":255
+  /* "motorisedcameratracking/Imaging.py":266
  *             xV,yV: The velocities of the x and y motors respectively
  *         """
- *         deltaTime=self.positions[-1][0]-self.positions[-2][0]             # <<<<<<<<<<<<<<
+ *         deltaTime=self.positions[-1][0]-self.positions[-2][0]#works out the time difference             # <<<<<<<<<<<<<<
  *         print('positions ',self.positions)
  *         print('dT ',deltaTime)
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_1, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 255, __pyx_L1_error)
+  __pyx_t_3 = PyNumber_Subtract(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 266, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_deltaTime = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":256
+  /* "motorisedcameratracking/Imaging.py":267
  *         """
- *         deltaTime=self.positions[-1][0]-self.positions[-2][0]
+ *         deltaTime=self.positions[-1][0]-self.positions[-2][0]#works out the time difference
  *         print('positions ',self.positions)             # <<<<<<<<<<<<<<
  *         print('dT ',deltaTime)
- *         if deltaTime !=0:
+ *         if deltaTime !=0:#used for handling the startup
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 256, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 256, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_kp_s_positions_2);
   __Pyx_GIVEREF(__pyx_kp_s_positions_2);
@@ -6310,17 +6730,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3);
   __pyx_t_3 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 256, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":257
- *         deltaTime=self.positions[-1][0]-self.positions[-2][0]
+  /* "motorisedcameratracking/Imaging.py":268
+ *         deltaTime=self.positions[-1][0]-self.positions[-2][0]#works out the time difference
  *         print('positions ',self.positions)
  *         print('dT ',deltaTime)             # <<<<<<<<<<<<<<
- *         if deltaTime !=0:
+ *         if deltaTime !=0:#used for handling the startup
  * 
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 257, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_kp_s_dT);
   __Pyx_GIVEREF(__pyx_kp_s_dT);
@@ -6328,141 +6748,141 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __Pyx_INCREF(__pyx_v_deltaTime);
   __Pyx_GIVEREF(__pyx_v_deltaTime);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_deltaTime);
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 257, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":258
+  /* "motorisedcameratracking/Imaging.py":269
  *         print('positions ',self.positions)
  *         print('dT ',deltaTime)
- *         if deltaTime !=0:             # <<<<<<<<<<<<<<
+ *         if deltaTime !=0:#used for handling the startup             # <<<<<<<<<<<<<<
  * 
- *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
+ *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])#calcualtes the velocities
  */
-  __pyx_t_2 = __Pyx_PyInt_NeObjC(__pyx_v_deltaTime, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyInt_NeObjC(__pyx_v_deltaTime, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 258, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 269, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "motorisedcameratracking/Imaging.py":260
- *         if deltaTime !=0:
+    /* "motorisedcameratracking/Imaging.py":271
+ *         if deltaTime !=0:#used for handling the startup
  * 
- *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])             # <<<<<<<<<<<<<<
+ *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])#calcualtes the velocities             # <<<<<<<<<<<<<<
  *             yV=(self.positions[-1][2]-self.positions[-2][2])/(self.positions[-1][0]-self.positions[-2][0])
  * 
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_3, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Subtract(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Subtract(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_5 = PyNumber_Subtract(__pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 260, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_t_5); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_v_xV = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":261
+    /* "motorisedcameratracking/Imaging.py":272
  * 
- *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
+ *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])#calcualtes the velocities
  *             yV=(self.positions[-1][2]-self.positions[-2][2])/(self.positions[-1][0]-self.positions[-2][0])             # <<<<<<<<<<<<<<
  * 
  *         else:
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_5, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_5, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = PyNumber_Subtract(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Subtract(__pyx_t_2, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_5, -1L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_positions); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, -2L, long, 1, __Pyx_PyInt_From_long, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = PyNumber_Subtract(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Subtract(__pyx_t_5, __pyx_t_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 272, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_v_yV = __pyx_t_2;
     __pyx_t_2 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":258
+    /* "motorisedcameratracking/Imaging.py":269
  *         print('positions ',self.positions)
  *         print('dT ',deltaTime)
- *         if deltaTime !=0:             # <<<<<<<<<<<<<<
+ *         if deltaTime !=0:#used for handling the startup             # <<<<<<<<<<<<<<
  * 
- *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])
+ *             xV=(self.positions[-1][1]-self.positions[-2][1])/(self.positions[-1][0]-self.positions[-2][0])#calcualtes the velocities
  */
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":264
+  /* "motorisedcameratracking/Imaging.py":275
  * 
  *         else:
  *             xV=0             # <<<<<<<<<<<<<<
@@ -6473,7 +6893,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
     __Pyx_INCREF(__pyx_int_0);
     __pyx_v_xV = __pyx_int_0;
 
-    /* "motorisedcameratracking/Imaging.py":265
+    /* "motorisedcameratracking/Imaging.py":276
  *         else:
  *             xV=0
  *             yV=0             # <<<<<<<<<<<<<<
@@ -6485,14 +6905,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   }
   __pyx_L3:;
 
-  /* "motorisedcameratracking/Imaging.py":266
+  /* "motorisedcameratracking/Imaging.py":277
  *             xV=0
  *             yV=0
  *         print('xV ',xV)             # <<<<<<<<<<<<<<
  *         print('yV ',yV)
- *         xV,yV=self.velocityCheck(xV,yV)
+ *         xV,yV=self.velocityCheck(xV,yV)#checks the velocities dont exceed the limits
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 266, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_kp_s_xV_2);
   __Pyx_GIVEREF(__pyx_kp_s_xV_2);
@@ -6500,17 +6920,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __Pyx_INCREF(__pyx_v_xV);
   __Pyx_GIVEREF(__pyx_v_xV);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_xV);
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 266, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 277, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":267
+  /* "motorisedcameratracking/Imaging.py":278
  *             yV=0
  *         print('xV ',xV)
  *         print('yV ',yV)             # <<<<<<<<<<<<<<
- *         xV,yV=self.velocityCheck(xV,yV)
+ *         xV,yV=self.velocityCheck(xV,yV)#checks the velocities dont exceed the limits
  *         self.currentVelocity=[xV,yV]
  */
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 267, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_kp_s_yV_2);
   __Pyx_GIVEREF(__pyx_kp_s_yV_2);
@@ -6518,17 +6938,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __Pyx_INCREF(__pyx_v_yV);
   __Pyx_GIVEREF(__pyx_v_yV);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_yV);
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 267, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 278, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":268
+  /* "motorisedcameratracking/Imaging.py":279
  *         print('xV ',xV)
  *         print('yV ',yV)
- *         xV,yV=self.velocityCheck(xV,yV)             # <<<<<<<<<<<<<<
+ *         xV,yV=self.velocityCheck(xV,yV)#checks the velocities dont exceed the limits             # <<<<<<<<<<<<<<
  *         self.currentVelocity=[xV,yV]
  *         return xV,yV
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_velocityCheck); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_velocityCheck); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __pyx_t_1 = NULL;
   __pyx_t_6 = 0;
@@ -6545,7 +6965,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_xV, __pyx_v_yV};
-    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_2);
   } else
@@ -6553,13 +6973,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
     PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_xV, __pyx_v_yV};
-    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_2);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -6570,7 +6990,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
     __Pyx_INCREF(__pyx_v_yV);
     __Pyx_GIVEREF(__pyx_v_yV);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_6, __pyx_v_yV);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -6581,7 +7001,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
     if (unlikely(size != 2)) {
       if (size > 2) __Pyx_RaiseTooManyValuesError(2);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 268, __pyx_L1_error)
+      __PYX_ERR(0, 279, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -6594,15 +7014,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
     __Pyx_INCREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_t_5);
     #else
-    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_5 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     #endif
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_1 = PyObject_GetIter(__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_7 = Py_TYPE(__pyx_t_1)->tp_iternext;
@@ -6610,7 +7030,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
     __Pyx_GOTREF(__pyx_t_3);
     index = 1; __pyx_t_5 = __pyx_t_7(__pyx_t_1); if (unlikely(!__pyx_t_5)) goto __pyx_L4_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_5);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_7(__pyx_t_1), 2) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_7(__pyx_t_1), 2) < 0) __PYX_ERR(0, 279, __pyx_L1_error)
     __pyx_t_7 = NULL;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     goto __pyx_L5_unpacking_done;
@@ -6618,7 +7038,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_7 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 279, __pyx_L1_error)
     __pyx_L5_unpacking_done:;
   }
   __Pyx_DECREF_SET(__pyx_v_xV, __pyx_t_3);
@@ -6626,14 +7046,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __Pyx_DECREF_SET(__pyx_v_yV, __pyx_t_5);
   __pyx_t_5 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":269
+  /* "motorisedcameratracking/Imaging.py":280
  *         print('yV ',yV)
- *         xV,yV=self.velocityCheck(xV,yV)
+ *         xV,yV=self.velocityCheck(xV,yV)#checks the velocities dont exceed the limits
  *         self.currentVelocity=[xV,yV]             # <<<<<<<<<<<<<<
  *         return xV,yV
  * 
  */
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 269, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_xV);
   __Pyx_GIVEREF(__pyx_v_xV);
@@ -6641,18 +7061,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __Pyx_INCREF(__pyx_v_yV);
   __Pyx_GIVEREF(__pyx_v_yV);
   PyList_SET_ITEM(__pyx_t_2, 1, __pyx_v_yV);
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 269, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_currentVelocity, __pyx_t_2) < 0) __PYX_ERR(0, 280, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":270
- *         xV,yV=self.velocityCheck(xV,yV)
+  /* "motorisedcameratracking/Imaging.py":281
+ *         xV,yV=self.velocityCheck(xV,yV)#checks the velocities dont exceed the limits
  *         self.currentVelocity=[xV,yV]
  *         return xV,yV             # <<<<<<<<<<<<<<
  * 
  *     def search(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_v_xV);
   __Pyx_GIVEREF(__pyx_v_xV);
@@ -6664,8 +7084,8 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":250
- *     #    self.currentVelocity=[xV,yV]
+  /* "motorisedcameratracking/Imaging.py":261
+ * 
  * 
  *     def determineVelocity(self):             # <<<<<<<<<<<<<<
  *         """determines the velocity the object is moving at
@@ -6689,7 +7109,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_22determin
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":272
+/* "motorisedcameratracking/Imaging.py":283
  *         return xV,yV
  * 
  *     def search(self):             # <<<<<<<<<<<<<<
@@ -6729,16 +7149,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("search", 0);
 
-  /* "motorisedcameratracking/Imaging.py":274
+  /* "motorisedcameratracking/Imaging.py":285
  *     def search(self):
  *         """used for reacquirig a lock when a target is lost"""
  *         warnings.warn('attempting to aquire a new target')             # <<<<<<<<<<<<<<
  *         self.dataQueue.put([-10,0])#pick a better search pattern
  *         while True:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 274, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 274, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_2 = NULL;
@@ -6753,24 +7173,24 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
   }
   __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_3, __pyx_t_2, __pyx_kp_s_attempting_to_aquire_a_new_targe) : __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_kp_s_attempting_to_aquire_a_new_targe);
   __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 274, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 285, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":275
+  /* "motorisedcameratracking/Imaging.py":286
  *         """used for reacquirig a lock when a target is lost"""
  *         warnings.warn('attempting to aquire a new target')
  *         self.dataQueue.put([-10,0])#pick a better search pattern             # <<<<<<<<<<<<<<
  *         while True:
  *             img=self.camera.capture()
  */
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dataQueue); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_dataQueue); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_put); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_put); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 275, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_int_neg_10);
   __Pyx_GIVEREF(__pyx_int_neg_10);
@@ -6791,12 +7211,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
   __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_t_3) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 275, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 286, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":276
+  /* "motorisedcameratracking/Imaging.py":287
  *         warnings.warn('attempting to aquire a new target')
  *         self.dataQueue.put([-10,0])#pick a better search pattern
  *         while True:             # <<<<<<<<<<<<<<
@@ -6805,16 +7225,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":277
+    /* "motorisedcameratracking/Imaging.py":288
  *         self.dataQueue.put([-10,0])#pick a better search pattern
  *         while True:
  *             img=self.camera.capture()             # <<<<<<<<<<<<<<
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_capture); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 277, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_capture); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -6829,22 +7249,22 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
     }
     __pyx_t_1 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_3);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 277, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 288, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":278
+    /* "motorisedcameratracking/Imaging.py":289
  *         while True:
  *             img=self.camera.capture()
  *             xCo,yCo=self.OR.getCoordinates(img)             # <<<<<<<<<<<<<<
  *             if xCo != None:
  *                 #reset the first steps of main
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_3 = NULL;
@@ -6859,7 +7279,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
     }
     __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_img);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 278, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if ((likely(PyTuple_CheckExact(__pyx_t_1))) || (PyList_CheckExact(__pyx_t_1))) {
@@ -6868,7 +7288,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 278, __pyx_L1_error)
+        __PYX_ERR(0, 289, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -6881,15 +7301,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_3);
       #else
-      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 278, __pyx_L1_error)
+      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 278, __pyx_L1_error)
+      __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 289, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       #endif
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 278, __pyx_L1_error)
+      __pyx_t_4 = PyObject_GetIter(__pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 289, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
@@ -6897,7 +7317,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       __Pyx_GOTREF(__pyx_t_2);
       index = 1; __pyx_t_3 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_3)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_3);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 278, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 289, __pyx_L1_error)
       __pyx_t_5 = NULL;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       goto __pyx_L6_unpacking_done;
@@ -6905,7 +7325,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_5 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 278, __pyx_L1_error)
+      __PYX_ERR(0, 289, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_xCo, __pyx_t_2);
@@ -6913,28 +7333,28 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
     __Pyx_XDECREF_SET(__pyx_v_yCo, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":279
+    /* "motorisedcameratracking/Imaging.py":290
  *             img=self.camera.capture()
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:             # <<<<<<<<<<<<<<
  *                 #reset the first steps of main
  *                 warnings.warn('new target aquired')
  */
-    __pyx_t_1 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 279, __pyx_L1_error)
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 279, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 290, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     if (__pyx_t_6) {
 
-      /* "motorisedcameratracking/Imaging.py":281
+      /* "motorisedcameratracking/Imaging.py":292
  *             if xCo != None:
  *                 #reset the first steps of main
  *                 warnings.warn('new target aquired')             # <<<<<<<<<<<<<<
  *                 self.reset()
  *                 self.advancedTracking()
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_warnings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_warnings); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_3 = NULL;
@@ -6949,19 +7369,19 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       }
       __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_kp_s_new_target_aquired) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_new_target_aquired);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":282
+      /* "motorisedcameratracking/Imaging.py":293
  *                 #reset the first steps of main
  *                 warnings.warn('new target aquired')
  *                 self.reset()             # <<<<<<<<<<<<<<
  *                 self.advancedTracking()
  *                 #restart tracking
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 282, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_reset); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 293, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_3 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -6975,19 +7395,19 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       }
       __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 282, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 293, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":283
+      /* "motorisedcameratracking/Imaging.py":294
  *                 warnings.warn('new target aquired')
  *                 self.reset()
  *                 self.advancedTracking()             # <<<<<<<<<<<<<<
  *                 #restart tracking
  * 
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_advancedTracking); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 283, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_advancedTracking); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_3 = NULL;
       if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7001,12 +7421,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
       }
       __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3) : __Pyx_PyObject_CallNoArg(__pyx_t_2);
       __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 283, __pyx_L1_error)
+      if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":279
+      /* "motorisedcameratracking/Imaging.py":290
  *             img=self.camera.capture()
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:             # <<<<<<<<<<<<<<
@@ -7016,7 +7436,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
     }
   }
 
-  /* "motorisedcameratracking/Imaging.py":272
+  /* "motorisedcameratracking/Imaging.py":283
  *         return xV,yV
  * 
  *     def search(self):             # <<<<<<<<<<<<<<
@@ -7043,7 +7463,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_24search(C
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":288
+/* "motorisedcameratracking/Imaging.py":299
  * ###############################################################
  * 
  *     def simpleTracking(self):             # <<<<<<<<<<<<<<
@@ -7087,50 +7507,50 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("simpleTracking", 0);
 
-  /* "motorisedcameratracking/Imaging.py":290
+  /* "motorisedcameratracking/Imaging.py":301
  *     def simpleTracking(self):
  *         """A simple tracking function that sets the velocity based on how far from the centre of the image the target is"""
  *         while True:             # <<<<<<<<<<<<<<
- *             img=self.camera.capture(resolution=self.resolution)
- *             xCo,yCo=self.OR.getCoordinates(img)
+ *             img=self.camera.capture(resolution=self.resolution)#captures an image
+ *             xCo,yCo=self.OR.getCoordinates(img)#runs the object recognition
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":291
+    /* "motorisedcameratracking/Imaging.py":302
  *         """A simple tracking function that sets the velocity based on how far from the centre of the image the target is"""
  *         while True:
- *             img=self.camera.capture(resolution=self.resolution)             # <<<<<<<<<<<<<<
- *             xCo,yCo=self.OR.getCoordinates(img)
+ *             img=self.camera.capture(resolution=self.resolution)#captures an image             # <<<<<<<<<<<<<<
+ *             xCo,yCo=self.OR.getCoordinates(img)#runs the object recognition
  *             if xCo != None:
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 291, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 291, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 291, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 291, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":292
+    /* "motorisedcameratracking/Imaging.py":303
  *         while True:
- *             img=self.camera.capture(resolution=self.resolution)
- *             xCo,yCo=self.OR.getCoordinates(img)             # <<<<<<<<<<<<<<
+ *             img=self.camera.capture(resolution=self.resolution)#captures an image
+ *             xCo,yCo=self.OR.getCoordinates(img)#runs the object recognition             # <<<<<<<<<<<<<<
  *             if xCo != None:
- *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
+ *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)#runs the velocity calculator
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -7145,7 +7565,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_img);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 292, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if ((likely(PyTuple_CheckExact(__pyx_t_3))) || (PyList_CheckExact(__pyx_t_3))) {
@@ -7154,7 +7574,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 292, __pyx_L1_error)
+        __PYX_ERR(0, 303, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -7167,15 +7587,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_1);
       #else
-      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
+      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 303, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       #endif
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 292, __pyx_L1_error)
+      __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 303, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
@@ -7183,7 +7603,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       __Pyx_GOTREF(__pyx_t_2);
       index = 1; __pyx_t_1 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_1)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_1);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 292, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 303, __pyx_L1_error)
       __pyx_t_5 = NULL;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       goto __pyx_L6_unpacking_done;
@@ -7191,7 +7611,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_5 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 292, __pyx_L1_error)
+      __PYX_ERR(0, 303, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_xCo, __pyx_t_2);
@@ -7199,26 +7619,26 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
     __Pyx_XDECREF_SET(__pyx_v_yCo, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":293
- *             img=self.camera.capture(resolution=self.resolution)
- *             xCo,yCo=self.OR.getCoordinates(img)
+    /* "motorisedcameratracking/Imaging.py":304
+ *             img=self.camera.capture(resolution=self.resolution)#captures an image
+ *             xCo,yCo=self.OR.getCoordinates(img)#runs the object recognition
  *             if xCo != None:             # <<<<<<<<<<<<<<
- *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
- *                 #self.dataQueue.put([xV,yV])
+ *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)#runs the velocity calculator
+ *             else:
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 293, __pyx_L1_error)
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 293, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 304, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_6) {
 
-      /* "motorisedcameratracking/Imaging.py":294
- *             xCo,yCo=self.OR.getCoordinates(img)
+      /* "motorisedcameratracking/Imaging.py":305
+ *             xCo,yCo=self.OR.getCoordinates(img)#runs the object recognition
  *             if xCo != None:
- *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)             # <<<<<<<<<<<<<<
- *                 #self.dataQueue.put([xV,yV])
+ *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)#runs the velocity calculator             # <<<<<<<<<<<<<<
  *             else:
+ *                 xV=10#runs at a velocity of 10 if the lock is lost
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleVelocityCalculation); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleVelocityCalculation); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 305, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_2 = NULL;
       __pyx_t_7 = 0;
@@ -7235,7 +7655,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_1)) {
         PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
@@ -7243,13 +7663,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
         PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
       #endif
       {
-        __pyx_t_4 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         if (__pyx_t_2) {
           __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -7260,7 +7680,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
         __Pyx_INCREF(__pyx_v_yCo);
         __Pyx_GIVEREF(__pyx_v_yCo);
         PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_7, __pyx_v_yCo);
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
@@ -7271,7 +7691,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 294, __pyx_L1_error)
+          __PYX_ERR(0, 305, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -7284,15 +7704,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
         __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_4);
         #else
-        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 294, __pyx_L1_error)
+        __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 305, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext;
@@ -7300,7 +7720,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
         __Pyx_GOTREF(__pyx_t_1);
         index = 1; __pyx_t_4 = __pyx_t_5(__pyx_t_2); if (unlikely(!__pyx_t_4)) goto __pyx_L8_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_4);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_2), 2) < 0) __PYX_ERR(0, 294, __pyx_L1_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_2), 2) < 0) __PYX_ERR(0, 305, __pyx_L1_error)
         __pyx_t_5 = NULL;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         goto __pyx_L9_unpacking_done;
@@ -7308,7 +7728,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_5 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 294, __pyx_L1_error)
+        __PYX_ERR(0, 305, __pyx_L1_error)
         __pyx_L9_unpacking_done:;
       }
       __Pyx_XDECREF_SET(__pyx_v_xV, __pyx_t_1);
@@ -7316,56 +7736,56 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
       __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":293
- *             img=self.camera.capture(resolution=self.resolution)
- *             xCo,yCo=self.OR.getCoordinates(img)
+      /* "motorisedcameratracking/Imaging.py":304
+ *             img=self.camera.capture(resolution=self.resolution)#captures an image
+ *             xCo,yCo=self.OR.getCoordinates(img)#runs the object recognition
  *             if xCo != None:             # <<<<<<<<<<<<<<
- *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
- *                 #self.dataQueue.put([xV,yV])
+ *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)#runs the velocity calculator
+ *             else:
  */
       goto __pyx_L7;
     }
 
-    /* "motorisedcameratracking/Imaging.py":297
- *                 #self.dataQueue.put([xV,yV])
+    /* "motorisedcameratracking/Imaging.py":307
+ *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)#runs the velocity calculator
  *             else:
- *                 xV=10             # <<<<<<<<<<<<<<
+ *                 xV=10#runs at a velocity of 10 if the lock is lost             # <<<<<<<<<<<<<<
  *                 yV=0
- *                 #self.dataQueue.put([xV,yV])
+ * 
  */
     /*else*/ {
       __Pyx_INCREF(__pyx_int_10);
       __Pyx_XDECREF_SET(__pyx_v_xV, __pyx_int_10);
 
-      /* "motorisedcameratracking/Imaging.py":298
+      /* "motorisedcameratracking/Imaging.py":308
  *             else:
- *                 xV=10
+ *                 xV=10#runs at a velocity of 10 if the lock is lost
  *                 yV=0             # <<<<<<<<<<<<<<
- *                 #self.dataQueue.put([xV,yV])
  * 
+ *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})#sends the velocities
  */
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_int_0);
     }
     __pyx_L7:;
 
-    /* "motorisedcameratracking/Imaging.py":301
- *                 #self.dataQueue.put([xV,yV])
+    /* "motorisedcameratracking/Imaging.py":310
+ *                 yV=0
  * 
- *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})             # <<<<<<<<<<<<<<
+ *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})#sends the velocities             # <<<<<<<<<<<<<<
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 301, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_send); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 301, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_send); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 301, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 301, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 301, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_recentre, Py_False) < 0) __PYX_ERR(0, 301, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_recentre, Py_False) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
       __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
@@ -7379,21 +7799,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 301, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":303
- *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
+    /* "motorisedcameratracking/Imaging.py":312
+ *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})#sends the velocities
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 312, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -7408,35 +7828,93 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 303, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 312, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_8 = ((!__pyx_t_6) != 0);
     if (__pyx_t_8) {
 
-      /* "motorisedcameratracking/Imaging.py":304
+      /* "motorisedcameratracking/Imaging.py":313
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)             # <<<<<<<<<<<<<<
+ *                 warnings.warn("imaging terminating")
+ *                 break
+ */
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 313, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_put); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 313, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_1, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_4, __pyx_int_1) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_int_1);
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 313, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":314
+ *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")             # <<<<<<<<<<<<<<
+ *                 break
+ * 
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_4);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_4, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_1, __pyx_kp_s_imaging_terminating) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_s_imaging_terminating);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 314, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":315
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  *                 break             # <<<<<<<<<<<<<<
  * 
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
  */
       goto __pyx_L4_break;
 
-      /* "motorisedcameratracking/Imaging.py":303
- *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
+      /* "motorisedcameratracking/Imaging.py":312
+ *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})#sends the velocities
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
     }
   }
   __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":288
+  /* "motorisedcameratracking/Imaging.py":299
  * ###############################################################
  * 
  *     def simpleTracking(self):             # <<<<<<<<<<<<<<
@@ -7465,7 +7943,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_26simpleTr
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":306
+/* "motorisedcameratracking/Imaging.py":317
  *                 break
  * 
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
@@ -7517,29 +7995,29 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_29simpleTr
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 1); __PYX_ERR(0, 306, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 1); __PYX_ERR(0, 317, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 2); __PYX_ERR(0, 306, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 2); __PYX_ERR(0, 317, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 3); __PYX_ERR(0, 306, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 3); __PYX_ERR(0, 317, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 4); __PYX_ERR(0, 306, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, 4); __PYX_ERR(0, 317, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simpleTrackingLimited") < 0)) __PYX_ERR(0, 306, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simpleTrackingLimited") < 0)) __PYX_ERR(0, 317, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -7558,7 +8036,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_29simpleTr
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 306, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("simpleTrackingLimited", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 317, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.simpleTrackingLimited", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -7593,7 +8071,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("simpleTrackingLimited", 0);
 
-  /* "motorisedcameratracking/Imaging.py":307
+  /* "motorisedcameratracking/Imaging.py":318
  * 
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
  *         while True:             # <<<<<<<<<<<<<<
@@ -7602,7 +8080,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":308
+    /* "motorisedcameratracking/Imaging.py":319
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
  *         while True:
  *             recentre=False             # <<<<<<<<<<<<<<
@@ -7611,41 +8089,41 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
  */
     __pyx_v_recentre = 0;
 
-    /* "motorisedcameratracking/Imaging.py":309
+    /* "motorisedcameratracking/Imaging.py":320
  *         while True:
  *             recentre=False
  *             img=self.camera.capture(resolution=self.resolution)             # <<<<<<<<<<<<<<
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 309, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 320, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":310
+    /* "motorisedcameratracking/Imaging.py":321
  *             recentre=False
  *             img=self.camera.capture(resolution=self.resolution)
  *             xCo,yCo=self.OR.getCoordinates(img)             # <<<<<<<<<<<<<<
  *             if xCo != None:
  *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 310, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 321, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinates); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -7660,7 +8138,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_img);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 310, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 321, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     if ((likely(PyTuple_CheckExact(__pyx_t_3))) || (PyList_CheckExact(__pyx_t_3))) {
@@ -7669,7 +8147,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       if (unlikely(size != 2)) {
         if (size > 2) __Pyx_RaiseTooManyValuesError(2);
         else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-        __PYX_ERR(0, 310, __pyx_L1_error)
+        __PYX_ERR(0, 321, __pyx_L1_error)
       }
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
       if (likely(PyTuple_CheckExact(sequence))) {
@@ -7682,15 +8160,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_INCREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_t_1);
       #else
-      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 310, __pyx_L1_error)
+      __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 321, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 310, __pyx_L1_error)
+      __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 321, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       #endif
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     } else {
       Py_ssize_t index = -1;
-      __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 310, __pyx_L1_error)
+      __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 321, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext;
@@ -7698,7 +8176,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_GOTREF(__pyx_t_2);
       index = 1; __pyx_t_1 = __pyx_t_5(__pyx_t_4); if (unlikely(!__pyx_t_1)) goto __pyx_L5_unpacking_failed;
       __Pyx_GOTREF(__pyx_t_1);
-      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 310, __pyx_L1_error)
+      if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_4), 2) < 0) __PYX_ERR(0, 321, __pyx_L1_error)
       __pyx_t_5 = NULL;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       goto __pyx_L6_unpacking_done;
@@ -7706,7 +8184,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __pyx_t_5 = NULL;
       if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-      __PYX_ERR(0, 310, __pyx_L1_error)
+      __PYX_ERR(0, 321, __pyx_L1_error)
       __pyx_L6_unpacking_done:;
     }
     __Pyx_XDECREF_SET(__pyx_v_xCo, __pyx_t_2);
@@ -7714,26 +8192,26 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
     __Pyx_XDECREF_SET(__pyx_v_yCo, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":311
+    /* "motorisedcameratracking/Imaging.py":322
  *             img=self.camera.capture(resolution=self.resolution)
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:             # <<<<<<<<<<<<<<
  *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
- *                 #self.dataQueue.put([xV,yV])
+ * 
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 311, __pyx_L1_error)
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 311, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_xCo, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 322, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 322, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_6) {
 
-      /* "motorisedcameratracking/Imaging.py":312
+      /* "motorisedcameratracking/Imaging.py":323
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:
  *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)             # <<<<<<<<<<<<<<
- *                 #self.dataQueue.put([xV,yV])
+ * 
  *             else:
  */
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleVelocityCalculation); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 312, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_simpleVelocityCalculation); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 323, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_2 = NULL;
       __pyx_t_7 = 0;
@@ -7750,7 +8228,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_1)) {
         PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
@@ -7758,13 +8236,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
         PyObject *__pyx_temp[3] = {__pyx_t_2, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_7, 2+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
       #endif
       {
-        __pyx_t_4 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_4 = PyTuple_New(2+__pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         if (__pyx_t_2) {
           __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -7775,7 +8253,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
         __Pyx_INCREF(__pyx_v_yCo);
         __Pyx_GIVEREF(__pyx_v_yCo);
         PyTuple_SET_ITEM(__pyx_t_4, 1+__pyx_t_7, __pyx_v_yCo);
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       }
@@ -7786,7 +8264,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
         if (unlikely(size != 2)) {
           if (size > 2) __Pyx_RaiseTooManyValuesError(2);
           else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-          __PYX_ERR(0, 312, __pyx_L1_error)
+          __PYX_ERR(0, 323, __pyx_L1_error)
         }
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
         if (likely(PyTuple_CheckExact(sequence))) {
@@ -7799,15 +8277,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
         __Pyx_INCREF(__pyx_t_1);
         __Pyx_INCREF(__pyx_t_4);
         #else
-        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_1 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_4 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         #endif
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       } else {
         Py_ssize_t index = -1;
-        __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 312, __pyx_L1_error)
+        __pyx_t_2 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 323, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __pyx_t_5 = Py_TYPE(__pyx_t_2)->tp_iternext;
@@ -7815,7 +8293,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
         __Pyx_GOTREF(__pyx_t_1);
         index = 1; __pyx_t_4 = __pyx_t_5(__pyx_t_2); if (unlikely(!__pyx_t_4)) goto __pyx_L8_unpacking_failed;
         __Pyx_GOTREF(__pyx_t_4);
-        if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_2), 2) < 0) __PYX_ERR(0, 312, __pyx_L1_error)
+        if (__Pyx_IternextUnpackEndCheck(__pyx_t_5(__pyx_t_2), 2) < 0) __PYX_ERR(0, 323, __pyx_L1_error)
         __pyx_t_5 = NULL;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         goto __pyx_L9_unpacking_done;
@@ -7823,7 +8301,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __pyx_t_5 = NULL;
         if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-        __PYX_ERR(0, 312, __pyx_L1_error)
+        __PYX_ERR(0, 323, __pyx_L1_error)
         __pyx_L9_unpacking_done:;
       }
       __Pyx_XDECREF_SET(__pyx_v_xV, __pyx_t_1);
@@ -7831,47 +8309,47 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_t_4);
       __pyx_t_4 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":311
+      /* "motorisedcameratracking/Imaging.py":322
  *             img=self.camera.capture(resolution=self.resolution)
  *             xCo,yCo=self.OR.getCoordinates(img)
  *             if xCo != None:             # <<<<<<<<<<<<<<
  *                 xV,yV=self.simpleVelocityCalculation(xCo,yCo)
- *                 #self.dataQueue.put([xV,yV])
+ * 
  */
       goto __pyx_L7;
     }
 
-    /* "motorisedcameratracking/Imaging.py":315
- *                 #self.dataQueue.put([xV,yV])
+    /* "motorisedcameratracking/Imaging.py":326
+ * 
  *             else:
  *                 xV=10             # <<<<<<<<<<<<<<
  *                 yV=0
- *                 #self.dataQueue.put([xV,yV])
+ * 
  */
     /*else*/ {
       __Pyx_INCREF(__pyx_int_10);
       __Pyx_XDECREF_SET(__pyx_v_xV, __pyx_int_10);
 
-      /* "motorisedcameratracking/Imaging.py":316
+      /* "motorisedcameratracking/Imaging.py":327
  *             else:
  *                 xV=10
  *                 yV=0             # <<<<<<<<<<<<<<
- *                 #self.dataQueue.put([xV,yV])
  * 
+ *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):#recentres the motors when they are outside the limits
  */
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_XDECREF_SET(__pyx_v_yV, __pyx_int_0);
     }
     __pyx_L7:;
 
-    /* "motorisedcameratracking/Imaging.py":319
- *                 #self.dataQueue.put([xV,yV])
+    /* "motorisedcameratracking/Imaging.py":329
+ *                 yV=0
  * 
- *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):#recentres the motors when they are outside the limits             # <<<<<<<<<<<<<<
  *                 xV=0
  *                 yV=0
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_outsideLimits); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_outsideLimits); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 329, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_1 = NULL;
     __pyx_t_7 = 0;
@@ -7888,7 +8366,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[5] = {__pyx_t_1, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_3);
     } else
@@ -7896,13 +8374,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
       PyObject *__pyx_temp[5] = {__pyx_t_1, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_7, 4+__pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_GOTREF(__pyx_t_3);
     } else
     #endif
     {
-      __pyx_t_2 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(4+__pyx_t_7); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 329, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       if (__pyx_t_1) {
         __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -7919,18 +8397,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_INCREF(__pyx_v_yLimit2);
       __Pyx_GIVEREF(__pyx_v_yLimit2);
       PyTuple_SET_ITEM(__pyx_t_2, 3+__pyx_t_7, __pyx_v_yLimit2);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 319, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 329, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     }
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 319, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 329, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_6) {
 
-      /* "motorisedcameratracking/Imaging.py":320
+      /* "motorisedcameratracking/Imaging.py":330
  * 
- *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
+ *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):#recentres the motors when they are outside the limits
  *                 xV=0             # <<<<<<<<<<<<<<
  *                 yV=0
  *                 recentre=True
@@ -7938,8 +8416,8 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_DECREF_SET(__pyx_v_xV, __pyx_int_0);
 
-      /* "motorisedcameratracking/Imaging.py":321
- *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
+      /* "motorisedcameratracking/Imaging.py":331
+ *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):#recentres the motors when they are outside the limits
  *                 xV=0
  *                 yV=0             # <<<<<<<<<<<<<<
  *                 recentre=True
@@ -7948,7 +8426,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_DECREF_SET(__pyx_v_yV, __pyx_int_0);
 
-      /* "motorisedcameratracking/Imaging.py":322
+      /* "motorisedcameratracking/Imaging.py":332
  *                 xV=0
  *                 yV=0
  *                 recentre=True             # <<<<<<<<<<<<<<
@@ -7957,34 +8435,34 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
  */
       __pyx_v_recentre = 1;
 
-      /* "motorisedcameratracking/Imaging.py":319
- *                 #self.dataQueue.put([xV,yV])
+      /* "motorisedcameratracking/Imaging.py":329
+ *                 yV=0
  * 
- *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):#recentres the motors when they are outside the limits             # <<<<<<<<<<<<<<
  *                 xV=0
  *                 yV=0
  */
     }
 
-    /* "motorisedcameratracking/Imaging.py":324
+    /* "motorisedcameratracking/Imaging.py":334
  *                 recentre=True
  * 
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})             # <<<<<<<<<<<<<<
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
  */
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_send); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_send); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 324, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 324, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 324, __pyx_L1_error)
-    __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_recentre); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 324, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 334, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 334, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyBool_FromLong(__pyx_v_recentre); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_recentre, __pyx_t_1) < 0) __PYX_ERR(0, 324, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_recentre, __pyx_t_1) < 0) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -7999,21 +8477,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_4);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 324, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 334, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":326
+    /* "motorisedcameratracking/Imaging.py":336
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 326, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 326, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 336, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -8028,35 +8506,93 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_4);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 326, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 336, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 326, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 336, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_8 = ((!__pyx_t_6) != 0);
     if (__pyx_t_8) {
 
-      /* "motorisedcameratracking/Imaging.py":327
+      /* "motorisedcameratracking/Imaging.py":337
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)             # <<<<<<<<<<<<<<
+ *                 warnings.warn("imaging terminating")
+ *                 break
+ */
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 337, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_put); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __pyx_t_4 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_4)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_4);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_int_1) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_int_1);
+      __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 337, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":338
+ *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")             # <<<<<<<<<<<<<<
+ *                 break
+ * 
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_4);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_4))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_4);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
+          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_4, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_2, __pyx_kp_s_imaging_terminating) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_kp_s_imaging_terminating);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 338, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":339
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  *                 break             # <<<<<<<<<<<<<<
  * 
  * 
  */
       goto __pyx_L4_break;
 
-      /* "motorisedcameratracking/Imaging.py":326
+      /* "motorisedcameratracking/Imaging.py":336
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
     }
   }
   __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":306
+  /* "motorisedcameratracking/Imaging.py":317
  *                 break
  * 
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
@@ -8085,7 +8621,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_28simpleTr
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":330
+/* "motorisedcameratracking/Imaging.py":342
  * 
  * 
  *     def simpleVelocityCalculation(self,xCo,yCo,maxSpeed: float = 20):             # <<<<<<<<<<<<<<
@@ -8109,7 +8645,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_31simpleVe
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("simpleVelocityCalculation (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xCo_2,&__pyx_n_s_yCo_2,&__pyx_n_s_maxSpeed,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xCo,&__pyx_n_s_yCo,&__pyx_n_s_maxSpeed,0};
     PyObject* values[4] = {0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -8133,15 +8669,15 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_31simpleVe
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xCo_2)) != 0)) kw_args--;
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xCo)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simpleVelocityCalculation", 0, 3, 4, 1); __PYX_ERR(0, 330, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simpleVelocityCalculation", 0, 3, 4, 1); __PYX_ERR(0, 342, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yCo_2)) != 0)) kw_args--;
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yCo)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simpleVelocityCalculation", 0, 3, 4, 2); __PYX_ERR(0, 330, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simpleVelocityCalculation", 0, 3, 4, 2); __PYX_ERR(0, 342, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -8151,7 +8687,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_31simpleVe
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simpleVelocityCalculation") < 0)) __PYX_ERR(0, 330, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simpleVelocityCalculation") < 0)) __PYX_ERR(0, 342, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -8168,14 +8704,14 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_31simpleVe
     __pyx_v_xCo = values[1];
     __pyx_v_yCo = values[2];
     if (values[3]) {
-      __pyx_v_maxSpeed = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_maxSpeed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 330, __pyx_L3_error)
+      __pyx_v_maxSpeed = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_maxSpeed == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 342, __pyx_L3_error)
     } else {
       __pyx_v_maxSpeed = ((double)((double)20.0));
     }
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("simpleVelocityCalculation", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 330, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("simpleVelocityCalculation", 0, 3, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 342, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.simpleVelocityCalculation", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -8207,105 +8743,105 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_30simpleVe
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("simpleVelocityCalculation", 0);
 
-  /* "motorisedcameratracking/Imaging.py":335
+  /* "motorisedcameratracking/Imaging.py":347
  *         This is likely to work best when the images are being taken frequently
  *         """
- *         xDis=xCo-self.xMid             # <<<<<<<<<<<<<<
+ *         xDis=xCo-self.xMid#works othe distance from the centre of the image             # <<<<<<<<<<<<<<
  *         yDis=yCo-self.yMid
- *         x=xDis/self.xMid
+ *         x=xDis/self.xMid#works out a decimal for how far from the centre the coordinates are
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Subtract(__pyx_v_xCo, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 335, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_v_xCo, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 347, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_xDis = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":336
+  /* "motorisedcameratracking/Imaging.py":348
  *         """
- *         xDis=xCo-self.xMid
+ *         xDis=xCo-self.xMid#works othe distance from the centre of the image
  *         yDis=yCo-self.yMid             # <<<<<<<<<<<<<<
- *         x=xDis/self.xMid
+ *         x=xDis/self.xMid#works out a decimal for how far from the centre the coordinates are
  *         y=yDis/self.yMid
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Subtract(__pyx_v_yCo, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 336, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Subtract(__pyx_v_yCo, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_yDis = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":337
- *         xDis=xCo-self.xMid
+  /* "motorisedcameratracking/Imaging.py":349
+ *         xDis=xCo-self.xMid#works othe distance from the centre of the image
  *         yDis=yCo-self.yMid
- *         x=xDis/self.xMid             # <<<<<<<<<<<<<<
+ *         x=xDis/self.xMid#works out a decimal for how far from the centre the coordinates are             # <<<<<<<<<<<<<<
  *         y=yDis/self.yMid
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_v_xDis, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_v_xDis, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":338
+  /* "motorisedcameratracking/Imaging.py":350
  *         yDis=yCo-self.yMid
- *         x=xDis/self.xMid
+ *         x=xDis/self.xMid#works out a decimal for how far from the centre the coordinates are
  *         y=yDis/self.yMid             # <<<<<<<<<<<<<<
  * 
- *         xV=x*maxSpeed
+ *         xV=x*maxSpeed#works out the velocities
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_v_yDis, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 338, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_v_yDis, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 350, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_y = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":340
+  /* "motorisedcameratracking/Imaging.py":352
  *         y=yDis/self.yMid
  * 
- *         xV=x*maxSpeed             # <<<<<<<<<<<<<<
+ *         xV=x*maxSpeed#works out the velocities             # <<<<<<<<<<<<<<
  *         yV=y*maxSpeed
- *         return self.velocityCheck(xV,yV)
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities
  */
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_maxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_maxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_x, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 340, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_x, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 352, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_xV = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":341
+  /* "motorisedcameratracking/Imaging.py":353
  * 
- *         xV=x*maxSpeed
+ *         xV=x*maxSpeed#works out the velocities
  *         yV=y*maxSpeed             # <<<<<<<<<<<<<<
- *         return self.velocityCheck(xV,yV)
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities
  * 
  */
-  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_maxSpeed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_2 = PyFloat_FromDouble(__pyx_v_maxSpeed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_y, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 341, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_y, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 353, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_yV = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":342
- *         xV=x*maxSpeed
+  /* "motorisedcameratracking/Imaging.py":354
+ *         xV=x*maxSpeed#works out the velocities
  *         yV=y*maxSpeed
- *         return self.velocityCheck(xV,yV)             # <<<<<<<<<<<<<<
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities             # <<<<<<<<<<<<<<
  * 
  *     def intermediateTracking(self):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_velocityCheck); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_velocityCheck); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 354, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -8322,7 +8858,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_30simpleVe
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_xV, __pyx_v_yV};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 342, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -8330,13 +8866,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_30simpleVe
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_xV, __pyx_v_yV};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 342, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 342, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -8347,7 +8883,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_30simpleVe
     __Pyx_INCREF(__pyx_v_yV);
     __Pyx_GIVEREF(__pyx_v_yV);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_yV);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 342, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -8356,7 +8892,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_30simpleVe
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":330
+  /* "motorisedcameratracking/Imaging.py":342
  * 
  * 
  *     def simpleVelocityCalculation(self,xCo,yCo,maxSpeed: float = 20):             # <<<<<<<<<<<<<<
@@ -8384,8 +8920,8 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_30simpleVe
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":344
- *         return self.velocityCheck(xV,yV)
+/* "motorisedcameratracking/Imaging.py":356
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities
  * 
  *     def intermediateTracking(self):             # <<<<<<<<<<<<<<
  *         """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
@@ -8430,7 +8966,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("intermediateTracking", 0);
 
-  /* "motorisedcameratracking/Imaging.py":346
+  /* "motorisedcameratracking/Imaging.py":358
  *     def intermediateTracking(self):
  *         """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
  *         xV=0             # <<<<<<<<<<<<<<
@@ -8440,7 +8976,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_xV = __pyx_int_0;
 
-  /* "motorisedcameratracking/Imaging.py":347
+  /* "motorisedcameratracking/Imaging.py":359
  *         """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
  *         xV=0
  *         yV=0             # <<<<<<<<<<<<<<
@@ -8450,7 +8986,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_yV = __pyx_int_0;
 
-  /* "motorisedcameratracking/Imaging.py":348
+  /* "motorisedcameratracking/Imaging.py":360
  *         xV=0
  *         yV=0
  *         while True:             # <<<<<<<<<<<<<<
@@ -8459,41 +8995,41 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":349
+    /* "motorisedcameratracking/Imaging.py":361
  *         yV=0
  *         while True:
  *             img=self.camera.capture(resolution=self.resolution)#captures the image             # <<<<<<<<<<<<<<
  * 
  *             targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 349, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 349, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 361, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":351
+    /* "motorisedcameratracking/Imaging.py":363
  *             img=self.camera.capture(resolution=self.resolution)#captures the image
  * 
  *             targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects             # <<<<<<<<<<<<<<
  *             if targetsList==None:#checks none has not been returned
  *                 pass
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 351, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinatesMultiTargetLP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 351, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinatesMultiTargetLP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -8508,75 +9044,75 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_img);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 351, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 363, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_targetsList, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":352
+    /* "motorisedcameratracking/Imaging.py":364
  * 
  *             targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects
  *             if targetsList==None:#checks none has not been returned             # <<<<<<<<<<<<<<
  *                 pass
  *             elif len(targetsList) == 1:
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_targetsList, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 352, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 352, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_targetsList, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 364, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_4) {
       goto __pyx_L5;
     }
 
-    /* "motorisedcameratracking/Imaging.py":354
+    /* "motorisedcameratracking/Imaging.py":366
  *             if targetsList==None:#checks none has not been returned
  *                 pass
  *             elif len(targetsList) == 1:             # <<<<<<<<<<<<<<
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]
  */
-    __pyx_t_5 = PyObject_Length(__pyx_v_targetsList); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 354, __pyx_L1_error)
+    __pyx_t_5 = PyObject_Length(__pyx_v_targetsList); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 366, __pyx_L1_error)
     __pyx_t_4 = ((__pyx_t_5 == 1) != 0);
     if (__pyx_t_4) {
 
-      /* "motorisedcameratracking/Imaging.py":355
+      /* "motorisedcameratracking/Imaging.py":367
  *                 pass
  *             elif len(targetsList) == 1:
  *                 xCo=targetsList[0][1]             # <<<<<<<<<<<<<<
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):
  */
-      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 355, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 367, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 355, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 367, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF_SET(__pyx_v_xCo, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":356
+      /* "motorisedcameratracking/Imaging.py":368
  *             elif len(targetsList) == 1:
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]             # <<<<<<<<<<<<<<
  *                 if not self.inCentralBox(xCo,yCo):
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
  */
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 356, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 356, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 368, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_yCo, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":357
+      /* "motorisedcameratracking/Imaging.py":369
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):             # <<<<<<<<<<<<<<
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
  *                     #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_inCentralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 357, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_inCentralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 369, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_1 = NULL;
       __pyx_t_6 = 0;
@@ -8593,7 +9129,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
@@ -8601,13 +9137,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_1) {
           __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -8618,24 +9154,24 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
         __Pyx_INCREF(__pyx_v_yCo);
         __Pyx_GIVEREF(__pyx_v_yCo);
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_yCo);
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 357, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 369, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 357, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 369, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_8 = ((!__pyx_t_4) != 0);
       if (__pyx_t_8) {
 
-        /* "motorisedcameratracking/Imaging.py":358
+        /* "motorisedcameratracking/Imaging.py":370
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)             # <<<<<<<<<<<<<<
  *                     #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
  *             elif self.isMultiple(targetsList):
  */
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateVelocityCalculation); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 358, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateVelocityCalculation); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 370, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_7 = NULL;
         __pyx_t_6 = 0;
@@ -8652,7 +9188,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_2)) {
           PyObject *__pyx_temp[5] = {__pyx_t_7, __pyx_v_xV, __pyx_v_yV, __pyx_v_xCo, __pyx_v_yCo};
-          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
@@ -8660,13 +9196,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
           PyObject *__pyx_temp[5] = {__pyx_t_7, __pyx_v_xV, __pyx_v_yV, __pyx_v_xCo, __pyx_v_yCo};
-          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
         #endif
         {
-          __pyx_t_1 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -8683,7 +9219,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
           __Pyx_INCREF(__pyx_v_yCo);
           __Pyx_GIVEREF(__pyx_v_yCo);
           PyTuple_SET_ITEM(__pyx_t_1, 3+__pyx_t_6, __pyx_v_yCo);
-          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         }
@@ -8694,7 +9230,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
           if (unlikely(size != 2)) {
             if (size > 2) __Pyx_RaiseTooManyValuesError(2);
             else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-            __PYX_ERR(0, 358, __pyx_L1_error)
+            __PYX_ERR(0, 370, __pyx_L1_error)
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
           if (likely(PyTuple_CheckExact(sequence))) {
@@ -8707,15 +9243,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
           __Pyx_INCREF(__pyx_t_2);
           __Pyx_INCREF(__pyx_t_1);
           #else
-          __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         } else {
           Py_ssize_t index = -1;
-          __pyx_t_7 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 358, __pyx_L1_error)
+          __pyx_t_7 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 370, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __pyx_t_9 = Py_TYPE(__pyx_t_7)->tp_iternext;
@@ -8723,7 +9259,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
           __Pyx_GOTREF(__pyx_t_2);
           index = 1; __pyx_t_1 = __pyx_t_9(__pyx_t_7); if (unlikely(!__pyx_t_1)) goto __pyx_L7_unpacking_failed;
           __Pyx_GOTREF(__pyx_t_1);
-          if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_7), 2) < 0) __PYX_ERR(0, 358, __pyx_L1_error)
+          if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_7), 2) < 0) __PYX_ERR(0, 370, __pyx_L1_error)
           __pyx_t_9 = NULL;
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           goto __pyx_L8_unpacking_done;
@@ -8731,7 +9267,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_t_9 = NULL;
           if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-          __PYX_ERR(0, 358, __pyx_L1_error)
+          __PYX_ERR(0, 370, __pyx_L1_error)
           __pyx_L8_unpacking_done:;
         }
         __Pyx_DECREF_SET(__pyx_v_xV, __pyx_t_2);
@@ -8739,7 +9275,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
         __Pyx_DECREF_SET(__pyx_v_yV, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":357
+        /* "motorisedcameratracking/Imaging.py":369
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):             # <<<<<<<<<<<<<<
@@ -8748,7 +9284,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
  */
       }
 
-      /* "motorisedcameratracking/Imaging.py":354
+      /* "motorisedcameratracking/Imaging.py":366
  *             if targetsList==None:#checks none has not been returned
  *                 pass
  *             elif len(targetsList) == 1:             # <<<<<<<<<<<<<<
@@ -8758,14 +9294,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
       goto __pyx_L5;
     }
 
-    /* "motorisedcameratracking/Imaging.py":360
+    /* "motorisedcameratracking/Imaging.py":372
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
  *                     #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
  *             elif self.isMultiple(targetsList):             # <<<<<<<<<<<<<<
  *                 pass#maintains the same velocity
  *                 #tweak the tracking for the scenario
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_isMultiple); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_isMultiple); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -8779,32 +9315,32 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_v_targetsList) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_targetsList);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 360, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 372, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 360, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 372, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_8) {
     }
     __pyx_L5:;
 
-    /* "motorisedcameratracking/Imaging.py":364
+    /* "motorisedcameratracking/Imaging.py":376
  *                 #tweak the tracking for the scenario
  * 
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})             # <<<<<<<<<<<<<<
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_send); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 364, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_send); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 364, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 364, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 364, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_recentre, Py_False) < 0) __PYX_ERR(0, 364, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_recentre, Py_False) < 0) __PYX_ERR(0, 376, __pyx_L1_error)
     __pyx_t_7 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
       __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_2);
@@ -8818,21 +9354,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
     __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_1);
     __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 364, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 376, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":366
+    /* "motorisedcameratracking/Imaging.py":378
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 378, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_empty); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 378, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
@@ -8847,36 +9383,94 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_2) : __Pyx_PyObject_CallNoArg(__pyx_t_1);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 366, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 378, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 366, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 378, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_4 = ((!__pyx_t_8) != 0);
     if (__pyx_t_4) {
 
-      /* "motorisedcameratracking/Imaging.py":367
+      /* "motorisedcameratracking/Imaging.py":379
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)             # <<<<<<<<<<<<<<
+ *                 warnings.warn("imaging terminating")
+ *                 break
+ */
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 379, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_put); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 379, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_2);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_2);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_2, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_int_1) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_int_1);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 379, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":380
+ *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")             # <<<<<<<<<<<<<<
+ *                 break
+ * 
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_warnings); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_2);
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_warn); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+      __pyx_t_2 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_1))) {
+        __pyx_t_2 = PyMethod_GET_SELF(__pyx_t_1);
+        if (likely(__pyx_t_2)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+          __Pyx_INCREF(__pyx_t_2);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_1, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_kp_s_imaging_terminating) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_kp_s_imaging_terminating);
+      __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":381
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  *                 break             # <<<<<<<<<<<<<<
  * 
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
  */
       goto __pyx_L4_break;
 
-      /* "motorisedcameratracking/Imaging.py":366
+      /* "motorisedcameratracking/Imaging.py":378
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':False})
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
     }
   }
   __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":344
- *         return self.velocityCheck(xV,yV)
+  /* "motorisedcameratracking/Imaging.py":356
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities
  * 
  *     def intermediateTracking(self):             # <<<<<<<<<<<<<<
  *         """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
@@ -8905,7 +9499,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_32intermed
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":369
+/* "motorisedcameratracking/Imaging.py":383
  *                 break
  * 
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
@@ -8957,29 +9551,29 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_35intermed
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 1); __PYX_ERR(0, 369, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 1); __PYX_ERR(0, 383, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 2); __PYX_ERR(0, 369, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 2); __PYX_ERR(0, 383, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 3); __PYX_ERR(0, 369, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 3); __PYX_ERR(0, 383, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 4); __PYX_ERR(0, 369, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, 4); __PYX_ERR(0, 383, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "intermediateTrackingLimited") < 0)) __PYX_ERR(0, 369, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "intermediateTrackingLimited") < 0)) __PYX_ERR(0, 383, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -8998,7 +9592,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_35intermed
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 369, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("intermediateTrackingLimited", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 383, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.intermediateTrackingLimited", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9035,7 +9629,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("intermediateTrackingLimited", 0);
 
-  /* "motorisedcameratracking/Imaging.py":370
+  /* "motorisedcameratracking/Imaging.py":384
  * 
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
  *         xV=0             # <<<<<<<<<<<<<<
@@ -9045,7 +9639,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_xV = __pyx_int_0;
 
-  /* "motorisedcameratracking/Imaging.py":371
+  /* "motorisedcameratracking/Imaging.py":385
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):
  *         xV=0
  *         yV=0             # <<<<<<<<<<<<<<
@@ -9055,7 +9649,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
   __Pyx_INCREF(__pyx_int_0);
   __pyx_v_yV = __pyx_int_0;
 
-  /* "motorisedcameratracking/Imaging.py":372
+  /* "motorisedcameratracking/Imaging.py":386
  *         xV=0
  *         yV=0
  *         while True:             # <<<<<<<<<<<<<<
@@ -9064,7 +9658,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
  */
   while (1) {
 
-    /* "motorisedcameratracking/Imaging.py":373
+    /* "motorisedcameratracking/Imaging.py":387
  *         yV=0
  *         while True:
  *             recentre=False             # <<<<<<<<<<<<<<
@@ -9073,41 +9667,41 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
  */
     __pyx_v_recentre = 0;
 
-    /* "motorisedcameratracking/Imaging.py":374
+    /* "motorisedcameratracking/Imaging.py":388
  *         while True:
  *             recentre=False
  *             img=self.camera.capture(resolution=self.resolution)#captures the image             # <<<<<<<<<<<<<<
  * 
  *             targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_camera); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 374, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_capture); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 374, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_resolution); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 374, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_t_3) < 0) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 374, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_empty_tuple, __pyx_t_1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 388, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_XDECREF_SET(__pyx_v_img, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":376
+    /* "motorisedcameratracking/Imaging.py":390
  *             img=self.camera.capture(resolution=self.resolution)#captures the image
  * 
  *             targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects             # <<<<<<<<<<<<<<
  *             if targetsList==None:#checks none has not been returned
  *                 pass
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 376, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinatesMultiTargetLP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_getCoordinatesMultiTargetLP); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 390, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -9122,75 +9716,75 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_1, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_img);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 376, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_XDECREF_SET(__pyx_v_targetsList, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":377
+    /* "motorisedcameratracking/Imaging.py":391
  * 
  *             targetsList=self.OR.getCoordinatesMultiTargetLP(img)#gets the coordinates of the objects
  *             if targetsList==None:#checks none has not been returned             # <<<<<<<<<<<<<<
  *                 pass
  *             elif len(targetsList) == 1:
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_targetsList, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 377, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 377, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_targetsList, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 391, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_4) {
       goto __pyx_L5;
     }
 
-    /* "motorisedcameratracking/Imaging.py":379
+    /* "motorisedcameratracking/Imaging.py":393
  *             if targetsList==None:#checks none has not been returned
  *                 pass
  *             elif len(targetsList) == 1:             # <<<<<<<<<<<<<<
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]
  */
-    __pyx_t_5 = PyObject_Length(__pyx_v_targetsList); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 379, __pyx_L1_error)
+    __pyx_t_5 = PyObject_Length(__pyx_v_targetsList); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 393, __pyx_L1_error)
     __pyx_t_4 = ((__pyx_t_5 == 1) != 0);
     if (__pyx_t_4) {
 
-      /* "motorisedcameratracking/Imaging.py":380
+      /* "motorisedcameratracking/Imaging.py":394
  *                 pass
  *             elif len(targetsList) == 1:
  *                 xCo=targetsList[0][1]             # <<<<<<<<<<<<<<
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):
  */
-      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 394, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 380, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_t_3, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 394, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_XDECREF_SET(__pyx_v_xCo, __pyx_t_2);
       __pyx_t_2 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":381
+      /* "motorisedcameratracking/Imaging.py":395
  *             elif len(targetsList) == 1:
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]             # <<<<<<<<<<<<<<
  *                 if not self.inCentralBox(xCo,yCo):
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
  */
-      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_targetsList, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 395, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 381, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 395, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_XDECREF_SET(__pyx_v_yCo, __pyx_t_3);
       __pyx_t_3 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":382
+      /* "motorisedcameratracking/Imaging.py":396
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):             # <<<<<<<<<<<<<<
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
  *                     #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
  */
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_inCentralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 382, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_inCentralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __pyx_t_1 = NULL;
       __pyx_t_6 = 0;
@@ -9207,7 +9801,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
@@ -9215,13 +9809,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
         PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_xCo, __pyx_v_yCo};
-        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_GOTREF(__pyx_t_3);
       } else
       #endif
       {
-        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 396, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         if (__pyx_t_1) {
           __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -9232,24 +9826,24 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
         __Pyx_INCREF(__pyx_v_yCo);
         __Pyx_GIVEREF(__pyx_v_yCo);
         PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_yCo);
-        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 382, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       }
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 382, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 396, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __pyx_t_8 = ((!__pyx_t_4) != 0);
       if (__pyx_t_8) {
 
-        /* "motorisedcameratracking/Imaging.py":383
+        /* "motorisedcameratracking/Imaging.py":397
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)             # <<<<<<<<<<<<<<
  *                     #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
  *             elif self.isMultiple(targetsList):
  */
-        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateVelocityCalculation); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_intermediateVelocityCalculation); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __pyx_t_7 = NULL;
         __pyx_t_6 = 0;
@@ -9266,7 +9860,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
         #if CYTHON_FAST_PYCALL
         if (PyFunction_Check(__pyx_t_2)) {
           PyObject *__pyx_temp[5] = {__pyx_t_7, __pyx_v_xV, __pyx_v_yV, __pyx_v_xCo, __pyx_v_yCo};
-          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
@@ -9274,13 +9868,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
         #if CYTHON_FAST_PYCCALL
         if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
           PyObject *__pyx_temp[5] = {__pyx_t_7, __pyx_v_xV, __pyx_v_yV, __pyx_v_xCo, __pyx_v_yCo};
-          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
           __Pyx_GOTREF(__pyx_t_3);
         } else
         #endif
         {
-          __pyx_t_1 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_1 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           if (__pyx_t_7) {
             __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -9297,7 +9891,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
           __Pyx_INCREF(__pyx_v_yCo);
           __Pyx_GIVEREF(__pyx_v_yCo);
           PyTuple_SET_ITEM(__pyx_t_1, 3+__pyx_t_6, __pyx_v_yCo);
-          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_3);
           __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         }
@@ -9308,7 +9902,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
           if (unlikely(size != 2)) {
             if (size > 2) __Pyx_RaiseTooManyValuesError(2);
             else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-            __PYX_ERR(0, 383, __pyx_L1_error)
+            __PYX_ERR(0, 397, __pyx_L1_error)
           }
           #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
           if (likely(PyTuple_CheckExact(sequence))) {
@@ -9321,15 +9915,15 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
           __Pyx_INCREF(__pyx_t_2);
           __Pyx_INCREF(__pyx_t_1);
           #else
-          __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_2 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_2);
-          __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           #endif
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         } else {
           Py_ssize_t index = -1;
-          __pyx_t_7 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 383, __pyx_L1_error)
+          __pyx_t_7 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 397, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_7);
           __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
           __pyx_t_9 = Py_TYPE(__pyx_t_7)->tp_iternext;
@@ -9337,7 +9931,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
           __Pyx_GOTREF(__pyx_t_2);
           index = 1; __pyx_t_1 = __pyx_t_9(__pyx_t_7); if (unlikely(!__pyx_t_1)) goto __pyx_L7_unpacking_failed;
           __Pyx_GOTREF(__pyx_t_1);
-          if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_7), 2) < 0) __PYX_ERR(0, 383, __pyx_L1_error)
+          if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_7), 2) < 0) __PYX_ERR(0, 397, __pyx_L1_error)
           __pyx_t_9 = NULL;
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           goto __pyx_L8_unpacking_done;
@@ -9345,7 +9939,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
           __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
           __pyx_t_9 = NULL;
           if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-          __PYX_ERR(0, 383, __pyx_L1_error)
+          __PYX_ERR(0, 397, __pyx_L1_error)
           __pyx_L8_unpacking_done:;
         }
         __Pyx_DECREF_SET(__pyx_v_xV, __pyx_t_2);
@@ -9353,7 +9947,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
         __Pyx_DECREF_SET(__pyx_v_yV, __pyx_t_1);
         __pyx_t_1 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":382
+        /* "motorisedcameratracking/Imaging.py":396
  *                 xCo=targetsList[0][1]
  *                 yCo=targetsList[0][2]
  *                 if not self.inCentralBox(xCo,yCo):             # <<<<<<<<<<<<<<
@@ -9362,7 +9956,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
  */
       }
 
-      /* "motorisedcameratracking/Imaging.py":379
+      /* "motorisedcameratracking/Imaging.py":393
  *             if targetsList==None:#checks none has not been returned
  *                 pass
  *             elif len(targetsList) == 1:             # <<<<<<<<<<<<<<
@@ -9372,14 +9966,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       goto __pyx_L5;
     }
 
-    /* "motorisedcameratracking/Imaging.py":385
+    /* "motorisedcameratracking/Imaging.py":399
  *                     xV,yV=self.intermediateVelocityCalculation(xV,yV,xCo,yCo)
  *                     #self.dataQueue.put([xV,yV])#only sends a new velocity when one is available
  *             elif self.isMultiple(targetsList):             # <<<<<<<<<<<<<<
  *                 pass#maintains the same velocity
  *                 #tweak the tracking for the scenario
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_isMultiple); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_isMultiple); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -9393,23 +9987,23 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
     }
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_v_targetsList) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_v_targetsList);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 385, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 385, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 399, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_8) {
     }
     __pyx_L5:;
 
-    /* "motorisedcameratracking/Imaging.py":390
+    /* "motorisedcameratracking/Imaging.py":404
  * 
  * 
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *                 warnings.warn('outside limits')
  *                 xV=0
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_outsideLimits); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 390, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_outsideLimits); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_2 = NULL;
     __pyx_t_6 = 0;
@@ -9426,7 +10020,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_1)) {
       PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_3);
     } else
@@ -9434,13 +10028,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
       PyObject *__pyx_temp[5] = {__pyx_t_2, __pyx_v_xLimit1, __pyx_v_xLimit2, __pyx_v_yLimit1, __pyx_v_yLimit2};
-      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 4+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_GOTREF(__pyx_t_3);
     } else
     #endif
     {
-      __pyx_t_7 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 390, __pyx_L1_error)
+      __pyx_t_7 = PyTuple_New(4+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 404, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       if (__pyx_t_2) {
         __Pyx_GIVEREF(__pyx_t_2); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_2); __pyx_t_2 = NULL;
@@ -9457,25 +10051,25 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       __Pyx_INCREF(__pyx_v_yLimit2);
       __Pyx_GIVEREF(__pyx_v_yLimit2);
       PyTuple_SET_ITEM(__pyx_t_7, 3+__pyx_t_6, __pyx_v_yLimit2);
-      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 390, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 404, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 390, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 404, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_8) {
 
-      /* "motorisedcameratracking/Imaging.py":391
+      /* "motorisedcameratracking/Imaging.py":405
  * 
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
  *                 warnings.warn('outside limits')             # <<<<<<<<<<<<<<
  *                 xV=0
  *                 yV=0
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 405, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 391, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 405, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __pyx_t_1 = NULL;
@@ -9490,12 +10084,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       }
       __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_1, __pyx_kp_s_outside_limits) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_kp_s_outside_limits);
       __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 405, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":392
+      /* "motorisedcameratracking/Imaging.py":406
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):
  *                 warnings.warn('outside limits')
  *                 xV=0             # <<<<<<<<<<<<<<
@@ -9505,7 +10099,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_DECREF_SET(__pyx_v_xV, __pyx_int_0);
 
-      /* "motorisedcameratracking/Imaging.py":393
+      /* "motorisedcameratracking/Imaging.py":407
  *                 warnings.warn('outside limits')
  *                 xV=0
  *                 yV=0             # <<<<<<<<<<<<<<
@@ -9515,7 +10109,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_DECREF_SET(__pyx_v_yV, __pyx_int_0);
 
-      /* "motorisedcameratracking/Imaging.py":394
+      /* "motorisedcameratracking/Imaging.py":408
  *                 xV=0
  *                 yV=0
  *                 recentre=True             # <<<<<<<<<<<<<<
@@ -9524,7 +10118,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
  */
       __pyx_v_recentre = 1;
 
-      /* "motorisedcameratracking/Imaging.py":390
+      /* "motorisedcameratracking/Imaging.py":404
  * 
  * 
  *             if self.outsideLimits(xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
@@ -9533,25 +10127,25 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
  */
     }
 
-    /* "motorisedcameratracking/Imaging.py":396
+    /* "motorisedcameratracking/Imaging.py":410
  *                 recentre=True
  *                 #self.MC.recentre()
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})             # <<<<<<<<<<<<<<
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
  */
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_MCPipe); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_send); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_send); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 396, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 396, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 396, __pyx_L1_error)
-    __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_v_recentre); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 396, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_xV, __pyx_v_xV) < 0) __PYX_ERR(0, 410, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_yV, __pyx_v_yV) < 0) __PYX_ERR(0, 410, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyBool_FromLong(__pyx_v_recentre); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_recentre, __pyx_t_2) < 0) __PYX_ERR(0, 396, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_recentre, __pyx_t_2) < 0) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_t_2 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
@@ -9566,21 +10160,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
     __pyx_t_3 = (__pyx_t_2) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_2, __pyx_t_7) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_t_7);
     __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 396, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 410, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":398
+    /* "motorisedcameratracking/Imaging.py":412
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 398, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_controlQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 398, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 412, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -9595,35 +10189,93 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
     }
     __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_t_1) : __Pyx_PyObject_CallNoArg(__pyx_t_7);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 398, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 412, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 398, __pyx_L1_error)
+    __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 412, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __pyx_t_4 = ((!__pyx_t_8) != 0);
     if (__pyx_t_4) {
 
-      /* "motorisedcameratracking/Imaging.py":399
+      /* "motorisedcameratracking/Imaging.py":413
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)             # <<<<<<<<<<<<<<
+ *                 warnings.warn("imaging terminating")
+ *                 break
+ */
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_threadKillQueue); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 413, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_put); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 413, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __pyx_t_7 = NULL;
+      if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_1))) {
+        __pyx_t_7 = PyMethod_GET_SELF(__pyx_t_1);
+        if (likely(__pyx_t_7)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+          __Pyx_INCREF(__pyx_t_7);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_1, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_7) ? __Pyx_PyObject_Call2Args(__pyx_t_1, __pyx_t_7, __pyx_int_1) : __Pyx_PyObject_CallOneArg(__pyx_t_1, __pyx_int_1);
+      __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 413, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":414
+ *             if not self.controlQueue.empty():#breaks when the signal is sent
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")             # <<<<<<<<<<<<<<
+ *                 break
+ * 
+ */
+      __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 414, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_1);
+      __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 414, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_7);
+      __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+      __pyx_t_1 = NULL;
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_7))) {
+        __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_7);
+        if (likely(__pyx_t_1)) {
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
+          __Pyx_INCREF(__pyx_t_1);
+          __Pyx_INCREF(function);
+          __Pyx_DECREF_SET(__pyx_t_7, function);
+        }
+      }
+      __pyx_t_3 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_1, __pyx_kp_s_imaging_terminating) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_kp_s_imaging_terminating);
+      __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
+      if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 414, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_3);
+      __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
+      __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+
+      /* "motorisedcameratracking/Imaging.py":415
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  *                 break             # <<<<<<<<<<<<<<
  * 
  *     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):
  */
       goto __pyx_L4_break;
 
-      /* "motorisedcameratracking/Imaging.py":398
+      /* "motorisedcameratracking/Imaging.py":412
  *             self.MCPipe.send({'xV':xV,'yV':yV,'recentre':recentre})
  * 
  *             if not self.controlQueue.empty():#breaks when the signal is sent             # <<<<<<<<<<<<<<
- *                 break
- * 
+ *                 self.threadKillQueue.put(1)
+ *                 warnings.warn("imaging terminating")
  */
     }
   }
   __pyx_L4_break:;
 
-  /* "motorisedcameratracking/Imaging.py":369
+  /* "motorisedcameratracking/Imaging.py":383
  *                 break
  * 
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
@@ -9653,7 +10305,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_34intermed
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":401
+/* "motorisedcameratracking/Imaging.py":417
  *                 break
  * 
  *     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):             # <<<<<<<<<<<<<<
@@ -9678,7 +10330,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_37intermed
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("intermediateVelocityCalculation (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xV,&__pyx_n_s_yV,&__pyx_n_s_xCo_2,&__pyx_n_s_yCo_2,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xV,&__pyx_n_s_yV,&__pyx_n_s_xCo,&__pyx_n_s_yCo,0};
     PyObject* values[5] = {0,0,0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -9706,29 +10358,29 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_37intermed
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xV)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 1); __PYX_ERR(0, 401, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 1); __PYX_ERR(0, 417, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yV)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 2); __PYX_ERR(0, 401, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 2); __PYX_ERR(0, 417, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xCo_2)) != 0)) kw_args--;
+        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xCo)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 3); __PYX_ERR(0, 401, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 3); __PYX_ERR(0, 417, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yCo_2)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yCo)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 4); __PYX_ERR(0, 401, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, 4); __PYX_ERR(0, 417, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "intermediateVelocityCalculation") < 0)) __PYX_ERR(0, 401, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "intermediateVelocityCalculation") < 0)) __PYX_ERR(0, 417, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -9747,7 +10399,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_37intermed
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 401, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("intermediateVelocityCalculation", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 417, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.intermediateVelocityCalculation", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -9780,115 +10432,115 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_36intermed
   __Pyx_INCREF(__pyx_v_xV);
   __Pyx_INCREF(__pyx_v_yV);
 
-  /* "motorisedcameratracking/Imaging.py":410
+  /* "motorisedcameratracking/Imaging.py":426
  * 
  *         """
  *         xDis=xCo-self.xMid             # <<<<<<<<<<<<<<
  *         yDis=yCo-self.yMid
  *         x=xDis/self.xMid
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 410, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Subtract(__pyx_v_xCo, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 410, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Subtract(__pyx_v_xCo, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 426, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_xDis = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":411
+  /* "motorisedcameratracking/Imaging.py":427
  *         """
  *         xDis=xCo-self.xMid
  *         yDis=yCo-self.yMid             # <<<<<<<<<<<<<<
  *         x=xDis/self.xMid
  *         y=yDis/self.yMid
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 411, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Subtract(__pyx_v_yCo, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 411, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Subtract(__pyx_v_yCo, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 427, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_yDis = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":412
+  /* "motorisedcameratracking/Imaging.py":428
  *         xDis=xCo-self.xMid
  *         yDis=yCo-self.yMid
  *         x=xDis/self.xMid             # <<<<<<<<<<<<<<
  *         y=yDis/self.yMid
- *         maxAdditionalSpeed=10
+ *         maxAdditionalSpeed=10#defines the max speed that will be added if the object is at the farthest end of the frame
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 412, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMid); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 428, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_v_xDis, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 412, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_v_xDis, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 428, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_x = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":413
+  /* "motorisedcameratracking/Imaging.py":429
  *         yDis=yCo-self.yMid
  *         x=xDis/self.xMid
  *         y=yDis/self.yMid             # <<<<<<<<<<<<<<
- *         maxAdditionalSpeed=10
- *         xV=xV+x*maxAdditionalSpeed
+ *         maxAdditionalSpeed=10#defines the max speed that will be added if the object is at the farthest end of the frame
+ *         xV=xV+x*maxAdditionalSpeed#works out the new velocities
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMid); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_v_yDis, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 413, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_v_yDis, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 429, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_y = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":414
+  /* "motorisedcameratracking/Imaging.py":430
  *         x=xDis/self.xMid
  *         y=yDis/self.yMid
- *         maxAdditionalSpeed=10             # <<<<<<<<<<<<<<
- *         xV=xV+x*maxAdditionalSpeed
+ *         maxAdditionalSpeed=10#defines the max speed that will be added if the object is at the farthest end of the frame             # <<<<<<<<<<<<<<
+ *         xV=xV+x*maxAdditionalSpeed#works out the new velocities
  *         yV=xV+y*maxAdditionalSpeed
  */
   __Pyx_INCREF(__pyx_int_10);
   __pyx_v_maxAdditionalSpeed = __pyx_int_10;
 
-  /* "motorisedcameratracking/Imaging.py":415
+  /* "motorisedcameratracking/Imaging.py":431
  *         y=yDis/self.yMid
- *         maxAdditionalSpeed=10
- *         xV=xV+x*maxAdditionalSpeed             # <<<<<<<<<<<<<<
+ *         maxAdditionalSpeed=10#defines the max speed that will be added if the object is at the farthest end of the frame
+ *         xV=xV+x*maxAdditionalSpeed#works out the new velocities             # <<<<<<<<<<<<<<
  *         yV=xV+y*maxAdditionalSpeed
  *         return self.velocityCheck(xV,yV)
  */
-  __pyx_t_1 = PyNumber_Multiply(__pyx_v_x, __pyx_v_maxAdditionalSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Multiply(__pyx_v_x, __pyx_v_maxAdditionalSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyNumber_Add(__pyx_v_xV, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 415, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Add(__pyx_v_xV, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 431, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF_SET(__pyx_v_xV, __pyx_t_2);
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":416
- *         maxAdditionalSpeed=10
- *         xV=xV+x*maxAdditionalSpeed
+  /* "motorisedcameratracking/Imaging.py":432
+ *         maxAdditionalSpeed=10#defines the max speed that will be added if the object is at the farthest end of the frame
+ *         xV=xV+x*maxAdditionalSpeed#works out the new velocities
  *         yV=xV+y*maxAdditionalSpeed             # <<<<<<<<<<<<<<
  *         return self.velocityCheck(xV,yV)
  * 
  */
-  __pyx_t_2 = PyNumber_Multiply(__pyx_v_y, __pyx_v_maxAdditionalSpeed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 416, __pyx_L1_error)
+  __pyx_t_2 = PyNumber_Multiply(__pyx_v_y, __pyx_v_maxAdditionalSpeed); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyNumber_Add(__pyx_v_xV, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 416, __pyx_L1_error)
+  __pyx_t_1 = PyNumber_Add(__pyx_v_xV, __pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 432, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF_SET(__pyx_v_yV, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":417
- *         xV=xV+x*maxAdditionalSpeed
+  /* "motorisedcameratracking/Imaging.py":433
+ *         xV=xV+x*maxAdditionalSpeed#works out the new velocities
  *         yV=xV+y*maxAdditionalSpeed
  *         return self.velocityCheck(xV,yV)             # <<<<<<<<<<<<<<
  * 
  * ###############################################################
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_velocityCheck); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 417, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_velocityCheck); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 433, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   __pyx_t_4 = 0;
@@ -9905,7 +10557,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_36intermed
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_xV, __pyx_v_yV};
-    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 417, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
@@ -9913,13 +10565,13 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_36intermed
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_2)) {
     PyObject *__pyx_temp[3] = {__pyx_t_3, __pyx_v_xV, __pyx_v_yV};
-    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 417, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_2, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_GOTREF(__pyx_t_1);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 417, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 433, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_3) {
       __Pyx_GIVEREF(__pyx_t_3); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_3); __pyx_t_3 = NULL;
@@ -9930,7 +10582,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_36intermed
     __Pyx_INCREF(__pyx_v_yV);
     __Pyx_GIVEREF(__pyx_v_yV);
     PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_v_yV);
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 417, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 433, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -9939,7 +10591,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_36intermed
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":401
+  /* "motorisedcameratracking/Imaging.py":417
  *                 break
  * 
  *     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):             # <<<<<<<<<<<<<<
@@ -9968,7 +10620,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_36intermed
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":421
+/* "motorisedcameratracking/Imaging.py":437
  * ###############################################################
  * 
  *     def inCentralBox(self,xCo,yCo):             # <<<<<<<<<<<<<<
@@ -9990,7 +10642,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_39inCentra
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("inCentralBox (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xCo_2,&__pyx_n_s_yCo_2,0};
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_self,&__pyx_n_s_xCo,&__pyx_n_s_yCo,0};
     PyObject* values[3] = {0,0,0};
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
@@ -10012,19 +10664,19 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_39inCentra
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
-        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xCo_2)) != 0)) kw_args--;
+        if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xCo)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("inCentralBox", 1, 3, 3, 1); __PYX_ERR(0, 421, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("inCentralBox", 1, 3, 3, 1); __PYX_ERR(0, 437, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
-        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yCo_2)) != 0)) kw_args--;
+        if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yCo)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("inCentralBox", 1, 3, 3, 2); __PYX_ERR(0, 421, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("inCentralBox", 1, 3, 3, 2); __PYX_ERR(0, 437, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "inCentralBox") < 0)) __PYX_ERR(0, 421, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "inCentralBox") < 0)) __PYX_ERR(0, 437, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -10039,7 +10691,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_39inCentra
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("inCentralBox", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 421, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("inCentralBox", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 437, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.inCentralBox", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10066,61 +10718,61 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_38inCentra
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("inCentralBox", 0);
 
-  /* "motorisedcameratracking/Imaging.py":422
+  /* "motorisedcameratracking/Imaging.py":438
  * 
  *     def inCentralBox(self,xCo,yCo):
  *         if self.centralBox[0]<xCo<self.centralBox[1] and self.centralBox[2]<yCo<self.centralBox[3] :             # <<<<<<<<<<<<<<
  *             return True
  *         else:
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_v_xCo, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_v_xCo, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
   if (__Pyx_PyObject_IsTrue(__pyx_t_2)) {
     __Pyx_DECREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 422, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 438, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 422, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 438, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_xCo, __pyx_t_5, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_xCo, __pyx_t_5, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_6) {
   } else {
     __pyx_t_1 = __pyx_t_6;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_2, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_v_yCo, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_t_3, __pyx_v_yCo, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
   if (__Pyx_PyObject_IsTrue(__pyx_t_2)) {
     __Pyx_DECREF(__pyx_t_2);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 422, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_centralBox); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 438, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 422, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 438, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_2 = PyObject_RichCompare(__pyx_v_yCo, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 422, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_v_yCo, __pyx_t_4, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 422, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_6 < 0)) __PYX_ERR(0, 438, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_t_1 = __pyx_t_6;
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "motorisedcameratracking/Imaging.py":423
+    /* "motorisedcameratracking/Imaging.py":439
  *     def inCentralBox(self,xCo,yCo):
  *         if self.centralBox[0]<xCo<self.centralBox[1] and self.centralBox[2]<yCo<self.centralBox[3] :
  *             return True             # <<<<<<<<<<<<<<
@@ -10132,7 +10784,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_38inCentra
     __pyx_r = Py_True;
     goto __pyx_L0;
 
-    /* "motorisedcameratracking/Imaging.py":422
+    /* "motorisedcameratracking/Imaging.py":438
  * 
  *     def inCentralBox(self,xCo,yCo):
  *         if self.centralBox[0]<xCo<self.centralBox[1] and self.centralBox[2]<yCo<self.centralBox[3] :             # <<<<<<<<<<<<<<
@@ -10141,7 +10793,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_38inCentra
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":425
+  /* "motorisedcameratracking/Imaging.py":441
  *             return True
  *         else:
  *             return False             # <<<<<<<<<<<<<<
@@ -10155,7 +10807,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_38inCentra
     goto __pyx_L0;
   }
 
-  /* "motorisedcameratracking/Imaging.py":421
+  /* "motorisedcameratracking/Imaging.py":437
  * ###############################################################
  * 
  *     def inCentralBox(self,xCo,yCo):             # <<<<<<<<<<<<<<
@@ -10177,7 +10829,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_38inCentra
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":427
+/* "motorisedcameratracking/Imaging.py":443
  *             return False
  * 
  *     def isMultiple(self,targetList):             # <<<<<<<<<<<<<<
@@ -10220,11 +10872,11 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_41isMultip
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_targetList)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("isMultiple", 1, 2, 2, 1); __PYX_ERR(0, 427, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("isMultiple", 1, 2, 2, 1); __PYX_ERR(0, 443, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "isMultiple") < 0)) __PYX_ERR(0, 427, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "isMultiple") < 0)) __PYX_ERR(0, 443, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -10237,7 +10889,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_41isMultip
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("isMultiple", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 427, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("isMultiple", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 443, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.isMultiple", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10260,18 +10912,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_40isMultip
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("isMultiple", 0);
 
-  /* "motorisedcameratracking/Imaging.py":428
+  /* "motorisedcameratracking/Imaging.py":444
  * 
  *     def isMultiple(self,targetList):
  *         if len(targetList)>1:             # <<<<<<<<<<<<<<
  *             return True
  *         else:
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_targetList); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 428, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_targetList); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 444, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_1 > 1) != 0);
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":429
+    /* "motorisedcameratracking/Imaging.py":445
  *     def isMultiple(self,targetList):
  *         if len(targetList)>1:
  *             return True             # <<<<<<<<<<<<<<
@@ -10283,7 +10935,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_40isMultip
     __pyx_r = Py_True;
     goto __pyx_L0;
 
-    /* "motorisedcameratracking/Imaging.py":428
+    /* "motorisedcameratracking/Imaging.py":444
  * 
  *     def isMultiple(self,targetList):
  *         if len(targetList)>1:             # <<<<<<<<<<<<<<
@@ -10292,7 +10944,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_40isMultip
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":431
+  /* "motorisedcameratracking/Imaging.py":447
  *             return True
  *         else:
  *             return False             # <<<<<<<<<<<<<<
@@ -10306,7 +10958,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_40isMultip
     goto __pyx_L0;
   }
 
-  /* "motorisedcameratracking/Imaging.py":427
+  /* "motorisedcameratracking/Imaging.py":443
  *             return False
  * 
  *     def isMultiple(self,targetList):             # <<<<<<<<<<<<<<
@@ -10324,17 +10976,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_40isMultip
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":433
+/* "motorisedcameratracking/Imaging.py":449
  *             return False
  * 
  *     def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """checks if the limits have been exceded"""
  *         print('xl1',xLimit1)
- *         print('xl2',xLimit2)
  */
 
 /* Python wrapper */
 static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits = {"outsideLimits", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits, METH_VARARGS|METH_KEYWORDS, 0};
+static char __pyx_doc_23motorisedcameratracking_7Imaging_7Imaging_42outsideLimits[] = "checks if the limits have been exceded";
+static PyMethodDef __pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits = {"outsideLimits", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits, METH_VARARGS|METH_KEYWORDS, __pyx_doc_23motorisedcameratracking_7Imaging_7Imaging_42outsideLimits};
 static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_self = 0;
   PyObject *__pyx_v_xLimit1 = 0;
@@ -10376,29 +11029,29 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_43outsideL
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 1); __PYX_ERR(0, 433, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 1); __PYX_ERR(0, 449, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 2); __PYX_ERR(0, 433, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 2); __PYX_ERR(0, 449, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 3); __PYX_ERR(0, 433, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 3); __PYX_ERR(0, 449, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yLimit2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 4); __PYX_ERR(0, 433, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, 4); __PYX_ERR(0, 449, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "outsideLimits") < 0)) __PYX_ERR(0, 433, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "outsideLimits") < 0)) __PYX_ERR(0, 449, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 5) {
       goto __pyx_L5_argtuple_error;
@@ -10417,7 +11070,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_43outsideL
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 433, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("outsideLimits", 1, 5, 5, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 449, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.outsideLimits", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10442,14 +11095,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("outsideLimits", 0);
 
-  /* "motorisedcameratracking/Imaging.py":434
- * 
+  /* "motorisedcameratracking/Imaging.py":451
  *     def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):
+ *         """checks if the limits have been exceded"""
  *         print('xl1',xLimit1)             # <<<<<<<<<<<<<<
  *         print('xl2',xLimit2)
  *         print('yl1',yLimit1)
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 434, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 451, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_xl1);
   __Pyx_GIVEREF(__pyx_n_s_xl1);
@@ -10457,17 +11110,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   __Pyx_INCREF(__pyx_v_xLimit1);
   __Pyx_GIVEREF(__pyx_v_xLimit1);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_xLimit1);
-  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 434, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 451, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":435
- *     def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):
+  /* "motorisedcameratracking/Imaging.py":452
+ *         """checks if the limits have been exceded"""
  *         print('xl1',xLimit1)
  *         print('xl2',xLimit2)             # <<<<<<<<<<<<<<
  *         print('yl1',yLimit1)
  *         print('yl2',yLimit2)
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 435, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_xl2);
   __Pyx_GIVEREF(__pyx_n_s_xl2);
@@ -10475,17 +11128,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   __Pyx_INCREF(__pyx_v_xLimit2);
   __Pyx_GIVEREF(__pyx_v_xLimit2);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_xLimit2);
-  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 435, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 452, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":436
+  /* "motorisedcameratracking/Imaging.py":453
  *         print('xl1',xLimit1)
  *         print('xl2',xLimit2)
  *         print('yl1',yLimit1)             # <<<<<<<<<<<<<<
  *         print('yl2',yLimit2)
  *         print('xD',self.xD)
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 436, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_yl1);
   __Pyx_GIVEREF(__pyx_n_s_yl1);
@@ -10493,17 +11146,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   __Pyx_INCREF(__pyx_v_yLimit1);
   __Pyx_GIVEREF(__pyx_v_yLimit1);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_yLimit1);
-  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 436, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 453, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":437
+  /* "motorisedcameratracking/Imaging.py":454
  *         print('xl2',xLimit2)
  *         print('yl1',yLimit1)
  *         print('yl2',yLimit2)             # <<<<<<<<<<<<<<
  *         print('xD',self.xD)
  *         print('yD',self.yD)
  */
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 437, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_yl2);
   __Pyx_GIVEREF(__pyx_n_s_yl2);
@@ -10511,19 +11164,19 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   __Pyx_INCREF(__pyx_v_yLimit2);
   __Pyx_GIVEREF(__pyx_v_yLimit2);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_v_yLimit2);
-  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 437, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 454, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":438
+  /* "motorisedcameratracking/Imaging.py":455
  *         print('yl1',yLimit1)
  *         print('yl2',yLimit2)
  *         print('xD',self.xD)             # <<<<<<<<<<<<<<
  *         print('yD',self.yD)
  *         if not (xLimit1<self.xD<xLimit2 and yLimit1<self.yD<yLimit2):
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 438, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_xD);
   __Pyx_GIVEREF(__pyx_n_s_xD);
@@ -10531,19 +11184,19 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
   __pyx_t_1 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 438, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_2) < 0) __PYX_ERR(0, 455, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":439
+  /* "motorisedcameratracking/Imaging.py":456
  *         print('yl2',yLimit2)
  *         print('xD',self.xD)
  *         print('yD',self.yD)             # <<<<<<<<<<<<<<
  *         if not (xLimit1<self.xD<xLimit2 and yLimit1<self.yD<yLimit2):
  *             return True
  */
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 439, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 439, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_yD);
   __Pyx_GIVEREF(__pyx_n_s_yD);
@@ -10551,47 +11204,47 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_2);
   __pyx_t_2 = 0;
-  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 439, __pyx_L1_error)
+  if (__Pyx_PrintOne(0, __pyx_t_1) < 0) __PYX_ERR(0, 456, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":440
+  /* "motorisedcameratracking/Imaging.py":457
  *         print('xD',self.xD)
  *         print('yD',self.yD)
  *         if not (xLimit1<self.xD<xLimit2 and yLimit1<self.yD<yLimit2):             # <<<<<<<<<<<<<<
  *             return True
  *         else:
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xD); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyObject_RichCompare(__pyx_v_xLimit1, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_2 = PyObject_RichCompare(__pyx_v_xLimit1, __pyx_t_1, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 457, __pyx_L1_error)
   if (__Pyx_PyObject_IsTrue(__pyx_t_2)) {
     __Pyx_DECREF(__pyx_t_2);
-    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_v_xLimit2, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 440, __pyx_L1_error)
+    __pyx_t_2 = PyObject_RichCompare(__pyx_t_1, __pyx_v_xLimit2, Py_LT); __Pyx_XGOTREF(__pyx_t_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 457, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_2); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
   } else {
     __pyx_t_3 = __pyx_t_4;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yD); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_yLimit1, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_yLimit1, __pyx_t_2, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
   if (__Pyx_PyObject_IsTrue(__pyx_t_1)) {
     __Pyx_DECREF(__pyx_t_1);
-    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_v_yLimit2, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 440, __pyx_L1_error)
+    __pyx_t_1 = PyObject_RichCompare(__pyx_t_2, __pyx_v_yLimit2, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 457, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 440, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 457, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_3 = __pyx_t_4;
   __pyx_L4_bool_binop_done:;
   __pyx_t_4 = ((!__pyx_t_3) != 0);
   if (__pyx_t_4) {
 
-    /* "motorisedcameratracking/Imaging.py":441
+    /* "motorisedcameratracking/Imaging.py":458
  *         print('yD',self.yD)
  *         if not (xLimit1<self.xD<xLimit2 and yLimit1<self.yD<yLimit2):
  *             return True             # <<<<<<<<<<<<<<
@@ -10603,7 +11256,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
     __pyx_r = Py_True;
     goto __pyx_L0;
 
-    /* "motorisedcameratracking/Imaging.py":440
+    /* "motorisedcameratracking/Imaging.py":457
  *         print('xD',self.xD)
  *         print('yD',self.yD)
  *         if not (xLimit1<self.xD<xLimit2 and yLimit1<self.yD<yLimit2):             # <<<<<<<<<<<<<<
@@ -10612,7 +11265,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":443
+  /* "motorisedcameratracking/Imaging.py":460
  *             return True
  *         else:
  *             return False             # <<<<<<<<<<<<<<
@@ -10626,12 +11279,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
     goto __pyx_L0;
   }
 
-  /* "motorisedcameratracking/Imaging.py":433
+  /* "motorisedcameratracking/Imaging.py":449
  *             return False
  * 
  *     def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """checks if the limits have been exceded"""
  *         print('xl1',xLimit1)
- *         print('xl2',xLimit2)
  */
 
   /* function exit code */
@@ -10646,12 +11299,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_42outsideL
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":447
+/* "motorisedcameratracking/Imaging.py":464
  * 
  * 
  *     def velocityCheck(self,xV,yV):             # <<<<<<<<<<<<<<
  *         """used for ensuring the velocity is below the maxSpeed"""
- *         if xV <0:
+ *         #works out the speeds
  */
 
 /* Python wrapper */
@@ -10693,17 +11346,17 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_45velocity
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_xV)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("velocityCheck", 1, 3, 3, 1); __PYX_ERR(0, 447, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("velocityCheck", 1, 3, 3, 1); __PYX_ERR(0, 464, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_yV)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("velocityCheck", 1, 3, 3, 2); __PYX_ERR(0, 447, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("velocityCheck", 1, 3, 3, 2); __PYX_ERR(0, 464, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "velocityCheck") < 0)) __PYX_ERR(0, 447, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "velocityCheck") < 0)) __PYX_ERR(0, 464, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -10718,7 +11371,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_7Imaging_45velocity
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("velocityCheck", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 447, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("velocityCheck", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 464, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.Imaging.velocityCheck", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -10746,33 +11399,33 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
   __Pyx_INCREF(__pyx_v_xV);
   __Pyx_INCREF(__pyx_v_yV);
 
-  /* "motorisedcameratracking/Imaging.py":449
- *     def velocityCheck(self,xV,yV):
+  /* "motorisedcameratracking/Imaging.py":467
  *         """used for ensuring the velocity is below the maxSpeed"""
+ *         #works out the speeds
  *         if xV <0:             # <<<<<<<<<<<<<<
  *             xSpeed=-xV
  *         else:
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_xV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 449, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 449, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_xV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 467, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":450
- *         """used for ensuring the velocity is below the maxSpeed"""
+    /* "motorisedcameratracking/Imaging.py":468
+ *         #works out the speeds
  *         if xV <0:
  *             xSpeed=-xV             # <<<<<<<<<<<<<<
  *         else:
  *             xSpeed=xV
  */
-    __pyx_t_1 = PyNumber_Negative(__pyx_v_xV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 450, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Negative(__pyx_v_xV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 468, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_xSpeed = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":449
- *     def velocityCheck(self,xV,yV):
+    /* "motorisedcameratracking/Imaging.py":467
  *         """used for ensuring the velocity is below the maxSpeed"""
+ *         #works out the speeds
  *         if xV <0:             # <<<<<<<<<<<<<<
  *             xSpeed=-xV
  *         else:
@@ -10780,7 +11433,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
     goto __pyx_L3;
   }
 
-  /* "motorisedcameratracking/Imaging.py":452
+  /* "motorisedcameratracking/Imaging.py":470
  *             xSpeed=-xV
  *         else:
  *             xSpeed=xV             # <<<<<<<<<<<<<<
@@ -10793,31 +11446,31 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
   }
   __pyx_L3:;
 
-  /* "motorisedcameratracking/Imaging.py":454
+  /* "motorisedcameratracking/Imaging.py":472
  *             xSpeed=xV
  * 
  *         if yV <0:             # <<<<<<<<<<<<<<
  *             ySpeed=-yV
  *         else:
  */
-  __pyx_t_1 = PyObject_RichCompare(__pyx_v_yV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 454, __pyx_L1_error)
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 454, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_v_yV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 472, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 472, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":455
+    /* "motorisedcameratracking/Imaging.py":473
  * 
  *         if yV <0:
  *             ySpeed=-yV             # <<<<<<<<<<<<<<
  *         else:
  *             ySpeed=yV
  */
-    __pyx_t_1 = PyNumber_Negative(__pyx_v_yV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 455, __pyx_L1_error)
+    __pyx_t_1 = PyNumber_Negative(__pyx_v_yV); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 473, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_ySpeed = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":454
+    /* "motorisedcameratracking/Imaging.py":472
  *             xSpeed=xV
  * 
  *         if yV <0:             # <<<<<<<<<<<<<<
@@ -10827,12 +11480,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
     goto __pyx_L4;
   }
 
-  /* "motorisedcameratracking/Imaging.py":457
+  /* "motorisedcameratracking/Imaging.py":475
  *             ySpeed=-yV
  *         else:
  *             ySpeed=yV             # <<<<<<<<<<<<<<
  * 
- *         if xSpeed>self.xMaxSpeed:
+ *             #compares the speed to the max speed
  */
   /*else*/ {
     __Pyx_INCREF(__pyx_v_yV);
@@ -10840,125 +11493,125 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
   }
   __pyx_L4:;
 
-  /* "motorisedcameratracking/Imaging.py":459
- *             ySpeed=yV
+  /* "motorisedcameratracking/Imaging.py":478
  * 
+ *             #compares the speed to the max speed
  *         if xSpeed>self.xMaxSpeed:             # <<<<<<<<<<<<<<
  *             if xV <0:
- *                 xV=-self.xMaxSpeed
+ *                 xV=-self.xMaxSpeed#sets the velocity to the max velocity if it is exceeded
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 459, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_v_xSpeed, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 459, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_v_xSpeed, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 459, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 478, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":460
- * 
+    /* "motorisedcameratracking/Imaging.py":479
+ *             #compares the speed to the max speed
  *         if xSpeed>self.xMaxSpeed:
  *             if xV <0:             # <<<<<<<<<<<<<<
- *                 xV=-self.xMaxSpeed
+ *                 xV=-self.xMaxSpeed#sets the velocity to the max velocity if it is exceeded
  *             else:
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_xV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 460, __pyx_L1_error)
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 460, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_xV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 479, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 479, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "motorisedcameratracking/Imaging.py":461
+      /* "motorisedcameratracking/Imaging.py":480
  *         if xSpeed>self.xMaxSpeed:
  *             if xV <0:
- *                 xV=-self.xMaxSpeed             # <<<<<<<<<<<<<<
+ *                 xV=-self.xMaxSpeed#sets the velocity to the max velocity if it is exceeded             # <<<<<<<<<<<<<<
  *             else:
  *                 xV=self.xMaxSpeed
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 461, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 480, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 461, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 480, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_xV, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":460
- * 
+      /* "motorisedcameratracking/Imaging.py":479
+ *             #compares the speed to the max speed
  *         if xSpeed>self.xMaxSpeed:
  *             if xV <0:             # <<<<<<<<<<<<<<
- *                 xV=-self.xMaxSpeed
+ *                 xV=-self.xMaxSpeed#sets the velocity to the max velocity if it is exceeded
  *             else:
  */
       goto __pyx_L6;
     }
 
-    /* "motorisedcameratracking/Imaging.py":463
- *                 xV=-self.xMaxSpeed
+    /* "motorisedcameratracking/Imaging.py":482
+ *                 xV=-self.xMaxSpeed#sets the velocity to the max velocity if it is exceeded
  *             else:
  *                 xV=self.xMaxSpeed             # <<<<<<<<<<<<<<
  * 
  *         if ySpeed>self.yMaxSpeed:
  */
     /*else*/ {
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 463, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_xMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 482, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF_SET(__pyx_v_xV, __pyx_t_1);
       __pyx_t_1 = 0;
     }
     __pyx_L6:;
 
-    /* "motorisedcameratracking/Imaging.py":459
- *             ySpeed=yV
+    /* "motorisedcameratracking/Imaging.py":478
  * 
+ *             #compares the speed to the max speed
  *         if xSpeed>self.xMaxSpeed:             # <<<<<<<<<<<<<<
  *             if xV <0:
- *                 xV=-self.xMaxSpeed
+ *                 xV=-self.xMaxSpeed#sets the velocity to the max velocity if it is exceeded
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":465
+  /* "motorisedcameratracking/Imaging.py":484
  *                 xV=self.xMaxSpeed
  * 
  *         if ySpeed>self.yMaxSpeed:             # <<<<<<<<<<<<<<
  *             if yV <0:
  *                 yV=-self.yMaxSpeed
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 465, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_v_ySpeed, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 465, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_v_ySpeed, __pyx_t_1, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 465, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 484, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":466
+    /* "motorisedcameratracking/Imaging.py":485
  * 
  *         if ySpeed>self.yMaxSpeed:
  *             if yV <0:             # <<<<<<<<<<<<<<
  *                 yV=-self.yMaxSpeed
  *             else:
  */
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_yV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 466, __pyx_L1_error)
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 466, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_yV, __pyx_int_0, Py_LT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 485, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 485, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "motorisedcameratracking/Imaging.py":467
+      /* "motorisedcameratracking/Imaging.py":486
  *         if ySpeed>self.yMaxSpeed:
  *             if yV <0:
  *                 yV=-self.yMaxSpeed             # <<<<<<<<<<<<<<
  *             else:
  *                 yV=self.yMaxSpeed
  */
-      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 467, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 486, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 467, __pyx_L1_error)
+      __pyx_t_1 = PyNumber_Negative(__pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 486, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF_SET(__pyx_v_yV, __pyx_t_1);
       __pyx_t_1 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":466
+      /* "motorisedcameratracking/Imaging.py":485
  * 
  *         if ySpeed>self.yMaxSpeed:
  *             if yV <0:             # <<<<<<<<<<<<<<
@@ -10968,7 +11621,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
       goto __pyx_L8;
     }
 
-    /* "motorisedcameratracking/Imaging.py":469
+    /* "motorisedcameratracking/Imaging.py":488
  *                 yV=-self.yMaxSpeed
  *             else:
  *                 yV=self.yMaxSpeed             # <<<<<<<<<<<<<<
@@ -10976,14 +11629,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
  *         return xV,yV
  */
     /*else*/ {
-      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 469, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_yMaxSpeed); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 488, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_DECREF_SET(__pyx_v_yV, __pyx_t_1);
       __pyx_t_1 = 0;
     }
     __pyx_L8:;
 
-    /* "motorisedcameratracking/Imaging.py":465
+    /* "motorisedcameratracking/Imaging.py":484
  *                 xV=self.xMaxSpeed
  * 
  *         if ySpeed>self.yMaxSpeed:             # <<<<<<<<<<<<<<
@@ -10992,7 +11645,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":471
+  /* "motorisedcameratracking/Imaging.py":490
  *                 yV=self.yMaxSpeed
  * 
  *         return xV,yV             # <<<<<<<<<<<<<<
@@ -11000,7 +11653,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 471, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 490, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_xV);
   __Pyx_GIVEREF(__pyx_v_xV);
@@ -11012,12 +11665,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":447
+  /* "motorisedcameratracking/Imaging.py":464
  * 
  * 
  *     def velocityCheck(self,xV,yV):             # <<<<<<<<<<<<<<
  *         """used for ensuring the velocity is below the maxSpeed"""
- *         if xV <0:
+ *         #works out the speeds
  */
 
   /* function exit code */
@@ -11036,7 +11689,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_7Imaging_44velocity
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":484
+/* "motorisedcameratracking/Imaging.py":503
  *     OR=None
  *     targets: list = []
  *     def __init__(self,target: str,imageReturnQueue=None):             # <<<<<<<<<<<<<<
@@ -11083,7 +11736,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_target)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, 1); __PYX_ERR(0, 484, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, 1); __PYX_ERR(0, 503, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -11093,7 +11746,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 484, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__init__") < 0)) __PYX_ERR(0, 503, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -11111,13 +11764,13 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 484, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__init__", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 503, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.ObjectRecognition.__init__", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target), (&PyString_Type), 1, "target", 1))) __PYX_ERR(0, 484, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_target), (&PyString_Type), 1, "target", 1))) __PYX_ERR(0, 503, __pyx_L1_error)
   __pyx_r = __pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition___init__(__pyx_self, __pyx_v_self, __pyx_v_target, __pyx_v_imageReturnQueue);
 
   /* function exit code */
@@ -11213,16 +11866,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__init__", 0);
 
-  /* "motorisedcameratracking/Imaging.py":486
+  /* "motorisedcameratracking/Imaging.py":505
  *     def __init__(self,target: str,imageReturnQueue=None):
  *         functions=[#defines the targets and the corresponding functions
  *             ['person',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bicycle',self.ORBackUp],
  *             ['car',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 486, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 505, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_person);
   __Pyx_GIVEREF(__pyx_n_s_person);
@@ -11231,16 +11884,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_2, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":487
+  /* "motorisedcameratracking/Imaging.py":506
  *         functions=[#defines the targets and the corresponding functions
  *             ['person',self.ORBackUp],
  *             ['bicycle',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['car',self.ORBackUp],
  *             ['motorcycle',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 487, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 487, __pyx_L1_error)
+  __pyx_t_3 = PyList_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 506, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_n_s_bicycle);
   __Pyx_GIVEREF(__pyx_n_s_bicycle);
@@ -11249,16 +11902,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_3, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":488
+  /* "motorisedcameratracking/Imaging.py":507
  *             ['person',self.ORBackUp],
  *             ['bicycle',self.ORBackUp],
  *             ['car',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['motorcycle',self.ORBackUp],
  *             ['airplane',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 507, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 488, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 507, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_n_s_car);
   __Pyx_GIVEREF(__pyx_n_s_car);
@@ -11267,16 +11920,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_4, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":489
+  /* "motorisedcameratracking/Imaging.py":508
  *             ['bicycle',self.ORBackUp],
  *             ['car',self.ORBackUp],
  *             ['motorcycle',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['airplane',self.ORBackUp],
  *             ['bus',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 489, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 489, __pyx_L1_error)
+  __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 508, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_n_s_motorcycle);
   __Pyx_GIVEREF(__pyx_n_s_motorcycle);
@@ -11285,16 +11938,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_5, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":490
+  /* "motorisedcameratracking/Imaging.py":509
  *             ['car',self.ORBackUp],
  *             ['motorcycle',self.ORBackUp],
  *             ['airplane',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bus',self.ORBackUp],
  *             ['train',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 509, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyList_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 490, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 509, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_INCREF(__pyx_n_s_airplane);
   __Pyx_GIVEREF(__pyx_n_s_airplane);
@@ -11303,16 +11956,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_6, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":491
+  /* "motorisedcameratracking/Imaging.py":510
  *             ['motorcycle',self.ORBackUp],
  *             ['airplane',self.ORBackUp],
  *             ['bus',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['train',self.ORBackUp],
  *             ['truck',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_7 = PyList_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 491, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 510, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_INCREF(__pyx_n_s_bus);
   __Pyx_GIVEREF(__pyx_n_s_bus);
@@ -11321,16 +11974,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_7, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":492
+  /* "motorisedcameratracking/Imaging.py":511
  *             ['airplane',self.ORBackUp],
  *             ['bus',self.ORBackUp],
  *             ['train',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['truck',self.ORBackUp],
  *             ['boat',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 492, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_8 = PyList_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 492, __pyx_L1_error)
+  __pyx_t_8 = PyList_New(2); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 511, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
   __Pyx_INCREF(__pyx_n_s_train);
   __Pyx_GIVEREF(__pyx_n_s_train);
@@ -11339,16 +11992,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_8, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":493
+  /* "motorisedcameratracking/Imaging.py":512
  *             ['bus',self.ORBackUp],
  *             ['train',self.ORBackUp],
  *             ['truck',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['boat',self.ORBackUp],
  *             ['traffic light',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_9 = PyList_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 493, __pyx_L1_error)
+  __pyx_t_9 = PyList_New(2); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 512, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
   __Pyx_INCREF(__pyx_n_s_truck);
   __Pyx_GIVEREF(__pyx_n_s_truck);
@@ -11357,16 +12010,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_9, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":494
+  /* "motorisedcameratracking/Imaging.py":513
  *             ['train',self.ORBackUp],
  *             ['truck',self.ORBackUp],
  *             ['boat',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['traffic light',self.ORBackUp],
  *             ['fire hydrant',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 494, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_10 = PyList_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 494, __pyx_L1_error)
+  __pyx_t_10 = PyList_New(2); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 513, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
   __Pyx_INCREF(__pyx_n_s_boat);
   __Pyx_GIVEREF(__pyx_n_s_boat);
@@ -11375,16 +12028,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_10, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":495
+  /* "motorisedcameratracking/Imaging.py":514
  *             ['truck',self.ORBackUp],
  *             ['boat',self.ORBackUp],
  *             ['traffic light',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['fire hydrant',self.ORBackUp],
  *             ['stop sign',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_11 = PyList_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 495, __pyx_L1_error)
+  __pyx_t_11 = PyList_New(2); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 514, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
   __Pyx_INCREF(__pyx_kp_s_traffic_light);
   __Pyx_GIVEREF(__pyx_kp_s_traffic_light);
@@ -11393,16 +12046,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_11, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":496
+  /* "motorisedcameratracking/Imaging.py":515
  *             ['boat',self.ORBackUp],
  *             ['traffic light',self.ORBackUp],
  *             ['fire hydrant',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['stop sign',self.ORBackUp],
  *             ['parking meter',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 496, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_12 = PyList_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 496, __pyx_L1_error)
+  __pyx_t_12 = PyList_New(2); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 515, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
   __Pyx_INCREF(__pyx_kp_s_fire_hydrant);
   __Pyx_GIVEREF(__pyx_kp_s_fire_hydrant);
@@ -11411,16 +12064,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_12, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":497
+  /* "motorisedcameratracking/Imaging.py":516
  *             ['traffic light',self.ORBackUp],
  *             ['fire hydrant',self.ORBackUp],
  *             ['stop sign',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['parking meter',self.ORBackUp],
  *             ['bench',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 497, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_13 = PyList_New(2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 497, __pyx_L1_error)
+  __pyx_t_13 = PyList_New(2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 516, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_INCREF(__pyx_kp_s_stop_sign);
   __Pyx_GIVEREF(__pyx_kp_s_stop_sign);
@@ -11429,16 +12082,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_13, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":498
+  /* "motorisedcameratracking/Imaging.py":517
  *             ['fire hydrant',self.ORBackUp],
  *             ['stop sign',self.ORBackUp],
  *             ['parking meter',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bench',self.ORBackUp],
  *             ['bird',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_14 = PyList_New(2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 498, __pyx_L1_error)
+  __pyx_t_14 = PyList_New(2); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 517, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_14);
   __Pyx_INCREF(__pyx_kp_s_parking_meter);
   __Pyx_GIVEREF(__pyx_kp_s_parking_meter);
@@ -11447,16 +12100,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_14, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":499
+  /* "motorisedcameratracking/Imaging.py":518
  *             ['stop sign',self.ORBackUp],
  *             ['parking meter',self.ORBackUp],
  *             ['bench',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bird',self.ORBackUp],
  *             ['cat',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 499, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_15 = PyList_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 499, __pyx_L1_error)
+  __pyx_t_15 = PyList_New(2); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 518, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_15);
   __Pyx_INCREF(__pyx_n_s_bench);
   __Pyx_GIVEREF(__pyx_n_s_bench);
@@ -11465,16 +12118,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_15, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":500
+  /* "motorisedcameratracking/Imaging.py":519
  *             ['parking meter',self.ORBackUp],
  *             ['bench',self.ORBackUp],
  *             ['bird',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['cat',self.ORBackUp],
  *             ['dog',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 500, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 519, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_16 = PyList_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 500, __pyx_L1_error)
+  __pyx_t_16 = PyList_New(2); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 519, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_16);
   __Pyx_INCREF(__pyx_n_s_bird);
   __Pyx_GIVEREF(__pyx_n_s_bird);
@@ -11483,16 +12136,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_16, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":501
+  /* "motorisedcameratracking/Imaging.py":520
  *             ['bench',self.ORBackUp],
  *             ['bird',self.ORBackUp],
  *             ['cat',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['dog',self.ORBackUp],
  *             ['horse',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 501, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_17 = PyList_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 501, __pyx_L1_error)
+  __pyx_t_17 = PyList_New(2); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 520, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_17);
   __Pyx_INCREF(__pyx_n_s_cat);
   __Pyx_GIVEREF(__pyx_n_s_cat);
@@ -11501,16 +12154,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_17, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":502
+  /* "motorisedcameratracking/Imaging.py":521
  *             ['bird',self.ORBackUp],
  *             ['cat',self.ORBackUp],
  *             ['dog',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['horse',self.ORBackUp],
  *             ['sheep',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 521, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_18 = PyList_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 502, __pyx_L1_error)
+  __pyx_t_18 = PyList_New(2); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 521, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_18);
   __Pyx_INCREF(__pyx_n_s_dog);
   __Pyx_GIVEREF(__pyx_n_s_dog);
@@ -11519,16 +12172,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_18, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":503
+  /* "motorisedcameratracking/Imaging.py":522
  *             ['cat',self.ORBackUp],
  *             ['dog',self.ORBackUp],
  *             ['horse',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['sheep',self.ORBackUp],
  *             ['cow',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_19 = PyList_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_19 = PyList_New(2); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 522, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_19);
   __Pyx_INCREF(__pyx_n_s_horse);
   __Pyx_GIVEREF(__pyx_n_s_horse);
@@ -11537,16 +12190,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_19, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":504
+  /* "motorisedcameratracking/Imaging.py":523
  *             ['dog',self.ORBackUp],
  *             ['horse',self.ORBackUp],
  *             ['sheep',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['cow',self.ORBackUp],
  *             ['elephant',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_20 = PyList_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 504, __pyx_L1_error)
+  __pyx_t_20 = PyList_New(2); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 523, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_20);
   __Pyx_INCREF(__pyx_n_s_sheep);
   __Pyx_GIVEREF(__pyx_n_s_sheep);
@@ -11555,16 +12208,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_20, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":505
+  /* "motorisedcameratracking/Imaging.py":524
  *             ['horse',self.ORBackUp],
  *             ['sheep',self.ORBackUp],
  *             ['cow',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['elephant',self.ORBackUp],
  *             ['bear',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 524, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_21 = PyList_New(2); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 505, __pyx_L1_error)
+  __pyx_t_21 = PyList_New(2); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 524, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_21);
   __Pyx_INCREF(__pyx_n_s_cow);
   __Pyx_GIVEREF(__pyx_n_s_cow);
@@ -11573,16 +12226,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_21, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":506
+  /* "motorisedcameratracking/Imaging.py":525
  *             ['sheep',self.ORBackUp],
  *             ['cow',self.ORBackUp],
  *             ['elephant',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bear',self.ORBackUp],
  *             ['zebra',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 525, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_22 = PyList_New(2); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 506, __pyx_L1_error)
+  __pyx_t_22 = PyList_New(2); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 525, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_22);
   __Pyx_INCREF(__pyx_n_s_elephant);
   __Pyx_GIVEREF(__pyx_n_s_elephant);
@@ -11591,16 +12244,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_22, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":507
+  /* "motorisedcameratracking/Imaging.py":526
  *             ['cow',self.ORBackUp],
  *             ['elephant',self.ORBackUp],
  *             ['bear',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['zebra',self.ORBackUp],
  *             ['giraffe',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_23 = PyList_New(2); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 507, __pyx_L1_error)
+  __pyx_t_23 = PyList_New(2); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 526, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_23);
   __Pyx_INCREF(__pyx_n_s_bear);
   __Pyx_GIVEREF(__pyx_n_s_bear);
@@ -11609,16 +12262,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_23, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":508
+  /* "motorisedcameratracking/Imaging.py":527
  *             ['elephant',self.ORBackUp],
  *             ['bear',self.ORBackUp],
  *             ['zebra',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['giraffe',self.ORBackUp],
  *             ['backpack',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 527, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_24 = PyList_New(2); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 508, __pyx_L1_error)
+  __pyx_t_24 = PyList_New(2); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 527, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_24);
   __Pyx_INCREF(__pyx_n_s_zebra);
   __Pyx_GIVEREF(__pyx_n_s_zebra);
@@ -11627,16 +12280,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_24, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":509
+  /* "motorisedcameratracking/Imaging.py":528
  *             ['bear',self.ORBackUp],
  *             ['zebra',self.ORBackUp],
  *             ['giraffe',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['backpack',self.ORBackUp],
  *             ['umbrella',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_25 = PyList_New(2); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 509, __pyx_L1_error)
+  __pyx_t_25 = PyList_New(2); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 528, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_25);
   __Pyx_INCREF(__pyx_n_s_giraffe);
   __Pyx_GIVEREF(__pyx_n_s_giraffe);
@@ -11645,16 +12298,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_25, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":510
+  /* "motorisedcameratracking/Imaging.py":529
  *             ['zebra',self.ORBackUp],
  *             ['giraffe',self.ORBackUp],
  *             ['backpack',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['umbrella',self.ORBackUp],
  *             ['handbag',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_26 = PyList_New(2); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 510, __pyx_L1_error)
+  __pyx_t_26 = PyList_New(2); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 529, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_26);
   __Pyx_INCREF(__pyx_n_s_backpack);
   __Pyx_GIVEREF(__pyx_n_s_backpack);
@@ -11663,16 +12316,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_26, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":511
+  /* "motorisedcameratracking/Imaging.py":530
  *             ['giraffe',self.ORBackUp],
  *             ['backpack',self.ORBackUp],
  *             ['umbrella',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['handbag',self.ORBackUp],
  *             ['tie',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_27 = PyList_New(2); if (unlikely(!__pyx_t_27)) __PYX_ERR(0, 511, __pyx_L1_error)
+  __pyx_t_27 = PyList_New(2); if (unlikely(!__pyx_t_27)) __PYX_ERR(0, 530, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_27);
   __Pyx_INCREF(__pyx_n_s_umbrella);
   __Pyx_GIVEREF(__pyx_n_s_umbrella);
@@ -11681,16 +12334,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_27, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":512
+  /* "motorisedcameratracking/Imaging.py":531
  *             ['backpack',self.ORBackUp],
  *             ['umbrella',self.ORBackUp],
  *             ['handbag',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['tie',self.ORBackUp],
  *             ['suitcase',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_28 = PyList_New(2); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 512, __pyx_L1_error)
+  __pyx_t_28 = PyList_New(2); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 531, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_28);
   __Pyx_INCREF(__pyx_n_s_handbag);
   __Pyx_GIVEREF(__pyx_n_s_handbag);
@@ -11699,16 +12352,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_28, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":513
+  /* "motorisedcameratracking/Imaging.py":532
  *             ['umbrella',self.ORBackUp],
  *             ['handbag',self.ORBackUp],
  *             ['tie',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['suitcase',self.ORBackUp],
  *             ['frisbee',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 513, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_29 = PyList_New(2); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 513, __pyx_L1_error)
+  __pyx_t_29 = PyList_New(2); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 532, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_29);
   __Pyx_INCREF(__pyx_n_s_tie);
   __Pyx_GIVEREF(__pyx_n_s_tie);
@@ -11717,16 +12370,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_29, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":514
+  /* "motorisedcameratracking/Imaging.py":533
  *             ['handbag',self.ORBackUp],
  *             ['tie',self.ORBackUp],
  *             ['suitcase',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['frisbee',self.ORBackUp],
  *             ['skis',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_30 = PyList_New(2); if (unlikely(!__pyx_t_30)) __PYX_ERR(0, 514, __pyx_L1_error)
+  __pyx_t_30 = PyList_New(2); if (unlikely(!__pyx_t_30)) __PYX_ERR(0, 533, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_30);
   __Pyx_INCREF(__pyx_n_s_suitcase);
   __Pyx_GIVEREF(__pyx_n_s_suitcase);
@@ -11735,16 +12388,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_30, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":515
+  /* "motorisedcameratracking/Imaging.py":534
  *             ['tie',self.ORBackUp],
  *             ['suitcase',self.ORBackUp],
  *             ['frisbee',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['skis',self.ORBackUp],
  *             ['snowboard',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_31 = PyList_New(2); if (unlikely(!__pyx_t_31)) __PYX_ERR(0, 515, __pyx_L1_error)
+  __pyx_t_31 = PyList_New(2); if (unlikely(!__pyx_t_31)) __PYX_ERR(0, 534, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_31);
   __Pyx_INCREF(__pyx_n_s_frisbee);
   __Pyx_GIVEREF(__pyx_n_s_frisbee);
@@ -11753,16 +12406,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_31, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":516
+  /* "motorisedcameratracking/Imaging.py":535
  *             ['suitcase',self.ORBackUp],
  *             ['frisbee',self.ORBackUp],
  *             ['skis',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['snowboard',self.ORBackUp],
  *             ['sports ball',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 516, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_32 = PyList_New(2); if (unlikely(!__pyx_t_32)) __PYX_ERR(0, 516, __pyx_L1_error)
+  __pyx_t_32 = PyList_New(2); if (unlikely(!__pyx_t_32)) __PYX_ERR(0, 535, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_32);
   __Pyx_INCREF(__pyx_n_s_skis);
   __Pyx_GIVEREF(__pyx_n_s_skis);
@@ -11771,16 +12424,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_32, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":517
+  /* "motorisedcameratracking/Imaging.py":536
  *             ['frisbee',self.ORBackUp],
  *             ['skis',self.ORBackUp],
  *             ['snowboard',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['sports ball',self.ORBackUp],
  *             ['kite',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 517, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_33 = PyList_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(0, 517, __pyx_L1_error)
+  __pyx_t_33 = PyList_New(2); if (unlikely(!__pyx_t_33)) __PYX_ERR(0, 536, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_33);
   __Pyx_INCREF(__pyx_n_s_snowboard);
   __Pyx_GIVEREF(__pyx_n_s_snowboard);
@@ -11789,16 +12442,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_33, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":518
+  /* "motorisedcameratracking/Imaging.py":537
  *             ['skis',self.ORBackUp],
  *             ['snowboard',self.ORBackUp],
  *             ['sports ball',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['kite',self.ORBackUp],
  *             ['spoon',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_34 = PyList_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(0, 518, __pyx_L1_error)
+  __pyx_t_34 = PyList_New(2); if (unlikely(!__pyx_t_34)) __PYX_ERR(0, 537, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_34);
   __Pyx_INCREF(__pyx_kp_s_sports_ball);
   __Pyx_GIVEREF(__pyx_kp_s_sports_ball);
@@ -11807,16 +12460,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_34, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":519
+  /* "motorisedcameratracking/Imaging.py":538
  *             ['snowboard',self.ORBackUp],
  *             ['sports ball',self.ORBackUp],
  *             ['kite',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['spoon',self.ORBackUp],
  *             ['bowl',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 519, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_35 = PyList_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(0, 519, __pyx_L1_error)
+  __pyx_t_35 = PyList_New(2); if (unlikely(!__pyx_t_35)) __PYX_ERR(0, 538, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_35);
   __Pyx_INCREF(__pyx_n_s_kite);
   __Pyx_GIVEREF(__pyx_n_s_kite);
@@ -11825,16 +12478,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_35, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":520
+  /* "motorisedcameratracking/Imaging.py":539
  *             ['sports ball',self.ORBackUp],
  *             ['kite',self.ORBackUp],
  *             ['spoon',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bowl',self.ORBackUp],
  *             ['banana',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 520, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_36 = PyList_New(2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 520, __pyx_L1_error)
+  __pyx_t_36 = PyList_New(2); if (unlikely(!__pyx_t_36)) __PYX_ERR(0, 539, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_36);
   __Pyx_INCREF(__pyx_n_s_spoon);
   __Pyx_GIVEREF(__pyx_n_s_spoon);
@@ -11843,16 +12496,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_36, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":521
+  /* "motorisedcameratracking/Imaging.py":540
  *             ['kite',self.ORBackUp],
  *             ['spoon',self.ORBackUp],
  *             ['bowl',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['banana',self.ORBackUp],
  *             ['apple',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 521, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_37 = PyList_New(2); if (unlikely(!__pyx_t_37)) __PYX_ERR(0, 521, __pyx_L1_error)
+  __pyx_t_37 = PyList_New(2); if (unlikely(!__pyx_t_37)) __PYX_ERR(0, 540, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_37);
   __Pyx_INCREF(__pyx_n_s_bowl);
   __Pyx_GIVEREF(__pyx_n_s_bowl);
@@ -11861,16 +12514,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_37, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":522
+  /* "motorisedcameratracking/Imaging.py":541
  *             ['spoon',self.ORBackUp],
  *             ['bowl',self.ORBackUp],
  *             ['banana',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['apple',self.ORBackUp],
  *             ['sandwich',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 522, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_38 = PyList_New(2); if (unlikely(!__pyx_t_38)) __PYX_ERR(0, 522, __pyx_L1_error)
+  __pyx_t_38 = PyList_New(2); if (unlikely(!__pyx_t_38)) __PYX_ERR(0, 541, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_38);
   __Pyx_INCREF(__pyx_n_s_banana);
   __Pyx_GIVEREF(__pyx_n_s_banana);
@@ -11879,16 +12532,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_38, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":523
+  /* "motorisedcameratracking/Imaging.py":542
  *             ['bowl',self.ORBackUp],
  *             ['banana',self.ORBackUp],
  *             ['apple',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['sandwich',self.ORBackUp],
  *             ['orange',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_39 = PyList_New(2); if (unlikely(!__pyx_t_39)) __PYX_ERR(0, 523, __pyx_L1_error)
+  __pyx_t_39 = PyList_New(2); if (unlikely(!__pyx_t_39)) __PYX_ERR(0, 542, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_39);
   __Pyx_INCREF(__pyx_n_s_apple);
   __Pyx_GIVEREF(__pyx_n_s_apple);
@@ -11897,16 +12550,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_39, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":524
+  /* "motorisedcameratracking/Imaging.py":543
  *             ['banana',self.ORBackUp],
  *             ['apple',self.ORBackUp],
  *             ['sandwich',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['orange',self.ORBackUp],
  *             ['broccoli',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 524, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_40 = PyList_New(2); if (unlikely(!__pyx_t_40)) __PYX_ERR(0, 524, __pyx_L1_error)
+  __pyx_t_40 = PyList_New(2); if (unlikely(!__pyx_t_40)) __PYX_ERR(0, 543, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_40);
   __Pyx_INCREF(__pyx_n_s_sandwich);
   __Pyx_GIVEREF(__pyx_n_s_sandwich);
@@ -11915,16 +12568,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_40, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":525
+  /* "motorisedcameratracking/Imaging.py":544
  *             ['apple',self.ORBackUp],
  *             ['sandwich',self.ORBackUp],
  *             ['orange',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['broccoli',self.ORBackUp],
  *             ['carrot',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 525, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_41 = PyList_New(2); if (unlikely(!__pyx_t_41)) __PYX_ERR(0, 525, __pyx_L1_error)
+  __pyx_t_41 = PyList_New(2); if (unlikely(!__pyx_t_41)) __PYX_ERR(0, 544, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_41);
   __Pyx_INCREF(__pyx_n_s_orange);
   __Pyx_GIVEREF(__pyx_n_s_orange);
@@ -11933,16 +12586,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_41, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":526
+  /* "motorisedcameratracking/Imaging.py":545
  *             ['sandwich',self.ORBackUp],
  *             ['orange',self.ORBackUp],
  *             ['broccoli',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['carrot',self.ORBackUp],
  *             ['hot dog',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 526, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_42 = PyList_New(2); if (unlikely(!__pyx_t_42)) __PYX_ERR(0, 526, __pyx_L1_error)
+  __pyx_t_42 = PyList_New(2); if (unlikely(!__pyx_t_42)) __PYX_ERR(0, 545, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_42);
   __Pyx_INCREF(__pyx_n_s_broccoli);
   __Pyx_GIVEREF(__pyx_n_s_broccoli);
@@ -11951,16 +12604,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_42, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":527
+  /* "motorisedcameratracking/Imaging.py":546
  *             ['orange',self.ORBackUp],
  *             ['broccoli',self.ORBackUp],
  *             ['carrot',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['hot dog',self.ORBackUp],
  *             ['pizza',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 527, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_43 = PyList_New(2); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 527, __pyx_L1_error)
+  __pyx_t_43 = PyList_New(2); if (unlikely(!__pyx_t_43)) __PYX_ERR(0, 546, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_43);
   __Pyx_INCREF(__pyx_n_s_carrot);
   __Pyx_GIVEREF(__pyx_n_s_carrot);
@@ -11969,16 +12622,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_43, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":528
+  /* "motorisedcameratracking/Imaging.py":547
  *             ['broccoli',self.ORBackUp],
  *             ['carrot',self.ORBackUp],
  *             ['hot dog',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['pizza',self.ORBackUp],
  *             ['donut',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 528, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_44 = PyList_New(2); if (unlikely(!__pyx_t_44)) __PYX_ERR(0, 528, __pyx_L1_error)
+  __pyx_t_44 = PyList_New(2); if (unlikely(!__pyx_t_44)) __PYX_ERR(0, 547, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_44);
   __Pyx_INCREF(__pyx_kp_s_hot_dog);
   __Pyx_GIVEREF(__pyx_kp_s_hot_dog);
@@ -11987,16 +12640,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_44, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":529
+  /* "motorisedcameratracking/Imaging.py":548
  *             ['carrot',self.ORBackUp],
  *             ['hot dog',self.ORBackUp],
  *             ['pizza',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['donut',self.ORBackUp],
  *             ['cake',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 548, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_45 = PyList_New(2); if (unlikely(!__pyx_t_45)) __PYX_ERR(0, 529, __pyx_L1_error)
+  __pyx_t_45 = PyList_New(2); if (unlikely(!__pyx_t_45)) __PYX_ERR(0, 548, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_45);
   __Pyx_INCREF(__pyx_n_s_pizza);
   __Pyx_GIVEREF(__pyx_n_s_pizza);
@@ -12005,16 +12658,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_45, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":530
+  /* "motorisedcameratracking/Imaging.py":549
  *             ['hot dog',self.ORBackUp],
  *             ['pizza',self.ORBackUp],
  *             ['donut',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['cake',self.ORBackUp],
  *             ['chair',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 530, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_46 = PyList_New(2); if (unlikely(!__pyx_t_46)) __PYX_ERR(0, 530, __pyx_L1_error)
+  __pyx_t_46 = PyList_New(2); if (unlikely(!__pyx_t_46)) __PYX_ERR(0, 549, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_46);
   __Pyx_INCREF(__pyx_n_s_donut);
   __Pyx_GIVEREF(__pyx_n_s_donut);
@@ -12023,16 +12676,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_46, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":531
+  /* "motorisedcameratracking/Imaging.py":550
  *             ['pizza',self.ORBackUp],
  *             ['donut',self.ORBackUp],
  *             ['cake',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['chair',self.ORBackUp],
  *             ['couch',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 531, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_47 = PyList_New(2); if (unlikely(!__pyx_t_47)) __PYX_ERR(0, 531, __pyx_L1_error)
+  __pyx_t_47 = PyList_New(2); if (unlikely(!__pyx_t_47)) __PYX_ERR(0, 550, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_47);
   __Pyx_INCREF(__pyx_n_s_cake);
   __Pyx_GIVEREF(__pyx_n_s_cake);
@@ -12041,16 +12694,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_47, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":532
+  /* "motorisedcameratracking/Imaging.py":551
  *             ['donut',self.ORBackUp],
  *             ['cake',self.ORBackUp],
  *             ['chair',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['couch',self.ORBackUp],
  *             ['potted plant',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_48 = PyList_New(2); if (unlikely(!__pyx_t_48)) __PYX_ERR(0, 532, __pyx_L1_error)
+  __pyx_t_48 = PyList_New(2); if (unlikely(!__pyx_t_48)) __PYX_ERR(0, 551, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_48);
   __Pyx_INCREF(__pyx_n_s_chair);
   __Pyx_GIVEREF(__pyx_n_s_chair);
@@ -12059,16 +12712,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_48, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":533
+  /* "motorisedcameratracking/Imaging.py":552
  *             ['cake',self.ORBackUp],
  *             ['chair',self.ORBackUp],
  *             ['couch',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['potted plant',self.ORBackUp],
  *             ['bed',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_49 = PyList_New(2); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 533, __pyx_L1_error)
+  __pyx_t_49 = PyList_New(2); if (unlikely(!__pyx_t_49)) __PYX_ERR(0, 552, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_49);
   __Pyx_INCREF(__pyx_n_s_couch);
   __Pyx_GIVEREF(__pyx_n_s_couch);
@@ -12077,16 +12730,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_49, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":534
+  /* "motorisedcameratracking/Imaging.py":553
  *             ['chair',self.ORBackUp],
  *             ['couch',self.ORBackUp],
  *             ['potted plant',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['bed',self.ORBackUp],
  *             ['dining table',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 534, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_50 = PyList_New(2); if (unlikely(!__pyx_t_50)) __PYX_ERR(0, 534, __pyx_L1_error)
+  __pyx_t_50 = PyList_New(2); if (unlikely(!__pyx_t_50)) __PYX_ERR(0, 553, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_50);
   __Pyx_INCREF(__pyx_kp_s_potted_plant);
   __Pyx_GIVEREF(__pyx_kp_s_potted_plant);
@@ -12095,16 +12748,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_50, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":535
+  /* "motorisedcameratracking/Imaging.py":554
  *             ['couch',self.ORBackUp],
  *             ['potted plant',self.ORBackUp],
  *             ['bed',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['dining table',self.ORBackUp],
  *             ['toilet',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 535, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 554, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_51 = PyList_New(2); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 535, __pyx_L1_error)
+  __pyx_t_51 = PyList_New(2); if (unlikely(!__pyx_t_51)) __PYX_ERR(0, 554, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_51);
   __Pyx_INCREF(__pyx_n_s_bed);
   __Pyx_GIVEREF(__pyx_n_s_bed);
@@ -12113,16 +12766,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_51, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":536
+  /* "motorisedcameratracking/Imaging.py":555
  *             ['potted plant',self.ORBackUp],
  *             ['bed',self.ORBackUp],
  *             ['dining table',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['toilet',self.ORBackUp],
  *             ['tv',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 536, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 555, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_52 = PyList_New(2); if (unlikely(!__pyx_t_52)) __PYX_ERR(0, 536, __pyx_L1_error)
+  __pyx_t_52 = PyList_New(2); if (unlikely(!__pyx_t_52)) __PYX_ERR(0, 555, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_52);
   __Pyx_INCREF(__pyx_kp_s_dining_table);
   __Pyx_GIVEREF(__pyx_kp_s_dining_table);
@@ -12131,16 +12784,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_52, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":537
+  /* "motorisedcameratracking/Imaging.py":556
  *             ['bed',self.ORBackUp],
  *             ['dining table',self.ORBackUp],
  *             ['toilet',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['tv',self.ORBackUp],
  *             ['laptop',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 537, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 556, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_53 = PyList_New(2); if (unlikely(!__pyx_t_53)) __PYX_ERR(0, 537, __pyx_L1_error)
+  __pyx_t_53 = PyList_New(2); if (unlikely(!__pyx_t_53)) __PYX_ERR(0, 556, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_53);
   __Pyx_INCREF(__pyx_n_s_toilet);
   __Pyx_GIVEREF(__pyx_n_s_toilet);
@@ -12149,16 +12802,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_53, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":538
+  /* "motorisedcameratracking/Imaging.py":557
  *             ['dining table',self.ORBackUp],
  *             ['toilet',self.ORBackUp],
  *             ['tv',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['laptop',self.ORBackUp],
  *             ['mouse',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 538, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_54 = PyList_New(2); if (unlikely(!__pyx_t_54)) __PYX_ERR(0, 538, __pyx_L1_error)
+  __pyx_t_54 = PyList_New(2); if (unlikely(!__pyx_t_54)) __PYX_ERR(0, 557, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_54);
   __Pyx_INCREF(__pyx_n_s_tv);
   __Pyx_GIVEREF(__pyx_n_s_tv);
@@ -12167,16 +12820,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_54, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":539
+  /* "motorisedcameratracking/Imaging.py":558
  *             ['toilet',self.ORBackUp],
  *             ['tv',self.ORBackUp],
  *             ['laptop',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['mouse',self.ORBackUp],
  *             ['remote',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 539, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 558, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_55 = PyList_New(2); if (unlikely(!__pyx_t_55)) __PYX_ERR(0, 539, __pyx_L1_error)
+  __pyx_t_55 = PyList_New(2); if (unlikely(!__pyx_t_55)) __PYX_ERR(0, 558, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_55);
   __Pyx_INCREF(__pyx_n_s_laptop);
   __Pyx_GIVEREF(__pyx_n_s_laptop);
@@ -12185,16 +12838,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_55, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":540
+  /* "motorisedcameratracking/Imaging.py":559
  *             ['tv',self.ORBackUp],
  *             ['laptop',self.ORBackUp],
  *             ['mouse',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['remote',self.ORBackUp],
  *             ['keyboard',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 540, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_56 = PyList_New(2); if (unlikely(!__pyx_t_56)) __PYX_ERR(0, 540, __pyx_L1_error)
+  __pyx_t_56 = PyList_New(2); if (unlikely(!__pyx_t_56)) __PYX_ERR(0, 559, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_56);
   __Pyx_INCREF(__pyx_n_s_mouse);
   __Pyx_GIVEREF(__pyx_n_s_mouse);
@@ -12203,16 +12856,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_56, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":541
+  /* "motorisedcameratracking/Imaging.py":560
  *             ['laptop',self.ORBackUp],
  *             ['mouse',self.ORBackUp],
  *             ['remote',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['keyboard',self.ORBackUp],
  *             ['cell phone',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 560, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_57 = PyList_New(2); if (unlikely(!__pyx_t_57)) __PYX_ERR(0, 541, __pyx_L1_error)
+  __pyx_t_57 = PyList_New(2); if (unlikely(!__pyx_t_57)) __PYX_ERR(0, 560, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_57);
   __Pyx_INCREF(__pyx_n_s_remote);
   __Pyx_GIVEREF(__pyx_n_s_remote);
@@ -12221,16 +12874,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_57, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":542
+  /* "motorisedcameratracking/Imaging.py":561
  *             ['mouse',self.ORBackUp],
  *             ['remote',self.ORBackUp],
  *             ['keyboard',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['cell phone',self.ORBackUp],
  *             ['microwave',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 542, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 561, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_58 = PyList_New(2); if (unlikely(!__pyx_t_58)) __PYX_ERR(0, 542, __pyx_L1_error)
+  __pyx_t_58 = PyList_New(2); if (unlikely(!__pyx_t_58)) __PYX_ERR(0, 561, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_58);
   __Pyx_INCREF(__pyx_n_s_keyboard);
   __Pyx_GIVEREF(__pyx_n_s_keyboard);
@@ -12239,16 +12892,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_58, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":543
+  /* "motorisedcameratracking/Imaging.py":562
  *             ['remote',self.ORBackUp],
  *             ['keyboard',self.ORBackUp],
  *             ['cell phone',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['microwave',self.ORBackUp],
  *             ['oven',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 543, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 562, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_59 = PyList_New(2); if (unlikely(!__pyx_t_59)) __PYX_ERR(0, 543, __pyx_L1_error)
+  __pyx_t_59 = PyList_New(2); if (unlikely(!__pyx_t_59)) __PYX_ERR(0, 562, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_59);
   __Pyx_INCREF(__pyx_kp_s_cell_phone);
   __Pyx_GIVEREF(__pyx_kp_s_cell_phone);
@@ -12257,16 +12910,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_59, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":544
+  /* "motorisedcameratracking/Imaging.py":563
  *             ['keyboard',self.ORBackUp],
  *             ['cell phone',self.ORBackUp],
  *             ['microwave',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['oven',self.ORBackUp],
  *             ['toaster',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 544, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 563, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_60 = PyList_New(2); if (unlikely(!__pyx_t_60)) __PYX_ERR(0, 544, __pyx_L1_error)
+  __pyx_t_60 = PyList_New(2); if (unlikely(!__pyx_t_60)) __PYX_ERR(0, 563, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_60);
   __Pyx_INCREF(__pyx_n_s_microwave);
   __Pyx_GIVEREF(__pyx_n_s_microwave);
@@ -12275,16 +12928,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_60, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":545
+  /* "motorisedcameratracking/Imaging.py":564
  *             ['cell phone',self.ORBackUp],
  *             ['microwave',self.ORBackUp],
  *             ['oven',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['toaster',self.ORBackUp],
  *             ['sink',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_61 = PyList_New(2); if (unlikely(!__pyx_t_61)) __PYX_ERR(0, 545, __pyx_L1_error)
+  __pyx_t_61 = PyList_New(2); if (unlikely(!__pyx_t_61)) __PYX_ERR(0, 564, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_61);
   __Pyx_INCREF(__pyx_n_s_oven);
   __Pyx_GIVEREF(__pyx_n_s_oven);
@@ -12293,16 +12946,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_61, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":546
+  /* "motorisedcameratracking/Imaging.py":565
  *             ['microwave',self.ORBackUp],
  *             ['oven',self.ORBackUp],
  *             ['toaster',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['sink',self.ORBackUp],
  *             ['refrigerator',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 546, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_62 = PyList_New(2); if (unlikely(!__pyx_t_62)) __PYX_ERR(0, 546, __pyx_L1_error)
+  __pyx_t_62 = PyList_New(2); if (unlikely(!__pyx_t_62)) __PYX_ERR(0, 565, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_62);
   __Pyx_INCREF(__pyx_n_s_toaster);
   __Pyx_GIVEREF(__pyx_n_s_toaster);
@@ -12311,16 +12964,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_62, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":547
+  /* "motorisedcameratracking/Imaging.py":566
  *             ['oven',self.ORBackUp],
  *             ['toaster',self.ORBackUp],
  *             ['sink',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['refrigerator',self.ORBackUp],
  *             ['book',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 547, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_63 = PyList_New(2); if (unlikely(!__pyx_t_63)) __PYX_ERR(0, 547, __pyx_L1_error)
+  __pyx_t_63 = PyList_New(2); if (unlikely(!__pyx_t_63)) __PYX_ERR(0, 566, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_63);
   __Pyx_INCREF(__pyx_n_s_sink);
   __Pyx_GIVEREF(__pyx_n_s_sink);
@@ -12329,16 +12982,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_63, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":548
+  /* "motorisedcameratracking/Imaging.py":567
  *             ['toaster',self.ORBackUp],
  *             ['sink',self.ORBackUp],
  *             ['refrigerator',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['book',self.ORBackUp],
  *             ['clock',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 548, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 567, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_64 = PyList_New(2); if (unlikely(!__pyx_t_64)) __PYX_ERR(0, 548, __pyx_L1_error)
+  __pyx_t_64 = PyList_New(2); if (unlikely(!__pyx_t_64)) __PYX_ERR(0, 567, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_64);
   __Pyx_INCREF(__pyx_n_s_refrigerator);
   __Pyx_GIVEREF(__pyx_n_s_refrigerator);
@@ -12347,16 +13000,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_64, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":549
+  /* "motorisedcameratracking/Imaging.py":568
  *             ['sink',self.ORBackUp],
  *             ['refrigerator',self.ORBackUp],
  *             ['book',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['clock',self.ORBackUp],
  *             ['vase',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 568, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_65 = PyList_New(2); if (unlikely(!__pyx_t_65)) __PYX_ERR(0, 549, __pyx_L1_error)
+  __pyx_t_65 = PyList_New(2); if (unlikely(!__pyx_t_65)) __PYX_ERR(0, 568, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_65);
   __Pyx_INCREF(__pyx_n_s_book);
   __Pyx_GIVEREF(__pyx_n_s_book);
@@ -12365,16 +13018,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_65, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":550
+  /* "motorisedcameratracking/Imaging.py":569
  *             ['refrigerator',self.ORBackUp],
  *             ['book',self.ORBackUp],
  *             ['clock',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['vase',self.ORBackUp],
  *             ['scissors',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 550, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 569, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_66 = PyList_New(2); if (unlikely(!__pyx_t_66)) __PYX_ERR(0, 550, __pyx_L1_error)
+  __pyx_t_66 = PyList_New(2); if (unlikely(!__pyx_t_66)) __PYX_ERR(0, 569, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_66);
   __Pyx_INCREF(__pyx_n_s_clock);
   __Pyx_GIVEREF(__pyx_n_s_clock);
@@ -12383,16 +13036,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_66, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":551
+  /* "motorisedcameratracking/Imaging.py":570
  *             ['book',self.ORBackUp],
  *             ['clock',self.ORBackUp],
  *             ['vase',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['scissors',self.ORBackUp],
  *             ['teddy bear',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 551, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 570, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_67 = PyList_New(2); if (unlikely(!__pyx_t_67)) __PYX_ERR(0, 551, __pyx_L1_error)
+  __pyx_t_67 = PyList_New(2); if (unlikely(!__pyx_t_67)) __PYX_ERR(0, 570, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_67);
   __Pyx_INCREF(__pyx_n_s_vase);
   __Pyx_GIVEREF(__pyx_n_s_vase);
@@ -12401,16 +13054,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_67, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":552
+  /* "motorisedcameratracking/Imaging.py":571
  *             ['clock',self.ORBackUp],
  *             ['vase',self.ORBackUp],
  *             ['scissors',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['teddy bear',self.ORBackUp],
  *             ['hair drier',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 552, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 571, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_68 = PyList_New(2); if (unlikely(!__pyx_t_68)) __PYX_ERR(0, 552, __pyx_L1_error)
+  __pyx_t_68 = PyList_New(2); if (unlikely(!__pyx_t_68)) __PYX_ERR(0, 571, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_68);
   __Pyx_INCREF(__pyx_n_s_scissors);
   __Pyx_GIVEREF(__pyx_n_s_scissors);
@@ -12419,16 +13072,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_68, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":553
+  /* "motorisedcameratracking/Imaging.py":572
  *             ['vase',self.ORBackUp],
  *             ['scissors',self.ORBackUp],
  *             ['teddy bear',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['hair drier',self.ORBackUp],
  *             ['toothbrush',self.ORBackUp],
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 553, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 572, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_69 = PyList_New(2); if (unlikely(!__pyx_t_69)) __PYX_ERR(0, 553, __pyx_L1_error)
+  __pyx_t_69 = PyList_New(2); if (unlikely(!__pyx_t_69)) __PYX_ERR(0, 572, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_69);
   __Pyx_INCREF(__pyx_kp_s_teddy_bear);
   __Pyx_GIVEREF(__pyx_kp_s_teddy_bear);
@@ -12437,16 +13090,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_69, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":554
+  /* "motorisedcameratracking/Imaging.py":573
  *             ['scissors',self.ORBackUp],
  *             ['teddy bear',self.ORBackUp],
  *             ['hair drier',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ['toothbrush',self.ORBackUp],
  *             ]
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 554, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_70 = PyList_New(2); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 554, __pyx_L1_error)
+  __pyx_t_70 = PyList_New(2); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 573, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_70);
   __Pyx_INCREF(__pyx_kp_s_hair_drier);
   __Pyx_GIVEREF(__pyx_kp_s_hair_drier);
@@ -12455,16 +13108,16 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_70, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":555
+  /* "motorisedcameratracking/Imaging.py":574
  *             ['teddy bear',self.ORBackUp],
  *             ['hair drier',self.ORBackUp],
  *             ['toothbrush',self.ORBackUp],             # <<<<<<<<<<<<<<
  *             ]
  *         self.target=target
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 555, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_ORBackUp); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_71 = PyList_New(2); if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 555, __pyx_L1_error)
+  __pyx_t_71 = PyList_New(2); if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 574, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_71);
   __Pyx_INCREF(__pyx_n_s_toothbrush);
   __Pyx_GIVEREF(__pyx_n_s_toothbrush);
@@ -12473,14 +13126,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   PyList_SET_ITEM(__pyx_t_71, 1, __pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":485
+  /* "motorisedcameratracking/Imaging.py":504
  *     targets: list = []
  *     def __init__(self,target: str,imageReturnQueue=None):
  *         functions=[#defines the targets and the corresponding functions             # <<<<<<<<<<<<<<
  *             ['person',self.ORBackUp],
  *             ['bicycle',self.ORBackUp],
  */
-  __pyx_t_1 = PyList_New(70); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 485, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(70); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 504, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_2);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_t_2);
@@ -12695,25 +13348,25 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   __pyx_v_functions = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":557
+  /* "motorisedcameratracking/Imaging.py":576
  *             ['toothbrush',self.ORBackUp],
  *             ]
  *         self.target=target             # <<<<<<<<<<<<<<
  *         self.imageReturnQueue=imageReturnQueue
  *         for i in functions:
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_target, __pyx_v_target) < 0) __PYX_ERR(0, 557, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_target, __pyx_v_target) < 0) __PYX_ERR(0, 576, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":558
+  /* "motorisedcameratracking/Imaging.py":577
  *             ]
  *         self.target=target
  *         self.imageReturnQueue=imageReturnQueue             # <<<<<<<<<<<<<<
  *         for i in functions:
  *             self.targets.append(i[0])
  */
-  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue, __pyx_v_imageReturnQueue) < 0) __PYX_ERR(0, 558, __pyx_L1_error)
+  if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue, __pyx_v_imageReturnQueue) < 0) __PYX_ERR(0, 577, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":559
+  /* "motorisedcameratracking/Imaging.py":578
  *         self.target=target
  *         self.imageReturnQueue=imageReturnQueue
  *         for i in functions:             # <<<<<<<<<<<<<<
@@ -12724,30 +13377,30 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   for (;;) {
     if (__pyx_t_72 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_71 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_72); __Pyx_INCREF(__pyx_t_71); __pyx_t_72++; if (unlikely(0 < 0)) __PYX_ERR(0, 559, __pyx_L1_error)
+    __pyx_t_71 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_72); __Pyx_INCREF(__pyx_t_71); __pyx_t_72++; if (unlikely(0 < 0)) __PYX_ERR(0, 578, __pyx_L1_error)
     #else
-    __pyx_t_71 = PySequence_ITEM(__pyx_t_1, __pyx_t_72); __pyx_t_72++; if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 559, __pyx_L1_error)
+    __pyx_t_71 = PySequence_ITEM(__pyx_t_1, __pyx_t_72); __pyx_t_72++; if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 578, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_71);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_71);
     __pyx_t_71 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":560
+    /* "motorisedcameratracking/Imaging.py":579
  *         self.imageReturnQueue=imageReturnQueue
  *         for i in functions:
  *             self.targets.append(i[0])             # <<<<<<<<<<<<<<
  *         for i in functions:
  *             if i[0]==target:
  */
-    __pyx_t_71 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_targets); if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 560, __pyx_L1_error)
+    __pyx_t_71 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_targets); if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 579, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_71);
-    __pyx_t_70 = __Pyx_GetItemInt(__pyx_v_i, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 560, __pyx_L1_error)
+    __pyx_t_70 = __Pyx_GetItemInt(__pyx_v_i, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 579, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_70);
-    __pyx_t_73 = __Pyx_PyObject_Append(__pyx_t_71, __pyx_t_70); if (unlikely(__pyx_t_73 == ((int)-1))) __PYX_ERR(0, 560, __pyx_L1_error)
+    __pyx_t_73 = __Pyx_PyObject_Append(__pyx_t_71, __pyx_t_70); if (unlikely(__pyx_t_73 == ((int)-1))) __PYX_ERR(0, 579, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_71); __pyx_t_71 = 0;
     __Pyx_DECREF(__pyx_t_70); __pyx_t_70 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":559
+    /* "motorisedcameratracking/Imaging.py":578
  *         self.target=target
  *         self.imageReturnQueue=imageReturnQueue
  *         for i in functions:             # <<<<<<<<<<<<<<
@@ -12757,7 +13410,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":561
+  /* "motorisedcameratracking/Imaging.py":580
  *         for i in functions:
  *             self.targets.append(i[0])
  *         for i in functions:             # <<<<<<<<<<<<<<
@@ -12768,40 +13421,40 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   for (;;) {
     if (__pyx_t_72 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_70 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_72); __Pyx_INCREF(__pyx_t_70); __pyx_t_72++; if (unlikely(0 < 0)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_t_70 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_72); __Pyx_INCREF(__pyx_t_70); __pyx_t_72++; if (unlikely(0 < 0)) __PYX_ERR(0, 580, __pyx_L1_error)
     #else
-    __pyx_t_70 = PySequence_ITEM(__pyx_t_1, __pyx_t_72); __pyx_t_72++; if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 561, __pyx_L1_error)
+    __pyx_t_70 = PySequence_ITEM(__pyx_t_1, __pyx_t_72); __pyx_t_72++; if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 580, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_70);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_70);
     __pyx_t_70 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":562
+    /* "motorisedcameratracking/Imaging.py":581
  *             self.targets.append(i[0])
  *         for i in functions:
  *             if i[0]==target:             # <<<<<<<<<<<<<<
  *                 self.OR=i[1]
  *         if self.imageReturnQueue==None:
  */
-    __pyx_t_70 = __Pyx_GetItemInt(__pyx_v_i, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __pyx_t_70 = __Pyx_GetItemInt(__pyx_v_i, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 581, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_70);
-    __pyx_t_74 = (__Pyx_PyString_Equals(__pyx_t_70, __pyx_v_target, Py_EQ)); if (unlikely(__pyx_t_74 < 0)) __PYX_ERR(0, 562, __pyx_L1_error)
+    __pyx_t_74 = (__Pyx_PyString_Equals(__pyx_t_70, __pyx_v_target, Py_EQ)); if (unlikely(__pyx_t_74 < 0)) __PYX_ERR(0, 581, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_70); __pyx_t_70 = 0;
     if (__pyx_t_74) {
 
-      /* "motorisedcameratracking/Imaging.py":563
+      /* "motorisedcameratracking/Imaging.py":582
  *         for i in functions:
  *             if i[0]==target:
  *                 self.OR=i[1]             # <<<<<<<<<<<<<<
  *         if self.imageReturnQueue==None:
  *             warnings.warn('imageReturnQueue not set')
  */
-      __pyx_t_70 = __Pyx_GetItemInt(__pyx_v_i, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 563, __pyx_L1_error)
+      __pyx_t_70 = __Pyx_GetItemInt(__pyx_v_i, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 582, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_70);
-      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_OR, __pyx_t_70) < 0) __PYX_ERR(0, 563, __pyx_L1_error)
+      if (__Pyx_PyObject_SetAttrStr(__pyx_v_self, __pyx_n_s_OR, __pyx_t_70) < 0) __PYX_ERR(0, 582, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_70); __pyx_t_70 = 0;
 
-      /* "motorisedcameratracking/Imaging.py":562
+      /* "motorisedcameratracking/Imaging.py":581
  *             self.targets.append(i[0])
  *         for i in functions:
  *             if i[0]==target:             # <<<<<<<<<<<<<<
@@ -12810,7 +13463,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  */
     }
 
-    /* "motorisedcameratracking/Imaging.py":561
+    /* "motorisedcameratracking/Imaging.py":580
  *         for i in functions:
  *             self.targets.append(i[0])
  *         for i in functions:             # <<<<<<<<<<<<<<
@@ -12820,31 +13473,31 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":564
+  /* "motorisedcameratracking/Imaging.py":583
  *             if i[0]==target:
  *                 self.OR=i[1]
  *         if self.imageReturnQueue==None:             # <<<<<<<<<<<<<<
  *             warnings.warn('imageReturnQueue not set')
  * 
  */
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_70 = PyObject_RichCompare(__pyx_t_1, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_70); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_70 = PyObject_RichCompare(__pyx_t_1, Py_None, Py_EQ); __Pyx_XGOTREF(__pyx_t_70); if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_74 = __Pyx_PyObject_IsTrue(__pyx_t_70); if (unlikely(__pyx_t_74 < 0)) __PYX_ERR(0, 564, __pyx_L1_error)
+  __pyx_t_74 = __Pyx_PyObject_IsTrue(__pyx_t_70); if (unlikely(__pyx_t_74 < 0)) __PYX_ERR(0, 583, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_70); __pyx_t_70 = 0;
   if (__pyx_t_74) {
 
-    /* "motorisedcameratracking/Imaging.py":565
+    /* "motorisedcameratracking/Imaging.py":584
  *                 self.OR=i[1]
  *         if self.imageReturnQueue==None:
  *             warnings.warn('imageReturnQueue not set')             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 565, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_warnings); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 584, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_71 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 565, __pyx_L1_error)
+    __pyx_t_71 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_warn); if (unlikely(!__pyx_t_71)) __PYX_ERR(0, 584, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_71);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __pyx_t_1 = NULL;
@@ -12859,12 +13512,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     }
     __pyx_t_70 = (__pyx_t_1) ? __Pyx_PyObject_Call2Args(__pyx_t_71, __pyx_t_1, __pyx_kp_s_imageReturnQueue_not_set) : __Pyx_PyObject_CallOneArg(__pyx_t_71, __pyx_kp_s_imageReturnQueue_not_set);
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 565, __pyx_L1_error)
+    if (unlikely(!__pyx_t_70)) __PYX_ERR(0, 584, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_70);
     __Pyx_DECREF(__pyx_t_71); __pyx_t_71 = 0;
     __Pyx_DECREF(__pyx_t_70); __pyx_t_70 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":564
+    /* "motorisedcameratracking/Imaging.py":583
  *             if i[0]==target:
  *                 self.OR=i[1]
  *         if self.imageReturnQueue==None:             # <<<<<<<<<<<<<<
@@ -12873,7 +13526,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":484
+  /* "motorisedcameratracking/Imaging.py":503
  *     OR=None
  *     targets: list = []
  *     def __init__(self,target: str,imageReturnQueue=None):             # <<<<<<<<<<<<<<
@@ -12966,7 +13619,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":568
+/* "motorisedcameratracking/Imaging.py":587
  * 
  * 
  *     def ORBackUp(self,img):             # <<<<<<<<<<<<<<
@@ -13010,11 +13663,11 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_img)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("ORBackUp", 1, 2, 2, 1); __PYX_ERR(0, 568, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("ORBackUp", 1, 2, 2, 1); __PYX_ERR(0, 587, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ORBackUp") < 0)) __PYX_ERR(0, 568, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "ORBackUp") < 0)) __PYX_ERR(0, 587, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -13027,7 +13680,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("ORBackUp", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 568, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("ORBackUp", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 587, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.ObjectRecognition.ORBackUp", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -13065,27 +13718,27 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("ORBackUp", 0);
 
-  /* "motorisedcameratracking/Imaging.py":577
+  /* "motorisedcameratracking/Imaging.py":596
  *         """
  *         #try:
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects             # <<<<<<<<<<<<<<
  *         if len(label)!=0:
  *             xCo=None
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_cv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_cv); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_detect_common_objects); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_detect_common_objects); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_img);
   __Pyx_GIVEREF(__pyx_v_img);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_v_img);
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 577, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_model, __pyx_kp_s_yolov4_tiny) < 0) __PYX_ERR(0, 577, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 577, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_model, __pyx_kp_s_yolov4_tiny) < 0) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 596, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
@@ -13096,7 +13749,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 577, __pyx_L1_error)
+      __PYX_ERR(0, 596, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -13112,17 +13765,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_INCREF(__pyx_t_1);
     __Pyx_INCREF(__pyx_t_2);
     #else
-    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 577, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 596, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 577, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 577, __pyx_L1_error)
+    __pyx_t_2 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 596, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     #endif
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_5 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 577, __pyx_L1_error)
+    __pyx_t_5 = PyObject_GetIter(__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 596, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_6 = Py_TYPE(__pyx_t_5)->tp_iternext;
@@ -13132,7 +13785,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_GOTREF(__pyx_t_1);
     index = 2; __pyx_t_2 = __pyx_t_6(__pyx_t_5); if (unlikely(!__pyx_t_2)) goto __pyx_L3_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_2);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 3) < 0) __PYX_ERR(0, 577, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_6(__pyx_t_5), 3) < 0) __PYX_ERR(0, 596, __pyx_L1_error)
     __pyx_t_6 = NULL;
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     goto __pyx_L4_unpacking_done;
@@ -13140,7 +13793,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_6 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 577, __pyx_L1_error)
+    __PYX_ERR(0, 596, __pyx_L1_error)
     __pyx_L4_unpacking_done:;
   }
   __pyx_v_bbox = __pyx_t_3;
@@ -13150,18 +13803,18 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   __pyx_v_conf = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":578
+  /* "motorisedcameratracking/Imaging.py":597
  *         #try:
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         if len(label)!=0:             # <<<<<<<<<<<<<<
  *             xCo=None
  *             yCo=None
  */
-  __pyx_t_7 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 578, __pyx_L1_error)
+  __pyx_t_7 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 597, __pyx_L1_error)
   __pyx_t_8 = ((__pyx_t_7 != 0) != 0);
   if (__pyx_t_8) {
 
-    /* "motorisedcameratracking/Imaging.py":579
+    /* "motorisedcameratracking/Imaging.py":598
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         if len(label)!=0:
  *             xCo=None             # <<<<<<<<<<<<<<
@@ -13171,7 +13824,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_INCREF(Py_None);
     __pyx_v_xCo = Py_None;
 
-    /* "motorisedcameratracking/Imaging.py":580
+    /* "motorisedcameratracking/Imaging.py":599
  *         if len(label)!=0:
  *             xCo=None
  *             yCo=None             # <<<<<<<<<<<<<<
@@ -13181,91 +13834,91 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_INCREF(Py_None);
     __pyx_v_yCo = Py_None;
 
-    /* "motorisedcameratracking/Imaging.py":581
+    /* "motorisedcameratracking/Imaging.py":600
  *             xCo=None
  *             yCo=None
  *             for i in range(0,len(label)):#loops through the labels             # <<<<<<<<<<<<<<
  *                 if label[i] == self.target:#checks if the label is equal to the target
  *                     x=bbox[i]
  */
-    __pyx_t_7 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 581, __pyx_L1_error)
+    __pyx_t_7 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_7 == ((Py_ssize_t)-1))) __PYX_ERR(0, 600, __pyx_L1_error)
     __pyx_t_9 = __pyx_t_7;
     for (__pyx_t_10 = 0; __pyx_t_10 < __pyx_t_9; __pyx_t_10+=1) {
       __pyx_v_i = __pyx_t_10;
 
-      /* "motorisedcameratracking/Imaging.py":582
+      /* "motorisedcameratracking/Imaging.py":601
  *             yCo=None
  *             for i in range(0,len(label)):#loops through the labels
  *                 if label[i] == self.target:#checks if the label is equal to the target             # <<<<<<<<<<<<<<
  *                     x=bbox[i]
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  */
-      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_label, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 582, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_label, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 601, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_target); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 582, __pyx_L1_error)
+      __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_target); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 601, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 582, __pyx_L1_error)
+      __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, __pyx_t_2, Py_EQ); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 601, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 582, __pyx_L1_error)
+      __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 601, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       if (__pyx_t_8) {
 
-        /* "motorisedcameratracking/Imaging.py":583
+        /* "motorisedcameratracking/Imaging.py":602
  *             for i in range(0,len(label)):#loops through the labels
  *                 if label[i] == self.target:#checks if the label is equal to the target
  *                     x=bbox[i]             # <<<<<<<<<<<<<<
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  *                     yCo=(x[1]+x[3])/2
  */
-        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_bbox, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 583, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_bbox, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 602, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __pyx_v_x = __pyx_t_1;
         __pyx_t_1 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":584
+        /* "motorisedcameratracking/Imaging.py":603
  *                 if label[i] == self.target:#checks if the label is equal to the target
  *                     x=bbox[i]
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box             # <<<<<<<<<<<<<<
  *                     yCo=(x[1]+x[3])/2
  *                     break
  */
-        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 603, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 603, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_4 = PyNumber_Add(__pyx_t_1, __pyx_t_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 603, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-        __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 584, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_int_2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 603, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
         __Pyx_DECREF_SET(__pyx_v_xCo, __pyx_t_2);
         __pyx_t_2 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":585
+        /* "motorisedcameratracking/Imaging.py":604
  *                     x=bbox[i]
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  *                     yCo=(x[1]+x[3])/2             # <<<<<<<<<<<<<<
  *                     break
  *         #except:
  */
-        __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 585, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 604, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_2);
-        __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_x, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 585, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_GetItemInt(__pyx_v_x, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 604, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
-        __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 585, __pyx_L1_error)
+        __pyx_t_1 = PyNumber_Add(__pyx_t_2, __pyx_t_4); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 604, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
         __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-        __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 585, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_1, __pyx_int_2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 604, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
         __Pyx_DECREF_SET(__pyx_v_yCo, __pyx_t_4);
         __pyx_t_4 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":586
+        /* "motorisedcameratracking/Imaging.py":605
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  *                     yCo=(x[1]+x[3])/2
  *                     break             # <<<<<<<<<<<<<<
@@ -13274,7 +13927,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  */
         goto __pyx_L7_break;
 
-        /* "motorisedcameratracking/Imaging.py":582
+        /* "motorisedcameratracking/Imaging.py":601
  *             yCo=None
  *             for i in range(0,len(label)):#loops through the labels
  *                 if label[i] == self.target:#checks if the label is equal to the target             # <<<<<<<<<<<<<<
@@ -13285,7 +13938,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     }
     __pyx_L7_break:;
 
-    /* "motorisedcameratracking/Imaging.py":578
+    /* "motorisedcameratracking/Imaging.py":597
  *         #try:
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         if len(label)!=0:             # <<<<<<<<<<<<<<
@@ -13295,7 +13948,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     goto __pyx_L5;
   }
 
-  /* "motorisedcameratracking/Imaging.py":589
+  /* "motorisedcameratracking/Imaging.py":608
  *         #except:
  *         else:
  *             xCo=None             # <<<<<<<<<<<<<<
@@ -13306,7 +13959,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_INCREF(Py_None);
     __pyx_v_xCo = Py_None;
 
-    /* "motorisedcameratracking/Imaging.py":590
+    /* "motorisedcameratracking/Imaging.py":609
  *         else:
  *             xCo=None
  *             yCo=None             # <<<<<<<<<<<<<<
@@ -13318,31 +13971,31 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   __pyx_L5:;
 
-  /* "motorisedcameratracking/Imaging.py":591
+  /* "motorisedcameratracking/Imaging.py":610
  *             xCo=None
  *             yCo=None
  *         if self.imageReturnQueue!=None:             # <<<<<<<<<<<<<<
  *             warnings.warn('placing an image on the return Queue')
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 610, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_t_1 = PyObject_RichCompare(__pyx_t_4, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 610, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 591, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_8 < 0)) __PYX_ERR(0, 610, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_8) {
 
-    /* "motorisedcameratracking/Imaging.py":592
+    /* "motorisedcameratracking/Imaging.py":611
  *             yCo=None
  *         if self.imageReturnQueue!=None:
  *             warnings.warn('placing an image on the return Queue')             # <<<<<<<<<<<<<<
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
  *         else:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_warnings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_warnings); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 611, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 592, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 611, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -13357,29 +14010,29 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     }
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_kp_s_placing_an_image_on_the_return_Q) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_placing_an_image_on_the_return_Q);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 592, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 611, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":593
+    /* "motorisedcameratracking/Imaging.py":612
  *         if self.imageReturnQueue!=None:
  *             warnings.warn('placing an image on the return Queue')
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image             # <<<<<<<<<<<<<<
  *         else:
  *             warning.warn('no queue found')
  */
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_put); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_put); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    __pyx_t_2 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 593, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_img, __pyx_v_img) < 0) __PYX_ERR(0, 593, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_box, __pyx_v_bbox) < 0) __PYX_ERR(0, 593, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_label, __pyx_v_label) < 0) __PYX_ERR(0, 593, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_confidence, __pyx_v_conf) < 0) __PYX_ERR(0, 593, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_img, __pyx_v_img) < 0) __PYX_ERR(0, 612, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_box, __pyx_v_bbox) < 0) __PYX_ERR(0, 612, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_label, __pyx_v_label) < 0) __PYX_ERR(0, 612, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_confidence, __pyx_v_conf) < 0) __PYX_ERR(0, 612, __pyx_L1_error)
     __pyx_t_3 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_4))) {
       __pyx_t_3 = PyMethod_GET_SELF(__pyx_t_4);
@@ -13393,12 +14046,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_4, __pyx_t_3, __pyx_t_2) : __Pyx_PyObject_CallOneArg(__pyx_t_4, __pyx_t_2);
     __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 593, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 612, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":591
+    /* "motorisedcameratracking/Imaging.py":610
  *             xCo=None
  *             yCo=None
  *         if self.imageReturnQueue!=None:             # <<<<<<<<<<<<<<
@@ -13408,7 +14061,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     goto __pyx_L9;
   }
 
-  /* "motorisedcameratracking/Imaging.py":595
+  /* "motorisedcameratracking/Imaging.py":614
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
  *         else:
  *             warning.warn('no queue found')             # <<<<<<<<<<<<<<
@@ -13416,9 +14069,9 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  * 
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_warning); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 595, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_warning); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 614, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 595, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_warn); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 614, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_t_4 = NULL;
@@ -13433,14 +14086,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     }
     __pyx_t_1 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_4, __pyx_kp_s_no_queue_found) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_kp_s_no_queue_found);
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 595, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 614, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __pyx_L9:;
 
-  /* "motorisedcameratracking/Imaging.py":596
+  /* "motorisedcameratracking/Imaging.py":615
  *         else:
  *             warning.warn('no queue found')
  *         return xCo,yCo             # <<<<<<<<<<<<<<
@@ -13448,7 +14101,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 596, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 615, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_v_xCo);
   __Pyx_GIVEREF(__pyx_v_xCo);
@@ -13460,7 +14113,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":568
+  /* "motorisedcameratracking/Imaging.py":587
  * 
  * 
  *     def ORBackUp(self,img):             # <<<<<<<<<<<<<<
@@ -13489,7 +14142,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":598
+/* "motorisedcameratracking/Imaging.py":617
  *         return xCo,yCo
  * 
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):             # <<<<<<<<<<<<<<
@@ -13507,12 +14160,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_2__defaults__(CYTHO
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__defaults__", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__Pyx_CyFunction_Defaults(__pyx_defaults1, __pyx_self)->__pyx_arg_targets);
   __Pyx_GIVEREF(__Pyx_CyFunction_Defaults(__pyx_defaults1, __pyx_self)->__pyx_arg_targets);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __Pyx_CyFunction_Defaults(__pyx_defaults1, __pyx_self)->__pyx_arg_targets);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_1);
@@ -13576,7 +14229,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_img)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("getCoordinatesMultiTargetLP", 0, 2, 3, 1); __PYX_ERR(0, 598, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("getCoordinatesMultiTargetLP", 0, 2, 3, 1); __PYX_ERR(0, 617, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -13586,7 +14239,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "getCoordinatesMultiTargetLP") < 0)) __PYX_ERR(0, 598, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "getCoordinatesMultiTargetLP") < 0)) __PYX_ERR(0, 617, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
@@ -13604,7 +14257,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getCoordinatesMultiTargetLP", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 598, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getCoordinatesMultiTargetLP", 0, 2, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 617, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.ObjectRecognition.getCoordinatesMultiTargetLP", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -13645,30 +14298,30 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getCoordinatesMultiTargetLP", 0);
 
-  /* "motorisedcameratracking/Imaging.py":599
+  /* "motorisedcameratracking/Imaging.py":618
  * 
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):
  *         if len(targets)==0:             # <<<<<<<<<<<<<<
  *             targets.append(self.target)
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_targets); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 599, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_targets); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 618, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_1 == 0) != 0);
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":600
+    /* "motorisedcameratracking/Imaging.py":619
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):
  *         if len(targets)==0:
  *             targets.append(self.target)             # <<<<<<<<<<<<<<
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         returnTargets=[]#creates the array for returning the objects
  */
-    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_target); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 600, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_target); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 619, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_4 = __Pyx_PyObject_Append(__pyx_v_targets, __pyx_t_3); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 600, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_Append(__pyx_v_targets, __pyx_t_3); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 619, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":599
+    /* "motorisedcameratracking/Imaging.py":618
  * 
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):
  *         if len(targets)==0:             # <<<<<<<<<<<<<<
@@ -13677,27 +14330,27 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  */
   }
 
-  /* "motorisedcameratracking/Imaging.py":601
+  /* "motorisedcameratracking/Imaging.py":620
  *         if len(targets)==0:
  *             targets.append(self.target)
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects             # <<<<<<<<<<<<<<
  *         returnTargets=[]#creates the array for returning the objects
  *         if len(label)!=0:
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_cv); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 601, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_cv); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 620, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_detect_common_objects); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 601, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_3, __pyx_n_s_detect_common_objects); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 620, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 601, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 620, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_INCREF(__pyx_v_img);
   __Pyx_GIVEREF(__pyx_v_img);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_v_img);
-  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 601, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 620, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_model, __pyx_kp_s_yolov4_tiny) < 0) __PYX_ERR(0, 601, __pyx_L1_error)
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 601, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_model, __pyx_kp_s_yolov4_tiny) < 0) __PYX_ERR(0, 620, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_3, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 620, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
@@ -13708,7 +14361,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     if (unlikely(size != 3)) {
       if (size > 3) __Pyx_RaiseTooManyValuesError(3);
       else if (size >= 0) __Pyx_RaiseNeedMoreValuesError(size);
-      __PYX_ERR(0, 601, __pyx_L1_error)
+      __PYX_ERR(0, 620, __pyx_L1_error)
     }
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
     if (likely(PyTuple_CheckExact(sequence))) {
@@ -13724,17 +14377,17 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_INCREF(__pyx_t_3);
     __Pyx_INCREF(__pyx_t_5);
     #else
-    __pyx_t_6 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 601, __pyx_L1_error)
+    __pyx_t_6 = PySequence_ITEM(sequence, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 620, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 601, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(sequence, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 620, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_5 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 601, __pyx_L1_error)
+    __pyx_t_5 = PySequence_ITEM(sequence, 2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 620, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     #endif
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   } else {
     Py_ssize_t index = -1;
-    __pyx_t_8 = PyObject_GetIter(__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 601, __pyx_L1_error)
+    __pyx_t_8 = PyObject_GetIter(__pyx_t_7); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 620, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __pyx_t_9 = Py_TYPE(__pyx_t_8)->tp_iternext;
@@ -13744,7 +14397,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_GOTREF(__pyx_t_3);
     index = 2; __pyx_t_5 = __pyx_t_9(__pyx_t_8); if (unlikely(!__pyx_t_5)) goto __pyx_L4_unpacking_failed;
     __Pyx_GOTREF(__pyx_t_5);
-    if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 3) < 0) __PYX_ERR(0, 601, __pyx_L1_error)
+    if (__Pyx_IternextUnpackEndCheck(__pyx_t_9(__pyx_t_8), 3) < 0) __PYX_ERR(0, 620, __pyx_L1_error)
     __pyx_t_9 = NULL;
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     goto __pyx_L5_unpacking_done;
@@ -13752,7 +14405,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
     __pyx_t_9 = NULL;
     if (__Pyx_IterFinish() == 0) __Pyx_RaiseNeedMoreValuesError(index);
-    __PYX_ERR(0, 601, __pyx_L1_error)
+    __PYX_ERR(0, 620, __pyx_L1_error)
     __pyx_L5_unpacking_done:;
   }
   __pyx_v_bbox = __pyx_t_6;
@@ -13762,122 +14415,122 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   __pyx_v_conf = __pyx_t_5;
   __pyx_t_5 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":602
+  /* "motorisedcameratracking/Imaging.py":621
  *             targets.append(self.target)
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         returnTargets=[]#creates the array for returning the objects             # <<<<<<<<<<<<<<
  *         if len(label)!=0:
  *             #xCo=None
  */
-  __pyx_t_7 = PyList_New(0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 602, __pyx_L1_error)
+  __pyx_t_7 = PyList_New(0); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 621, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_v_returnTargets = ((PyObject*)__pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":603
+  /* "motorisedcameratracking/Imaging.py":622
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         returnTargets=[]#creates the array for returning the objects
  *         if len(label)!=0:             # <<<<<<<<<<<<<<
  *             #xCo=None
  *             #yCo=None
  */
-  __pyx_t_1 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 603, __pyx_L1_error)
+  __pyx_t_1 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 622, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_1 != 0) != 0);
   if (__pyx_t_2) {
 
-    /* "motorisedcameratracking/Imaging.py":606
+    /* "motorisedcameratracking/Imaging.py":625
  *             #xCo=None
  *             #yCo=None
  *             for i in range(0,len(label)):#loops through the labels             # <<<<<<<<<<<<<<
  *                 if label[i] in self.targets:#checks if the label is equal to one of the targets
  *                     x=bbox[i]
  */
-    __pyx_t_1 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 606, __pyx_L1_error)
+    __pyx_t_1 = PyObject_Length(__pyx_v_label); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 625, __pyx_L1_error)
     __pyx_t_10 = __pyx_t_1;
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v_i = __pyx_t_11;
 
-      /* "motorisedcameratracking/Imaging.py":607
+      /* "motorisedcameratracking/Imaging.py":626
  *             #yCo=None
  *             for i in range(0,len(label)):#loops through the labels
  *                 if label[i] in self.targets:#checks if the label is equal to one of the targets             # <<<<<<<<<<<<<<
  *                     x=bbox[i]
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  */
-      __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_label, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 607, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_label, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 626, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_targets); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 607, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_targets); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 626, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_7, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 607, __pyx_L1_error)
+      __pyx_t_2 = (__Pyx_PySequence_ContainsTF(__pyx_t_7, __pyx_t_5, Py_EQ)); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 626, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __pyx_t_12 = (__pyx_t_2 != 0);
       if (__pyx_t_12) {
 
-        /* "motorisedcameratracking/Imaging.py":608
+        /* "motorisedcameratracking/Imaging.py":627
  *             for i in range(0,len(label)):#loops through the labels
  *                 if label[i] in self.targets:#checks if the label is equal to one of the targets
  *                     x=bbox[i]             # <<<<<<<<<<<<<<
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  *                     yCo=(x[1]+x[3])/2
  */
-        __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_bbox, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 608, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_bbox, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 627, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_XDECREF_SET(__pyx_v_x, __pyx_t_5);
         __pyx_t_5 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":609
+        /* "motorisedcameratracking/Imaging.py":628
  *                 if label[i] in self.targets:#checks if the label is equal to one of the targets
  *                     x=bbox[i]
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box             # <<<<<<<<<<<<<<
  *                     yCo=(x[1]+x[3])/2
  *                     returnTargets.append([label[i],xCo,yCo])#appends the label and coordiates to the list
  */
-        __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 609, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_GetItemInt(__pyx_v_x, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 628, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
-        __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_x, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 609, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_x, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 628, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_3 = PyNumber_Add(__pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 609, __pyx_L1_error)
+        __pyx_t_3 = PyNumber_Add(__pyx_t_5, __pyx_t_7); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 628, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-        __pyx_t_7 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 609, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyNumber_Divide(__pyx_t_3, __pyx_int_2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 628, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
         __Pyx_XDECREF_SET(__pyx_v_xCo, __pyx_t_7);
         __pyx_t_7 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":610
+        /* "motorisedcameratracking/Imaging.py":629
  *                     x=bbox[i]
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  *                     yCo=(x[1]+x[3])/2             # <<<<<<<<<<<<<<
  *                     returnTargets.append([label[i],xCo,yCo])#appends the label and coordiates to the list
  *         #except:
  */
-        __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 610, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_GetItemInt(__pyx_v_x, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 629, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_7);
-        __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_x, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 610, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_x, 3, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 629, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_5 = PyNumber_Add(__pyx_t_7, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 610, __pyx_L1_error)
+        __pyx_t_5 = PyNumber_Add(__pyx_t_7, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 629, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-        __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 610, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_int_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 629, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_XDECREF_SET(__pyx_v_yCo, __pyx_t_3);
         __pyx_t_3 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":611
+        /* "motorisedcameratracking/Imaging.py":630
  *                     xCo=(x[0]+x[2])/2#calculates the centre of the bounding box
  *                     yCo=(x[1]+x[3])/2
  *                     returnTargets.append([label[i],xCo,yCo])#appends the label and coordiates to the list             # <<<<<<<<<<<<<<
  *         #except:
  *         else:
  */
-        __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_label, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 611, __pyx_L1_error)
+        __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_label, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 1, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 630, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
-        __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 611, __pyx_L1_error)
+        __pyx_t_5 = PyList_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 630, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_5);
         __Pyx_GIVEREF(__pyx_t_3);
         PyList_SET_ITEM(__pyx_t_5, 0, __pyx_t_3);
@@ -13888,10 +14541,10 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
         __Pyx_GIVEREF(__pyx_v_yCo);
         PyList_SET_ITEM(__pyx_t_5, 2, __pyx_v_yCo);
         __pyx_t_3 = 0;
-        __pyx_t_4 = __Pyx_PyList_Append(__pyx_v_returnTargets, __pyx_t_5); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 611, __pyx_L1_error)
+        __pyx_t_4 = __Pyx_PyList_Append(__pyx_v_returnTargets, __pyx_t_5); if (unlikely(__pyx_t_4 == ((int)-1))) __PYX_ERR(0, 630, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
 
-        /* "motorisedcameratracking/Imaging.py":607
+        /* "motorisedcameratracking/Imaging.py":626
  *             #yCo=None
  *             for i in range(0,len(label)):#loops through the labels
  *                 if label[i] in self.targets:#checks if the label is equal to one of the targets             # <<<<<<<<<<<<<<
@@ -13901,7 +14554,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
       }
     }
 
-    /* "motorisedcameratracking/Imaging.py":603
+    /* "motorisedcameratracking/Imaging.py":622
  *         bbox, label, conf = cv.detect_common_objects(img,model='yolov4-tiny')#detects objects
  *         returnTargets=[]#creates the array for returning the objects
  *         if len(label)!=0:             # <<<<<<<<<<<<<<
@@ -13911,7 +14564,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     goto __pyx_L6;
   }
 
-  /* "motorisedcameratracking/Imaging.py":616
+  /* "motorisedcameratracking/Imaging.py":635
  *             #xCo=None
  *             #yCo=None
  *             returnTargets=None#sets the list to None             # <<<<<<<<<<<<<<
@@ -13924,31 +14577,31 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   __pyx_L6:;
 
-  /* "motorisedcameratracking/Imaging.py":617
+  /* "motorisedcameratracking/Imaging.py":636
  *             #yCo=None
  *             returnTargets=None#sets the list to None
  *         if self.imageReturnQueue!=None:             # <<<<<<<<<<<<<<
  *             warnings.warn('placing an image on the return Queue')
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
  */
-  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 617, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 636, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_3 = PyObject_RichCompare(__pyx_t_5, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 617, __pyx_L1_error)
+  __pyx_t_3 = PyObject_RichCompare(__pyx_t_5, Py_None, Py_NE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 636, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 617, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_12 < 0)) __PYX_ERR(0, 636, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   if (__pyx_t_12) {
 
-    /* "motorisedcameratracking/Imaging.py":618
+    /* "motorisedcameratracking/Imaging.py":637
  *             returnTargets=None#sets the list to None
  *         if self.imageReturnQueue!=None:
  *             warnings.warn('placing an image on the return Queue')             # <<<<<<<<<<<<<<
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
  *         else:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_warnings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 618, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_warnings); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 637, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 618, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 637, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -13963,29 +14616,29 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_5, __pyx_kp_s_placing_an_image_on_the_return_Q) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_kp_s_placing_an_image_on_the_return_Q);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 618, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 637, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":619
+    /* "motorisedcameratracking/Imaging.py":638
  *         if self.imageReturnQueue!=None:
  *             warnings.warn('placing an image on the return Queue')
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image             # <<<<<<<<<<<<<<
  *         else:
  *             warning.warn('no queue found')
  */
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 619, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_imageReturnQueue); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 638, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_put); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 619, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_7, __pyx_n_s_put); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 638, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 619, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 638, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_img, __pyx_v_img) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_box, __pyx_v_bbox) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_label, __pyx_v_label) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
-    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_confidence, __pyx_v_conf) < 0) __PYX_ERR(0, 619, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_img, __pyx_v_img) < 0) __PYX_ERR(0, 638, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_box, __pyx_v_bbox) < 0) __PYX_ERR(0, 638, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_label, __pyx_v_label) < 0) __PYX_ERR(0, 638, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_confidence, __pyx_v_conf) < 0) __PYX_ERR(0, 638, __pyx_L1_error)
     __pyx_t_6 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_5))) {
       __pyx_t_6 = PyMethod_GET_SELF(__pyx_t_5);
@@ -13999,12 +14652,12 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     __pyx_t_3 = (__pyx_t_6) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_6, __pyx_t_7) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_7);
     __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 619, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 638, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-    /* "motorisedcameratracking/Imaging.py":617
+    /* "motorisedcameratracking/Imaging.py":636
  *             #yCo=None
  *             returnTargets=None#sets the list to None
  *         if self.imageReturnQueue!=None:             # <<<<<<<<<<<<<<
@@ -14014,7 +14667,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     goto __pyx_L10;
   }
 
-  /* "motorisedcameratracking/Imaging.py":621
+  /* "motorisedcameratracking/Imaging.py":640
  *             self.imageReturnQueue.put({'img':img,'box':bbox,'label':label,'confidence':conf})#returns the image
  *         else:
  *             warning.warn('no queue found')             # <<<<<<<<<<<<<<
@@ -14022,9 +14675,9 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  * 
  */
   /*else*/ {
-    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_warning); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 621, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_warning); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 640, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 621, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_warn); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 640, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
     __pyx_t_5 = NULL;
@@ -14039,14 +14692,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
     }
     __pyx_t_3 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_7, __pyx_t_5, __pyx_kp_s_no_queue_found) : __Pyx_PyObject_CallOneArg(__pyx_t_7, __pyx_kp_s_no_queue_found);
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 621, __pyx_L1_error)
+    if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 640, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   }
   __pyx_L10:;
 
-  /* "motorisedcameratracking/Imaging.py":622
+  /* "motorisedcameratracking/Imaging.py":641
  *         else:
  *             warning.warn('no queue found')
  *         return returnTargets             # <<<<<<<<<<<<<<
@@ -14058,7 +14711,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   __pyx_r = __pyx_v_returnTargets;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":598
+  /* "motorisedcameratracking/Imaging.py":617
  *         return xCo,yCo
  * 
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):             # <<<<<<<<<<<<<<
@@ -14088,7 +14741,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":624
+/* "motorisedcameratracking/Imaging.py":643
  *         return returnTargets
  * 
  *     def getCoordinates(self,img):             # <<<<<<<<<<<<<<
@@ -14132,11 +14785,11 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_img)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("getCoordinates", 1, 2, 2, 1); __PYX_ERR(0, 624, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("getCoordinates", 1, 2, 2, 1); __PYX_ERR(0, 643, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "getCoordinates") < 0)) __PYX_ERR(0, 624, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "getCoordinates") < 0)) __PYX_ERR(0, 643, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -14149,7 +14802,7 @@ static PyObject *__pyx_pw_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("getCoordinates", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 624, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("getCoordinates", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 643, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("motorisedcameratracking.Imaging.ObjectRecognition.getCoordinates", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -14173,7 +14826,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getCoordinates", 0);
 
-  /* "motorisedcameratracking/Imaging.py":629
+  /* "motorisedcameratracking/Imaging.py":648
  *             coordinates: the coordinates of the object in the image
  *         """
  *         return self.OR(img)             # <<<<<<<<<<<<<<
@@ -14181,7 +14834,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
  *     def getTargets(self) -> list:
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 629, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_OR); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 648, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __pyx_t_3 = NULL;
   if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_2))) {
@@ -14195,14 +14848,14 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   }
   __pyx_t_1 = (__pyx_t_3) ? __Pyx_PyObject_Call2Args(__pyx_t_2, __pyx_t_3, __pyx_v_img) : __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_v_img);
   __Pyx_XDECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 629, __pyx_L1_error)
+  if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 648, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":624
+  /* "motorisedcameratracking/Imaging.py":643
  *         return returnTargets
  * 
  *     def getCoordinates(self,img):             # <<<<<<<<<<<<<<
@@ -14223,7 +14876,7 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   return __pyx_r;
 }
 
-/* "motorisedcameratracking/Imaging.py":631
+/* "motorisedcameratracking/Imaging.py":650
  *         return self.OR(img)
  * 
  *     def getTargets(self) -> list:             # <<<<<<<<<<<<<<
@@ -14255,21 +14908,21 @@ static PyObject *__pyx_pf_23motorisedcameratracking_7Imaging_17ObjectRecognition
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("getTargets", 0);
 
-  /* "motorisedcameratracking/Imaging.py":636
+  /* "motorisedcameratracking/Imaging.py":655
  *             targest: the posible targets
  *         """
  *         return self.targets             # <<<<<<<<<<<<<<
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_targets); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 636, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_self, __pyx_n_s_targets); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 655, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 636, __pyx_L1_error)
+  if (!(likely(PyList_CheckExact(__pyx_t_1))||((__pyx_t_1) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_t_1)->tp_name), 0))) __PYX_ERR(0, 655, __pyx_L1_error)
   __pyx_r = ((PyObject*)__pyx_t_1);
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "motorisedcameratracking/Imaging.py":631
+  /* "motorisedcameratracking/Imaging.py":650
  *         return self.OR(img)
  * 
  *     def getTargets(self) -> list:             # <<<<<<<<<<<<<<
@@ -14296,8 +14949,10 @@ static int __pyx_import_star_set(PyObject *o, PyObject* py_name, char *name) {
   static const char* internal_type_names[] = {
     "__pyx_ctuple_double",
     "__pyx_ctuple_double_struct",
+    "__pyx_ctuple_long",
     "__pyx_ctuple_long__and_Py_ssize_t",
     "__pyx_ctuple_long__and_Py_ssize_t_struct",
+    "__pyx_ctuple_long_struct",
     0
   };
   const char** type_name = internal_type_names;
@@ -14488,6 +15143,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_Imaging_isMultiple, __pyx_k_Imaging_isMultiple, sizeof(__pyx_k_Imaging_isMultiple), 0, 0, 1, 1},
   {&__pyx_n_s_Imaging_main, __pyx_k_Imaging_main, sizeof(__pyx_k_Imaging_main), 0, 0, 1, 1},
   {&__pyx_n_s_Imaging_mainLimited, __pyx_k_Imaging_mainLimited, sizeof(__pyx_k_Imaging_mainLimited), 0, 0, 1, 1},
+  {&__pyx_kp_s_Imaging_motor_updater_is_dead, __pyx_k_Imaging_motor_updater_is_dead, sizeof(__pyx_k_Imaging_motor_updater_is_dead), 0, 0, 1, 0},
   {&__pyx_n_s_Imaging_outsideLimits, __pyx_k_Imaging_outsideLimits, sizeof(__pyx_k_Imaging_outsideLimits), 0, 0, 1, 1},
   {&__pyx_n_s_Imaging_reset, __pyx_k_Imaging_reset, sizeof(__pyx_k_Imaging_reset), 0, 0, 1, 1},
   {&__pyx_n_s_Imaging_search, __pyx_k_Imaging_search, sizeof(__pyx_k_Imaging_search), 0, 0, 1, 1},
@@ -14507,6 +15163,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ObjectRecognition_getCoordinates, __pyx_k_ObjectRecognition_getCoordinates, sizeof(__pyx_k_ObjectRecognition_getCoordinates), 0, 0, 1, 1},
   {&__pyx_n_s_ObjectRecognition_getCoordinates_2, __pyx_k_ObjectRecognition_getCoordinates_2, sizeof(__pyx_k_ObjectRecognition_getCoordinates_2), 0, 0, 1, 1},
   {&__pyx_n_s_ObjectRecognition_getTargets, __pyx_k_ObjectRecognition_getTargets, sizeof(__pyx_k_ObjectRecognition_getTargets), 0, 0, 1, 1},
+  {&__pyx_n_s_Queue, __pyx_k_Queue, sizeof(__pyx_k_Queue), 0, 0, 1, 1},
   {&__pyx_n_s_RPICam, __pyx_k_RPICam, sizeof(__pyx_k_RPICam), 0, 0, 1, 1},
   {&__pyx_kp_s_The_Imaging_class_is_responsible, __pyx_k_The_Imaging_class_is_responsible, sizeof(__pyx_k_The_Imaging_class_is_responsible), 0, 0, 1, 0},
   {&__pyx_n_s_Thread, __pyx_k_Thread, sizeof(__pyx_k_Thread), 0, 0, 1, 1},
@@ -14521,6 +15178,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_anglePerPixel, __pyx_k_anglePerPixel, sizeof(__pyx_k_anglePerPixel), 0, 0, 1, 1},
   {&__pyx_n_s_append, __pyx_k_append, sizeof(__pyx_k_append), 0, 0, 1, 1},
   {&__pyx_n_s_apple, __pyx_k_apple, sizeof(__pyx_k_apple), 0, 0, 1, 1},
+  {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
   {&__pyx_kp_s_attempting_to_aquire_a_new_targe, __pyx_k_attempting_to_aquire_a_new_targe, sizeof(__pyx_k_attempting_to_aquire_a_new_targe), 0, 0, 1, 0},
   {&__pyx_n_s_backpack, __pyx_k_backpack, sizeof(__pyx_k_backpack), 0, 0, 1, 1},
   {&__pyx_n_s_banana, __pyx_k_banana, sizeof(__pyx_k_banana), 0, 0, 1, 1},
@@ -14598,6 +15256,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_imageReturnQueue, __pyx_k_imageReturnQueue, sizeof(__pyx_k_imageReturnQueue), 0, 0, 1, 1},
   {&__pyx_kp_s_imageReturnQueue_not_set, __pyx_k_imageReturnQueue_not_set, sizeof(__pyx_k_imageReturnQueue_not_set), 0, 0, 1, 0},
   {&__pyx_kp_s_imaging_main_is_active, __pyx_k_imaging_main_is_active, sizeof(__pyx_k_imaging_main_is_active), 0, 0, 1, 0},
+  {&__pyx_kp_s_imaging_terminating, __pyx_k_imaging_terminating, sizeof(__pyx_k_imaging_terminating), 0, 0, 1, 0},
   {&__pyx_n_s_img, __pyx_k_img, sizeof(__pyx_k_img), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_inCentralBox, __pyx_k_inCentralBox, sizeof(__pyx_k_inCentralBox), 0, 0, 1, 1},
@@ -14612,8 +15271,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_kite, __pyx_k_kite, sizeof(__pyx_k_kite), 0, 0, 1, 1},
   {&__pyx_n_s_label, __pyx_k_label, sizeof(__pyx_k_label), 0, 0, 1, 1},
   {&__pyx_n_s_laptop, __pyx_k_laptop, sizeof(__pyx_k_laptop), 0, 0, 1, 1},
-  {&__pyx_n_s_limit1, __pyx_k_limit1, sizeof(__pyx_k_limit1), 0, 0, 1, 1},
-  {&__pyx_n_s_limit2, __pyx_k_limit2, sizeof(__pyx_k_limit2), 0, 0, 1, 1},
   {&__pyx_n_u_list, __pyx_k_list, sizeof(__pyx_k_list), 0, 1, 0, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mainLimited, __pyx_k_mainLimited, sizeof(__pyx_k_mainLimited), 0, 0, 1, 1},
@@ -14644,6 +15301,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pizza, __pyx_k_pizza, sizeof(__pyx_k_pizza), 0, 0, 1, 1},
   {&__pyx_kp_s_placing_an_image_on_the_return_Q, __pyx_k_placing_an_image_on_the_return_Q, sizeof(__pyx_k_placing_an_image_on_the_return_Q), 0, 0, 1, 0},
   {&__pyx_n_s_plt, __pyx_k_plt, sizeof(__pyx_k_plt), 0, 0, 1, 1},
+  {&__pyx_n_s_poll, __pyx_k_poll, sizeof(__pyx_k_poll), 0, 0, 1, 1},
   {&__pyx_n_s_positions, __pyx_k_positions, sizeof(__pyx_k_positions), 0, 0, 1, 1},
   {&__pyx_kp_s_positions_2, __pyx_k_positions_2, sizeof(__pyx_k_positions_2), 0, 0, 1, 0},
   {&__pyx_kp_s_potted_plant, __pyx_k_potted_plant, sizeof(__pyx_k_potted_plant), 0, 0, 1, 0},
@@ -14652,6 +15310,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_put, __pyx_k_put, sizeof(__pyx_k_put), 0, 0, 1, 1},
   {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
+  {&__pyx_n_s_queue, __pyx_k_queue, sizeof(__pyx_k_queue), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
   {&__pyx_n_s_recentre, __pyx_k_recentre, sizeof(__pyx_k_recentre), 0, 0, 1, 1},
   {&__pyx_n_s_recv, __pyx_k_recv, sizeof(__pyx_k_recv), 0, 0, 1, 1},
@@ -14690,6 +15349,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_targetsList, __pyx_k_targetsList, sizeof(__pyx_k_targetsList), 0, 0, 1, 1},
   {&__pyx_kp_s_teddy_bear, __pyx_k_teddy_bear, sizeof(__pyx_k_teddy_bear), 0, 0, 1, 0},
   {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
+  {&__pyx_n_s_threadKillQueue, __pyx_k_threadKillQueue, sizeof(__pyx_k_threadKillQueue), 0, 0, 1, 1},
   {&__pyx_n_s_threading, __pyx_k_threading, sizeof(__pyx_k_threading), 0, 0, 1, 1},
   {&__pyx_n_s_tie, __pyx_k_tie, sizeof(__pyx_k_tie), 0, 0, 1, 1},
   {&__pyx_n_s_time, __pyx_k_time, sizeof(__pyx_k_time), 0, 0, 1, 1},
@@ -14707,8 +15367,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_warning, __pyx_k_warning, sizeof(__pyx_k_warning), 0, 0, 1, 1},
   {&__pyx_n_s_warnings, __pyx_k_warnings, sizeof(__pyx_k_warnings), 0, 0, 1, 1},
   {&__pyx_n_s_x, __pyx_k_x, sizeof(__pyx_k_x), 0, 0, 1, 1},
-  {&__pyx_kp_s_xCo, __pyx_k_xCo, sizeof(__pyx_k_xCo), 0, 0, 1, 0},
-  {&__pyx_n_s_xCo_2, __pyx_k_xCo_2, sizeof(__pyx_k_xCo_2), 0, 0, 1, 1},
+  {&__pyx_n_s_xCo, __pyx_k_xCo, sizeof(__pyx_k_xCo), 0, 0, 1, 1},
   {&__pyx_n_s_xD, __pyx_k_xD, sizeof(__pyx_k_xD), 0, 0, 1, 1},
   {&__pyx_n_s_xDis, __pyx_k_xDis, sizeof(__pyx_k_xDis), 0, 0, 1, 1},
   {&__pyx_n_s_xLimit1, __pyx_k_xLimit1, sizeof(__pyx_k_xLimit1), 0, 0, 1, 1},
@@ -14721,8 +15380,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_xl1, __pyx_k_xl1, sizeof(__pyx_k_xl1), 0, 0, 1, 1},
   {&__pyx_n_s_xl2, __pyx_k_xl2, sizeof(__pyx_k_xl2), 0, 0, 1, 1},
   {&__pyx_n_s_y, __pyx_k_y, sizeof(__pyx_k_y), 0, 0, 1, 1},
-  {&__pyx_kp_s_yCo, __pyx_k_yCo, sizeof(__pyx_k_yCo), 0, 0, 1, 0},
-  {&__pyx_n_s_yCo_2, __pyx_k_yCo_2, sizeof(__pyx_k_yCo_2), 0, 0, 1, 1},
+  {&__pyx_n_s_yCo, __pyx_k_yCo, sizeof(__pyx_k_yCo), 0, 0, 1, 1},
   {&__pyx_n_s_yD, __pyx_k_yD, sizeof(__pyx_k_yD), 0, 0, 1, 1},
   {&__pyx_n_s_yDis, __pyx_k_yDis, sizeof(__pyx_k_yDis), 0, 0, 1, 1},
   {&__pyx_n_s_yLimit1, __pyx_k_yLimit1, sizeof(__pyx_k_yLimit1), 0, 0, 1, 1},
@@ -14739,7 +15397,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 581, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 600, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -14749,344 +15407,344 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "motorisedcameratracking/Imaging.py":52
+  /* "motorisedcameratracking/Imaging.py":54
  * 
  * 
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):             # <<<<<<<<<<<<<<
  *         if camera['name']=='RPICam':
  *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
  */
-  __pyx_tuple__2 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_MC, __pyx_n_s_dataQueue, __pyx_n_s_controlQueue, __pyx_n_s_imageReturnQueue, __pyx_n_s_target, __pyx_n_s_camera, __pyx_n_s_mode, __pyx_n_s_extras); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_MC, __pyx_n_s_dataQueue, __pyx_n_s_controlQueue, __pyx_n_s_imageReturnQueue, __pyx_n_s_target, __pyx_n_s_camera, __pyx_n_s_mode, __pyx_n_s_extras); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
-  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(9, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_init, 52, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_codeobj__3 = (PyObject*)__Pyx_PyCode_New(9, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__2, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_init, 54, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__3)) __PYX_ERR(0, 54, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":72
+  /* "motorisedcameratracking/Imaging.py":74
  *         self.yMaxSpeed=extras['yMaxSpeed']
  * 
- *     def MotorUpdater(self):             # <<<<<<<<<<<<<<
+ *     def MotorUpdater(self,queue):             # <<<<<<<<<<<<<<
  *         while True:
- *             data=self.MCPipe.recv()
+ *             if self.MCPipe.poll():
  */
-  __pyx_tuple__4 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_data); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_queue, __pyx_n_s_data); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
-  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(1, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_MotorUpdater, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_codeobj__5 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__4, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_MotorUpdater, 74, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__5)) __PYX_ERR(0, 74, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":82
+  /* "motorisedcameratracking/Imaging.py":88
  * 
  * 
  *     def main(self,MC,MCPipe):#offers a choice of mode             # <<<<<<<<<<<<<<
  *         self.MC=MC
  *         self.MCPipe=MCPipe
  */
-  __pyx_tuple__6 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_MC, __pyx_n_s_MCPipe, __pyx_n_s_t); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_tuple__6 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_MC, __pyx_n_s_MCPipe, __pyx_n_s_t); if (unlikely(!__pyx_tuple__6)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__6);
   __Pyx_GIVEREF(__pyx_tuple__6);
-  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_main_2, 82, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_codeobj__7 = (PyObject*)__Pyx_PyCode_New(3, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__6, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_main_2, 88, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__7)) __PYX_ERR(0, 88, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":99
- *             self.simpleTracking()
+  /* "motorisedcameratracking/Imaging.py":106
+ *             self.simpleTracking()#defaults to simple tracking
  * 
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently             # <<<<<<<<<<<<<<
+ *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """ identical to main but starts the limited versions of methods"""
  *         self.MC=MC
- *         self.MCPipe=MCPipe
  */
-  __pyx_tuple__8 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_MC, __pyx_n_s_MCPipe, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_t); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_tuple__8 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_MC, __pyx_n_s_MCPipe, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_t); if (unlikely(!__pyx_tuple__8)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__8);
   __Pyx_GIVEREF(__pyx_tuple__8);
-  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(7, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_mainLimited, 99, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_codeobj__9 = (PyObject*)__Pyx_PyCode_New(7, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__8, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_mainLimited, 106, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__9)) __PYX_ERR(0, 106, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":117
+  /* "motorisedcameratracking/Imaging.py":126
  * 
  * 
  *     def advancedTracking(self):             # <<<<<<<<<<<<<<
  *         """The main loop for processing images
  * 
  */
-  __pyx_tuple__10 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_tuple__10 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__10)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__10);
   __Pyx_GIVEREF(__pyx_tuple__10);
-  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_advancedTracking, 117, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_codeobj__11 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__10, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_advancedTracking, 126, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__11)) __PYX_ERR(0, 126, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":150
+  /* "motorisedcameratracking/Imaging.py":162
  *                 break
  * 
- *     def advancedTrackingLimited(self, limit1: float, limit2: float):             # <<<<<<<<<<<<<<
+ *     def advancedTrackingLimited(self, xLimit1: float, xLimit2: float,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         """The limited version of the tracking
  * 
  */
-  __pyx_tuple__12 = PyTuple_Pack(8, __pyx_n_s_self, __pyx_n_s_limit1, __pyx_n_s_limit2, __pyx_n_s_recentre, __pyx_n_s_x, __pyx_n_s_previousTime, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_tuple__12 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_recentre, __pyx_n_s_img, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__12)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__12);
   __Pyx_GIVEREF(__pyx_tuple__12);
-  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(3, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_advancedTrackingLimited, 150, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_codeobj__13 = (PyObject*)__Pyx_PyCode_New(5, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__12, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_advancedTrackingLimited, 162, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__13)) __PYX_ERR(0, 162, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":187
+  /* "motorisedcameratracking/Imaging.py":205
  *                 break
  * 
  *     def reset(self):             # <<<<<<<<<<<<<<
  *         """Resets the variables
  *         Likely to be removed once varaibles are converted to non global
  */
-  __pyx_tuple__14 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_coordinates, __pyx_n_s_positions, __pyx_n_s_currentPosition, __pyx_n_s_currentVelocity, __pyx_n_s_previousTime); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __pyx_tuple__14 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__14)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__14);
   __Pyx_GIVEREF(__pyx_tuple__14);
-  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_reset, 187, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __pyx_codeobj__15 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__14, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_reset, 205, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__15)) __PYX_ERR(0, 205, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":199
+  /* "motorisedcameratracking/Imaging.py":217
  * 
  * 
  *     def getCurrentPositionOfMotors(self):             # <<<<<<<<<<<<<<
  *         """calculates current position of motors"""
  *         self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[0]*(self.currentPosition[0]-self.previousTime))
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
-  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getCurrentPositionOfMotors, 199, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_codeobj__17 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__16, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getCurrentPositionOfMotors, 217, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__17)) __PYX_ERR(0, 217, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":205
+  /* "motorisedcameratracking/Imaging.py":223
  *         print('self.currentPosition ',self.currentPosition)
  * 
  *     def calculatePositionOfObject(self):             # <<<<<<<<<<<<<<
  *         """calculates the current relative position of the object"""
  *         self.positions[-1][1]=self.currentPosition[1]+(self.calculateAngleImage(self.coordinates[-1][0],self.resolution,'x'))
  */
-  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_tuple__18 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__18)) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
-  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_calculatePositionOfObject, 205, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_codeobj__19 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__18, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_calculatePositionOfObject, 223, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__19)) __PYX_ERR(0, 223, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":211
+  /* "motorisedcameratracking/Imaging.py":229
  *         print('self.positions[-1] ',self.positions[-1])
  * 
  *     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:             # <<<<<<<<<<<<<<
  *         """calculates the angle of the object within the image
  *         Args:
  */
-  __pyx_tuple__20 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_coordinates, __pyx_n_s_resolution, __pyx_n_s_XorY, __pyx_n_s_anglePerPixel); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_tuple__20 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_coordinates, __pyx_n_s_resolution, __pyx_n_s_XorY, __pyx_n_s_anglePerPixel); if (unlikely(!__pyx_tuple__20)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__20);
   __Pyx_GIVEREF(__pyx_tuple__20);
-  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_calculateAngleImage, 211, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_codeobj__21 = (PyObject*)__Pyx_PyCode_New(4, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__20, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_calculateAngleImage, 229, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__21)) __PYX_ERR(0, 229, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":227
- *             return (coordinates-self.yMid)*anglePerPixel
+  /* "motorisedcameratracking/Imaging.py":245
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  * 
  *     def calculateCoordinates(self,img):             # <<<<<<<<<<<<<<
  *         """Calculates the ccordintes of the object in the image
  *         Args:
  */
-  __pyx_tuple__22 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_tuple__22 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xCo, __pyx_n_s_yCo); if (unlikely(!__pyx_tuple__22)) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
-  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_calculateCoordinates, 227, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_codeobj__23 = (PyObject*)__Pyx_PyCode_New(2, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__22, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_calculateCoordinates, 245, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__23)) __PYX_ERR(0, 245, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":250
- *     #    self.currentVelocity=[xV,yV]
+  /* "motorisedcameratracking/Imaging.py":261
+ * 
  * 
  *     def determineVelocity(self):             # <<<<<<<<<<<<<<
  *         """determines the velocity the object is moving at
  *         Returns:
  */
-  __pyx_tuple__24 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_deltaTime, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 250, __pyx_L1_error)
+  __pyx_tuple__24 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_deltaTime, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__24)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__24);
   __Pyx_GIVEREF(__pyx_tuple__24);
-  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_determineVelocity, 250, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 250, __pyx_L1_error)
+  __pyx_codeobj__25 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__24, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_determineVelocity, 261, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__25)) __PYX_ERR(0, 261, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":272
+  /* "motorisedcameratracking/Imaging.py":283
  *         return xV,yV
  * 
  *     def search(self):             # <<<<<<<<<<<<<<
  *         """used for reacquirig a lock when a target is lost"""
  *         warnings.warn('attempting to aquire a new target')
  */
-  __pyx_tuple__26 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_tuple__26 = PyTuple_Pack(4, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xCo, __pyx_n_s_yCo); if (unlikely(!__pyx_tuple__26)) __PYX_ERR(0, 283, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__26);
   __Pyx_GIVEREF(__pyx_tuple__26);
-  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_search, 272, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_codeobj__27 = (PyObject*)__Pyx_PyCode_New(1, 0, 4, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__26, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_search, 283, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__27)) __PYX_ERR(0, 283, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":288
+  /* "motorisedcameratracking/Imaging.py":299
  * ###############################################################
  * 
  *     def simpleTracking(self):             # <<<<<<<<<<<<<<
  *         """A simple tracking function that sets the velocity based on how far from the centre of the image the target is"""
  *         while True:
  */
-  __pyx_tuple__28 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_tuple__28 = PyTuple_Pack(6, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_xCo, __pyx_n_s_yCo, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__28)) __PYX_ERR(0, 299, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__28);
   __Pyx_GIVEREF(__pyx_tuple__28);
-  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_simpleTracking, 288, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_codeobj__29 = (PyObject*)__Pyx_PyCode_New(1, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__28, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_simpleTracking, 299, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__29)) __PYX_ERR(0, 299, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":306
+  /* "motorisedcameratracking/Imaging.py":317
  *                 break
  * 
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         while True:
  *             recentre=False
  */
-  __pyx_tuple__30 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_recentre, __pyx_n_s_img, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __pyx_tuple__30 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_recentre, __pyx_n_s_img, __pyx_n_s_xCo, __pyx_n_s_yCo, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__30)) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__30);
   __Pyx_GIVEREF(__pyx_tuple__30);
-  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(5, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_simpleTrackingLimited, 306, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __pyx_codeobj__31 = (PyObject*)__Pyx_PyCode_New(5, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__30, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_simpleTrackingLimited, 317, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__31)) __PYX_ERR(0, 317, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":330
+  /* "motorisedcameratracking/Imaging.py":342
  * 
  * 
  *     def simpleVelocityCalculation(self,xCo,yCo,maxSpeed: float = 20):             # <<<<<<<<<<<<<<
  *         """used to determine the velocity based on how far from the centre of the the target is
  * 
  */
-  __pyx_tuple__32 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2, __pyx_n_s_maxSpeed, __pyx_n_s_xDis, __pyx_n_s_yDis, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_tuple__32 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_xCo, __pyx_n_s_yCo, __pyx_n_s_maxSpeed, __pyx_n_s_xDis, __pyx_n_s_yDis, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_xV, __pyx_n_s_yV); if (unlikely(!__pyx_tuple__32)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__32);
   __Pyx_GIVEREF(__pyx_tuple__32);
-  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_simpleVelocityCalculation, 330, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_codeobj__33 = (PyObject*)__Pyx_PyCode_New(4, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__32, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_simpleVelocityCalculation, 342, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__33)) __PYX_ERR(0, 342, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":344
- *         return self.velocityCheck(xV,yV)
+  /* "motorisedcameratracking/Imaging.py":356
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities
  * 
  *     def intermediateTracking(self):             # <<<<<<<<<<<<<<
  *         """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
  *         xV=0
  */
-  __pyx_tuple__34 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_img, __pyx_n_s_targetsList, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_tuple__34 = PyTuple_Pack(7, __pyx_n_s_self, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_img, __pyx_n_s_targetsList, __pyx_n_s_xCo, __pyx_n_s_yCo); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_intermediateTracking, 344, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(1, 0, 7, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_intermediateTracking, 356, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 356, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":369
+  /* "motorisedcameratracking/Imaging.py":383
  *                 break
  * 
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         xV=0
  *         yV=0
  */
-  __pyx_tuple__36 = PyTuple_Pack(12, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_recentre, __pyx_n_s_img, __pyx_n_s_targetsList, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_tuple__36 = PyTuple_Pack(12, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_recentre, __pyx_n_s_img, __pyx_n_s_targetsList, __pyx_n_s_xCo, __pyx_n_s_yCo); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
-  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(5, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_intermediateTrackingLimited, 369, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_codeobj__37 = (PyObject*)__Pyx_PyCode_New(5, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__36, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_intermediateTrackingLimited, 383, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__37)) __PYX_ERR(0, 383, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":401
+  /* "motorisedcameratracking/Imaging.py":417
  *                 break
  * 
  *     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):             # <<<<<<<<<<<<<<
  *         """used to calculate velocities for intermediate tracking
  *         Args:
  */
-  __pyx_tuple__38 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2, __pyx_n_s_xDis, __pyx_n_s_yDis, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_maxAdditionalSpeed); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_tuple__38 = PyTuple_Pack(10, __pyx_n_s_self, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_xCo, __pyx_n_s_yCo, __pyx_n_s_xDis, __pyx_n_s_yDis, __pyx_n_s_x, __pyx_n_s_y, __pyx_n_s_maxAdditionalSpeed); if (unlikely(!__pyx_tuple__38)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__38);
   __Pyx_GIVEREF(__pyx_tuple__38);
-  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(5, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_intermediateVelocityCalculation, 401, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_codeobj__39 = (PyObject*)__Pyx_PyCode_New(5, 0, 10, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__38, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_intermediateVelocityCalculation, 417, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__39)) __PYX_ERR(0, 417, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":421
+  /* "motorisedcameratracking/Imaging.py":437
  * ###############################################################
  * 
  *     def inCentralBox(self,xCo,yCo):             # <<<<<<<<<<<<<<
  *         if self.centralBox[0]<xCo<self.centralBox[1] and self.centralBox[2]<yCo<self.centralBox[3] :
  *             return True
  */
-  __pyx_tuple__40 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_tuple__40 = PyTuple_Pack(3, __pyx_n_s_self, __pyx_n_s_xCo, __pyx_n_s_yCo); if (unlikely(!__pyx_tuple__40)) __PYX_ERR(0, 437, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__40);
   __Pyx_GIVEREF(__pyx_tuple__40);
-  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_inCentralBox, 421, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_codeobj__41 = (PyObject*)__Pyx_PyCode_New(3, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__40, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_inCentralBox, 437, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__41)) __PYX_ERR(0, 437, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":427
+  /* "motorisedcameratracking/Imaging.py":443
  *             return False
  * 
  *     def isMultiple(self,targetList):             # <<<<<<<<<<<<<<
  *         if len(targetList)>1:
  *             return True
  */
-  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_targetList); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_tuple__42 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_targetList); if (unlikely(!__pyx_tuple__42)) __PYX_ERR(0, 443, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__42);
   __Pyx_GIVEREF(__pyx_tuple__42);
-  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_isMultiple, 427, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_codeobj__43 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__42, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_isMultiple, 443, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__43)) __PYX_ERR(0, 443, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":433
+  /* "motorisedcameratracking/Imaging.py":449
  *             return False
  * 
  *     def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """checks if the limits have been exceded"""
  *         print('xl1',xLimit1)
- *         print('xl2',xLimit2)
  */
-  __pyx_tuple__44 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_tuple__44 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_xLimit1, __pyx_n_s_xLimit2, __pyx_n_s_yLimit1, __pyx_n_s_yLimit2); if (unlikely(!__pyx_tuple__44)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__44);
   __Pyx_GIVEREF(__pyx_tuple__44);
-  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_outsideLimits, 433, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_codeobj__45 = (PyObject*)__Pyx_PyCode_New(5, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__44, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_outsideLimits, 449, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__45)) __PYX_ERR(0, 449, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":447
+  /* "motorisedcameratracking/Imaging.py":464
  * 
  * 
  *     def velocityCheck(self,xV,yV):             # <<<<<<<<<<<<<<
  *         """used for ensuring the velocity is below the maxSpeed"""
- *         if xV <0:
+ *         #works out the speeds
  */
-  __pyx_tuple__46 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_xSpeed, __pyx_n_s_ySpeed); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_tuple__46 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_xV, __pyx_n_s_yV, __pyx_n_s_xSpeed, __pyx_n_s_ySpeed); if (unlikely(!__pyx_tuple__46)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__46);
   __Pyx_GIVEREF(__pyx_tuple__46);
-  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_velocityCheck, 447, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_codeobj__47 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__46, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_velocityCheck, 464, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__47)) __PYX_ERR(0, 464, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":484
+  /* "motorisedcameratracking/Imaging.py":503
  *     OR=None
  *     targets: list = []
  *     def __init__(self,target: str,imageReturnQueue=None):             # <<<<<<<<<<<<<<
  *         functions=[#defines the targets and the corresponding functions
  *             ['person',self.ORBackUp],
  */
-  __pyx_tuple__48 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_target, __pyx_n_s_imageReturnQueue, __pyx_n_s_functions, __pyx_n_s_i); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_tuple__48 = PyTuple_Pack(5, __pyx_n_s_self, __pyx_n_s_target, __pyx_n_s_imageReturnQueue, __pyx_n_s_functions, __pyx_n_s_i); if (unlikely(!__pyx_tuple__48)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__48);
   __Pyx_GIVEREF(__pyx_tuple__48);
-  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_init, 484, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 484, __pyx_L1_error)
-  __pyx_tuple__50 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_codeobj__49 = (PyObject*)__Pyx_PyCode_New(3, 0, 5, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__48, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_init, 503, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__49)) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_tuple__50 = PyTuple_Pack(1, ((PyObject *)Py_None)); if (unlikely(!__pyx_tuple__50)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__50);
   __Pyx_GIVEREF(__pyx_tuple__50);
 
-  /* "motorisedcameratracking/Imaging.py":568
+  /* "motorisedcameratracking/Imaging.py":587
  * 
  * 
  *     def ORBackUp(self,img):             # <<<<<<<<<<<<<<
  *         """Calculates the ccordintes of the object in the image
  *         Args:
  */
-  __pyx_tuple__51 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_bbox, __pyx_n_s_label, __pyx_n_s_conf, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2, __pyx_n_s_i, __pyx_n_s_x); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 568, __pyx_L1_error)
+  __pyx_tuple__51 = PyTuple_Pack(9, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_bbox, __pyx_n_s_label, __pyx_n_s_conf, __pyx_n_s_xCo, __pyx_n_s_yCo, __pyx_n_s_i, __pyx_n_s_x); if (unlikely(!__pyx_tuple__51)) __PYX_ERR(0, 587, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__51);
   __Pyx_GIVEREF(__pyx_tuple__51);
-  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_ORBackUp, 568, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 568, __pyx_L1_error)
+  __pyx_codeobj__52 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__51, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_ORBackUp, 587, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__52)) __PYX_ERR(0, 587, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":598
+  /* "motorisedcameratracking/Imaging.py":617
  *         return xCo,yCo
  * 
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):             # <<<<<<<<<<<<<<
  *         if len(targets)==0:
  *             targets.append(self.target)
  */
-  __pyx_tuple__53 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_targets, __pyx_n_s_bbox, __pyx_n_s_label, __pyx_n_s_conf, __pyx_n_s_returnTargets, __pyx_n_s_i, __pyx_n_s_x, __pyx_n_s_xCo_2, __pyx_n_s_yCo_2); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_tuple__53 = PyTuple_Pack(11, __pyx_n_s_self, __pyx_n_s_img, __pyx_n_s_targets, __pyx_n_s_bbox, __pyx_n_s_label, __pyx_n_s_conf, __pyx_n_s_returnTargets, __pyx_n_s_i, __pyx_n_s_x, __pyx_n_s_xCo, __pyx_n_s_yCo); if (unlikely(!__pyx_tuple__53)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__53);
   __Pyx_GIVEREF(__pyx_tuple__53);
-  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(3, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getCoordinatesMultiTargetLP, 598, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_codeobj__54 = (PyObject*)__Pyx_PyCode_New(3, 0, 11, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__53, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getCoordinatesMultiTargetLP, 617, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__54)) __PYX_ERR(0, 617, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":624
+  /* "motorisedcameratracking/Imaging.py":643
  *         return returnTargets
  * 
  *     def getCoordinates(self,img):             # <<<<<<<<<<<<<<
  *         """returns the ccordnates of the object in the image
  *         Returns:
  */
-  __pyx_tuple__55 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_img); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 624, __pyx_L1_error)
+  __pyx_tuple__55 = PyTuple_Pack(2, __pyx_n_s_self, __pyx_n_s_img); if (unlikely(!__pyx_tuple__55)) __PYX_ERR(0, 643, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__55);
   __Pyx_GIVEREF(__pyx_tuple__55);
-  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getCoordinates, 624, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 624, __pyx_L1_error)
+  __pyx_codeobj__56 = (PyObject*)__Pyx_PyCode_New(2, 0, 2, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__55, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getCoordinates, 643, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__56)) __PYX_ERR(0, 643, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":631
+  /* "motorisedcameratracking/Imaging.py":650
  *         return self.OR(img)
  * 
  *     def getTargets(self) -> list:             # <<<<<<<<<<<<<<
  *         """returns a list of the targets
  *         Returns:
  */
-  __pyx_tuple__57 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__57)) __PYX_ERR(0, 631, __pyx_L1_error)
+  __pyx_tuple__57 = PyTuple_Pack(1, __pyx_n_s_self); if (unlikely(!__pyx_tuple__57)) __PYX_ERR(0, 650, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__57);
   __Pyx_GIVEREF(__pyx_tuple__57);
-  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getTargets, 631, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 631, __pyx_L1_error)
+  __pyx_codeobj__58 = (PyObject*)__Pyx_PyCode_New(1, 0, 1, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__57, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_motorisedcameratracking_Imaging_2, __pyx_n_s_getTargets, 650, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__58)) __PYX_ERR(0, 650, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -15097,9 +15755,10 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 static CYTHON_SMALL_CODE int __Pyx_InitGlobals(void) {
   if (__Pyx_InitStrings(__pyx_string_tab) < 0) __PYX_ERR(0, 1, __pyx_L1_error);
   __pyx_int_0 = PyInt_FromLong(0); if (unlikely(!__pyx_int_0)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_3 = PyInt_FromLong(3); if (unlikely(!__pyx_int_3)) __PYX_ERR(0, 1, __pyx_L1_error)
-  __pyx_int_4 = PyInt_FromLong(4); if (unlikely(!__pyx_int_4)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_5 = PyInt_FromLong(5); if (unlikely(!__pyx_int_5)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_10 = PyInt_FromLong(10); if (unlikely(!__pyx_int_10)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_40 = PyInt_FromLong(40); if (unlikely(!__pyx_int_40)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_180 = PyInt_FromLong(180); if (unlikely(!__pyx_int_180)) __PYX_ERR(0, 1, __pyx_L1_error)
@@ -15414,7 +16073,7 @@ if (!__Pyx_RefNanny) {
  * import matplotlib.pyplot as plt
  * import cvlib as cv             # <<<<<<<<<<<<<<
  * import time
- * from cvlib.object_detection import draw_bbox
+ * import queue
  */
   __pyx_t_2 = __Pyx_Import(__pyx_n_s_cvlib, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 3, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -15425,8 +16084,8 @@ if (!__Pyx_RefNanny) {
  * import matplotlib.pyplot as plt
  * import cvlib as cv
  * import time             # <<<<<<<<<<<<<<
- * from cvlib.object_detection import draw_bbox
- * import warnings
+ * import queue
+ * 
  */
   __pyx_t_2 = __Pyx_Import(__pyx_n_s_time, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 4, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -15436,213 +16095,225 @@ if (!__Pyx_RefNanny) {
   /* "motorisedcameratracking/Imaging.py":5
  * import cvlib as cv
  * import time
+ * import queue             # <<<<<<<<<<<<<<
+ * 
+ * from cvlib.object_detection import draw_bbox
+ */
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_queue, 0, -1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_queue, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+
+  /* "motorisedcameratracking/Imaging.py":7
+ * import queue
+ * 
  * from cvlib.object_detection import draw_bbox             # <<<<<<<<<<<<<<
  * import warnings
  * from .Cameras import *
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_draw_bbox);
   __Pyx_GIVEREF(__pyx_n_s_draw_bbox);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_draw_bbox);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_cvlib_object_detection, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_cvlib_object_detection, __pyx_t_2, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_draw_bbox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 5, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_ImportFrom(__pyx_t_1, __pyx_n_s_draw_bbox); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_draw_bbox, __pyx_t_2) < 0) __PYX_ERR(0, 5, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_draw_bbox, __pyx_t_2) < 0) __PYX_ERR(0, 7, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":6
- * import time
+  /* "motorisedcameratracking/Imaging.py":8
+ * 
  * from cvlib.object_detection import draw_bbox
  * import warnings             # <<<<<<<<<<<<<<
  * from .Cameras import *
  * from .MotorControl import *
  */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_warnings, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 6, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_warnings, 0, -1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warnings, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_warnings, __pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":7
+  /* "motorisedcameratracking/Imaging.py":9
  * from cvlib.object_detection import draw_bbox
  * import warnings
  * from .Cameras import *             # <<<<<<<<<<<<<<
  * from .MotorControl import *
  * from .Config import *
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_Cameras, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 7, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_Cameras, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__pyx_import_star(__pyx_t_2) < 0) __PYX_ERR(0, 7, __pyx_L1_error);
+  if (__pyx_import_star(__pyx_t_2) < 0) __PYX_ERR(0, 9, __pyx_L1_error);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":8
+  /* "motorisedcameratracking/Imaging.py":10
  * import warnings
  * from .Cameras import *
  * from .MotorControl import *             # <<<<<<<<<<<<<<
  * from .Config import *
  * 
  */
-  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_2 = PyList_New(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_2, 0, __pyx_n_s_);
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_MotorControl, __pyx_t_2, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 8, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_Import(__pyx_n_s_MotorControl, __pyx_t_2, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 10, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  if (__pyx_import_star(__pyx_t_1) < 0) __PYX_ERR(0, 8, __pyx_L1_error);
+  if (__pyx_import_star(__pyx_t_1) < 0) __PYX_ERR(0, 10, __pyx_L1_error);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":9
+  /* "motorisedcameratracking/Imaging.py":11
  * from .Cameras import *
  * from .MotorControl import *
  * from .Config import *             # <<<<<<<<<<<<<<
  * 
  * class Imaging:
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_Config, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_Config, __pyx_t_1, 1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__pyx_import_star(__pyx_t_2) < 0) __PYX_ERR(0, 9, __pyx_L1_error);
+  if (__pyx_import_star(__pyx_t_2) < 0) __PYX_ERR(0, 11, __pyx_L1_error);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":11
+  /* "motorisedcameratracking/Imaging.py":13
  * from .Config import *
  * 
  * class Imaging:             # <<<<<<<<<<<<<<
  *     """The Imaging class is responsible for calculating the velocities etc for Motor Control
  *     Attributes:
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_Imaging, __pyx_n_s_Imaging, (PyObject *) NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_kp_s_The_Imaging_class_is_responsible); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_Imaging, __pyx_n_s_Imaging, (PyObject *) NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_kp_s_The_Imaging_class_is_responsible); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "motorisedcameratracking/Imaging.py":28
+  /* "motorisedcameratracking/Imaging.py":30
  *     """
  * 
  *     imagePath: str = '/home/pi/Desktop/image%s.jpg'             # <<<<<<<<<<<<<<
  *     camera=None
  *     OR=None
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_imagePath, __pyx_kp_s_home_pi_Desktop_image_s_jpg) < 0) __PYX_ERR(0, 28, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_imagePath, __pyx_kp_s_home_pi_Desktop_image_s_jpg) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":29
+  /* "motorisedcameratracking/Imaging.py":31
  * 
  *     imagePath: str = '/home/pi/Desktop/image%s.jpg'
  *     camera=None             # <<<<<<<<<<<<<<
  *     OR=None
  *     dataQueue=None
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_camera, Py_None) < 0) __PYX_ERR(0, 29, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_camera, Py_None) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":30
+  /* "motorisedcameratracking/Imaging.py":32
  *     imagePath: str = '/home/pi/Desktop/image%s.jpg'
  *     camera=None
  *     OR=None             # <<<<<<<<<<<<<<
  *     dataQueue=None
  *     MCPipe=None
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_OR, Py_None) < 0) __PYX_ERR(0, 30, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_OR, Py_None) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":31
+  /* "motorisedcameratracking/Imaging.py":33
  *     camera=None
  *     OR=None
  *     dataQueue=None             # <<<<<<<<<<<<<<
  *     MCPipe=None
  * 
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_dataQueue, Py_None) < 0) __PYX_ERR(0, 31, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_dataQueue, Py_None) < 0) __PYX_ERR(0, 33, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":32
+  /* "motorisedcameratracking/Imaging.py":34
  *     OR=None
  *     dataQueue=None
  *     MCPipe=None             # <<<<<<<<<<<<<<
  * 
  *     target: str = None
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_MCPipe, Py_None) < 0) __PYX_ERR(0, 32, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_MCPipe, Py_None) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":34
+  /* "motorisedcameratracking/Imaging.py":36
  *     MCPipe=None
  * 
  *     target: str = None             # <<<<<<<<<<<<<<
  *     xMid: int = 640
  *     yMid: int = 360
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_target, Py_None) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_target, Py_None) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":35
+  /* "motorisedcameratracking/Imaging.py":37
  * 
  *     target: str = None
  *     xMid: int = 640             # <<<<<<<<<<<<<<
  *     yMid: int = 360
  *     centralBox=None
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_xMid, __pyx_int_640) < 0) __PYX_ERR(0, 35, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_xMid, __pyx_int_640) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":36
+  /* "motorisedcameratracking/Imaging.py":38
  *     target: str = None
  *     xMid: int = 640
  *     yMid: int = 360             # <<<<<<<<<<<<<<
  *     centralBox=None
  * 
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_yMid, __pyx_int_360) < 0) __PYX_ERR(0, 36, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_yMid, __pyx_int_360) < 0) __PYX_ERR(0, 38, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":37
+  /* "motorisedcameratracking/Imaging.py":39
  *     xMid: int = 640
  *     yMid: int = 360
  *     centralBox=None             # <<<<<<<<<<<<<<
  * 
  *     coordinates: list = []
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_centralBox, Py_None) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_centralBox, Py_None) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":39
+  /* "motorisedcameratracking/Imaging.py":41
  *     centralBox=None
  * 
  *     coordinates: list = []             # <<<<<<<<<<<<<<
  *     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
  *     currentPosition: list = [None,0,0]#time,positionx,positiony
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_coordinates, __pyx_t_1) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_coordinates, __pyx_t_1) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":40
+  /* "motorisedcameratracking/Imaging.py":42
  * 
  *     coordinates: list = []
  *     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]             # <<<<<<<<<<<<<<
  *     currentPosition: list = [None,0,0]#time,positionx,positiony
  *     currentVelocity: list = [0,0]
  */
-  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_positions, __pyx_t_1) < 0) __PYX_ERR(0, 40, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_positions, __pyx_t_1) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":41
+  /* "motorisedcameratracking/Imaging.py":43
  *     coordinates: list = []
  *     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
  *     currentPosition: list = [None,0,0]#time,positionx,positiony             # <<<<<<<<<<<<<<
  *     currentVelocity: list = [0,0]
  *     previousTime: float = None
  */
-  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 41, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
@@ -15653,17 +16324,17 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
   PyList_SET_ITEM(__pyx_t_1, 2, __pyx_int_0);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_currentPosition, __pyx_t_1) < 0) __PYX_ERR(0, 41, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_currentPosition, __pyx_t_1) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":42
+  /* "motorisedcameratracking/Imaging.py":44
  *     positions: list = []#sub arrays should be of the the form [time,xdegrees,ydegrees]
  *     currentPosition: list = [None,0,0]#time,positionx,positiony
  *     currentVelocity: list = [0,0]             # <<<<<<<<<<<<<<
  *     previousTime: float = None
  * 
  */
-  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 42, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
@@ -15671,522 +16342,522 @@ if (!__Pyx_RefNanny) {
   __Pyx_INCREF(__pyx_int_0);
   __Pyx_GIVEREF(__pyx_int_0);
   PyList_SET_ITEM(__pyx_t_1, 1, __pyx_int_0);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_currentVelocity, __pyx_t_1) < 0) __PYX_ERR(0, 42, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_currentVelocity, __pyx_t_1) < 0) __PYX_ERR(0, 44, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":43
+  /* "motorisedcameratracking/Imaging.py":45
  *     currentPosition: list = [None,0,0]#time,positionx,positiony
  *     currentVelocity: list = [0,0]
  *     previousTime: float = None             # <<<<<<<<<<<<<<
  * 
  *     xV=0
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_previousTime, Py_None) < 0) __PYX_ERR(0, 43, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_previousTime, Py_None) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":45
+  /* "motorisedcameratracking/Imaging.py":47
  *     previousTime: float = None
  * 
  *     xV=0             # <<<<<<<<<<<<<<
  *     yV=0
  *     xD=0
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_xV, __pyx_int_0) < 0) __PYX_ERR(0, 45, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_xV, __pyx_int_0) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":46
+  /* "motorisedcameratracking/Imaging.py":48
  * 
  *     xV=0
  *     yV=0             # <<<<<<<<<<<<<<
  *     xD=0
  *     yD=0
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_yV, __pyx_int_0) < 0) __PYX_ERR(0, 46, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_yV, __pyx_int_0) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":47
+  /* "motorisedcameratracking/Imaging.py":49
  *     xV=0
  *     yV=0
  *     xD=0             # <<<<<<<<<<<<<<
  *     yD=0
  * 
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_xD, __pyx_int_0) < 0) __PYX_ERR(0, 47, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_xD, __pyx_int_0) < 0) __PYX_ERR(0, 49, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":48
+  /* "motorisedcameratracking/Imaging.py":50
  *     yV=0
  *     xD=0
  *     yD=0             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_yD, __pyx_int_0) < 0) __PYX_ERR(0, 48, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_yD, __pyx_int_0) < 0) __PYX_ERR(0, 50, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":52
+  /* "motorisedcameratracking/Imaging.py":54
  * 
  * 
  *     def __init__(self,MC, dataQueue, controlQueue,imageReturnQueue, target: str, camera: dict = {'name': 'RPICam','orientation': 180,'Width':1280,'Height':720},mode='advanced',extras={'xMaxSpeed':40,'yMaxSpeed':40},):             # <<<<<<<<<<<<<<
  *         if camera['name']=='RPICam':
  *             self.camera=RPICam(self.imagePath,camera['orientation'])#sets the camera based on the one that is selected
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_target, __pyx_n_u_str) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_camera, __pyx_n_u_dict) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_1__init__, 0, __pyx_n_s_Imaging___init, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_target, __pyx_n_u_str) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_camera, __pyx_n_u_dict) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_1__init__, 0, __pyx_n_s_Imaging___init, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__3)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, sizeof(__pyx_defaults), 2)) __PYX_ERR(0, 52, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, sizeof(__pyx_defaults), 2)) __PYX_ERR(0, 54, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_name, __pyx_n_s_RPICam) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_orientation, __pyx_int_180) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_Width, __pyx_int_1280) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_Height, __pyx_int_720) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_name, __pyx_n_s_RPICam) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_orientation, __pyx_int_180) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_Width, __pyx_int_1280) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_Height, __pyx_int_720) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_t_3)->__pyx_arg_camera = ((PyObject*)__pyx_t_4);
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 52, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_xMaxSpeed, __pyx_int_40) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_yMaxSpeed, __pyx_int_40) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_xMaxSpeed, __pyx_int_40) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_yMaxSpeed, __pyx_int_40) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_CyFunction_Defaults(__pyx_defaults, __pyx_t_3)->__pyx_arg_extras = __pyx_t_4;
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_3, __pyx_pf_23motorisedcameratracking_7Imaging___defaults__);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 52, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 54, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":72
+  /* "motorisedcameratracking/Imaging.py":74
  *         self.yMaxSpeed=extras['yMaxSpeed']
  * 
- *     def MotorUpdater(self):             # <<<<<<<<<<<<<<
+ *     def MotorUpdater(self,queue):             # <<<<<<<<<<<<<<
  *         while True:
- *             data=self.MCPipe.recv()
+ *             if self.MCPipe.poll():
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater, 0, __pyx_n_s_Imaging_MotorUpdater, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 72, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_3MotorUpdater, 0, __pyx_n_s_Imaging_MotorUpdater, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__5)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_MotorUpdater, __pyx_t_3) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_MotorUpdater, __pyx_t_3) < 0) __PYX_ERR(0, 74, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":82
+  /* "motorisedcameratracking/Imaging.py":88
  * 
  * 
  *     def main(self,MC,MCPipe):#offers a choice of mode             # <<<<<<<<<<<<<<
  *         self.MC=MC
  *         self.MCPipe=MCPipe
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_5main, 0, __pyx_n_s_Imaging_main, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_5main, 0, __pyx_n_s_Imaging_main, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__7)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_main_2, __pyx_t_3) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_main_2, __pyx_t_3) < 0) __PYX_ERR(0, 88, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":99
- *             self.simpleTracking()
+  /* "motorisedcameratracking/Imaging.py":106
+ *             self.simpleTracking()#defaults to simple tracking
  * 
- *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):#only supports one mode currently             # <<<<<<<<<<<<<<
+ *     def mainLimited(self,MC,MCPipe,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """ identical to main but starts the limited versions of methods"""
  *         self.MC=MC
- *         self.MCPipe=MCPipe
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited, 0, __pyx_n_s_Imaging_mainLimited, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 99, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_7mainLimited, 0, __pyx_n_s_Imaging_mainLimited, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__9)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_mainLimited, __pyx_t_3) < 0) __PYX_ERR(0, 99, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_mainLimited, __pyx_t_3) < 0) __PYX_ERR(0, 106, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":117
+  /* "motorisedcameratracking/Imaging.py":126
  * 
  * 
  *     def advancedTracking(self):             # <<<<<<<<<<<<<<
  *         """The main loop for processing images
  * 
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_9advancedTracking, 0, __pyx_n_s_Imaging_advancedTracking, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_9advancedTracking, 0, __pyx_n_s_Imaging_advancedTracking, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__11)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_advancedTracking, __pyx_t_3) < 0) __PYX_ERR(0, 117, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_advancedTracking, __pyx_t_3) < 0) __PYX_ERR(0, 126, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":150
+  /* "motorisedcameratracking/Imaging.py":162
  *                 break
  * 
- *     def advancedTrackingLimited(self, limit1: float, limit2: float):             # <<<<<<<<<<<<<<
+ *     def advancedTrackingLimited(self, xLimit1: float, xLimit2: float,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         """The limited version of the tracking
  * 
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_limit1, __pyx_n_u_float) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_limit2, __pyx_n_u_float) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_11advancedTrackingLimited, 0, __pyx_n_s_Imaging_advancedTrackingLimited, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_xLimit1, __pyx_n_u_float) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_xLimit2, __pyx_n_u_float) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_11advancedTrackingLimited, 0, __pyx_n_s_Imaging_advancedTrackingLimited, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__13)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_1, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_advancedTrackingLimited, __pyx_t_1) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_advancedTrackingLimited, __pyx_t_1) < 0) __PYX_ERR(0, 162, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":187
+  /* "motorisedcameratracking/Imaging.py":205
  *                 break
  * 
  *     def reset(self):             # <<<<<<<<<<<<<<
  *         """Resets the variables
  *         Likely to be removed once varaibles are converted to non global
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_13reset, 0, __pyx_n_s_Imaging_reset, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_13reset, 0, __pyx_n_s_Imaging_reset, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__15)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_reset, __pyx_t_1) < 0) __PYX_ERR(0, 187, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_reset, __pyx_t_1) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":199
+  /* "motorisedcameratracking/Imaging.py":217
  * 
  * 
  *     def getCurrentPositionOfMotors(self):             # <<<<<<<<<<<<<<
  *         """calculates current position of motors"""
  *         self.currentPosition[1]=self.currentPosition[1]+(self.currentVelocity[0]*(self.currentPosition[0]-self.previousTime))
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_15getCurrentPositionOfMotors, 0, __pyx_n_s_Imaging_getCurrentPositionOfMoto, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_15getCurrentPositionOfMotors, 0, __pyx_n_s_Imaging_getCurrentPositionOfMoto, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__17)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getCurrentPositionOfMotors, __pyx_t_1) < 0) __PYX_ERR(0, 199, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getCurrentPositionOfMotors, __pyx_t_1) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":205
+  /* "motorisedcameratracking/Imaging.py":223
  *         print('self.currentPosition ',self.currentPosition)
  * 
  *     def calculatePositionOfObject(self):             # <<<<<<<<<<<<<<
  *         """calculates the current relative position of the object"""
  *         self.positions[-1][1]=self.currentPosition[1]+(self.calculateAngleImage(self.coordinates[-1][0],self.resolution,'x'))
  */
-  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_17calculatePositionOfObject, 0, __pyx_n_s_Imaging_calculatePositionOfObjec, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_17calculatePositionOfObject, 0, __pyx_n_s_Imaging_calculatePositionOfObjec, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__19)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_calculatePositionOfObject, __pyx_t_1) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_calculatePositionOfObject, __pyx_t_1) < 0) __PYX_ERR(0, 223, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":211
+  /* "motorisedcameratracking/Imaging.py":229
  *         print('self.positions[-1] ',self.positions[-1])
  * 
  *     def calculateAngleImage(self,coordinates,resolution: int,XorY: str) -> float:             # <<<<<<<<<<<<<<
  *         """calculates the angle of the object within the image
  *         Args:
  */
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 211, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_n_u_int) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_XorY, __pyx_n_u_str) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, __pyx_n_u_float) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_19calculateAngleImage, 0, __pyx_n_s_Imaging_calculateAngleImage, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 211, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_resolution, __pyx_n_u_int) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_XorY, __pyx_n_u_str) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_return, __pyx_n_u_float) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_19calculateAngleImage, 0, __pyx_n_s_Imaging_calculateAngleImage, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__21)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_1);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_calculateAngleImage, __pyx_t_3) < 0) __PYX_ERR(0, 211, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_calculateAngleImage, __pyx_t_3) < 0) __PYX_ERR(0, 229, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":227
- *             return (coordinates-self.yMid)*anglePerPixel
+  /* "motorisedcameratracking/Imaging.py":245
+ *             return (coordinates-self.yMid)*anglePerPixel#returns degrees from centre of frame
  * 
  *     def calculateCoordinates(self,img):             # <<<<<<<<<<<<<<
  *         """Calculates the ccordintes of the object in the image
  *         Args:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_21calculateCoordinates, 0, __pyx_n_s_Imaging_calculateCoordinates, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 227, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_21calculateCoordinates, 0, __pyx_n_s_Imaging_calculateCoordinates, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__23)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_calculateCoordinates, __pyx_t_3) < 0) __PYX_ERR(0, 227, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_calculateCoordinates, __pyx_t_3) < 0) __PYX_ERR(0, 245, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":250
- *     #    self.currentVelocity=[xV,yV]
+  /* "motorisedcameratracking/Imaging.py":261
+ * 
  * 
  *     def determineVelocity(self):             # <<<<<<<<<<<<<<
  *         """determines the velocity the object is moving at
  *         Returns:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_23determineVelocity, 0, __pyx_n_s_Imaging_determineVelocity, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 250, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_23determineVelocity, 0, __pyx_n_s_Imaging_determineVelocity, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__25)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_determineVelocity, __pyx_t_3) < 0) __PYX_ERR(0, 250, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_determineVelocity, __pyx_t_3) < 0) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":272
+  /* "motorisedcameratracking/Imaging.py":283
  *         return xV,yV
  * 
  *     def search(self):             # <<<<<<<<<<<<<<
  *         """used for reacquirig a lock when a target is lost"""
  *         warnings.warn('attempting to aquire a new target')
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_25search, 0, __pyx_n_s_Imaging_search, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 272, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_25search, 0, __pyx_n_s_Imaging_search, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__27)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 283, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_search, __pyx_t_3) < 0) __PYX_ERR(0, 272, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_search, __pyx_t_3) < 0) __PYX_ERR(0, 283, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":288
+  /* "motorisedcameratracking/Imaging.py":299
  * ###############################################################
  * 
  *     def simpleTracking(self):             # <<<<<<<<<<<<<<
  *         """A simple tracking function that sets the velocity based on how far from the centre of the image the target is"""
  *         while True:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_27simpleTracking, 0, __pyx_n_s_Imaging_simpleTracking, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 288, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_27simpleTracking, 0, __pyx_n_s_Imaging_simpleTracking, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__29)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 299, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_simpleTracking, __pyx_t_3) < 0) __PYX_ERR(0, 288, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_simpleTracking, __pyx_t_3) < 0) __PYX_ERR(0, 299, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":306
+  /* "motorisedcameratracking/Imaging.py":317
  *                 break
  * 
  *     def simpleTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         while True:
  *             recentre=False
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_29simpleTrackingLimited, 0, __pyx_n_s_Imaging_simpleTrackingLimited, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 306, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_29simpleTrackingLimited, 0, __pyx_n_s_Imaging_simpleTrackingLimited, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__31)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_simpleTrackingLimited, __pyx_t_3) < 0) __PYX_ERR(0, 306, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_simpleTrackingLimited, __pyx_t_3) < 0) __PYX_ERR(0, 317, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":330
+  /* "motorisedcameratracking/Imaging.py":342
  * 
  * 
  *     def simpleVelocityCalculation(self,xCo,yCo,maxSpeed: float = 20):             # <<<<<<<<<<<<<<
  *         """used to determine the velocity based on how far from the centre of the the target is
  * 
  */
-  __pyx_t_3 = PyFloat_FromDouble(((double)20.0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(((double)20.0)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 330, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_maxSpeed, __pyx_n_u_float) < 0) __PYX_ERR(0, 330, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_31simpleVelocityCalculation, 0, __pyx_n_s_Imaging_simpleVelocityCalculatio, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 330, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_maxSpeed, __pyx_n_u_float) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_31simpleVelocityCalculation, 0, __pyx_n_s_Imaging_simpleVelocityCalculatio, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__33)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_4, __pyx_t_1);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_4, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_simpleVelocityCalculation, __pyx_t_4) < 0) __PYX_ERR(0, 330, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_simpleVelocityCalculation, __pyx_t_4) < 0) __PYX_ERR(0, 342, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":344
- *         return self.velocityCheck(xV,yV)
+  /* "motorisedcameratracking/Imaging.py":356
+ *         return self.velocityCheck(xV,yV)#returns the checked velocities
  * 
  *     def intermediateTracking(self):             # <<<<<<<<<<<<<<
  *         """A tracking method that tries to match the velocity of the target by increasing or decreasing it based on how from the centre of the image the target is"""
  *         xV=0
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_33intermediateTracking, 0, __pyx_n_s_Imaging_intermediateTracking, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 344, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_33intermediateTracking, 0, __pyx_n_s_Imaging_intermediateTracking, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__35)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_intermediateTracking, __pyx_t_4) < 0) __PYX_ERR(0, 344, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_intermediateTracking, __pyx_t_4) < 0) __PYX_ERR(0, 356, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":369
+  /* "motorisedcameratracking/Imaging.py":383
  *                 break
  * 
  *     def intermediateTrackingLimited(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
  *         xV=0
  *         yV=0
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_35intermediateTrackingLimited, 0, __pyx_n_s_Imaging_intermediateTrackingLimi, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_35intermediateTrackingLimited, 0, __pyx_n_s_Imaging_intermediateTrackingLimi, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__37)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 383, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_intermediateTrackingLimited, __pyx_t_4) < 0) __PYX_ERR(0, 369, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_intermediateTrackingLimited, __pyx_t_4) < 0) __PYX_ERR(0, 383, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":401
+  /* "motorisedcameratracking/Imaging.py":417
  *                 break
  * 
  *     def intermediateVelocityCalculation(self,xV,yV,xCo,yCo):             # <<<<<<<<<<<<<<
  *         """used to calculate velocities for intermediate tracking
  *         Args:
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_37intermediateVelocityCalculation, 0, __pyx_n_s_Imaging_intermediateVelocityCalc, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 401, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_37intermediateVelocityCalculation, 0, __pyx_n_s_Imaging_intermediateVelocityCalc, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__39)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_intermediateVelocityCalculation, __pyx_t_4) < 0) __PYX_ERR(0, 401, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_intermediateVelocityCalculation, __pyx_t_4) < 0) __PYX_ERR(0, 417, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":421
+  /* "motorisedcameratracking/Imaging.py":437
  * ###############################################################
  * 
  *     def inCentralBox(self,xCo,yCo):             # <<<<<<<<<<<<<<
  *         if self.centralBox[0]<xCo<self.centralBox[1] and self.centralBox[2]<yCo<self.centralBox[3] :
  *             return True
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_39inCentralBox, 0, __pyx_n_s_Imaging_inCentralBox, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 421, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_39inCentralBox, 0, __pyx_n_s_Imaging_inCentralBox, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__41)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 437, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_inCentralBox, __pyx_t_4) < 0) __PYX_ERR(0, 421, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_inCentralBox, __pyx_t_4) < 0) __PYX_ERR(0, 437, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":427
+  /* "motorisedcameratracking/Imaging.py":443
  *             return False
  * 
  *     def isMultiple(self,targetList):             # <<<<<<<<<<<<<<
  *         if len(targetList)>1:
  *             return True
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_41isMultiple, 0, __pyx_n_s_Imaging_isMultiple, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 427, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_41isMultiple, 0, __pyx_n_s_Imaging_isMultiple, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__43)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 443, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_isMultiple, __pyx_t_4) < 0) __PYX_ERR(0, 427, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_isMultiple, __pyx_t_4) < 0) __PYX_ERR(0, 443, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":433
+  /* "motorisedcameratracking/Imaging.py":449
  *             return False
  * 
  *     def outsideLimits(self,xLimit1,xLimit2,yLimit1,yLimit2):             # <<<<<<<<<<<<<<
+ *         """checks if the limits have been exceded"""
  *         print('xl1',xLimit1)
- *         print('xl2',xLimit2)
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits, 0, __pyx_n_s_Imaging_outsideLimits, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 433, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_43outsideLimits, 0, __pyx_n_s_Imaging_outsideLimits, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__45)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_outsideLimits, __pyx_t_4) < 0) __PYX_ERR(0, 433, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_outsideLimits, __pyx_t_4) < 0) __PYX_ERR(0, 449, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":447
+  /* "motorisedcameratracking/Imaging.py":464
  * 
  * 
  *     def velocityCheck(self,xV,yV):             # <<<<<<<<<<<<<<
  *         """used for ensuring the velocity is below the maxSpeed"""
- *         if xV <0:
+ *         #works out the speeds
  */
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_45velocityCheck, 0, __pyx_n_s_Imaging_velocityCheck, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 447, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_7Imaging_45velocityCheck, 0, __pyx_n_s_Imaging_velocityCheck, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__47)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_velocityCheck, __pyx_t_4) < 0) __PYX_ERR(0, 447, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_velocityCheck, __pyx_t_4) < 0) __PYX_ERR(0, 464, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":11
+  /* "motorisedcameratracking/Imaging.py":13
  * from .Config import *
  * 
  * class Imaging:             # <<<<<<<<<<<<<<
  *     """The Imaging class is responsible for calculating the velocities etc for Motor Control
  *     Attributes:
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_Imaging, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_Imaging, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Imaging, __pyx_t_4) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_Imaging, __pyx_t_4) < 0) __PYX_ERR(0, 13, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":480
+  /* "motorisedcameratracking/Imaging.py":499
  * ########## OR class and functions ################
  * 
  * class ObjectRecognition:             # <<<<<<<<<<<<<<
  *     target: str = None
  *     OR=None
  */
-  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_ObjectRecognition, __pyx_n_s_ObjectRecognition, (PyObject *) NULL, __pyx_n_s_motorisedcameratracking_Imaging, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 480, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Py3MetaclassPrepare((PyObject *) NULL, __pyx_empty_tuple, __pyx_n_s_ObjectRecognition, __pyx_n_s_ObjectRecognition, (PyObject *) NULL, __pyx_n_s_motorisedcameratracking_Imaging, (PyObject *) NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 499, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
 
-  /* "motorisedcameratracking/Imaging.py":481
+  /* "motorisedcameratracking/Imaging.py":500
  * 
  * class ObjectRecognition:
  *     target: str = None             # <<<<<<<<<<<<<<
  *     OR=None
  *     targets: list = []
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_target, Py_None) < 0) __PYX_ERR(0, 481, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_target, Py_None) < 0) __PYX_ERR(0, 500, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":482
+  /* "motorisedcameratracking/Imaging.py":501
  * class ObjectRecognition:
  *     target: str = None
  *     OR=None             # <<<<<<<<<<<<<<
  *     targets: list = []
  *     def __init__(self,target: str,imageReturnQueue=None):
  */
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_OR, Py_None) < 0) __PYX_ERR(0, 482, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_OR, Py_None) < 0) __PYX_ERR(0, 501, __pyx_L1_error)
 
-  /* "motorisedcameratracking/Imaging.py":483
+  /* "motorisedcameratracking/Imaging.py":502
  *     target: str = None
  *     OR=None
  *     targets: list = []             # <<<<<<<<<<<<<<
  *     def __init__(self,target: str,imageReturnQueue=None):
  *         functions=[#defines the targets and the corresponding functions
  */
-  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 483, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 502, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_targets, __pyx_t_4) < 0) __PYX_ERR(0, 483, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_targets, __pyx_t_4) < 0) __PYX_ERR(0, 502, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":484
+  /* "motorisedcameratracking/Imaging.py":503
  *     OR=None
  *     targets: list = []
  *     def __init__(self,target: str,imageReturnQueue=None):             # <<<<<<<<<<<<<<
  *         functions=[#defines the targets and the corresponding functions
  *             ['person',self.ORBackUp],
  */
-  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 484, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_target, __pyx_n_u_str) < 0) __PYX_ERR(0, 484, __pyx_L1_error)
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_1__init__, 0, __pyx_n_s_ObjectRecognition___init, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 484, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_target, __pyx_n_u_str) < 0) __PYX_ERR(0, 503, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_1__init__, 0, __pyx_n_s_ObjectRecognition___init, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__49)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_3, __pyx_tuple__50);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_3, __pyx_t_4);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 484, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_init, __pyx_t_3) < 0) __PYX_ERR(0, 503, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":568
+  /* "motorisedcameratracking/Imaging.py":587
  * 
  * 
  *     def ORBackUp(self,img):             # <<<<<<<<<<<<<<
  *         """Calculates the ccordintes of the object in the image
  *         Args:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_3ORBackUp, 0, __pyx_n_s_ObjectRecognition_ORBackUp, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 568, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_3ORBackUp, 0, __pyx_n_s_ObjectRecognition_ORBackUp, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__52)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 587, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_ORBackUp, __pyx_t_3) < 0) __PYX_ERR(0, 568, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_ORBackUp, __pyx_t_3) < 0) __PYX_ERR(0, 587, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":598
+  /* "motorisedcameratracking/Imaging.py":617
  *         return xCo,yCo
  * 
  *     def getCoordinatesMultiTargetLP(self,img,targets=[]):             # <<<<<<<<<<<<<<
  *         if len(targets)==0:
  *             targets.append(self.target)
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_5getCoordinatesMultiTargetLP, 0, __pyx_n_s_ObjectRecognition_getCoordinates, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 598, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_5getCoordinatesMultiTargetLP, 0, __pyx_n_s_ObjectRecognition_getCoordinates, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__54)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, sizeof(__pyx_defaults1), 1)) __PYX_ERR(0, 598, __pyx_L1_error)
-  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 598, __pyx_L1_error)
+  if (!__Pyx_CyFunction_InitDefaults(__pyx_t_3, sizeof(__pyx_defaults1), 1)) __PYX_ERR(0, 617, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_CyFunction_Defaults(__pyx_defaults1, __pyx_t_3)->__pyx_arg_targets = __pyx_t_4;
   __Pyx_GIVEREF(__pyx_t_4);
   __pyx_t_4 = 0;
   __Pyx_CyFunction_SetDefaultsGetter(__pyx_t_3, __pyx_pf_23motorisedcameratracking_7Imaging_2__defaults__);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getCoordinatesMultiTargetLP, __pyx_t_3) < 0) __PYX_ERR(0, 598, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getCoordinatesMultiTargetLP, __pyx_t_3) < 0) __PYX_ERR(0, 617, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":624
+  /* "motorisedcameratracking/Imaging.py":643
  *         return returnTargets
  * 
  *     def getCoordinates(self,img):             # <<<<<<<<<<<<<<
  *         """returns the ccordnates of the object in the image
  *         Returns:
  */
-  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_7getCoordinates, 0, __pyx_n_s_ObjectRecognition_getCoordinates_2, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 624, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_7getCoordinates, 0, __pyx_n_s_ObjectRecognition_getCoordinates_2, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__56)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 643, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getCoordinates, __pyx_t_3) < 0) __PYX_ERR(0, 624, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getCoordinates, __pyx_t_3) < 0) __PYX_ERR(0, 643, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":631
+  /* "motorisedcameratracking/Imaging.py":650
  *         return self.OR(img)
  * 
  *     def getTargets(self) -> list:             # <<<<<<<<<<<<<<
  *         """returns a list of the targets
  *         Returns:
  */
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 631, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 650, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_n_u_list) < 0) __PYX_ERR(0, 631, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_9getTargets, 0, __pyx_n_s_ObjectRecognition_getTargets, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 631, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_return, __pyx_n_u_list) < 0) __PYX_ERR(0, 650, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_CyFunction_New(&__pyx_mdef_23motorisedcameratracking_7Imaging_17ObjectRecognition_9getTargets, 0, __pyx_n_s_ObjectRecognition_getTargets, NULL, __pyx_n_s_motorisedcameratracking_Imaging, __pyx_d, ((PyObject *)__pyx_codeobj__58)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 650, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_CyFunction_SetAnnotationsDict(__pyx_t_4, __pyx_t_3);
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getTargets, __pyx_t_4) < 0) __PYX_ERR(0, 631, __pyx_L1_error)
+  if (__Pyx_SetNameInClass(__pyx_t_2, __pyx_n_s_getTargets, __pyx_t_4) < 0) __PYX_ERR(0, 650, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "motorisedcameratracking/Imaging.py":480
+  /* "motorisedcameratracking/Imaging.py":499
  * ########## OR class and functions ################
  * 
  * class ObjectRecognition:             # <<<<<<<<<<<<<<
  *     target: str = None
  *     OR=None
  */
-  __pyx_t_4 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_ObjectRecognition, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 480, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_Py3ClassCreate(((PyObject*)&__Pyx_DefaultClassType), __pyx_n_s_ObjectRecognition, __pyx_empty_tuple, __pyx_t_2, NULL, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 499, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ObjectRecognition, __pyx_t_4) < 0) __PYX_ERR(0, 480, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_ObjectRecognition, __pyx_t_4) < 0) __PYX_ERR(0, 499, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
